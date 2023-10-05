@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6, p, span, input, label, textarea, select {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+} 
+.form-section {
+  padding: 50px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.form-inner {
+  background-color: #fff;
+  box-shadow: 0 0 10px 2px #0000002e !important;
+  border-radius: 20px !important;
+  padding: 60px;
+}  
+.flx-box {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+ul.hdr-date {
+  text-align: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.hdr-date li {
+  line-height: 30px;
+}
+img.brandname {
+  width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+.text-box {
+  padding: 30px 0 50px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-box h1 {
+  font-size: 46px;
+  margin: 0;
+}
+.text-box h4 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+.text-box h6 {
+  font-size: 16px;
+  margin: 0 0 50px;
+}
+.red-link {
+  color: #F90000;
+}
+.txt-width {
+  width: 100%;
+}
+.txt-fld-space .flx-box {
+  padding: 14px 0;
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+.checkbox .MuiFormControlLabel-label {
+  font-size: 14px;
+}
+.pd-top-btm {
+  padding: 20px 0;
+}
+.pd-top-btm label {
+  margin-bottom: 18px;
+}
+.pd-top-btm .MuiFormControlLabel-labelPlacementEnd {
+  margin-bottom: 0 !important;
+}
+.tag {
+  background-color: #383535;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 20px;
+}
+.right-btn {
+  float: right;
 }

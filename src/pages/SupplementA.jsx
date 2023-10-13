@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Grid, TextField, Typography, Button } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 //Images
 import mainlogo from "../assets/images/logo.png";
@@ -214,8 +215,13 @@ const SupplementA = () => {
 
 
        <Grid container spacing={3} columns={12} className='btm-button'>
-        <Grid item xs={6}><Button variant="contained" className='left-btn' href="/">Prev</Button></Grid>
-        <Grid item xs={6}><Button variant="contained" className='right-btn' href="/supplementb">Next</Button></Grid>
+        <Grid item xs={6}></Grid>
+        <Grid item xs={6}>
+         <Grid className='form-btns'>
+          <Link to={'/stepform'} className='cancel-btn'>Cancel</Link>
+          <Link to={'/stepform'} className='save-btn'>Save</Link>
+         </Grid>
+        </Grid>
         </Grid>
 
         </Grid>

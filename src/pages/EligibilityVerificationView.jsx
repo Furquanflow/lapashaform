@@ -5,7 +5,6 @@ import { Container, Grid, TextField, Typography, FormGroup, Checkbox, FormContro
 //Images
 import mainlogo from "../assets/images/logo.png";
 import { Link } from 'react-router-dom';
-import { Label } from '@mui/icons-material';
 
 
 const EligibilityVerificationView = () => {

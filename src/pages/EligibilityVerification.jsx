@@ -13,11 +13,11 @@ const EligibilityVerification = () => {
        <Container>
         <Grid className='form-inner'>
         
-        <Grid container spacing={2} columns={16} className='flx-box'>
-        <Grid item xs={8}>
+        <Grid container spacing={2} columns={12} className='flx-box form-hdr'>
+        <Grid item xs={6}>
             <img className="brandname" src={mainlogo} alt="" />
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={6}>
             <ul className="hdr-date">
              <li>USCIS</li>
              <li>Form I-9</li>

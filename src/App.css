@@ -364,3 +364,172 @@ hr {
   height: 5px;
   background-color: #000;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .card-blk h4 {
+    font-size: 18px;
+    height: 40px;
+}
+.image-card img {
+  max-width: 180px;
+}
+.image-card {
+  height: 130px;
+}
+.theme-btn {
+  padding: 10px 30px;
+}
+.card-blk {
+  min-height: 370px;
+}
+.home-sec h1 {
+  font-size: 32px;
+}
+img.bgcard3 {
+  width: 300px !important;
+}
+.img-card-blk img {
+  width: 500px;
+  z-index: 0;
+}
+img.bgcard1 {
+  right: 140px;
+}
+.login-blk {
+  width: 60%;
+  z-index: 99;
+  position: relative;
+}
+.step-bar {
+  width: 100%;
+}
+.step-flx::before {
+  right: -45px;
+  width: 25px;
+  height: 25px;
+}
+.text-box h1 {
+  font-size: 32px;
+}
+
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+  .home-sec h1 {
+    font-size: 30px !important;
+  }
+  .flx-box {
+    display: block !important;
+}
+.flx-box .css-gj1fbr-MuiGrid-root {
+  max-width: 100% !important;
+}
+.home-sec {
+  height: auto;
+  padding: 40px 0;
+}
+img.bgcard3 {
+  width: 200px !important;
+}
+.img-card-blk img {
+  width: 330px;
+}
+img.bgcard1 {
+  right: 80px;
+}
+.login-blk {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+.login-blk h2 {
+  font-size: 46px;
+}
+.login-box img {
+  max-width: 35%;
+}
+.step-bar {
+  padding: 10px 10px;
+  width: 100%;
+}
+.step-flx span {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+.step-bar h5 {
+  font-size: 13px;
+}
+.step-flx::before {
+  right: -13px;
+  width: 15px;
+  height: 15px;
+}
+.step-opt {
+  display: block;
+}
+.step-opt-title img {
+  width: 60px;
+  margin-right: 10px;
+}
+.step-opt-title h6 {
+  font-size: 18px;
+  line-height: 22px;
+}
+.step-opt a {
+  display: inline-block;
+  margin-top: 20px;
+}
+.btm-nxt-sec {
+  display: block;
+}
+.file-upload span img {
+  width: 40px;
+}
+.file-upload {
+  padding: 20px 15px;
+}
+.file-upload span {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+.file-upload-txt h4 {
+  font-size: 16px !important;
+}
+.steps {
+  margin-top: 30px;
+}
+.form-inner {
+  padding: 30px;
+}
+img.brandname {
+  width: 100%;
+}
+.text-box h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.text-box {
+  padding: 0px 0 20px;
+}
+.text-box h4 {
+  font-size: 20px;
+}
+.txt-fld-space .css-1osj8n2-MuiGrid-root {
+  max-width: 100%;
+}
+.form-btns a {
+  min-width: 120px;
+}
+.form-hdr {
+  display: flex !important;
+  margin-bottom: 20px;
+}
+ul.hdr-date li {
+  font-size: 13px;
+  line-height: 26px;
+}
+
+} 

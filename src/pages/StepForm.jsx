@@ -46,7 +46,7 @@ const StepForm = () => {
       <img src={pdfimg} alt='' />
       <Typography variant='h6'>Policy 20223-06-12 Employee Manual</Typography>
       </Grid>
-      <Link to={'/'}>Edit</Link>
+      <Link to={'/policyform'}>Edit</Link>
       </Grid>
 
       <Grid className='step-opt'>
@@ -54,7 +54,7 @@ const StepForm = () => {
       <img src={pdfimg} alt='' />
       <Typography variant='h6'>Contract 2023-04-12 Class Action Waiver Krikwood Ops</Typography>
       </Grid>
-      <Link to={'/'}>Edit</Link>
+      <Link to={'/contractform'}>Edit</Link>
       </Grid>
 
       <Grid className='step-opt'>

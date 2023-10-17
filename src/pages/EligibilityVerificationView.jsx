@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const EligibilityVerificationView = () => {
   return (
-    <div>
+    <Grid>
       <Grid className='form-section'>
        <Container>
         <Grid className='form-inner'>
@@ -320,7 +320,7 @@ const EligibilityVerificationView = () => {
         </Grid>
        </Container>
       </Grid>
-     </div>
+     </Grid>
   )
 }
 

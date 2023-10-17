@@ -364,6 +364,110 @@ hr {
   height: 5px;
   background-color: #000;
 }
+.main-title {
+  text-align: center;
+  margin: 0 0 50px !important;
+}
+.form-point-inn h5 {
+  font-weight: 600;
+}
+.form-points span {
+  margin: 8px 0;
+  display: inline-block;
+  line-height: 28px;
+}
+.form-point-inn {
+  margin: 30px 0;
+}
+.form-points {
+  margin: 20px 0;
+}
+.select-opt {
+  position: relative;
+}
+.label-opt {
+  margin-top: 0 !important;
+  padding-left: 30px;
+  font-weight: 400 !important;
+}
+.select-opt .css-j204z7-MuiFormControlLabel-root {
+  align-items: flex-start !important;
+}
+
+.company-logos img {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.company-logos {
+  text-align: center;
+}
+.policy-form-title h4 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.linewrapper {
+  display: flex;
+  align-items: baseline;
+}
+.middle {
+  border-bottom: 1px dashed #999;
+  flex-grow: 1;
+  margin: 0 5px;
+}
+.main-linewrapper h5 {
+  font-weight: 600;
+}
+.linewrapper-inn {
+  padding: 3px 20px;
+}
+.main-linewrapper {
+  margin: 20px 0 10px;
+}
+.book-index-sec {
+  margin: 40px 0;
+}
+.book-index {
+  margin: 0 0 40px;
+}
+.welcom-blk span {
+  display: block;
+  margin: 10px 0;
+}
+.welcom-blk h4 {
+  margin: 0 0 20px;
+}
+.welcom-blk {
+  padding-top: 30px;
+}
+.points-sec {
+  padding: 40px 0;
+}
+.points-sec h5 {
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+.points-sec span {
+  display: block;
+  margin: 16px 0;
+}
+.points-sec p {
+  font-weight: 600 !important;
+  margin: 40px 0 0;
+}
+.email-blk {
+  align-items: center;
+}
+ul.num-list li {
+  list-style-type: decimal;
+  margin: 10px 0;
+}
+.grid-blk {
+  padding: 50px 0;
+}
+.grid-blk h5 {
+  font-weight: 600;
+  margin: 0 0 30px;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
   .card-blk h4 {

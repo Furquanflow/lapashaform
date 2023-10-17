@@ -9,6 +9,8 @@ import Login from "../pages/Login";
 import StepForm from "../pages/StepForm";
 import EligibilityVerificationView from "../pages/EligibilityVerificationView";
 import EmploymentInformationForm from "../pages/EmploymentInformationForm";
+import ContractForm from "../pages/ContractForm";
+import PolicyForm from "../pages/PolicyForm";
 
 const LapashaRoutes = () => {
   return (
@@ -18,6 +20,8 @@ const LapashaRoutes = () => {
         <Route path="/eligibilityverification" element={<EligibilityVerification />} />
         <Route path="/eligibilityverificationview" element={<EligibilityVerificationView />} />
         <Route path="/employmentinformationform" element={<EmploymentInformationForm />} />
+        <Route path="/contractform" element={<ContractForm />} />
+        <Route path="/policyform" element={<PolicyForm />} /> 
         <Route path="/acceptabledocuments" element={<AcceptableDocuments />} />
         <Route path="/supplementa" element={<SupplementA />} />
         <Route path="/supplementb" element={<SupplementB />} />

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const EligibilityVerification = () => {
   return (
-     <div>
+     <Grid>
       <Grid className='form-section'>
        <Container>
         <Grid className='form-inner'>
@@ -738,7 +738,7 @@ const EligibilityVerification = () => {
        </Grid>
        </Container>
       </Grid>
-     </div>
+     </Grid>
   )
 }
 

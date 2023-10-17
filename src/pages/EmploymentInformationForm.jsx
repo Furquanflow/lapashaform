@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const EmploymentInformationForm = () => {
   return (
-    <div>
+    <Grid>
       <Grid className='form-section'>
        <Container>
         <Grid className='form-inner'>
@@ -308,7 +308,7 @@ const EmploymentInformationForm = () => {
        </Grid>
        </Container>
       </Grid>
-     </div>
+     </Grid>
   )
 }
 

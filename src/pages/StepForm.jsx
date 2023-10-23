@@ -14,7 +14,7 @@ const StepForm = () => {
      <Container>
      
      <Grid className='step-bar'>
-      <Grid className='step-flx step-active'>
+      <Grid className='step-flx'>
        <Typography variant='b'>01</Typography>
        <Typography variant='h5'>Step</Typography>
       </Grid>

@@ -21,6 +21,35 @@ import companylogo03 from "../assets/images/logo03.png";
 import { Link } from "react-router-dom";
 
 const PolicyForm = () => {
+  const formChange=()=>{
+      
+    let polciStatement;
+    let tipsCredit;
+    let cardFee;
+    let policyAgainst;
+    let policyReg;
+    let consent;
+    let WorkPlace;
+    let drugFee;
+    let remoteWork;
+    let ElecSys;
+    let alterDis;
+    let empSigPolicy;
+    let datePolicy;
+    let empNamePolicy;
+
+    let empSignPolicy;
+    let tranNamePolicy;
+    let transSignPolicy;
+
+        let AbleReadPolicy;
+        let ableReadPolicy;
+        let declinePolicy;
+    
+    
+
+
+  }
   return (
     <Grid>
       <Grid className="form-section">
@@ -3217,77 +3246,77 @@ const PolicyForm = () => {
        <Typography variant="body">Policy Statement on Equal Opportunity</Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField value={polciStatement} onChange={formChange} className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Tip Credit Notice</Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={tipsCredit} onChange={formChange}   className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Credit Card Fee</Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={cardFee} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Policy Against Harassment in the Workplace</Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={policyAgainst} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Policy Regarding Violence in the Workplace and Weapons Policy</Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={policyReg} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Consent and Release for Reasonable Workplace Searches </Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={consent} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Workplace Violence </Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={WorkPlace} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Drug Free Workplace and Drug/Alcohol Testing </Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={drugFee} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Remote Work Policy </Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={remoteWork} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Electronic Systems Usage </Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={ElecSys} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        <Grid item xs={8}>
        <Typography variant="body">Alternative Dispute Resolution/Class Action Waiver</Typography>
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" variant="standard" /> 
+       <TextField  value={alterDis} onChange={formChange}  className='txt-width' id="standard-basic" variant="standard" /> 
        </Grid>
        </Grid>
        </Grid>
 
        <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="EMPLOYEE SIGNATURE" variant="standard" />
+        <TextField  value={empSigPolicy} onChange={formChange}  className='txt-width' id="standard-basic" label="EMPLOYEE SIGNATURE" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="DATE" variant="standard" /> 
+        <TextField  value={datePolicy} onChange={formChange}  className='txt-width' id="standard-basic" label="DATE" variant="standard" /> 
         </Grid>
         </Grid>
 
@@ -3320,16 +3349,16 @@ const PolicyForm = () => {
       <Grid>
 
       <Grid className='select-opt'>
-        <FormControlLabel value="r1" control={<Radio />} label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it." />
+        <FormControlLabel value={AbleReadPolicy} onChange={formChange}  control={<Radio />} label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it." />
       </Grid> 
 
       <Grid className='select-opt'>
-        <FormControlLabel value="r2" control={<Radio />} label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy." />
+        <FormControlLabel  value={ableReadPolicy} onChange={formChange} control={<Radio />} label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy." />
         <Typography className='label-opt' variant='body'>No puedo leer ni entender inglés y solicito que me leyeran el Acuerdo de arbitraje y renuncia de clase del empleado en mi idioma nativo. Mi firma de este reconocimiento y el Acuerdo de arbitraje y renuncia de clase del empleado indica que comprendo y acepto la Poliza.</Typography>
       </Grid>  
 
       <Grid className='select-opt'>
-        <FormControlLabel value="r3" control={<Radio />} label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration." />
+        <FormControlLabel  value={declinePolicy} onChange={formChange} control={<Radio />} label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration." />
         <Typography className='label-opt' variant='body'>Me negué a que me leyeran el Acuerdo de arbitraje y renuncia de clase del empleado en mi idioma nativo. Entiendo que al firmar este reconocimiento y el Acuerdo de renuncia de clase y arbitraje, renuncio a mi derecho a un juicio con jurado y acepto llevar cualquier desacuerdo que pueda tener con mi empleador a arbitraje. También entiendo que no podré entablar una demanda en grupo con otros con respecto a mi empleo o participar en un acuerdo grupal. Cualquier disputa que tenga con mi empleador debe ser presentada por mí solo en un arbitraje.</Typography>
       </Grid>  
 
@@ -3341,16 +3370,16 @@ const PolicyForm = () => {
 
        <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee Printed Name" variant="standard" />
+        <TextField value={empNamePolicy} onChange={formChange} className='txt-width' id="standard-basic" label="Employee Printed Name" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee Signature" variant="standard" /> 
+        <TextField value={empSignPolicy} onChange={formChange} className='txt-width' id="standard-basic" label="Employee Signature" variant="standard" /> 
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Translator Printed Name" variant="standard" />
+        <TextField value={tranNamePolicy} onChange={formChange} className='txt-width' id="standard-basic" label="Translator Printed Name" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Translator Signature" variant="standard" /> 
+        <TextField value={transSignPolicy} onChange={formChange}  className='txt-width' id="standard-basic" label="Translator Signature" variant="standard" /> 
         </Grid>
         </Grid>
          

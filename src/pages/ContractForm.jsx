@@ -4,6 +4,19 @@ import { Container, Grid, TextField, Typography, FormGroup, Checkbox, FormContro
 import { Link } from 'react-router-dom';
 
 const ContractForm = () => {
+
+  const formChange=()=>{
+      
+    let ableReadEng;
+    let unableReadEng;
+    let declined;
+    let EmpName;
+    let EmpSign;
+    let TransPrinName;
+    let TransSignName;
+    
+  }
+
   return (
     <Grid>
       
@@ -113,16 +126,16 @@ const ContractForm = () => {
       <Grid>
 
       <Grid className='select-opt'>
-        <FormControlLabel value="r1" control={<Radio />} label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it." />
+        <FormControlLabel value={ableReadEng} onChange={formChange} control={<Radio />} label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it." />
       </Grid> 
 
       <Grid className='select-opt'>
-        <FormControlLabel value="r2" control={<Radio />} label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy." />
+        <FormControlLabel  value={unableReadEng} onChange={formChange}  control={<Radio />} label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy." />
         <Typography className='label-opt' variant='body'>No puedo leer ni entender inglés y solicito que me leyeran el Acuerdo de arbitraje y renuncia de clase del empleado en mi idioma nativo. Mi firma de este reconocimiento y el Acuerdo de arbitraje y renuncia de clase del empleado indica que comprendo y acepto la Poliza.</Typography>
       </Grid>  
 
       <Grid className='select-opt'>
-        <FormControlLabel value="r3" control={<Radio />} label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration." />
+        <FormControlLabel  value={declined} onChange={formChange}  control={<Radio />} label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration." />
         <Typography className='label-opt' variant='body'>Me negué a que me leyeran el Acuerdo de arbitraje y renuncia de clase del empleado en mi idioma nativo. Entiendo que al firmar este reconocimiento y el Acuerdo de renuncia de clase y arbitraje, renuncio a mi derecho a un juicio con jurado y acepto llevar cualquier desacuerdo que pueda tener con mi empleador a arbitraje. También entiendo que no podré entablar una demanda en grupo con otros con respecto a mi empleo o participar en un acuerdo grupal. Cualquier disputa que tenga con mi empleador debe ser presentada por mí solo en un arbitraje.</Typography>
       </Grid>  
 
@@ -134,16 +147,16 @@ const ContractForm = () => {
 
        <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee Printed Name" variant="standard" />
+        <TextField className='txt-width'  value={EmpName} onChange={formChange}  id="standard-basic" label="Employee Printed Name" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee Signature" variant="standard" /> 
+        <TextField className='txt-width'  value={EmpSign} onChange={formChange} id="standard-basic" label="Employee Signature" variant="standard" /> 
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Translator Printed Name" variant="standard" />
+        <TextField className='txt-width' value={TransPrinName} onChange={formChange}  id="standard-basic" label="Translator Printed Name" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Translator Signature" variant="standard" /> 
+        <TextField className='txt-width' value={TransSignName} onChange={formChange}  id="standard-basic" label="Translator Signature" variant="standard" /> 
         </Grid>
         </Grid>
          

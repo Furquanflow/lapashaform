@@ -7,6 +7,49 @@ import mainlogo from "../assets/images/logo.png";
 import { Link } from 'react-router-dom';
 
 const EmploymentInformationForm = () => {
+
+
+  const formChange=()=>{
+      
+    let FNamePerInfo;
+    let LnamePerInfo;
+    let statePerInfo;
+    let zipcodePerInfo;
+    let phoneNoPerInfo;
+    let emailAddPerInfo;
+    let addPerInfo;
+    let emrCnoPerInfo;
+    let RelaPerInfo;
+    let emrPhoneNoPerInfo;
+    let StartDateEmpDet;
+    let DeptEmpDet;
+    let ManagerEmpDet;
+    let EmpIdEmpDet;
+    let ssNoTaxInfo;
+    let DepTaxInfo;
+    let signleTaxInfo;
+    let MarriedTaxInfo;
+    let headOfHouseTaxInfo;
+    let bankNameDDinfo;
+    let RoutNoDDinfo;
+    let AccNoDDinfo;
+    let enrollHI;
+    let DeclineHI;
+    let enrollDI;
+    let declineDI;
+    let enrollVI;
+    let declineVI;
+    let enrollRP;
+    let declineRP;
+    let medConyes;
+    let medConNo;
+    let conFormsign;
+    let conFormDate;
+    
+    
+  }
+
+
   return (
     <Grid>
       <Grid className='form-section'>
@@ -33,25 +76,25 @@ const EmploymentInformationForm = () => {
 
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Full Name:" variant="standard" />
+        <TextField className='txt-width' value={FNamePerInfo } onChange={formChange} id="standard-basic" label="Full Name:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="City:" variant="standard" />
+        <TextField className='txt-width'   value={LnamePerInfo} onChange={formChange} id="standard-basic" label="City:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="State:" variant="standard" /> 
+        <TextField className='txt-width'  value={statePerInfo } onChange={formChange}  id="standard-basic" label="State:" variant="standard" /> 
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="ZIP Code:" variant="standard" />
+        <TextField className='txt-width'   value={ zipcodePerInfo} onChange={formChange} id="standard-basic" label="ZIP Code:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Phone Number:" variant="standard" /> 
+        <TextField className='txt-width'   value={phoneNoPerInfo} onChange={formChange} id="standard-basic" label="Phone Number:" variant="standard" /> 
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Email Address:" variant="standard" />
+        <TextField className='txt-width'   value={emailAddPerInfo } onChange={formChange} id="standard-basic" label="Email Address:" variant="standard" />
         </Grid>
         <Grid item xs={12}>
-        <TextField className='txt-width' id="standard-basic" label="Address:" variant="standard" /> 
+        <TextField className='txt-width'   value={addPerInfo} onChange={formChange} id="standard-basic" label="Address:" variant="standard" /> 
         </Grid>
         </Grid>
         </Grid>
@@ -63,13 +106,13 @@ const EmploymentInformationForm = () => {
 
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Emergency Contact Name:" variant="standard" />
+        <TextField className='txt-width' value={emrCnoPerInfo } onChange={formChange}  id="standard-basic" label="Emergency Contact Name:" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Relationship:" variant="standard" />
+        <TextField className='txt-width' value={RelaPerInfo } onChange={formChange}  id="standard-basic" label="Relationship:" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Phone Number:" variant="standard" /> 
+        <TextField className='txt-width'  value={emrPhoneNoPerInfo} onChange={formChange} id="standard-basic" label="Phone Number:" variant="standard" /> 
         </Grid>
         </Grid>
         </Grid>
@@ -81,16 +124,16 @@ const EmploymentInformationForm = () => {
 
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Start Date:" variant="standard" />
+        <TextField className='txt-width'  value={StartDateEmpDet } onChange={formChange} id="standard-basic" label="Start Date:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Department/Team:" variant="standard" />
+        <TextField className='txt-width' value={DeptEmpDet} onChange={formChange}  id="standard-basic" label="Department/Team:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Manager/Supervisor:" variant="standard" /> 
+        <TextField className='txt-width'  value={ ManagerEmpDet} onChange={formChange} id="standard-basic" label="Manager/Supervisor:" variant="standard" /> 
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee ID (if applicable):" variant="standard" /> 
+        <TextField className='txt-width' value={ EmpIdEmpDet} onChange={formChange}  id="standard-basic" label="Employee ID (if applicable):" variant="standard" /> 
         </Grid>
         </Grid>
         </Grid>
@@ -103,10 +146,10 @@ const EmploymentInformationForm = () => {
 
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Social Security Number:" variant="standard" />
+        <TextField className='txt-width'  value={ssNoTaxInfo } onChange={formChange} id="standard-basic" label="Social Security Number:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Department/Team:" variant="standard" />
+        <TextField className='txt-width'  value={DepTaxInfo } onChange={formChange} id="standard-basic" label="Department/Team:" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <FormGroup className='pd-top-btm'>
@@ -116,15 +159,15 @@ const EmploymentInformationForm = () => {
              <Grid container spacing={3} columns={12} className='flx-box checkbox'>
 
       <Grid item xs={4}>
-        <FormControlLabel value="Single" control={<Radio />} label="Single" />
+        <FormControlLabel  value={signleTaxInfo } onChange={formChange} control={<Radio />} label="Single" />
       </Grid> 
 
       <Grid item xs={4}>
-        <FormControlLabel value="Married" control={<Radio />} label="Married" />
+        <FormControlLabel  value={MarriedTaxInfo } onChange={formChange}  control={<Radio />} label="Married" />
       </Grid>  
 
       <Grid item xs={4}>
-        <FormControlLabel value="Head of Household" control={<Radio />} label="Head of Household" />
+        <FormControlLabel  value={headOfHouseTaxInfo } onChange={formChange} control={<Radio />} label="Head of Household" />
       </Grid>
              </Grid>
             </RadioGroup>
@@ -141,13 +184,13 @@ const EmploymentInformationForm = () => {
 
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Bank Name:" variant="standard" />
+        <TextField className='txt-width'  value={bankNameDDinfo} onChange={formChange}  id="standard-basic" label="Bank Name:" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Routing Number:" variant="standard" />
+        <TextField className='txt-width'  value={RoutNoDDinfo} onChange={formChange}  id="standard-basic" label="Routing Number:" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Account Number:" variant="standard" /> 
+        <TextField className='txt-width'  value={AccNoDDinfo} onChange={formChange}  id="standard-basic" label="Account Number:" variant="standard" /> 
         </Grid>
         </Grid>
         </Grid>
@@ -164,11 +207,11 @@ const EmploymentInformationForm = () => {
             <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
              <Grid container spacing={3} columns={12} className='flx-box checkbox'>
                 <Grid item xs={4}>
-                    <FormControlLabel value="Enroll" control={<Radio />} label="Enroll" />
+                    <FormControlLabel  value={enrollHI } onChange={formChange} control={<Radio />} label="Enroll" />
                 </Grid> 
 
                 <Grid item xs={4}>
-                    <FormControlLabel value="Decline" control={<Radio />} label="Decline" />
+                    <FormControlLabel  value={ DeclineHI} onChange={formChange}  control={<Radio />} label="Decline" />
                 </Grid>  
              </Grid>
             </RadioGroup>
@@ -182,11 +225,11 @@ const EmploymentInformationForm = () => {
             <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
              <Grid container spacing={3} columns={12} className='flx-box checkbox'>
                 <Grid item xs={4}>
-                    <FormControlLabel value="Enroll" control={<Radio />} label="Enroll" />
+                    <FormControlLabel  value={ enrollDI} onChange={formChange} control={<Radio />} label="Enroll" />
                 </Grid> 
 
                 <Grid item xs={4}>
-                    <FormControlLabel value="Decline" control={<Radio />} label="Decline" />
+                    <FormControlLabel  value={declineDI } onChange={formChange}  control={<Radio />} label="Decline" />
                 </Grid>  
              </Grid>
             </RadioGroup>
@@ -200,11 +243,11 @@ const EmploymentInformationForm = () => {
             <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
              <Grid container spacing={3} columns={12} className='flx-box checkbox'>
                 <Grid item xs={4}>
-                    <FormControlLabel value="Enroll" control={<Radio />} label="Enroll" />
+                    <FormControlLabel  value={enrollVI } onChange={formChange} control={<Radio />} label="Enroll" />
                 </Grid> 
 
                 <Grid item xs={4}>
-                    <FormControlLabel value="Decline" control={<Radio />} label="Decline" />
+                    <FormControlLabel  value={declineVI } onChange={formChange}  control={<Radio />} label="Decline" />
                 </Grid>  
              </Grid>
             </RadioGroup>
@@ -218,11 +261,11 @@ const EmploymentInformationForm = () => {
             <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
              <Grid container spacing={3} columns={12} className='flx-box checkbox'>
                 <Grid item xs={4}>
-                    <FormControlLabel value="Enroll" control={<Radio />} label="Enroll" />
+                    <FormControlLabel  value={enrollRP } onChange={formChange} control={<Radio />} label="Enroll" />
                 </Grid> 
 
                 <Grid item xs={4}>
-                    <FormControlLabel value="Decline" control={<Radio />} label="Decline" />
+                    <FormControlLabel  value={declineRP } onChange={formChange}  control={<Radio />} label="Decline" />
                 </Grid>  
              </Grid>
             </RadioGroup>
@@ -259,11 +302,11 @@ const EmploymentInformationForm = () => {
             <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
              <Grid container spacing={3} columns={12} className='flx-box checkbox'>
                 <Grid item xs={4}>
-                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                    <FormControlLabel  value={medConyes} onChange={formChange}  control={<Radio />} label="Yes" />
                 </Grid> 
 
                 <Grid item xs={4}>
-                    <FormControlLabel value="no" control={<Radio />} label="No If yes, please provide details:" />
+                    <FormControlLabel  value={ medConNo} onChange={formChange} control={<Radio />} label="No If yes, please provide details:" />
                 </Grid>  
              </Grid>
             </RadioGroup>
@@ -271,10 +314,10 @@ const EmploymentInformationForm = () => {
          </FormGroup> 
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Signature:" variant="standard" />
+        <TextField className='txt-width'  value={ conFormsign} onChange={formChange} id="standard-basic" label="Signature:" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Date:" variant="standard" />
+        <TextField className='txt-width'  value={ conFormDate} onChange={formChange} id="standard-basic" label="Date:" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <p>By signing above, I confirm that the information provided is accurate and complete to the best of my knowledge.

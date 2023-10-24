@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography, Button } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -38,7 +38,7 @@ const StepForm = () => {
       <img src={pdfimg} alt='' />
       <Typography variant='h6'>Employment information form</Typography>
       </Grid>
-      <Link to={'/employmentinformationform'}>Edit</Link>
+      <Button><Link to={'/employmentinformationform'}>Edit</Link></Button>
       </Grid>
 
       <Grid className='step-opt'>
@@ -46,7 +46,7 @@ const StepForm = () => {
       <img src={pdfimg} alt='' />
       <Typography variant='h6'>Policy 20223-06-12 Employee Manual</Typography>
       </Grid>
-      <Link to={'/policyform'}>Edit</Link>
+      <Button><Link to={'/policyform'}>Edit</Link></Button>
       </Grid>
 
       <Grid className='step-opt'>
@@ -54,7 +54,7 @@ const StepForm = () => {
       <img src={pdfimg} alt='' />
       <Typography variant='h6'>Contract 2023-04-12 Class Action Waiver Krikwood Ops</Typography>
       </Grid>
-      <Link to={'/contractform'}>Edit</Link>
+      <Button><Link to={'/contractform'}>Edit</Link></Button>
       </Grid>
 
       <Grid className='step-opt'>
@@ -62,7 +62,7 @@ const StepForm = () => {
       <img src={pdfimg} alt='' />
       <Typography variant='h6'>i-9</Typography>
       </Grid>
-      <Link to={'/eligibilityverification'}>Edit</Link>
+      <Button><Link to={'/eligibilityverification'}>Edit</Link></Button>
       </Grid>
      </Grid>
 
@@ -76,8 +76,8 @@ const StepForm = () => {
         </Grid>
        </Grid>
        <Grid className='steps'>
-        <Link className='next-btn'>Next</Link>
-        <Link className='finish-btn'>Submit</Link>
+        <Button><Link className='next-btn'>Next</Link></Button>
+        <Button><Link className='finish-btn'>Submit</Link></Button>
        </Grid>
      </Grid>
 

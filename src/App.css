@@ -468,7 +468,57 @@ ul.num-list li {
   font-weight: 600;
   margin: 0 0 30px;
 }
-
+/* Table Css  */
+.table-box {
+  padding: 0px 0 70px;
+}
+.table-box-title {
+  padding-bottom: 30px;
+}
+.table-box-title span {
+  display: block;
+}
+.table-box th, .table-box td {
+  border: 1px solid #0000004a;
+  border-spacing: 0;
+}
+.table-box table {
+  border: 1px solid #0000004a;
+  border-spacing: 0;
+}
+.table-box table th span {
+  display: block;
+  font-weight: 600;
+}
+.table-box th, .table-box td {
+  padding: 10px;
+} 
+.table-box li {
+  list-style: none !important;
+  font-size: 12px;
+  margin: 10px 0;
+}
+.table-box ul ol {
+  padding-left: 15px;
+}
+.table-box ul {
+  padding-left: 0;
+}
+.table-box td {
+  font-size: 14px;
+}
+td.bordernone {
+  border: none;
+}
+.grid-title {
+  text-align: center;
+  padding: 20px 0;
+  border: 1px solid #0000004a;
+}
+.grid-title span b {
+  padding-top: 15px;
+  display: inline-block;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px){
   .card-blk h4 {
     font-size: 18px;

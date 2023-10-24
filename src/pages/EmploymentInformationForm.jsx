@@ -1,12 +1,22 @@
 import React from 'react'
 import { Container, Grid, TextField, Typography, FormGroup, Checkbox, FormControlLabel, Button, Radio, RadioGroup, FormControl, FormLabel } from '@mui/material'
-
+import {useState} from 'react';
 
 //Images
 import mainlogo from "../assets/images/logo.png";
 import { Link } from 'react-router-dom';
 
 const EmploymentInformationForm = () => {
+
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle isActive state variable
+    setIsActive(current => !current);
+  };
+
+  const myClass = 'saveform';
+
   return (
     <Grid>
       <Grid className='form-section'>
@@ -301,7 +311,7 @@ const EmploymentInformationForm = () => {
        <Grid item xs={6}>
         <Grid className='form-btns'>
          <Link to={'/stepform'} className='cancel-btn'>Cancel</Link>
-         <Link to={'/stepform'} className='save-btn'>Save</Link>
+         <Link to={'/stepform'} id='save-value' className='save-btn'>Save</Link>
         </Grid>
        </Grid>
        </Grid>

@@ -12,6 +12,13 @@ import  bgcard03  from "../assets/images/bg-card-03.png"
 
 
 const Login = () => {
+  const formChange=()=>{
+    let emailAddLogin;
+    let passLogin;
+
+  }
+
+  
   return (
     <Grid>
     
@@ -24,10 +31,10 @@ const Login = () => {
         <Box>
         <FormGroup>
         <FormLabel>
-        <TextField id="standard-basic" label="Email Address" variant="standard" type='text' />
+        <TextField id="standard-basic" value={emailAddLogin} onChange={formChange} label="Email Address" variant="standard" type='text' />
         </FormLabel>
         <FormLabel>
-        <TextField id="standard-basic" label="Password" variant="standard" type='password' />
+        <TextField id="standard-basic" value={passLogin} onChange={formChange} label="Password" variant="standard" type='password' />
         </FormLabel>
         <Button><Link className='theme-btn' to={'/stepform'}>Login</Link></Button>
         <Button><Link className='trms-btn' to={'/'}>Terms & Conditions</Link></Button>

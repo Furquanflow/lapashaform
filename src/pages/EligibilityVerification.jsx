@@ -7,6 +7,89 @@ import mainlogo from "../assets/images/logo.png";
 import { Link } from 'react-router-dom';
 
 const EligibilityVerification = () => {
+
+  const formChange=()=>{
+    
+    let lastName;
+    let  firstName;
+    let  middle;
+    let  otheLn;
+    let  address;
+    let aptNo;
+    let  city;
+    let  state;
+    let  zipCode;
+    let  dob;
+    let  socialSno;
+    let  EmpEmail;
+    let EmpTno;
+    let  citizeOfUsa;
+    let  noncitizeOfUsa;
+    let  lawFullPr;
+    let  noncitizenAuth;
+    let  uscis;
+    let  formi94;
+    let  foreignPass;
+    let  signOfEmp;
+    let  TodayDate;
+    let  lawFullPrTextFeild;     // there was no no label so i used here random label
+    let  noncitizenAuthTextField;     // there was no no label so i used here random label
+    let  docTitle1;
+    let  issueAuth;
+    let  docNo;
+    let  expdate;
+    let  docTitle2;
+    let  issueAuth2;
+    let  docNo2;
+    let  expDate2;
+    let  docTitle3;
+    let  issueAuth3;
+    let  docNo3;
+    let  expdate3;
+    let  docTitle4;
+    let  issueAuth4;
+    let  docNo4;
+    let  expdate4;
+    let  docTitleC;
+    let  issueAuthC;
+    let  docNoC;
+    let  expdateC;
+    let addInfoC;
+    let  firstDayofEmp;
+    let  lastFirstNameOfEmp;
+    let  signOfEmpRep;
+    let  TodaySDate;
+    let  EmpBuss;
+    let  EmpBusOrg;
+    let  lNamesec1;
+    let  fNamesec1;
+    let  middleNamesec1;
+    let  signOfPre;
+    let  DatePre;
+    let  lastNamePre;
+    let  firstNamePre;
+    let  middleNamePre;
+    let  AddressPre;
+    let  cityPre;
+    let  StatePre;
+    let  ZipCodePre;
+    let  lastNameSBsec1;
+    let  firstNameSBsec1;
+    let  middleNameSBsec1;
+    let  dateOfRehireSB;
+    let  lastNameSb;
+    let  firstNameSB;
+    let  middleNameSB;
+    let  docTitleSB;
+    let  DocNoSB;
+    let  ExpDateSB;
+    let  nameOfEmpSB;
+    let  signOfEmpSB;
+    let  TodayDateSB;
+    let  clickhereSB;
+    
+
+}
   return (
      <Grid>
       <Grid className='form-section'>
@@ -48,53 +131,53 @@ const EligibilityVerification = () => {
 
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" />
+        <TextField className='txt-width' value={lastName} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="First Name (Given Name)" variant="standard" /> 
+        <TextField className='txt-width' value={firstName}  onChange={formChange}  id="standard-basic" label="First Name (Given Name)" variant="standard" /> 
         </Grid>
         </Grid>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+        <TextField className='txt-width' value={middle}  onChange={formChange}  id="standard-basic" label="Middle Initial (if any)" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Other Last Names Used (if any)" variant="standard" /> 
+        <TextField className='txt-width' value={otheLn}  onChange={formChange}  id="standard-basic" label="Other Last Names Used (if any)" variant="standard" /> 
         </Grid>
         </Grid>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Address (Street Number and Name)" variant="standard" />
+        <TextField className='txt-width' value={address}  onChange={formChange}  id="standard-basic" label="Address (Street Number and Name)" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Apt. Number (if any)" variant="standard" /> 
+        <TextField className='txt-width' value={aptNo}  onChange={formChange}  id="standard-basic" label="Apt. Number (if any)" variant="standard" /> 
         </Grid>
         </Grid>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="City or Town" variant="standard" />
+        <TextField className='txt-width' value={city}  onChange={formChange}  id="standard-basic" label="City or Town" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="State" variant="standard" /> 
+        <TextField className='txt-width' value={state}  onChange={formChange}  id="standard-basic" label="State" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="ZIP Code" variant="standard" /> 
+        <TextField className='txt-width' value={zipCode}  onChange={formChange}  id="standard-basic" label="ZIP Code" variant="standard" /> 
         </Grid>
         </Grid>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Date of Birth (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width' value={dob}  onChange={formChange}  id="standard-basic" label="Date of Birth (mm/dd/yyyy)" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="U.S. Social Security Number" variant="standard" /> 
+        <TextField className='txt-width' value={socialSno}  onChange={formChange}  id="standard-basic" label="U.S. Social Security Number" variant="standard" /> 
         </Grid>
         </Grid>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee's Email Address" variant="standard" />
+        <TextField className='txt-width' value={EmpEmail}  onChange={formChange}  id="standard-basic" label="Employee's Email Address" variant="standard" />
         </Grid>
         <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="Employee's Telephone Number" variant="standard" /> 
+        <TextField className='txt-width' value={EmpTno}  onChange={formChange}  id="standard-basic" label="Employee's Telephone Number" variant="standard" /> 
         </Grid>
         </Grid>
         </Grid>
@@ -114,25 +197,26 @@ const EligibilityVerification = () => {
       <Grid container spacing={3} columns={12} className='flx-box checkbox'>
 
       <Grid item xs={12}>
-        <FormControlLabel value="r1" control={<Radio />} label="1. A citizen of the United States" />
+        <FormControlLabel value={citizeOfUsa} onChange={formChange}  control={<Radio />} label="1. A citizen of the United States" />
       </Grid> 
 
       <Grid item xs={12}>
-        <FormControlLabel value="r2" control={<Radio />} label="2. A noncitizen national of the United States (See Instructions.)" />
+        <FormControlLabel value={noncitizeOfUsa} onChange={formChange} control={<Radio />} label="2. A noncitizen national of the United States (See Instructions.)" />
       </Grid>  
 
       <Grid item xs={6}>
-        <FormControlLabel value="r3" control={<Radio />} label="3. A lawful permanent resident (Enter USCIS or A-Number.)" />
+        <FormControlLabel value={lawFullPr} onChange={formChange} control={<Radio />} label="3. A lawful permanent resident (Enter USCIS or A-Number.)" />
       </Grid>
       <Grid item xs={6}>
-        <TextField className='txt-width' id="standard-basic" label="" variant="standard" />
+        <TextField className='txt-width' value={lawFullPrTextFeild} onChange={formChange} id="standard-basic" label="3. A lawful permanent resident (Enter USCIS or A-Number.)" variant="standard" />
+     
       </Grid>
 
       <Grid item xs={8}>
-        <FormControlLabel value="r4" control={<Radio />} label="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)" />
+        <FormControlLabel  value={noncitizenAuth} onChange={formChange} control={<Radio />} label="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)" />
       </Grid>
       <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="" variant="standard" />
+        <TextField className='txt-width' value={noncitizenAuthTextField} onChange={formChange}  id="standard-basic" label="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)" variant="standard" />
       </Grid>
         </Grid>
       </RadioGroup>
@@ -143,25 +227,25 @@ const EligibilityVerification = () => {
            <label>If you check Item Number 4., enter one of these:</label>
            <Grid container spacing={3} columns={12} className='flx-box checkbox'>
            <Grid item xs={3}>
-           <TextField className='txt-width' id="standard-basic" label="USCIS A-Number" variant="standard" />
+           <TextField className='txt-width'  value={uscis} onChange={formChange}  id="standard-basic" label="USCIS A-Number" variant="standard" />
             </Grid>
             <Grid item xs={1}>
             <Typography variant='h5'>OR</Typography>
             </Grid>
             <Grid item xs={3}>
-            <TextField className='txt-width' id="standard-basic" label="Form I-94 Admission Number" variant="standard" />
+            <TextField className='txt-width' value={formi94} onChange={formChange} id="standard-basic" label="Form I-94 Admission Number" variant="standard" />
             </Grid>
             <Grid item xs={1}>
             <Typography variant='h5'>OR</Typography>
             </Grid>
             <Grid item xs={4}>
-            <TextField className='txt-width' id="standard-basic" label="Foreign Passport Number and Country of Issuance" variant="standard" />
+            <TextField className='txt-width' value={foreignPass} onChange={formChange} id="standard-basic" label="Foreign Passport Number and Country of Issuance" variant="standard" />
             </Grid>  
             <Grid item xs={6}>
-            <TextField className='txt-width' id="standard-basic" label="Signature of Employee" variant="standard" />
+            <TextField className='txt-width' value={signOfEmp} onChange={formChange} id="standard-basic" label="Signature of Employee" variant="standard" />
             </Grid>
             <Grid item xs={6}>
-            <TextField className='txt-width' id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
+            <TextField className='txt-width' value={TodayDate} onChange={formChange} id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
             </Grid>  
           </Grid>
           <Typography variant='body' mt={5}>
@@ -188,40 +272,40 @@ const EligibilityVerification = () => {
         </Typography>
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Document Title 1" variant="standard" />
+       <TextField className='txt-width' value={docTitle1} onChange={formChange} id="standard-basic" label="Document Title 1" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Issuing Authority" variant="standard" /> 
+       <TextField className='txt-width' value={issueAuth} onChange={formChange} id="standard-basic" label="Issuing Authority" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={docNo} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={expdate} onChange={formChange}  id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Document Title 2 (if any)" variant="standard" />
+       <TextField className='txt-width' value={docTitle2} onChange={formChange}  id="standard-basic" label="Document Title 2 (if any)" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Issuing Authority" variant="standard" /> 
+       <TextField className='txt-width' value={issueAuth2} onChange={formChange}  id="standard-basic" label="Issuing Authority" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={docNo2} onChange={formChange}  id="standard-basic" label="Document Number (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={expDate2} onChange={formChange}  id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Document Title 3 (if any)" variant="standard" />
+       <TextField className='txt-width' value={docTitle3} onChange={formChange}  id="standard-basic" label="Document Title 3 (if any)" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Issuing Authority" variant="standard" /> 
+       <TextField className='txt-width' value={issueAuth3} onChange={formChange}  id="standard-basic" label="Issuing Authority" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={docNo3} onChange={formChange}  id="standard-basic" label="Document Number (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={expdate3} onChange={formChange}  id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
        </Grid>
 
        <Grid item xs={12} mt={5}>
@@ -230,16 +314,16 @@ const EligibilityVerification = () => {
         </Typography>
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Document Title 1" variant="standard" />
+       <TextField className='txt-width' value={docTitle4} onChange={formChange}  id="standard-basic" label="Document Title 4" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Issuing Authority" variant="standard" /> 
+       <TextField className='txt-width' value={issueAuth4} onChange={formChange} id="standard-basic" label="Issuing Authority" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={docNo3} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={expdate4} onChange={formChange} id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
        </Grid>
        
 
@@ -249,19 +333,19 @@ const EligibilityVerification = () => {
         </Typography>
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Document Title 1" variant="standard" />
+       <TextField className='txt-width' value={docTitleC} onChange={formChange} id="standard-basic" label="Document Title 1" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Issuing Authority" variant="standard" /> 
+       <TextField className='txt-width' value={issueAuthC} onChange={formChange} id="standard-basic" label="Issuing Authority" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={docNoC} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
+       <TextField className='txt-width' value={expdateC} onChange={formChange} id="standard-basic" label="Expiration Date (if any)" variant="standard" /> 
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Additional Information" variant="standard" />
+       <TextField className='txt-width' value={addInfoC} onChange={formChange} id="standard-basic" label="Additional Information" variant="standard" />
        </Grid>
        <Grid item xs={12}>
             <FormControlLabel control={<Checkbox />} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
@@ -281,22 +365,22 @@ const EligibilityVerification = () => {
 
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={6}>
-       <TextField className='txt-width' id="standard-basic" label="First Day of Employment (mm/dd/yyyy):" variant="standard" />
+       <TextField className='txt-width' value={firstDayofEmp} onChange={formChange} id="standard-basic" label="First Day of Employment (mm/dd/yyyy):" variant="standard" />
        </Grid>
        <Grid item xs={6}>
-       <TextField className='txt-width' id="standard-basic" label="Last Name, First Name and Title of Employer" variant="standard" /> 
+       <TextField className='txt-width' value={lastFirstNameOfEmp} onChange={formChange} id="standard-basic" label="Last Name, First Name and Title of Employer" variant="standard" /> 
        </Grid>
        <Grid item xs={6}>
-       <TextField className='txt-width' id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
+       <TextField className='txt-width' value={signOfEmpRep} onChange={formChange} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
        </Grid>
        <Grid item xs={6}>
-       <TextField className='txt-width' id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" /> 
+       <TextField className='txt-width' value={TodaySDate} onChange={formChange} id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Employer's Business or Organization Name" variant="standard" />
+       <TextField className='txt-width' value={EmpBuss} onChange={formChange} id="standard-basic" label="Employer's Business or Organization Name" variant="standard" />
        </Grid>
        <Grid item xs={12}>
-       <TextField className='txt-width' id="standard-basic" label="Employer's Business or Organization Address, City or Town, State, ZIP Code" variant="standard" /> 
+       <TextField className='txt-width' value={EmpBusOrg} onChange={formChange} id="standard-basic" label="Employer's Business or Organization Address, City or Town, State, ZIP Code" variant="standard" /> 
        </Grid>
        <Grid item xs={12}>
        <p>For reverification or rehire, complete Supplement B, Reverification and Rehire on Page 4.</p>
@@ -568,13 +652,13 @@ const EligibilityVerification = () => {
         <Grid className='text-box txt-fld-space'>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name) from Section 1." variant="standard" />
+        <TextField className='txt-width' value={lNamesec1} onChange={formChange} id="standard-basic" label="Last Name (Family Name) from Section 1." variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="First Name (Given Name) from Section 1." variant="standard" /> 
+        <TextField className='txt-width' value={fNamesec1} onChange={formChange} id="standard-basic" label="First Name (Given Name) from Section 1." variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Middle initial (if any) from Section 1." variant="standard" /> 
+        <TextField className='txt-width' value={middleNamesec1} onChange={formChange} id="standard-basic" label="Middle initial (if any) from Section 1." variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
          <p><b>Instructions:</b> This supplement must be completed by any preparer and/or translator who assists an employee in completing Section 1 
@@ -594,31 +678,31 @@ const EligibilityVerification = () => {
 
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={8}>
-       <TextField className='txt-width' id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       <TextField className='txt-width' value={signOfPre} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       <TextField className='txt-width' value={DatePre} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       <TextField className='txt-width' value={lastNamePre} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       <TextField className='txt-width' value={firstNamePre} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       <TextField className='txt-width' value={middleNamePre} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
        </Grid>
        <Grid item xs={5}>
-       <TextField className='txt-width' id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       <TextField className='txt-width' value={AddressPre} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={3}>
-       <TextField className='txt-width' id="standard-basic" label="City or Town " variant="standard" /> 
+       <TextField className='txt-width' value={cityPre} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="State" variant="standard" /> 
+       <TextField className='txt-width' value={StatePre} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="ZIP Code " variant="standard" />
+       <TextField className='txt-width' value={ZipCodePre} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
        </Grid>
 
        </Grid>
@@ -626,76 +710,37 @@ const EligibilityVerification = () => {
 
        <hr></hr>
 
-       <Grid className='text-box txt-fld-space'>
+       {/* <Grid className='text-box txt-fld-space'>
         <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
         knowledge the information is true and correct.</h3>
 
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={8}>
-       <TextField className='txt-width' id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
        </Grid>
        <Grid item xs={5}>
-       <TextField className='txt-width' id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={3}>
-       <TextField className='txt-width' id="standard-basic" label="City or Town " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="State" variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="ZIP Code " variant="standard" />
-       </Grid>
-
-       </Grid>
-       </Grid>
-
-       <hr></hr>
-
-
-       <Grid className='text-box txt-fld-space'>
-        <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
-        knowledge the information is true and correct.</h3>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-       <Grid item xs={8}>
-       <TextField className='txt-width' id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
-       </Grid>
-       <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
-       </Grid>
-       <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
-       </Grid>
-       <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
-       </Grid>
-       <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Middle Initial (if any)" variant="standard" />
-       </Grid>
-       <Grid item xs={5}>
-       <TextField className='txt-width' id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
-       </Grid>
-       <Grid item xs={3}>
-       <TextField className='txt-width' id="standard-basic" label="City or Town " variant="standard" /> 
-       </Grid>
-       <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="State" variant="standard" /> 
-       </Grid>
-       <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="ZIP Code " variant="standard" />
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
        </Grid>
 
        </Grid>
@@ -710,35 +755,74 @@ const EligibilityVerification = () => {
 
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={8}>
-       <TextField className='txt-width' id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       <TextField className='txt-width' id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
        </Grid>
        <Grid item xs={5}>
-       <TextField className='txt-width' id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={3}>
-       <TextField className='txt-width' id="standard-basic" label="City or Town " variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="State" variant="standard" /> 
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
-       <TextField className='txt-width' id="standard-basic" label="ZIP Code " variant="standard" />
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
        </Grid>
 
        </Grid>
        </Grid>
+
+       <hr></hr>
+
+
+       <Grid className='text-box txt-fld-space'>
+        <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
+        knowledge the information is true and correct.</h3>
+
+       <Grid container spacing={3} columns={12} className='flx-box'>
+       <Grid item xs={8}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       </Grid>
+       <Grid item xs={4}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       </Grid>
+       <Grid item xs={4}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       </Grid>
+       <Grid item xs={4}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       </Grid>
+       <Grid item xs={4}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       </Grid>
+       <Grid item xs={5}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       </Grid>
+       <Grid item xs={3}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
+       </Grid>
+       <Grid item xs={2}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
+       </Grid>
+       <Grid item xs={2}>
+       <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
+       </Grid>
+
+       </Grid>
+       </Grid> */}
 
        <Grid container spacing={2} columns={16} className='flx-box'>
         <Grid item xs={8}>
@@ -768,13 +852,13 @@ const EligibilityVerification = () => {
         <Grid className='text-box txt-fld-space'>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name) from Section 1." variant="standard" />
+        <TextField className='txt-width' value={lastNameSBsec1} onChange={formChange} id="standard-basic" label="Last Name (Family Name) from Section 1." variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="First Name (Given Name) from Section 1." variant="standard" /> 
+        <TextField className='txt-width' value={firstNameSBsec1} onChange={formChange} id="standard-basic" label="First Name (Given Name) from Section 1." variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Middle initial (if any) from Section 1." variant="standard" /> 
+        <TextField className='txt-width' value={middleNameSBsec1} onChange={formChange} id="standard-basic" label="Middle initial (if any) from Section 1." variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
          <p><b>Instructions:</b> This supplement replaces Section 3 on the previous version of Form I-9. Only use this page if your employee requires 
@@ -791,16 +875,16 @@ const EligibilityVerification = () => {
         <Grid className='text-box txt-fld-space'>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={2}>
-        <TextField className='txt-width' id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
+        <TextField className='txt-width' value={dateOfRehireSB} onChange={formChange} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
+        <TextField className='txt-width' value={lastNameSb} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" />
+        <TextField className='txt-width' value={firstNameSB} onChange={formChange}  id="standard-basic" label="First Name (Family Name)" variant="standard" />
         </Grid>
         <Grid item xs={2}>
-        <TextField className='txt-width' id="standard-basic" label="Middle Initial" variant="standard" /> 
+        <TextField className='txt-width' value={middleNameSB} onChange={formChange} id="standard-basic" label="Middle Initial" variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -809,13 +893,13 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Document Title" variant="standard" />
+        <TextField className='txt-width' value={docTitleSB} onChange={formChange} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+        <TextField className='txt-width' value={DocNoSB} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width' value={ExpDateSB} onChange={formChange}  id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -824,13 +908,13 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
+        <TextField className='txt-width' value={nameOfEmpSB} onChange={formChange} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
+        <TextField className='txt-width' value={signOfEmpSB} onChange={formChange} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width' value={TodayDateSB} onChange={formChange} id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
         </Grid>
 
         <Grid item xs={12} mt={4}>
@@ -839,26 +923,35 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={12}>
-            <FormControlLabel control={<Checkbox />} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
+            <FormControlLabel control={<Checkbox />} value={clickhereSB} onChange={formChange}  label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
         </Grid>
         </Grid>
         </Grid>
 
-        <hr></hr>
 
+
+
+
+{/* These section are being used By supplement b form Page. same values aree being called by multiples times below thats why
+below section are commented out */}
+
+
+
+{/*   
+<hr></hr>
         <Grid className='text-box txt-fld-space'>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={2}>
-        <TextField className='txt-width' id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" />
         </Grid>
         <Grid item xs={2}>
-        <TextField className='txt-width' id="standard-basic" label="Middle Initial" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Middle Initial" variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -867,13 +960,13 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Document Title" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -882,13 +975,13 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width'value={} onChange={formChange}  id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
         </Grid>
 
         <Grid item xs={12} mt={4}>
@@ -897,26 +990,26 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={12}>
-            <FormControlLabel control={<Checkbox />} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
+            <FormControlLabel control={<Checkbox />} value={} onChange={formChange} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
         </Grid>
         </Grid>
-        </Grid>
+        </Grid> */}
 
         <hr></hr>
 
-        <Grid className='text-box txt-fld-space'>
+        {/* <Grid className='text-box txt-fld-space'>
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={2}>
-        <TextField className='txt-width' id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Last Name (Family Name)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange}  id="standard-basic" label="Last Name (Family Name)" variant="standard" />
         </Grid>
         <Grid item xs={2}>
-        <TextField className='txt-width' id="standard-basic" label="Middle Initial" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Middle Initial" variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -925,13 +1018,13 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Document Title" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -940,13 +1033,13 @@ const EligibilityVerification = () => {
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
-        <TextField className='txt-width' id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
+        <TextField className='txt-width' value={} onChange={formChange} id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
         </Grid>
 
         <Grid item xs={12} mt={4}>
@@ -958,7 +1051,14 @@ const EligibilityVerification = () => {
             <FormControlLabel control={<Checkbox />} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
         </Grid>
         </Grid>
-        </Grid>
+        </Grid> */}
+
+
+
+
+
+
+
 
        <Grid container spacing={3} columns={12} className='btm-button'>
        <Grid item xs={6}></Grid>

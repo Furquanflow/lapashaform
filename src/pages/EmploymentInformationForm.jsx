@@ -1,16 +1,13 @@
 import React from 'react'
 import { Container, Grid, TextField, Typography, FormGroup, Checkbox, FormControlLabel, Button, Radio, RadioGroup, FormControl, FormLabel } from '@mui/material'
-
+import {useState} from 'react';
 
 //Images
 import mainlogo from "../assets/images/logo.png";
 import { Link } from 'react-router-dom';
 
 const EmploymentInformationForm = () => {
-
-
   const formChange=()=>{
-      
     let FNamePerInfo;
     let LnamePerInfo;
     let statePerInfo;
@@ -45,10 +42,7 @@ const EmploymentInformationForm = () => {
     let medConNo;
     let conFormsign;
     let conFormDate;
-    
-    
   }
-
 
   return (
     <Grid>
@@ -343,8 +337,8 @@ const EmploymentInformationForm = () => {
        <Grid item xs={6}></Grid>
        <Grid item xs={6}>
         <Grid className='form-btns'>
-         <Link to={'/stepform'} className='cancel-btn'>Cancel</Link>
-         <Link to={'/stepform'} className='save-btn'>Save</Link>
+         <Button><Link to={'/stepform'} className='cancel-btn'>Cancel</Link></Button>
+         <Button><Link to={'/stepform'} id='save-value' className='save-btn'>Save</Link></Button>
         </Grid>
        </Grid>
        </Grid>

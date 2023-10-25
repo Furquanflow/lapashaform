@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Container, FormGroup, FormLabel, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, Container, FormGroup, FormLabel, Grid, TextField, Typography } from '@mui/material'
 
 
 // Images
@@ -36,8 +36,8 @@ const Login = () => {
         <FormLabel>
         <TextField id="standard-basic" value={passLogin} onChange={formChange} label="Password" variant="standard" type='password' />
         </FormLabel>
-        <Link className='theme-btn' to={'/stepform'}>Login</Link>
-        <Link className='trms-btn' to={'/'}>Terms & Conditions</Link>
+        <Button><Link className='theme-btn' to={'/stepform'}>Login</Link></Button>
+        <Button><Link className='trms-btn' to={'/'}>Terms & Conditions</Link></Button>
         </FormGroup>
         </Box>
        </Grid>

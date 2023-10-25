@@ -388,6 +388,240 @@ const EligibilityVerification = () => {
        </Grid>
        </Grid>
 
+
+    
+    <Grid className='table-box'>   
+    <Grid container className='flx-box table-box-title'>
+        <Grid item xs={12}>
+            <Typography variant='h4'>LISTS OF ACCEPTABLE DOCUMENTS</Typography>
+            <Typography variant='body'>All documents containing an expiration date must be unexpired.</Typography>
+            <Typography variant='body'>Documents extended by the issuing authority are considered unexpired.</Typography>
+            <Typography variant='body'>Employees may present one selection from List A or a
+            combination of one selection from List B and one selection from List C.</Typography>
+            <Typography variant='body'><b>Examples of many of these documents appear in the Handbook for Employers (M-274).</b></Typography>
+        </Grid>
+    </Grid>  
+    <table>
+
+      <tr>
+        <th><Typography variant='body'>LIST A</Typography>
+        Documents that Establish Both Identity 
+        and Employment Authorization</th>
+        <th>OR</th>
+        <th><Typography variant='body'>LIST B</Typography> Documents that Establish Identity</th>
+        <th>AND</th>
+        <th><Typography variant='body'>LIST C</Typography>
+        Documents that Establish Employment
+        Authorization</th>
+      </tr>
+
+      <tr>
+        <td>1. U.S. Passport or U.S. Passport Card</td>
+        <td className='bordernone'></td>
+        <td>1. Driver's license or ID card issued by a State or
+        outlying possession of the United States
+        provided it contains a photograph or
+        information such as name, date of birth,
+        gender, height, eye color, and address</td>
+        <td className='bordernone'></td>
+        <td>A Social Security Account Number card,
+        unless the card includes one of the following
+        restrictions:
+         <ul>
+         <li>(1) NOT VALID FOR EMPLOYMENT</li>
+         <li>(2) VALID FOR WORK ONLY WITH
+         INS AUTHORIZATION</li>
+          <li>(3) VALID FOR WORK ONLY WITH
+          DHS AUTHORIZATION</li>
+         </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2. Permanent Resident Card or Alien
+        Registration Receipt Card (Form I-551)</td>
+        <td className='bordernone'></td>
+        <td>2. ID card issued by federal, state or local
+        government agencies or entities, provided it
+        contains a photograph or information such as
+        name, date of birth, gender, height, eye color,
+        and address</td>
+        <td className='bordernone'></td>
+        <td>2. Certification of report of birth issued by the
+        Department of State (Forms DS-1350,
+          FS-545, FS-240)</td>
+      </tr>
+
+      <tr>
+        <td>3. Foreign passport that contains a
+        temporary I-551 stamp or temporary
+        I-551 printed notation on a machinereadable immigrant visa</td>
+        <td className='bordernone'></td>
+        <td>3. School ID card with a photograph</td>
+        <td className='bordernone'></td>
+        <td>3. Original or certified copy of birth certificate
+        issued by a State, county, municipal
+        authority, or territory of the United States
+        bearing an official seal</td>
+      </tr>
+
+      <tr>
+        <td>4. Employment Authorization Document
+        that contains a photograph (Form I-766)</td>
+        <td className='bordernone'></td>
+        <td>4. Voter's registration card</td>
+        <td className='bordernone'></td>
+        <td>4. Native American tribal document</td>
+      </tr>
+
+      <tr>
+        <td>5. For an individual temporarily authorized
+        to work for a specific employer because
+        of his or her status or parole:
+         <ul>
+          <li>a. Foreign passport; and</li>
+          <li>b. Form I-94 or Form I-94A that has
+          the following:</li>
+          <ol>
+           <li>(1) The same name as the
+           passport; and</li>
+           <li>(2) An endorsement of the
+           individual's status or parole as
+           long as that period of
+           endorsement has not yet
+           expired and the proposed
+           employment is not in conflict
+           with any restrictions or
+           limitations identified on the form.</li>
+          </ol>
+         </ul>
+        </td>
+        <td className='bordernone'></td>
+        <td>5. U.S. Military card or draft record</td>
+        <td className='bordernone'></td>
+        <td>5. U.S. Citizen ID Card (Form I-197)</td>
+      </tr>
+
+      <tr>
+        <td>6. Passport from the Federated States of
+        Micronesia (FSM) or the Republic of the
+        Marshall Islands (RMI) with Form I-94 or
+        Form I-94A indicating nonimmigrant
+        admission under the Compact of Free
+        Association Between the United States
+        and the FSM or RMI</td>
+        <td className='bordernone'></td>
+        <td>6. Military dependent's ID card</td>
+        <td className='bordernone'></td>
+        <td>6. Identification Card for Use of Resident
+        Citizen in the United States (Form I-179)</td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td>7. U.S. Coast Guard Merchant Mariner Card</td>
+        <td className='bordernone'></td>
+        <td>7. Employment authorization document
+        issued by the Department of Homeland
+        Security
+        <br></br>
+        For examples, see Section 7 and
+        Section 13 of the M-274 on
+        uscis.gov/i-9-central.
+        <br></br>
+        The Form I-766, Employment
+        Authorization Document, is a List A, Item
+        Number 4. document, not a List C
+        document.</td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td>8. Native American tribal document</td>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td>9. Driver's license issued by a Canadian
+        government authority</td>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td><b>For persons under age 18 who are 
+        unable to present a document 
+        listed above:</b></td>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td>10. School record or report card</td>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td>11. Clinic, doctor, or hospital record</td>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+      </tr>
+
+      <tr>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+        <td>12. Day-care or nursery school record</td>
+        <td className='bordernone'></td>
+        <td className='bordernone'></td>
+      </tr>
+
+
+    </table>
+
+    <Grid className='grid-title'>
+    <Typography variant='h4'>Acceptable Receipts</Typography>
+    <Typography variant='body'>May be presented in lieu of a document listed above for a temporary period. 
+    For receipt validity dates, see the M-274. </Typography>
+    <table>
+  <tr>
+    <td>
+     <ul>
+     <li>● Receipt for a replacement of a lost,
+     stolen, or damaged List A document.</li>
+      <li>● Form I-94 issued to a lawful
+      permanent resident that contains an
+      I-551 stamp and a photograph of the
+      individual.</li>
+      <li>● Form I-94 with “RE” notation or
+      refugee stamp issued to a refugee.</li>
+     </ul>
+    </td>
+    <td className='bordernone'><b>OR</b></td>
+    <td> Receipt for a replacement of a lost, stolen, or 
+    damaged List B document.</td>
+    <td className='bordernone'></td>
+    <td className='bordernone'>Receipt for a replacement of a lost, stolen, or 
+    damaged List C document.</td>
+  </tr>
+    </table>
+    <Typography variant='body'><b>*Refer to the Employment Authorization Extensions page on I-9 Central for more information.</b></Typography>
+   </Grid>
+    </Grid>
+    
+
+
         
 
         <Grid container spacing={2} columns={16} className='flx-box'>
@@ -830,8 +1064,8 @@ below section are commented out */}
        <Grid item xs={6}></Grid>
        <Grid item xs={6}>
         <Grid className='form-btns'>
-         <Link to={'/stepform'} className='cancel-btn'>Cancel</Link>
-         <Link to={'/stepform'} className='save-btn'>Save</Link>
+         <Button><Link to={'/stepform'} className='cancel-btn'>Cancel</Link></Button>
+         <Button><Link to={'/stepform'} className='save-btn'>Save</Link></Button>
         </Grid>
        </Grid>
        </Grid>

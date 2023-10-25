@@ -55,6 +55,7 @@ const PolicyForm = () => {
       <Grid className="form-section">
         <Container>
           <Grid className="form-inner">
+
             <Grid className="company-logos">
               <Grid container spacing={3} columns={12} className="flx-box">
                 <Grid item xs={4}>
@@ -3388,8 +3389,8 @@ const PolicyForm = () => {
        <Grid item xs={6}></Grid>
        <Grid item xs={6}>
         <Grid className='form-btns'>
-         <Link to={'/stepform'} className='cancel-btn'>Cancel</Link>
-         <Link to={'/stepform'} className='save-btn'>Save</Link>
+         <Button><Link to={'/stepform'} className='cancel-btn'>Cancel</Link></Button>
+         <Button><Link to={'/stepform'} className='save-btn'>Save</Link></Button>
         </Grid>
        </Grid>
        </Grid>

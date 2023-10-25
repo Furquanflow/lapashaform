@@ -12,23 +12,42 @@ import EmploymentInformationForm from "../pages/EmploymentInformationForm";
 import ContractForm from "../pages/ContractForm";
 import PolicyForm from "../pages/PolicyForm";
 
-const LapashaRoutes = () => {
+const LapashaRoutes = ({ formData, onForm }) => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/eligibilityverification" element={<EligibilityVerification />} />
-        <Route path="/eligibilityverificationview" element={<EligibilityVerificationView />} />
-        <Route path="/employmentinformationform" element={<EmploymentInformationForm />} />
-        <Route path="/contractform" element={<ContractForm />} />
-        <Route path="/policyform" element={<PolicyForm />} /> 
+        <Route
+          path="/eligibilityverification"
+          element={
+            <EligibilityVerification data={formData} formChange={onForm} />
+          }
+        />
+        <Route
+          path="/eligibilityverificationview"
+          element={<EligibilityVerificationView />}
+        />
+        <Route
+          path="/employmentinformationform"
+          element={
+            <EmploymentInformationForm data={formData} formChange={onForm} />
+          }
+        />
+        <Route
+          path="/contractform"
+          element={<ContractForm data={formData} formChange={onForm} />}
+        />
+        <Route
+          path="/policyform"
+          element={<PolicyForm data={formData} formChange={onForm} />}
+        />
         <Route path="/acceptabledocuments" element={<AcceptableDocuments />} />
         <Route path="/supplementa" element={<SupplementA />} />
         <Route path="/supplementb" element={<SupplementB />} />
         <Route path="/login" element={<Login />} />
         <Route path="/stepform" element={<StepForm />} />
       </Routes>
-    </BrowserRouter> 
+    </BrowserRouter>
   );
 };
 

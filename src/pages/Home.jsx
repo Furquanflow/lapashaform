@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material'
+import { Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 
 // images
@@ -21,7 +21,7 @@ const Home = () => {
         <Grid className='image-card'><img src={companylogo01}></img></Grid>
         <Typography variant='h4'>LaPasha lounge and Grill</Typography>
         <Typography variant='p'>kirkwood ops</Typography>
-        <Link className='theme-btn' to={'/login'}>Get Started</Link>
+        <Button><Link className='theme-btn' to={'/login'}>Get Started</Link></Button>
        </Grid>
        </Grid>
        <Grid item xs={4}>
@@ -29,7 +29,7 @@ const Home = () => {
         <Grid className='image-card'><img src={companylogo02}></img></Grid>
         <Typography variant='h4'>LaPasha</Typography>
         <Typography variant='p'>kirkwood ops</Typography>
-        <Link className='theme-btn' to={'/login'}>Get Started</Link>
+        <Button><Link className='theme-btn' to={'/login'}>Get Started</Link></Button>
        </Grid>
        </Grid>
        <Grid item xs={4}>
@@ -37,7 +37,7 @@ const Home = () => {
         <Grid className='image-card'><img src={companylogo03}></img></Grid>
         <Typography variant='h4'>Grill</Typography>
         <Typography variant='p'>kirkwood ops</Typography>
-        <Link className='theme-btn' to={'/login'}>Get Started</Link>
+        <Button><Link className='theme-btn' to={'/login'}>Get Started</Link></Button>
        </Grid>
        </Grid>
 

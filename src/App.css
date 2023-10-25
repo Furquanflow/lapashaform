@@ -1,19 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 @font-face {
-  font-family: 'itc-avant-garde-gothic-std-bold';
-  src: url("../src/assets/fonts/itc-avant-garde-gothic-std-bold.otf") format("opentype");
+  font-family: "itc-avant-garde-gothic-std-bold";
+  src: url("../src/assets/fonts/itc-avant-garde-gothic-std-bold.otf")
+    format("opentype");
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #000;
-  background-color: #D6EFF6;
+  background-color: #d6eff6;
 }
-h4, h5, h6, p, span, input, label, textarea, select {
-  font-family: 'Poppins', sans-serif !important;
+h4,
+h5,
+h6,
+p,
+span,
+input,
+label,
+textarea,
+select {
+  font-family: "Poppins", sans-serif !important;
   font-weight: 500;
-} 
-h1, h2, h3, h4 {
-  font-family: 'itc-avant-garde-gothic-std-bold' !important;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "itc-avant-garde-gothic-std-bold" !important;
 }
 .form-section {
   padding: 50px 0;
@@ -23,7 +35,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 10px 2px #0000002e !important;
   border-radius: 20px !important;
   padding: 60px;
-}  
+}
 .flx-box {
   align-items: center;
 }
@@ -56,7 +68,7 @@ img.brandname {
   margin: 0 0 50px;
 }
 .red-link {
-  color: #F90000;
+  color: #f90000;
 }
 .txt-width {
   width: 100%;
@@ -64,10 +76,10 @@ img.brandname {
 .txt-fld-space .flx-box {
   padding: 14px 0;
 }
-input[type=date]:required:invalid::-webkit-datetime-edit {
+input[type="date"]:required:invalid::-webkit-datetime-edit {
   color: transparent;
 }
-input[type=date]:focus::-webkit-datetime-edit {
+input[type="date"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 .checkbox .MuiFormControlLabel-label {
@@ -129,19 +141,19 @@ input[type=date]:focus::-webkit-datetime-edit {
   margin: 10px 0;
 }
 .theme-btn {
-  background-color: #B49A53;
+  background-color: #b49a53;
   color: #fff;
   text-decoration: none;
   display: inline-block;
   padding: 10px 50px;
   border-radius: 30px;
   margin-top: 18px;
-  border: 2px solid #B49A53;
+  border: 2px solid #b49a53;
 }
 .theme-btn:hover {
   background-color: transparent;
-  color: #B49A53;
-  border-color: #B49A53;
+  color: #b49a53;
+  border-color: #b49a53;
 }
 
 .login-blk {
@@ -158,11 +170,11 @@ input[type=date]:focus::-webkit-datetime-edit {
 }
 .login-blk h2 {
   text-align: left;
-  color: #D7DBE7;
+  color: #d7dbe7;
   margin: 0 0 20px;
 }
 a.trms-btn {
-  color: #353A48;
+  color: #353a48;
   margin-top: 20px;
 }
 .login-pg {
@@ -204,7 +216,7 @@ img.bgcard1 {
   position: relative;
 }
 .step-flx span {
-  background-color: #1B1919;
+  background-color: #1b1919;
   color: #fff;
   width: 55px;
   height: 55px;
@@ -220,11 +232,11 @@ img.bgcard1 {
   font-size: 18px;
 }
 .step-flx::before {
-  content: '';
+  content: "";
   position: absolute;
   right: -65px;
-  border-bottom: 2px solid #CBCBCB;
-  border-right: 2px solid #CBCBCB;
+  border-bottom: 2px solid #cbcbcb;
+  border-right: 2px solid #cbcbcb;
   width: 40px;
   height: 40px;
   transform: rotate(-45deg);
@@ -236,7 +248,7 @@ img.bgcard1 {
   padding: 30px 0;
 }
 .step-active span {
-  background-color: #E5252A;
+  background-color: #e5252a;
 }
 .step-opt {
   box-shadow: 0px 10px 60px 0px #00000014;
@@ -262,7 +274,7 @@ img.bgcard1 {
   font-weight: 600;
 }
 .step-opt a {
-  background-color: #1B1919;
+  background-color: #1b1919;
   color: #fff;
   text-decoration: none;
   padding: 15px 60px;
@@ -273,15 +285,15 @@ img.bgcard1 {
   opacity: 1;
 }
 .step-opt-active a {
-  background-color: #B49A53;
-} 
+  background-color: #b49a53;
+}
 .btm-nxt-sec {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .file-upload {
-  border: 2px dashed #B49A53;
+  border: 2px dashed #b49a53;
   display: flex;
   align-items: center;
   position: relative;
@@ -328,7 +340,7 @@ a.next-btn {
   background-color: #b49a53;
 }
 a.finish-btn {
-  background-color: #41403E;
+  background-color: #41403e;
 }
 .form-btns {
   display: flex;
@@ -343,13 +355,23 @@ a.finish-btn {
   padding: 15px 0;
   border-radius: 30px;
 }
+.save-btn {
+  margin-left: 10px !important;
+  text-decoration: none !important; 
+  color: #fff  !important;
+  min-width: 150px !important;
+  text-align: center !important;
+  padding: 15px 0 !important;
+  border-radius: 30px !important;
+  background-color: #b49a53 !important;
+
+}
 a.save-btn {
   background-color: #b49a53;
 }
 a.cancel-btn {
-  background-color: #41403E;
+  background-color: #41403e;
 }
-
 
 .label-name {
   font-size: 14px;
@@ -481,7 +503,8 @@ ul.num-list li {
 .table-box-title span {
   display: block;
 }
-.table-box th, .table-box td {
+.table-box th,
+.table-box td {
   border: 1px solid #0000004a;
   border-spacing: 0;
 }
@@ -493,9 +516,10 @@ ul.num-list li {
   display: block;
   font-weight: 600;
 }
-.table-box th, .table-box td {
+.table-box th,
+.table-box td {
   padding: 10px;
-} 
+}
 .table-box li {
   list-style: none !important;
   font-size: 12px;
@@ -522,171 +546,170 @@ td.bordernone {
   padding-top: 15px;
   display: inline-block;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .card-blk h4 {
     font-size: 18px;
     height: 40px;
+  }
+  .image-card img {
+    max-width: 180px;
+  }
+  .image-card {
+    height: 130px;
+  }
+  .theme-btn {
+    padding: 10px 30px;
+  }
+  .card-blk {
+    min-height: 370px;
+  }
+  .home-sec h1 {
+    font-size: 32px;
+  }
+  img.bgcard3 {
+    width: 300px !important;
+  }
+  .img-card-blk img {
+    width: 500px;
+    z-index: 0;
+  }
+  img.bgcard1 {
+    right: 140px;
+  }
+  .login-blk {
+    width: 60%;
+    z-index: 99;
+    position: relative;
+  }
+  .step-bar {
+    width: 100%;
+  }
+  .step-flx::before {
+    right: -45px;
+    width: 25px;
+    height: 25px;
+  }
+  .text-box h1 {
+    font-size: 32px;
+  }
 }
-.image-card img {
-  max-width: 180px;
+@media only screen and (min-width: 520px) and (max-width: 767px) {
 }
-.image-card {
-  height: 130px;
-}
-.theme-btn {
-  padding: 10px 30px;
-}
-.card-blk {
-  min-height: 370px;
-}
-.home-sec h1 {
-  font-size: 32px;
-}
-img.bgcard3 {
-  width: 300px !important;
-}
-.img-card-blk img {
-  width: 500px;
-  z-index: 0;
-}
-img.bgcard1 {
-  right: 140px;
-}
-.login-blk {
-  width: 60%;
-  z-index: 99;
-  position: relative;
-}
-.step-bar {
-  width: 100%;
-}
-.step-flx::before {
-  right: -45px;
-  width: 25px;
-  height: 25px;
-}
-.text-box h1 {
-  font-size: 32px;
-}
-
-}
-@media only screen and (min-width: 520px) and (max-width: 767px){}
-@media only screen and (min-width: 300px) and (max-width: 519px){
+@media only screen and (min-width: 300px) and (max-width: 519px) {
   .home-sec h1 {
     font-size: 30px !important;
   }
   .flx-box {
     display: block !important;
+  }
+  .flx-box .css-gj1fbr-MuiGrid-root {
+    max-width: 100% !important;
+  }
+  .home-sec {
+    height: auto;
+    padding: 40px 0;
+  }
+  img.bgcard3 {
+    width: 200px !important;
+  }
+  .img-card-blk img {
+    width: 330px;
+  }
+  img.bgcard1 {
+    right: 80px;
+  }
+  .login-blk {
+    width: 100%;
+    position: relative;
+    z-index: 999;
+  }
+  .login-blk h2 {
+    font-size: 46px;
+  }
+  .login-box img {
+    max-width: 35%;
+  }
+  .step-bar {
+    padding: 10px 10px;
+    width: 100%;
+  }
+  .step-flx span {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+  .step-bar h5 {
+    font-size: 13px;
+  }
+  .step-flx::before {
+    right: -13px;
+    width: 15px;
+    height: 15px;
+  }
+  .step-opt {
+    display: block;
+  }
+  .step-opt-title img {
+    width: 60px;
+    margin-right: 10px;
+  }
+  .step-opt-title h6 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .step-opt a {
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .btm-nxt-sec {
+    display: block;
+  }
+  .file-upload span img {
+    width: 40px;
+  }
+  .file-upload {
+    padding: 20px 15px;
+  }
+  .file-upload span {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  .file-upload-txt h4 {
+    font-size: 16px !important;
+  }
+  .steps {
+    margin-top: 30px;
+  }
+  .form-inner {
+    padding: 30px;
+  }
+  img.brandname {
+    width: 100%;
+  }
+  .text-box h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .text-box {
+    padding: 0px 0 20px;
+  }
+  .text-box h4 {
+    font-size: 20px;
+  }
+  .txt-fld-space .css-1osj8n2-MuiGrid-root {
+    max-width: 100%;
+  }
+  .form-btns a {
+    min-width: 120px;
+  }
+  .form-hdr {
+    display: flex !important;
+    margin-bottom: 20px;
+  }
+  ul.hdr-date li {
+    font-size: 13px;
+    line-height: 26px;
+  }
 }
-.flx-box .css-gj1fbr-MuiGrid-root {
-  max-width: 100% !important;
-}
-.home-sec {
-  height: auto;
-  padding: 40px 0;
-}
-img.bgcard3 {
-  width: 200px !important;
-}
-.img-card-blk img {
-  width: 330px;
-}
-img.bgcard1 {
-  right: 80px;
-}
-.login-blk {
-  width: 100%;
-  position: relative;
-  z-index: 999;
-}
-.login-blk h2 {
-  font-size: 46px;
-}
-.login-box img {
-  max-width: 35%;
-}
-.step-bar {
-  padding: 10px 10px;
-  width: 100%;
-}
-.step-flx span {
-  width: 30px;
-  height: 30px;
-  font-size: 12px;
-  margin-right: 4px;
-}
-.step-bar h5 {
-  font-size: 13px;
-}
-.step-flx::before {
-  right: -13px;
-  width: 15px;
-  height: 15px;
-}
-.step-opt {
-  display: block;
-}
-.step-opt-title img {
-  width: 60px;
-  margin-right: 10px;
-}
-.step-opt-title h6 {
-  font-size: 18px;
-  line-height: 22px;
-}
-.step-opt a {
-  display: inline-block;
-  margin-top: 20px;
-}
-.btm-nxt-sec {
-  display: block;
-}
-.file-upload span img {
-  width: 40px;
-}
-.file-upload {
-  padding: 20px 15px;
-}
-.file-upload span {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
-}
-.file-upload-txt h4 {
-  font-size: 16px !important;
-}
-.steps {
-  margin-top: 30px;
-}
-.form-inner {
-  padding: 30px;
-}
-img.brandname {
-  width: 100%;
-}
-.text-box h1 {
-  font-size: 24px;
-  margin: 0;
-}
-.text-box {
-  padding: 0px 0 20px;
-}
-.text-box h4 {
-  font-size: 20px;
-}
-.txt-fld-space .css-1osj8n2-MuiGrid-root {
-  max-width: 100%;
-}
-.form-btns a {
-  min-width: 120px;
-}
-.form-hdr {
-  display: flex !important;
-  margin-bottom: 20px;
-}
-ul.hdr-date li {
-  font-size: 13px;
-  line-height: 26px;
-}
-
-} 

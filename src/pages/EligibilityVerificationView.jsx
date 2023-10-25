@@ -1,303 +1,458 @@
-import React from 'react'
-import { Container, Grid, TextField, Typography, FormGroup, Checkbox, FormControlLabel, Button, Radio, RadioGroup, FormControl, FormLabel } from '@mui/material'
-
+import React from "react";
+import {
+  Container,
+  Grid,
+  Typography,
+  FormGroup,
+  Button,
+  RadioGroup,
+  FormControl,
+} from "@mui/material";
 
 //Images
 import mainlogo from "../assets/images/logo.png";
 import companylogo01 from "../assets/images/logo01.png";
 import companylogo02 from "../assets/images/logo02.png";
 import companylogo03 from "../assets/images/logo03.png";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const EligibilityVerificationView = () => {
   return (
     <Grid>
-      <Grid className='form-section'>
-       <Container>
-       
-        <Grid className='form-inner'>
+      <Grid className="form-section">
+        <Container>
+          <Grid className="form-inner">
+            <Grid container spacing={2} columns={12} className="flx-box">
+              <Grid item xs={6}>
+                <img className="brandname" src={mainlogo} alt="" />
+              </Grid>
+              <Grid item xs={6}></Grid>
+            </Grid>
 
-        <Grid container spacing={2} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-            <img className="brandname" src={mainlogo} alt="" />
-        </Grid>
-        <Grid item xs={6}>
-            
-        </Grid>
-        </Grid>
+            <Grid className="text-box">
+              <h1>Company Name New Employee Onboarding Form</h1>
+            </Grid>
 
-        <Grid className='text-box'>
-         <h1>Company Name New Employee Onboarding Form</h1>
-        </Grid>
+            <hr></hr>
 
-        <hr></hr>
+            <Grid className="text-box txt-fld-space">
+              <h4>Personal Information: </h4>
 
-        <Grid className='text-box txt-fld-space'>
-         <h4>Personal Information: </h4>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Full Name:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    City:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    State:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    ZIP Code:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Phone Number:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Email Address:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Address:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
 
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Full Name:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>City:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}> 
-        <Typography className='label-name' variant='label'>State:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>ZIP Code:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}> 
-        <Typography className='label-name' variant='label'>Phone Number:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Email Address:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={12}> 
-        <Typography className='label-name' variant='label'>Address:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-        </Grid>
+            <hr></hr>
 
-        <hr></hr>
+            <Grid className="text-box txt-fld-space">
+              <h4>Emergency Contact Information:</h4>
 
-        <Grid className='text-box txt-fld-space'>
-         <h4>Emergency Contact Information:</h4>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Emergency Contact Name:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Relationship:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Phone Number:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-         <h4>Employment Details:</h4>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Start Date:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Department/Team:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Manager/Supervisor:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}> 
-        <Typography className='label-name' variant='label'>Employee ID (if applicable):</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-
-        <Grid className='text-box txt-fld-space'>
-         <h4>Tax Information:</h4>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Social Security Number:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Department/Team:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={12}>
-        <FormGroup className='pd-top-btm'>
-          <FormControl>
-           <label>Federal Tax Withholding (W-4) Status:</label>
-            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-             <Grid container spacing={3} columns={12} className='flx-box checkbox'>
-
-      <Grid item xs={4}>
-      <Typography className='input-value' variant='body'>Single</Typography>
-      </Grid> 
-
-             </Grid>
-            </RadioGroup>
-          </FormControl>
-         </FormGroup> 
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-         <h4>Direct Deposit Information:</h4>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Bank Name:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Routing Number:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Account Number:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-         <h4>Benefit Elections:</h4>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <FormGroup className='pd-top-btm'>
-          <FormControl>
-           <label>Health Insurance:</label>
-            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-             <Grid container spacing={3} columns={12} className='flx-box checkbox'>
+              <Grid container spacing={3} columns={12} className="flx-box">
                 <Grid item xs={4}>
-                    <Typography className='input-value' variant='body'>Enroll</Typography>
-                </Grid> 
-  
-             </Grid>
-            </RadioGroup>
-          </FormControl>
-         </FormGroup> 
-        </Grid>
-        <Grid item xs={6}>
-        <FormGroup className='pd-top-btm'>
-          <FormControl>
-           <label>Dental Insurance:</label>
-            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-             <Grid container spacing={3} columns={12} className='flx-box checkbox'>
-
+                  <Typography className="label-name" variant="label">
+                    Emergency Contact Name:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
                 <Grid item xs={4}>
-                    <Typography className='input-value' variant='body'>Decline</Typography>
-                </Grid>  
-             </Grid>
-            </RadioGroup>
-          </FormControl>
-         </FormGroup> 
-        </Grid>
-        <Grid item xs={6}>
-        <FormGroup className='pd-top-btm'>
-          <FormControl>
-           <label>Vision Insurance:</label>
-            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-             <Grid container spacing={3} columns={12} className='flx-box checkbox'>
+                  <Typography className="label-name" variant="label">
+                    Relationship:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
                 <Grid item xs={4}>
-                <Typography className='input-value' variant='body'>Decline</Typography>
-                </Grid> 
+                  <Typography className="label-name" variant="label">
+                    Phone Number:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
 
-             </Grid>
-            </RadioGroup>
-          </FormControl>
-         </FormGroup> 
-        </Grid>
-        <Grid item xs={6}>
-        <FormGroup className='pd-top-btm'>
-          <FormControl>
-           <label>Retirement Plan:</label>
-            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-             <Grid container spacing={3} columns={12} className='flx-box checkbox'>
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Employment Details:</h4>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Start Date:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Department/Team:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Manager/Supervisor:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Employee ID (if applicable):
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Tax Information:</h4>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Social Security Number:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Department/Team:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <FormGroup className="pd-top-btm">
+                    <FormControl>
+                      <label>Federal Tax Withholding (W-4) Status:</label>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="r1"
+                        name="radio-buttons-group"
+                      >
+                        <Grid
+                          container
+                          spacing={3}
+                          columns={12}
+                          className="flx-box checkbox"
+                        >
+                          <Grid item xs={4}>
+                            <Typography className="input-value" variant="body">
+                              Single
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Direct Deposit Information:</h4>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
                 <Grid item xs={4}>
-                    <Typography className='input-value' variant='body'>Enroll</Typography>
-                </Grid> 
- 
-             </Grid>
-            </RadioGroup>
-          </FormControl>
-         </FormGroup> 
-        </Grid>
-        </Grid>
-        </Grid>
- 
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space form-points'>
-         <h4>Acknowledgment of Company Policies:</h4>
-         <p>I acknowledge that I have received and read the following company policies and agree to abide by them:</p>
-         <ul>
-          <li>Employee Handbook</li>
-          <li>Code of Conduct</li>
-          <li>Confidentiality Agreement</li>
-          <li>Safety Guidelines</li>
-         </ul>
-        </Grid>
-
-
-        <hr></hr>
-
-
-        <Grid className='text-box txt-fld-space'>
-         <h4>Additional Information:</h4>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={12}>
-        <FormGroup className='pd-top-btm'>
-          <FormControl>
-           <label>Do you have any allergies or medical conditions that the company should be aware of?</label>
-            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-             <Grid container spacing={3} columns={12} className='flx-box checkbox'>
-
+                  <Typography className="label-name" variant="label">
+                    Bank Name:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
                 <Grid item xs={4}>
-                <Typography className='input-value' variant='body'>No If yes, please provide details:</Typography>
-                </Grid>  
-             </Grid>
-            </RadioGroup>
-          </FormControl>
-         </FormGroup> 
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Signature:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Date:</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={12}>
-        <p>By signing above, I confirm that the information provided is accurate and complete to the best of my knowledge.
-         I understand that I am responsible for reviewing and complying with all company policies and procedures.</p>
-         </Grid>
-        </Grid>
-        </Grid>
+                  <Typography className="label-name" variant="label">
+                    Routing Number:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Account Number:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
 
+            <hr></hr>
 
-        <hr></hr>
+            <Grid className="text-box txt-fld-space">
+              <h4>Benefit Elections:</h4>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <FormGroup className="pd-top-btm">
+                    <FormControl>
+                      <label>Health Insurance:</label>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="r1"
+                        name="radio-buttons-group"
+                      >
+                        <Grid
+                          container
+                          spacing={3}
+                          columns={12}
+                          className="flx-box checkbox"
+                        >
+                          <Grid item xs={4}>
+                            <Typography className="input-value" variant="body">
+                              Enroll
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </Grid>
+                <Grid item xs={6}>
+                  <FormGroup className="pd-top-btm">
+                    <FormControl>
+                      <label>Dental Insurance:</label>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="r1"
+                        name="radio-buttons-group"
+                      >
+                        <Grid
+                          container
+                          spacing={3}
+                          columns={12}
+                          className="flx-box checkbox"
+                        >
+                          <Grid item xs={4}>
+                            <Typography className="input-value" variant="body">
+                              Decline
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </Grid>
+                <Grid item xs={6}>
+                  <FormGroup className="pd-top-btm">
+                    <FormControl>
+                      <label>Vision Insurance:</label>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="r1"
+                        name="radio-buttons-group"
+                      >
+                        <Grid
+                          container
+                          spacing={3}
+                          columns={12}
+                          className="flx-box checkbox"
+                        >
+                          <Grid item xs={4}>
+                            <Typography className="input-value" variant="body">
+                              Decline
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </Grid>
+                <Grid item xs={6}>
+                  <FormGroup className="pd-top-btm">
+                    <FormControl>
+                      <label>Retirement Plan:</label>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="r1"
+                        name="radio-buttons-group"
+                      >
+                        <Grid
+                          container
+                          spacing={3}
+                          columns={12}
+                          className="flx-box checkbox"
+                        >
+                          <Grid item xs={4}>
+                            <Typography className="input-value" variant="body">
+                              Enroll
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </Grid>
+              </Grid>
+            </Grid>
 
-        <Grid className='text-box txt-fld-space'>
-        <p>This onboarding form covers basic employee information, tax details, direct deposit, benefit elections,
-         and acknowledgment of company policies. You can customize this form to match your company's specific onboarding
-          process and requirements. Additionally, it's important to keep sensitive information secure and compliant with
-          data protection regulations.</p>
-        </Grid>
+            <hr></hr>
 
-        <Grid mt={8} className="company-logos">
+            <Grid className="text-box txt-fld-space form-points">
+              <h4>Acknowledgment of Company Policies:</h4>
+              <p>
+                I acknowledge that I have received and read the following
+                company policies and agree to abide by them:
+              </p>
+              <ul>
+                <li>Employee Handbook</li>
+                <li>Code of Conduct</li>
+                <li>Confidentiality Agreement</li>
+                <li>Safety Guidelines</li>
+              </ul>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Additional Information:</h4>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={12}>
+                  <FormGroup className="pd-top-btm">
+                    <FormControl>
+                      <label>
+                        Do you have any allergies or medical conditions that the
+                        company should be aware of?
+                      </label>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="r1"
+                        name="radio-buttons-group"
+                      >
+                        <Grid
+                          container
+                          spacing={3}
+                          columns={12}
+                          className="flx-box checkbox"
+                        >
+                          <Grid item xs={4}>
+                            <Typography className="input-value" variant="body">
+                              No If yes, please provide details:
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Signature:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Date:
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <p>
+                    By signing above, I confirm that the information provided is
+                    accurate and complete to the best of my knowledge. I
+                    understand that I am responsible for reviewing and complying
+                    with all company policies and procedures.
+                  </p>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <p>
+                This onboarding form covers basic employee information, tax
+                details, direct deposit, benefit elections, and acknowledgment
+                of company policies. You can customize this form to match your
+                company's specific onboarding process and requirements.
+                Additionally, it's important to keep sensitive information
+                secure and compliant with data protection regulations.
+              </p>
+            </Grid>
+
+            <Grid mt={8} className="company-logos">
               <Grid container spacing={3} columns={12} className="flx-box">
                 <Grid item xs={4}>
                   <img src={companylogo01} alt="" />
@@ -2525,168 +2680,383 @@ const EligibilityVerificationView = () => {
                   I. Tipped Employees Uniforms
                 </Typography>
                 <Typography variant="body">
-                The Company will issue to each tipped employee an appropriate uniform consisting of two shirts and a jacket upon employment.  Uniforms which become unacceptable for use shall be replaced by the Company on an as-needed basis.  
+                  The Company will issue to each tipped employee an appropriate
+                  uniform consisting of two shirts and a jacket upon employment.
+                  Uniforms which become unacceptable for use shall be replaced
+                  by the Company on an as-needed basis.
                 </Typography>
                 <Typography variant="body">
-                An employee may purchase additional uniforms at cost and should contact the location manager for information.  
+                  An employee may purchase additional uniforms at cost and
+                  should contact the location manager for information.
                 </Typography>
                 <Typography variant="body">
-                Employees who misplace or damage the issued items rendering them unwearable prior to re-issue will be issued new items.  Employees who repeatedly forget, lose, or damage  their issued attire may be subject to discipline up to and including termination.
+                  Employees who misplace or damage the issued items rendering
+                  them unwearable prior to re-issue will be issued new items.
+                  Employees who repeatedly forget, lose, or damage their issued
+                  attire may be subject to discipline up to and including
+                  termination.
                 </Typography>
                 <Typography variant="body">
-                Occasionally, certain events may be hosted at a location for which there is a commemorative t-shirt or other attire available.  If the attire is required to be worn for the event, the attire will be issued to each employee working the event at no cost to the employee. If the attire is optional for the event, or for other employees wishing to purchase the attire, the employee may do so at employee’s own cost.
+                  Occasionally, certain events may be hosted at a location for
+                  which there is a commemorative t-shirt or other attire
+                  available. If the attire is required to be worn for the event,
+                  the attire will be issued to each employee working the event
+                  at no cost to the employee. If the attire is optional for the
+                  event, or for other employees wishing to purchase the attire,
+                  the employee may do so at employee’s own cost.
                 </Typography>
               </Grid>
 
               <Grid className="points-blk">
-                <Typography className="h6">
-                J.	Dress and Grooming
-                </Typography>
+                <Typography className="h6">J. Dress and Grooming</Typography>
                 <Typography variant="body">
-                The Company strives to project a professional image to customers, clients, visitors, and coworkers. The Company expects you to arrive for work with a well-groomed and professional appearance.     
+                  The Company strives to project a professional image to
+                  customers, clients, visitors, and coworkers. The Company
+                  expects you to arrive for work with a well-groomed and
+                  professional appearance.
                 </Typography>
                 <Grid className="point-blk-inn">
-                <Typography variant="body"><b>The Company has established the following guidelines as reasonable standards of cleanliness, grooming and dress for all employees:</b></Typography>
-                <ul>
-                 <li>In the interest of health and safety only closed toe shoes with rubber soles should be worn;</li>
-                 <li>General attire shall be clean, neat, in style and appropriate for the type of work being performed.  </li>
-                 <li>Clean jeans, shorts, or skirts without holes.  No cut off or rampant pants.</li>
-                 <li>Clean jeans, shorts, or skirts without holes.  No cut off or rampant pants.</li>
-                 <li>Long hair should be pulled back and out of the eyes.  Hair must be clean and pulled back if longer than chin length.</li>
-                 <li>Food handlers must wear appropriate hairnet or cap.</li>
-                 <li>Men should keep facial hair neatly trimmed.</li>
-                 <li>No excessive jewelry.</li>
-                 <li>No excessive jewelry.</li>
-                 <li>Clothing with slogans or pictures of any kind are not permitted, other than Company logo attire.</li>
-                 <li>No tattoos displaying nudity, profanity, or violence.</li>
-                </ul>
+                  <Typography variant="body">
+                    <b>
+                      The Company has established the following guidelines as
+                      reasonable standards of cleanliness, grooming and dress
+                      for all employees:
+                    </b>
+                  </Typography>
+                  <ul>
+                    <li>
+                      In the interest of health and safety only closed toe shoes
+                      with rubber soles should be worn;
+                    </li>
+                    <li>
+                      General attire shall be clean, neat, in style and
+                      appropriate for the type of work being performed.{" "}
+                    </li>
+                    <li>
+                      Clean jeans, shorts, or skirts without holes. No cut off
+                      or rampant pants.
+                    </li>
+                    <li>
+                      Clean jeans, shorts, or skirts without holes. No cut off
+                      or rampant pants.
+                    </li>
+                    <li>
+                      Long hair should be pulled back and out of the eyes. Hair
+                      must be clean and pulled back if longer than chin length.
+                    </li>
+                    <li>Food handlers must wear appropriate hairnet or cap.</li>
+                    <li>Men should keep facial hair neatly trimmed.</li>
+                    <li>No excessive jewelry.</li>
+                    <li>No excessive jewelry.</li>
+                    <li>
+                      Clothing with slogans or pictures of any kind are not
+                      permitted, other than Company logo attire.
+                    </li>
+                    <li>
+                      No tattoos displaying nudity, profanity, or violence.
+                    </li>
+                  </ul>
                 </Grid>
               </Grid>
-
             </Grid>
 
             <Grid className="points-sec">
-              <Typography variant="h5">VI. EMPLOYEE CONDUCT AND DISCIPLINARY ACTION </Typography>
-              <Grid className="points-blk">
-                <Typography className="h6">A.	Business Ethics and Conduct</Typography>
-                <Typography variant="body">
-                The Company requires employees to adhere to ethical standards in the conduct of business. All employees are expected to conduct business with integrity, to refrain from dishonest or unethical conduct, and to comply with the letter and spirit of all applicable laws.
-                </Typography>
-                <Typography variant="body">The Company’s successful business operation and reputation of is built upon the principles of fair dealing and ethical conduct of its employees. The Company’s reputation for integrity and excellence requires careful observance of the spirit and letter of all applicable laws and regulations, as well as a scrupulous regard for the highest standards of conduct and personal integrity.</Typography>
-                <Typography variant="body">The Company intends to comply with all applicable laws and regulations and expects its directors, officers, and employees to conduct business in accordance with the letter, spirit, and intent of all relevant laws and to refrain from any illegal, dishonest, or unethical conduct.</Typography>
-                <Typography variant="body"><b>In general, the use of good judgment, based on high ethical principles, will guide you with respect to lines of acceptable conduct.  If a situation arises where it is difficult to determine the proper course of action, the matter should be discussed openly with your immediate supervisor and, if necessary, with the Company Administrator for advice and consultation.</b></Typography>
-                </Grid>
+              <Typography variant="h5">
+                VI. EMPLOYEE CONDUCT AND DISCIPLINARY ACTION{" "}
+              </Typography>
               <Grid className="points-blk">
                 <Typography className="h6">
-                B.	Gifts, Favors, or Similar Items
+                  A. Business Ethics and Conduct
                 </Typography>
                 <Typography variant="body">
-                Employees should not engage in conduct or activity that may raise questions about The Company’s honesty or impartiality, or otherwise create a negative impression of The Company. Employees are expected to avoid any activity which might result in, or might reasonably be expected to create, an appearance of influence or favoritism.
+                  The Company requires employees to adhere to ethical standards
+                  in the conduct of business. All employees are expected to
+                  conduct business with integrity, to refrain from dishonest or
+                  unethical conduct, and to comply with the letter and spirit of
+                  all applicable laws.
                 </Typography>
                 <Typography variant="body">
-                Employees may not accept gifts, favors, entertainment, or payments if the offer intends to garner favoritism or influence, or may create an appearance of favoritism or influence. 
+                  The Company’s successful business operation and reputation of
+                  is built upon the principles of fair dealing and ethical
+                  conduct of its employees. The Company’s reputation for
+                  integrity and excellence requires careful observance of the
+                  spirit and letter of all applicable laws and regulations, as
+                  well as a scrupulous regard for the highest standards of
+                  conduct and personal integrity.
                 </Typography>
                 <Typography variant="body">
-                Employees are expected to conduct themselves with honesty and integrity and comply with the provisions of this policy and all applicable laws, rules and regulations of federal, state, provincial and local governments, and other appropriate private and public regulatory agencies.
+                  The Company intends to comply with all applicable laws and
+                  regulations and expects its directors, officers, and employees
+                  to conduct business in accordance with the letter, spirit, and
+                  intent of all relevant laws and to refrain from any illegal,
+                  dishonest, or unethical conduct.
                 </Typography>
                 <Typography variant="body">
-                Compliance with this policy of business ethics and conduct is the responsibility of every employee. Disregarding or failing to comply with this standard of business ethics and conduct could lead to disciplinary action, up to and including possible termination of employment.
+                  <b>
+                    In general, the use of good judgment, based on high ethical
+                    principles, will guide you with respect to lines of
+                    acceptable conduct. If a situation arises where it is
+                    difficult to determine the proper course of action, the
+                    matter should be discussed openly with your immediate
+                    supervisor and, if necessary, with the Company Administrator
+                    for advice and consultation.
+                  </b>
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                C.	Conflicts of Interest
+                  B. Gifts, Favors, or Similar Items
                 </Typography>
                 <Typography variant="body">
-                Employees have an obligation to conduct business within guidelines that prohibit actual or potential conflicts of interest. This policy establishes only the framework within which the Company wishes the business to operate. The purpose of these guidelines is to provide general direction so that employees can seek further clarification on issues related to the subject of acceptable standards of operation. Contact your supervisor for more information or questions about conflicts of interest.
+                  Employees should not engage in conduct or activity that may
+                  raise questions about The Company’s honesty or impartiality,
+                  or otherwise create a negative impression of The Company.
+                  Employees are expected to avoid any activity which might
+                  result in, or might reasonably be expected to create, an
+                  appearance of influence or favoritism.
                 </Typography>
                 <Typography variant="body">
-                Employees are expected to avoid any situation which involves or may involve a conflict between the employee’s personal interest and The Company’s interest. In all dealings with customers, competitors, vendors, or any other business contact, employees are expected to act in the best interests of The Company.
+                  Employees may not accept gifts, favors, entertainment, or
+                  payments if the offer intends to garner favoritism or
+                  influence, or may create an appearance of favoritism or
+                  influence.
                 </Typography>
                 <Typography variant="body">
-                Transactions with outside firms must be conducted within a framework established and controlled by the executive level of The Company. Business dealings with outside firms should not result in unusual gains for those firms. Unusual gain refers to bribes, product bonuses, special fringe benefits, unusual price breaks, and other windfalls designed to ultimately benefit either The Company, employee, or both.
+                  Employees are expected to conduct themselves with honesty and
+                  integrity and comply with the provisions of this policy and
+                  all applicable laws, rules and regulations of federal, state,
+                  provincial and local governments, and other appropriate
+                  private and public regulatory agencies.
                 </Typography>
                 <Typography variant="body">
-                An actual or potential conflict of interest occurs when an employee is in a position to influence a decision that may result in a personal gain for that employee or for a relative as a result of The Company's business dealings. For the purposes of this policy, a relative is any person who is related by blood or marriage, or whose relationship with the employee is similar to that of persons who are related by blood or marriage.
-                </Typography>
-                <Typography variant="body">
-                <b>No "presumption of guilt" is created by the mere existence of a relationship with outside firms. However, if employees have any influence on transactions involving purchases, contracts, or leases, it is imperative that they disclose to the supervisor and/or Company Administrator as soon as possible the existence of any actual or potential conflict of interest so that safeguards can be established to protect all parties.</b>
-                </Typography>
-                <Typography variant="body">
-                 <b>Personal gain may result not only in cases where an employee or relative has a significant ownership in a firm with which The Company does business, but also when an employee or relative receives any kickback, bribe, substantial gift, or special consideration as a result of any transaction or business dealings involving The Company.</b>
-                </Typography>
-                <Typography variant="body">
-                 <b>Employees have the responsibility to ask questions if uncertain about a particular situation, and to report suspected violations of this policy to the department supervisor. Retaliation against employees who report suspected violations will not be tolerated.</b>
-                </Typography>
-                <Typography variant="body">
-                Violations of this policy may result in disciplinary action, up to and including termination.
+                  Compliance with this policy of business ethics and conduct is
+                  the responsibility of every employee. Disregarding or failing
+                  to comply with this standard of business ethics and conduct
+                  could lead to disciplinary action, up to and including
+                  possible termination of employment.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">D.	Policy on Harassment or any other form of Unlawful Discrimination</Typography>
+                <Typography className="h6">C. Conflicts of Interest</Typography>
                 <Typography variant="body">
-                Employees are expected to conduct themselves professionally, in a manner befitting the work environment and with respect for co-workers.
+                  Employees have an obligation to conduct business within
+                  guidelines that prohibit actual or potential conflicts of
+                  interest. This policy establishes only the framework within
+                  which the Company wishes the business to operate. The purpose
+                  of these guidelines is to provide general direction so that
+                  employees can seek further clarification on issues related to
+                  the subject of acceptable standards of operation. Contact your
+                  supervisor for more information or questions about conflicts
+                  of interest.
                 </Typography>
                 <Typography variant="body">
-                Employees are expected to understand that behavior which one individual considers innocent and harmless may be regarded as harassment by another person.  Beyond being in violation of this policy, workplace harassment is against the law.  
+                  Employees are expected to avoid any situation which involves
+                  or may involve a conflict between the employee’s personal
+                  interest and The Company’s interest. In all dealings with
+                  customers, competitors, vendors, or any other business
+                  contact, employees are expected to act in the best interests
+                  of The Company.
+                </Typography>
+                <Typography variant="body">
+                  Transactions with outside firms must be conducted within a
+                  framework established and controlled by the executive level of
+                  The Company. Business dealings with outside firms should not
+                  result in unusual gains for those firms. Unusual gain refers
+                  to bribes, product bonuses, special fringe benefits, unusual
+                  price breaks, and other windfalls designed to ultimately
+                  benefit either The Company, employee, or both.
+                </Typography>
+                <Typography variant="body">
+                  An actual or potential conflict of interest occurs when an
+                  employee is in a position to influence a decision that may
+                  result in a personal gain for that employee or for a relative
+                  as a result of The Company's business dealings. For the
+                  purposes of this policy, a relative is any person who is
+                  related by blood or marriage, or whose relationship with the
+                  employee is similar to that of persons who are related by
+                  blood or marriage.
+                </Typography>
+                <Typography variant="body">
+                  <b>
+                    No "presumption of guilt" is created by the mere existence
+                    of a relationship with outside firms. However, if employees
+                    have any influence on transactions involving purchases,
+                    contracts, or leases, it is imperative that they disclose to
+                    the supervisor and/or Company Administrator as soon as
+                    possible the existence of any actual or potential conflict
+                    of interest so that safeguards can be established to protect
+                    all parties.
+                  </b>
+                </Typography>
+                <Typography variant="body">
+                  <b>
+                    Personal gain may result not only in cases where an employee
+                    or relative has a significant ownership in a firm with which
+                    The Company does business, but also when an employee or
+                    relative receives any kickback, bribe, substantial gift, or
+                    special consideration as a result of any transaction or
+                    business dealings involving The Company.
+                  </b>
+                </Typography>
+                <Typography variant="body">
+                  <b>
+                    Employees have the responsibility to ask questions if
+                    uncertain about a particular situation, and to report
+                    suspected violations of this policy to the department
+                    supervisor. Retaliation against employees who report
+                    suspected violations will not be tolerated.
+                  </b>
+                </Typography>
+                <Typography variant="body">
+                  Violations of this policy may result in disciplinary action,
+                  up to and including termination.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                E.	Definition of Harassment
+                  D. Policy on Harassment or any other form of Unlawful
+                  Discrimination
                 </Typography>
                 <Typography variant="body">
-                The legal definition of harassment is: Harassment includes any physical or verbal conduct demonstrating hostility toward a person because of his or her age, sex, race, color, religion, national origin, disability or other “legally protected status.”  According to The Company, harassment is any single incident or a pattern of behavior which entails verbal, physical, or psychological harassment and/or abuse of any nature.
+                  Employees are expected to conduct themselves professionally,
+                  in a manner befitting the work environment and with respect
+                  for co-workers.
+                </Typography>
+                <Typography variant="body">
+                  Employees are expected to understand that behavior which one
+                  individual considers innocent and harmless may be regarded as
+                  harassment by another person. Beyond being in violation of
+                  this policy, workplace harassment is against the law.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                F.	Sexual Harassment
+                  E. Definition of Harassment
                 </Typography>
                 <Typography variant="body">
-                It is illegal, and against The Company’s policy for any worker - male or female - to sexually harass or intimidate another worker by making unwelcome sexual advances or favors, or other verbal or physical conduct of a sexual nature, a condition of employment; by using a worker's submission to or rejection of such conduct as the basis for or a factor in any employment decision affecting the individual; or by creating an intimidating, hostile, or offensive work environment by engaging in such conduct.
+                  The legal definition of harassment is: Harassment includes any
+                  physical or verbal conduct demonstrating hostility toward a
+                  person because of his or her age, sex, race, color, religion,
+                  national origin, disability or other “legally protected
+                  status.” According to The Company, harassment is any single
+                  incident or a pattern of behavior which entails verbal,
+                  physical, or psychological harassment and/or abuse of any
+                  nature.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">F. Sexual Harassment</Typography>
+                <Typography variant="body">
+                  It is illegal, and against The Company’s policy for any worker
+                  - male or female - to sexually harass or intimidate another
+                  worker by making unwelcome sexual advances or favors, or other
+                  verbal or physical conduct of a sexual nature, a condition of
+                  employment; by using a worker's submission to or rejection of
+                  such conduct as the basis for or a factor in any employment
+                  decision affecting the individual; or by creating an
+                  intimidating, hostile, or offensive work environment by
+                  engaging in such conduct.
                 </Typography>
                 <Typography variant="body">
-                Sexual harassment is defined as “unwelcome” sexual advances, requests for sexual favors, or other verbal or physical conduct of a sexual nature when:
+                  Sexual harassment is defined as “unwelcome” sexual advances,
+                  requests for sexual favors, or other verbal or physical
+                  conduct of a sexual nature when:
                 </Typography>
                 <ul>
-                 <li>Submission to such conduct is made either explicitly or implicitly a term or condition of an individual’s employment; </li>
-                 <li>Submission to or rejection of such conduct by an individual is used as a basis for employment decisions affecting such individuals; or </li>
-                 <li>Such conduct has the purpose or effect of unreasonably interfering with an individual’s work performance or creating an intimidating, hostile, or offensive working environment. </li>
+                  <li>
+                    Submission to such conduct is made either explicitly or
+                    implicitly a term or condition of an individual’s
+                    employment;{" "}
+                  </li>
+                  <li>
+                    Submission to or rejection of such conduct by an individual
+                    is used as a basis for employment decisions affecting such
+                    individuals; or{" "}
+                  </li>
+                  <li>
+                    Such conduct has the purpose or effect of unreasonably
+                    interfering with an individual’s work performance or
+                    creating an intimidating, hostile, or offensive working
+                    environment.{" "}
+                  </li>
                 </ul>
                 <Typography variant="body">
-                The Company does not tolerate vulgar, abusive, humiliating or threatening language, practical jokes, or other inappropriate behavior in the workplace. 
+                  The Company does not tolerate vulgar, abusive, humiliating or
+                  threatening language, practical jokes, or other inappropriate
+                  behavior in the workplace.
                 </Typography>
                 <Typography variant="body">
-                Examples of unlawful sexual harassment may include but are not limited to; persistent comments on a worker's sexual proclivities or activities, the display or use of obscene or sexually oriented written or electronic communication, posters, photographs, computer images or drawings, unwanted and offensive physical touching, sexual advances, verbal and physical gestures through body language, and solicitation of sexual activity or favors in exchange for employment, providing a job benefit or threat of a loss of some job benefit. 
+                  Examples of unlawful sexual harassment may include but are not
+                  limited to; persistent comments on a worker's sexual
+                  proclivities or activities, the display or use of obscene or
+                  sexually oriented written or electronic communication,
+                  posters, photographs, computer images or drawings, unwanted
+                  and offensive physical touching, sexual advances, verbal and
+                  physical gestures through body language, and solicitation of
+                  sexual activity or favors in exchange for employment,
+                  providing a job benefit or threat of a loss of some job
+                  benefit.
                 </Typography>
                 <Typography variant="body">
-                The Company will not condone any sexual harassment of employees. All employees, including supervisors and managers, will be subject to discipline, including up to discharge, for any sexually harassing behavior. 
+                  The Company will not condone any sexual harassment of
+                  employees. All employees, including supervisors and managers,
+                  will be subject to discipline, including up to discharge, for
+                  any sexually harassing behavior.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                G.	Anti-Discrimination Policy
+                  G. Anti-Discrimination Policy
                 </Typography>
                 <Typography variant="body">
-                It is the policy of The Company to offer equal opportunity to every employee based on qualifications to perform the job only, without regard to race, color, religion, sex, age, national origin, disability, pregnancy, veteran status, or any other characteristic protected by law.  Positions are filled by persons best qualified by their training, experience, attitude, merit, merit ratings and other accepted determinable qualifications.
+                  It is the policy of The Company to offer equal opportunity to
+                  every employee based on qualifications to perform the job
+                  only, without regard to race, color, religion, sex, age,
+                  national origin, disability, pregnancy, veteran status, or any
+                  other characteristic protected by law. Positions are filled by
+                  persons best qualified by their training, experience,
+                  attitude, merit, merit ratings and other accepted determinable
+                  qualifications.
                 </Typography>
                 <Typography variant="body">
-                Any employees with questions or concerns about any type of discrimination in the workplace are encouraged to bring these issues to the attention of Management.  Anyone found to be engaging in any type of unlawful discrimination, policy or practice that has the effect of discriminating against any employee and or applicant for employment on the basis of race and/or retaliation in violation of Title VII will be subject to disciplinary action, up to and including termination of employment.  
+                  Any employees with questions or concerns about any type of
+                  discrimination in the workplace are encouraged to bring these
+                  issues to the attention of Management. Anyone found to be
+                  engaging in any type of unlawful discrimination, policy or
+                  practice that has the effect of discriminating against any
+                  employee and or applicant for employment on the basis of race
+                  and/or retaliation in violation of Title VII will be subject
+                  to disciplinary action, up to and including termination of
+                  employment.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                H.	How to Report Harassment or any other form of Unlawful Discrimination 
+                  H. How to Report Harassment or any other form of Unlawful
+                  Discrimination
                 </Typography>
                 <Typography variant="body">
-                The Company will not condone any harassment or any other form of unlawful discrimination of employees.  All employees, including supervisors and managers, will be subject to discipline, up to and including discharge, for any form of harassment or discrimination.
+                  The Company will not condone any harassment or any other form
+                  of unlawful discrimination of employees. All employees,
+                  including supervisors and managers, will be subject to
+                  discipline, up to and including discharge, for any form of
+                  harassment or discrimination.
                 </Typography>
                 <Typography variant="body">
-                If you believe you have been the subject of harassment or any other form of unlawful discrimination, you should bring your complaint to management without fear of retaliation.  Reporting an incident quickly will allow The Company to immediately address the complaint.  If you witness or suspect harassment or any other form of unlawful discrimination, you must immediately convey the information regarding that incident to management.  However, complaints will be accepted regardless of any delay in reporting.  
+                  If you believe you have been the subject of harassment or any
+                  other form of unlawful discrimination, you should bring your
+                  complaint to management without fear of retaliation. Reporting
+                  an incident quickly will allow The Company to immediately
+                  address the complaint. If you witness or suspect harassment or
+                  any other form of unlawful discrimination, you must
+                  immediately convey the information regarding that incident to
+                  management. However, complaints will be accepted regardless of
+                  any delay in reporting.
                 </Typography>
                 <Typography variant="body">
-                All reports of harassment or unlawful discrimination should be reported to the employee’s immediate supervisor or to Human Resources as follows:
+                  All reports of harassment or unlawful discrimination should be
+                  reported to the employee’s immediate supervisor or to Human
+                  Resources as follows:
                 </Typography>
                 <Grid container spacing={3} columns={12} className="email-blk">
                   <Grid item xs={4}>
@@ -2722,2081 +3092,3730 @@ const EligibilityVerificationView = () => {
                 </Grid>
               </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">
-                I.	Investigation Process
+                <Typography className="h6">I. Investigation Process</Typography>
+                <Typography variant="body">
+                  All complaints will be promptly and thoroughly investigated by
+                  management team, who will conduct a fair and impartial
+                  investigation.
                 </Typography>
                 <Typography variant="body">
-                All complaints will be promptly and thoroughly investigated by management team, who will conduct a fair and impartial investigation.
+                  Interim measures may be taken pending full investigation and
+                  resolution of the complaint, such as temporary reassignments,
+                  separating the alleged violator and the complainant, and/or
+                  suspension of the involved employees.
                 </Typography>
                 <Typography variant="body">
-                Interim measures may be taken pending full investigation and resolution of the complaint, such as temporary reassignments, separating the alleged violator and the complainant, and/or suspension of the involved employees.
+                  Complaints will remain confidential except where circumstances
+                  require that information be shared in order to conduct a
+                  thorough investigation.
                 </Typography>
                 <Typography variant="body">
-                Complaints will remain confidential except where circumstances require that information be shared in order to conduct a thorough investigation.
+                  Results of the investigation will be communicated to the
+                  individual who files the complaint.
                 </Typography>
                 <Typography variant="body">
-                Results of the investigation will be communicated to the individual who files the complaint.
+                  If the investigation reveals that an employee has engaged in
+                  harassment or any other form of unlawful discrimination, that
+                  individual will be subject to disciplinary action up to and
+                  including discharge.
                 </Typography>
                 <Typography variant="body">
-                If the investigation reveals that an employee has engaged in harassment or any other form of unlawful discrimination, that individual will be subject to disciplinary action up to and including discharge.
-                </Typography>
-                <Typography variant="body">
-                The Company takes the following steps when a complaint involving harassment, or any other form of unlawful discrimination is reported: 
+                  The Company takes the following steps when a complaint
+                  involving harassment, or any other form of unlawful
+                  discrimination is reported:
                 </Typography>
                 <ul>
-                 <li>Any employee who becomes aware of or who feels victimized by any form of harassment or any other form of unlawful discrimination should immediately report the alleged harassment or discrimination to his or her supervisor.  If the immediate supervisor is the source of alleged harassment or discrimination, the employee should report the problem to the upper Management.  </li>
-                 <li>The management personnel who receives a complaint of harassment or any other form of unlawful discrimination should carefully investigate the matter by interviewing the complainant, the alleged violator and obtain relevant witness statements.  Both the complaint and the investigative steps and findings should be documented as thoroughly as possible.</li>
-                 <li>Management will recommend and enforce actions to be taken</li>
+                  <li>
+                    Any employee who becomes aware of or who feels victimized by
+                    any form of harassment or any other form of unlawful
+                    discrimination should immediately report the alleged
+                    harassment or discrimination to his or her supervisor. If
+                    the immediate supervisor is the source of alleged harassment
+                    or discrimination, the employee should report the problem to
+                    the upper Management.{" "}
+                  </li>
+                  <li>
+                    The management personnel who receives a complaint of
+                    harassment or any other form of unlawful discrimination
+                    should carefully investigate the matter by interviewing the
+                    complainant, the alleged violator and obtain relevant
+                    witness statements. Both the complaint and the investigative
+                    steps and findings should be documented as thoroughly as
+                    possible.
+                  </li>
+                  <li>
+                    Management will recommend and enforce actions to be taken
+                  </li>
                 </ul>
                 <Typography variant="body">
-                Written notification of the results of the investigation and the remedial actions taken or proposed to stop the harassment or any other form of unlawful discrimination, correct its effect on the employee, and ensure that the harassment or discrimination does not recur, up to and including termination of employment, will be presented to the complainant upon the conclusion of the investigation.     
+                  Written notification of the results of the investigation and
+                  the remedial actions taken or proposed to stop the harassment
+                  or any other form of unlawful discrimination, correct its
+                  effect on the employee, and ensure that the harassment or
+                  discrimination does not recur, up to and including termination
+                  of employment, will be presented to the complainant upon the
+                  conclusion of the investigation.
                 </Typography>
                 <Typography variant="body">
-                Interviews, allegations, statements, and identities remain confidential to the extent possible and allowed by law.   
+                  Interviews, allegations, statements, and identities remain
+                  confidential to the extent possible and allowed by law.
                 </Typography>
                 <Typography variant="body">
-                The Company strictly prohibits retaliation of any kind against employees who in good faith bring harassment or any other form of unlawful discrimination complaints or assist in any associate investigation.  Violators of this policy, including by any alleged employee, will be subject to immediate termination.  Any retaliation incidents must be reported to Management.
+                  The Company strictly prohibits retaliation of any kind against
+                  employees who in good faith bring harassment or any other form
+                  of unlawful discrimination complaints or assist in any
+                  associate investigation. Violators of this policy, including
+                  by any alleged employee, will be subject to immediate
+                  termination. Any retaliation incidents must be reported to
+                  Management.
                 </Typography>
                 <Typography variant="body">
-                Individuals who present a knowingly false or frivolous claim that is proven to be untrue could be subject to civil repercussions from the falsely-accused party.   
+                  Individuals who present a knowingly false or frivolous claim
+                  that is proven to be untrue could be subject to civil
+                  repercussions from the falsely-accused party.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                J.	Accommodations under the Americans with Disabilities Act or Pregnant  Works Fairness Act 
+                  J. Accommodations under the Americans with Disabilities Act or
+                  Pregnant Works Fairness Act
                 </Typography>
                 <Typography variant="body">
-                An ADA or PWFA Reasonable Accommodation may be an option when an employee does not qualify for leave under the Company’s leave policies.  
+                  An ADA or PWFA Reasonable Accommodation may be an option when
+                  an employee does not qualify for leave under the Company’s
+                  leave policies.
                 </Typography>
                 <Typography variant="body">
-                To be considered for an accommodation under ADA, an employee must have a physical or mental impairment that substantially limits one or more major life activities and major bodily functions. Under the PWFA, an employee may be considered for an accommodation for known limitations related to pregnancy, childbirth, or related medical conditions.  
+                  To be considered for an accommodation under ADA, an employee
+                  must have a physical or mental impairment that substantially
+                  limits one or more major life activities and major bodily
+                  functions. Under the PWFA, an employee may be considered for
+                  an accommodation for known limitations related to pregnancy,
+                  childbirth, or related medical conditions.
                 </Typography>
                 <Typography variant="body">
-                To begin the ADA or PWFA accommodation process, the Employee should request an accommodation from management.  Management may require the Employee’s medical provider to complete an Accommodation Request Form and verify the alleged disability.  All medial information obtained by the Company during this process will remain confidential.
+                  To begin the ADA or PWFA accommodation process, the Employee
+                  should request an accommodation from management. Management
+                  may require the Employee’s medical provider to complete an
+                  Accommodation Request Form and verify the alleged disability.
+                  All medial information obtained by the Company during this
+                  process will remain confidential.
                 </Typography>
                 <Typography variant="body">
-                Upon receipt of the request, the Company will determine whether the accommodation can be made in accordance with applicable law and dependent upon whether the requested accommodation places an undue hardship on the Company or poses and direct threat to the safety of the Employee or others.
+                  Upon receipt of the request, the Company will determine
+                  whether the accommodation can be made in accordance with
+                  applicable law and dependent upon whether the requested
+                  accommodation places an undue hardship on the Company or poses
+                  and direct threat to the safety of the Employee or others.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                K.	Workplace Violence Prevention 
+                  K. Workplace Violence Prevention
                 </Typography>
                 <Typography variant="body">
-                The Company prohibits violence in the workplace and makes every attempt to maintain a safe workplace.  
+                  The Company prohibits violence in the workplace and makes
+                  every attempt to maintain a safe workplace.
                 </Typography>
                 <Typography variant="body">
-                For purposes of this policy, “violence” includes physically harming another, shoving, pushing, harassing, intimidating, coercing, brandishing weapons, fighting, "horseplay," or other conduct that may be dangerous to others, and threatening, or talk of engaging in those activities.  
+                  For purposes of this policy, “violence” includes physically
+                  harming another, shoving, pushing, harassing, intimidating,
+                  coercing, brandishing weapons, fighting, "horseplay," or other
+                  conduct that may be dangerous to others, and threatening, or
+                  talk of engaging in those activities.
                 </Typography>
                 <Typography variant="body">
-                This policy applies to all employees, all non-employees including customers/clients, visitors, suppliers, vendors, contractors, temporary workers, and other individuals with whom The Company’s employees come into contact with during work duties. Any of these individuals may be a victim or a violator under The Company’s policy.
+                  This policy applies to all employees, all non-employees
+                  including customers/clients, visitors, suppliers, vendors,
+                  contractors, temporary workers, and other individuals with
+                  whom The Company’s employees come into contact with during
+                  work duties. Any of these individuals may be a victim or a
+                  violator under The Company’s policy.
                 </Typography>
                 <Typography variant="body">
-                Conduct that threatens, intimidates, or coerces another employee, a resident, or a member of the public at any time, including off-duty periods, will not be tolerated. This prohibition includes all acts of harassment, including harassment that is based on an individual's sex, national origin, race, age, or any other characteristic protected by federal, state, or local law.
+                  Conduct that threatens, intimidates, or coerces another
+                  employee, a resident, or a member of the public at any time,
+                  including off-duty periods, will not be tolerated. This
+                  prohibition includes all acts of harassment, including
+                  harassment that is based on an individual's sex, national
+                  origin, race, age, or any other characteristic protected by
+                  federal, state, or local law.
                 </Typography>
                 <Typography variant="body">
-                All threats or displays of violence, both direct and indirect and whether verbal, physical or perpetuated through literature or pictures, will not be tolerated, and should be reported as soon as possible to your immediate supervisor or any other member of management. When reporting such conduct, you should be as specific and detailed as possible.
+                  All threats or displays of violence, both direct and indirect
+                  and whether verbal, physical or perpetuated through literature
+                  or pictures, will not be tolerated, and should be reported as
+                  soon as possible to your immediate supervisor or any other
+                  member of management. When reporting such conduct, you should
+                  be as specific and detailed as possible.
                 </Typography>
                 <Typography variant="body">
-                 <b>The Company encourages employees to bring their disputes or differences with other employees to the attention of their supervisors before the situation escalates into potential violence. The Company is eager to assist in the resolution of employee disputes and will not discipline employees for raising such concerns.</b>
+                  <b>
+                    The Company encourages employees to bring their disputes or
+                    differences with other employees to the attention of their
+                    supervisors before the situation escalates into potential
+                    violence. The Company is eager to assist in the resolution
+                    of employee disputes and will not discipline employees for
+                    raising such concerns.
+                  </b>
                 </Typography>
                 <Typography variant="body">
-                All suspicious individuals or activities should also be reported as soon as possible to a supervisor. Do not place yourself in peril. If you see or hear a commotion or disturbance near your workstation, do not try to intercede or see what is happening.
+                  All suspicious individuals or activities should also be
+                  reported as soon as possible to a supervisor. Do not place
+                  yourself in peril. If you see or hear a commotion or
+                  disturbance near your workstation, do not try to intercede or
+                  see what is happening.
                 </Typography>
                 <Typography variant="body">
-                In cases of workplace violence, Management may contact and involve local law enforcement authorities as necessary.
+                  In cases of workplace violence, Management may contact and
+                  involve local law enforcement authorities as necessary.
                 </Typography>
                 <Typography variant="body">
-                The Company will not tolerate any form of retaliation toward an employee who reports workplace violence. Any retaliatory incident must be reported to management. Retaliatory incidents will result in disciplinary action, up to and including termination.
+                  The Company will not tolerate any form of retaliation toward
+                  an employee who reports workplace violence. Any retaliatory
+                  incident must be reported to management. Retaliatory incidents
+                  will result in disciplinary action, up to and including
+                  termination.
                 </Typography>
                 <Typography variant="body">
-                The Company will promptly and thoroughly investigate all reports of threats or displays of violence and of suspicious individuals or activities. The identity of the individual making a report will be protected as much as is practical. In order to maintain workplace safety and the integrity of its investigation, The Company may suspend employees, either with or without pay, pending investigation.
+                  The Company will promptly and thoroughly investigate all
+                  reports of threats or displays of violence and of suspicious
+                  individuals or activities. The identity of the individual
+                  making a report will be protected as much as is practical. In
+                  order to maintain workplace safety and the integrity of its
+                  investigation, The Company may suspend employees, either with
+                  or without pay, pending investigation.
                 </Typography>
                 <Typography variant="body">
-                Failure to adhere to the established company policies and procedures will result in disciplinary action, up to and including termination.
+                  Failure to adhere to the established company policies and
+                  procedures will result in disciplinary action, up to and
+                  including termination.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                L.	Weapons Prohibition Policy 
+                  L. Weapons Prohibition Policy
                 </Typography>
                 <Typography variant="body">
-                Possession, use or sale of weapons, firearms, or explosives on work premises, while operating company machinery, equipment or vehicles for work-related purposes or while engaged in company business off premises is forbidden except where expressly authorized by the company and permitted by state and local laws.  This policy applies to all employees, including but not limited to, those who have a valid permit to carry a firearm. This policy does not apply to firearms stored in the employee's locked motor vehicle.  
+                  Possession, use or sale of weapons, firearms, or explosives on
+                  work premises, while operating company machinery, equipment or
+                  vehicles for work-related purposes or while engaged in company
+                  business off premises is forbidden except where expressly
+                  authorized by the company and permitted by state and local
+                  laws. This policy applies to all employees, including but not
+                  limited to, those who have a valid permit to carry a firearm.
+                  This policy does not apply to firearms stored in the
+                  employee's locked motor vehicle.
                 </Typography>
                 <Typography variant="body">
-                If you are aware of violations or threats of violations of this policy, you are required to report such violations or threats of violations to Human Resources immediately.  
+                  If you are aware of violations or threats of violations of
+                  this policy, you are required to report such violations or
+                  threats of violations to Human Resources immediately.
                 </Typography>
                 <Typography variant="body">
-                Violations of this policy will result in disciplinary action, up to and including discharge.
+                  Violations of this policy will result in disciplinary action,
+                  up to and including discharge.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                M.	Drug and Alcohol-Free Workplace Policy  
+                  M. Drug and Alcohol-Free Workplace Policy
                 </Typography>
                 <Typography variant="body">
-                The Company has a vital interest in maintaining a safe, healthy, and efficient working environment for its employees - a working environment as free from the use of illegal and non-prescription drugs, alcohol and unauthorized use of prescription drugs as reasonably possible.   
+                  The Company has a vital interest in maintaining a safe,
+                  healthy, and efficient working environment for its employees -
+                  a working environment as free from the use of illegal and
+                  non-prescription drugs, alcohol and unauthorized use of
+                  prescription drugs as reasonably possible.
                 </Typography>
                 <Typography variant="body">
-                Employees with drug and alcohol abuse problems make up only a fraction of the work force, and we regret any inconvenience that may be caused to other employees by the problems of a few. However, being under the influence of drugs or alcohol, and/or being intoxicated on the job, poses serious health and safety risks, not only to the user but also to all who come in contact with the user. The benefits to be derived from reducing the number of accidents and the greater safety of all the employees and residents make up for the inconvenience.  Each employee is expected and required to report to work in an appropriate mental and physical condition to perform his or her assigned duties.  
+                  Employees with drug and alcohol abuse problems make up only a
+                  fraction of the work force, and we regret any inconvenience
+                  that may be caused to other employees by the problems of a
+                  few. However, being under the influence of drugs or alcohol,
+                  and/or being intoxicated on the job, poses serious health and
+                  safety risks, not only to the user but also to all who come in
+                  contact with the user. The benefits to be derived from
+                  reducing the number of accidents and the greater safety of all
+                  the employees and residents make up for the inconvenience.
+                  Each employee is expected and required to report to work in an
+                  appropriate mental and physical condition to perform his or
+                  her assigned duties.
                 </Typography>
                 <Typography variant="body">
-                The Company defines “intoxication” pursuant to Sec. 401.013(a), Texas Labor Code.  
+                  The Company defines “intoxication” pursuant to Sec.
+                  401.013(a), Texas Labor Code.
                 </Typography>
                 <Typography variant="body">
-                Sec. 401.013.  DEFINITION OF INTOXICATION.  
+                  Sec. 401.013. DEFINITION OF INTOXICATION.
                 </Typography>
                 <Typography variant="body">
-                (a)  In this subtitle, "intoxication" means the state of:
+                  (a) In this subtitle, "intoxication" means the state of:
                 </Typography>
                 <Typography variant="body">
-                (1)  having an alcohol concentration to qualify as intoxicated under Section 49.01(2), Penal Code;  or
+                  (1) having an alcohol concentration to qualify as intoxicated
+                  under Section 49.01(2), Penal Code; or
                 </Typography>
                 <Typography variant="body">
-                (2)  not having the normal use of mental or physical faculties resulting from the voluntary introduction into the body of: 
+                  (2) not having the normal use of mental or physical faculties
+                  resulting from the voluntary introduction into the body of:
                 </Typography>
                 <Typography variant="body">
-                (A)  an alcoholic beverage, as defined by Section 1.04, Alcoholic Beverage Code;
+                  (A) an alcoholic beverage, as defined by Section 1.04,
+                  Alcoholic Beverage Code;
                 </Typography>
                 <Typography variant="body">
-                (B)  a controlled substance or controlled substance analogue, as defined by Section 481.002, Health and Safety Code;  
+                  (B) a controlled substance or controlled substance analogue,
+                  as defined by Section 481.002, Health and Safety Code;
                 </Typography>
                 <Typography variant="body">
-                (C)  a dangerous drug, as defined by Section 483.001, Health and Safety Code;
+                  (C) a dangerous drug, as defined by Section 483.001, Health
+                  and Safety Code;
                 </Typography>
                 <Typography variant="body">
-                (D)  an abusable glue or aerosol paint, as defined by Section 485.001, Health and Safety Code;  or 
+                  (D) an abusable glue or aerosol paint, as defined by Section
+                  485.001, Health and Safety Code; or
                 </Typography>
                 <Typography variant="body">
-                (E)  any similar substance, the use of which is regulated under state law.
+                  (E) any similar substance, the use of which is regulated under
+                  state law.
                 </Typography>
-                <Grid className="point-blk-inn"  mt={5}>
-                <Typography variant="h5">
-                IN ORDER TO ENSURE A SAFE, EFFICIENT AND DRUG FREE WORKPLACE, THE FOLLOWING POLICY HAS BEEN ADOPTED AND WILL BE STRICTLY ENFORCED AT ALL TIMES.
-                </Typography>
-                <ul>
-                 <li>The sale, purchase, use, possession of intoxicants, alcohol, non-prescribed narcotics, hallucinogenic drugs, marijuana, or other non-prescribed controlled substances, while on or off Company or corporate property, during the course of work <b>IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.</b></li>
-                 <li>The sale, purchase, use or possession of equipment, products and materials which are used, intended for use, or designed for the use with non-prescribed controlled substances, while on or off Company or corporate property, during the course of work <b>IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.</b></li>
-                 <li>Reporting to work or working with a measurable quantity of intoxicants, alcohol, non-prescribed narcotics, hallucinogenic drugs, marijuana or other non-prescribed controlled substances in blood or urine, while on or off Company or corporate property, <b>IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.</b></li>
-                 <li>Reporting to work or working, while on or off Company or corporate property, with a measurable quantity of prescribed or over-the-counter narcotics or drugs in blood or urine or the use of prescribed or over-the-counter narcotics or drugs, where, in the opinion of The Company such use prevents the employee from performing the duties of his or her job, or where such use poses a risk to the safety of the employee or other persons or property, <b>IS STRICTLY PROHIBITED AND MAY  BE CAUSE FOR DISMISSAL.</b>  The use of prescribed medicines while in control of any motor vehicle, equipment or machinery owned or leased by the Company or used for Company purposes, will only be allowed under the supervision of a family-authorized physician and if the physician has advised the individual that the drug or substance will NOT affect the individual's ability to safely perform his or her duties to operate any job-related machinery, equipment, or motor vehicle. An employee taking a prescribed or over-the-counter narcotic or drug must advise his or her supervisor of its use and any potential side effects. The employee may either be allowed to remain on his or her job, be required to take a leave of absence or be subjected to other appropriate action as determined by management.</li>
-                </ul>
+                <Grid className="point-blk-inn" mt={5}>
+                  <Typography variant="h5">
+                    IN ORDER TO ENSURE A SAFE, EFFICIENT AND DRUG FREE
+                    WORKPLACE, THE FOLLOWING POLICY HAS BEEN ADOPTED AND WILL BE
+                    STRICTLY ENFORCED AT ALL TIMES.
+                  </Typography>
+                  <ul>
+                    <li>
+                      The sale, purchase, use, possession of intoxicants,
+                      alcohol, non-prescribed narcotics, hallucinogenic drugs,
+                      marijuana, or other non-prescribed controlled substances,
+                      while on or off Company or corporate property, during the
+                      course of work{" "}
+                      <b>
+                        IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.
+                      </b>
+                    </li>
+                    <li>
+                      The sale, purchase, use or possession of equipment,
+                      products and materials which are used, intended for use,
+                      or designed for the use with non-prescribed controlled
+                      substances, while on or off Company or corporate property,
+                      during the course of work{" "}
+                      <b>
+                        IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.
+                      </b>
+                    </li>
+                    <li>
+                      Reporting to work or working with a measurable quantity of
+                      intoxicants, alcohol, non-prescribed narcotics,
+                      hallucinogenic drugs, marijuana or other non-prescribed
+                      controlled substances in blood or urine, while on or off
+                      Company or corporate property,{" "}
+                      <b>
+                        IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.
+                      </b>
+                    </li>
+                    <li>
+                      Reporting to work or working, while on or off Company or
+                      corporate property, with a measurable quantity of
+                      prescribed or over-the-counter narcotics or drugs in blood
+                      or urine or the use of prescribed or over-the-counter
+                      narcotics or drugs, where, in the opinion of The Company
+                      such use prevents the employee from performing the duties
+                      of his or her job, or where such use poses a risk to the
+                      safety of the employee or other persons or property,{" "}
+                      <b>
+                        IS STRICTLY PROHIBITED AND MAY BE CAUSE FOR DISMISSAL.
+                      </b>{" "}
+                      The use of prescribed medicines while in control of any
+                      motor vehicle, equipment or machinery owned or leased by
+                      the Company or used for Company purposes, will only be
+                      allowed under the supervision of a family-authorized
+                      physician and if the physician has advised the individual
+                      that the drug or substance will NOT affect the
+                      individual's ability to safely perform his or her duties
+                      to operate any job-related machinery, equipment, or motor
+                      vehicle. An employee taking a prescribed or
+                      over-the-counter narcotic or drug must advise his or her
+                      supervisor of its use and any potential side effects. The
+                      employee may either be allowed to remain on his or her
+                      job, be required to take a leave of absence or be
+                      subjected to other appropriate action as determined by
+                      management.
+                    </li>
+                  </ul>
                 </Grid>
-                <Grid className="point-blk-inn"  mt={5}>
-                <Typography variant="h5">
-                Tests
+                <Grid className="point-blk-inn" mt={5}>
+                  <Typography variant="h5">Tests</Typography>
+                  <Typography variant="body">
+                    The Company reserves the right to conduct random, no-notice
+                    testing of current employees at any time it feels such
+                    actions are appropriate.
+                  </Typography>
+                  <Typography variant="body">
+                    An employee will be required to undergo a blood test,
+                    urinalysis, "breath-analyzer" test or other diagnostic test
+                    under the following circumstances:
+                  </Typography>
+                  <ul>
+                    <li>
+                      As part of the hiring process in accordance with the
+                      pre-employment drug testing policy;
+                    </li>
+                    <li>
+                      After the occurrence of any work-related incident while on
+                      Company or corporate property or during working hours
+                      which requires medical attention other than first aid.
+                    </li>
+                  </ul>
+                  <Typography variant="body">
+                    When there is reason to believe, in the opinion of Company
+                    or corporate management, that an employee is under the
+                    influence of intoxicants, alcohol, drugs or narcotics while
+                    on Company property or during working hours or that an
+                    employee has reported to work with a measurable quantity of
+                    intoxicants, drugs or narcotics in blood or urine;
+                  </Typography>
+                  <ul>
+                    <li>As part of a random sampling of employees;</li>
+                    <li>
+                      As part of any periodic medical examination provided or
+                      required.
+                    </li>
+                  </ul>
+                </Grid>
+                <Grid className="point-blk-inn" mt={5}>
+                  <Typography variant="h5">Discipline</Typography>
+                  <Typography variant="body">
+                    Any employee who is observed coming to or returning to the
+                    job in an obviously impaired condition will be removed from
+                    the workplace immediately. Any employee who receives a
+                    non-negative test result will be placed on suspension until
+                    an alcohol/drug evaluation is completed and said employee is
+                    cleared.
+                  </Typography>
+                  <Typography variant="body">
+                    Any employee who violates any part of The Company’s drug
+                    free workplace policy may be subject to discipline up to and
+                    including discharge.
+                  </Typography>
+                  <Typography variant="body">
+                    Any employee convicted on a charge of illegal possession,
+                    use, distribution, purchase or sale of any controlled
+                    substance or alcohol, while off Company or corporate
+                    property and off duty, may be subject to discipline up to
+                    and including discharge; where The Company concludes that
+                    such conduct adversely affects services. In addition, The
+                    Company may impose discipline up to and including discharge
+                    for such off-duty conduct in the absence of a conviction
+                    where there is reasonable evidence of the commission of
+                    those acts and The Company concludes that such conduct
+                    adversely affects services.
+                  </Typography>
+                  <Typography variant="body">
+                    Any employee who is charged with a violation of any criminal
+                    drug statute must notify his or her supervisor within 5 days
+                    of such charge. Criminal drug statutes include federal,
+                    state, and local laws involving the use of drugs (including
+                    controlled substances). Failure to report a charge will
+                    result in disciplinary action including termination from
+                    employment. A charge of violating any criminal drug statute
+                    may result in disciplinary action including termination.
+                  </Typography>
+                  <Typography variant="body">
+                    An employee's refusal to submit immediately upon request to
+                    a search of his or her person and/or property or to a blood
+                    test, urinalysis, "breath-analyzer" test or other diagnostic
+                    test, or a positive result on such test(s) indicating prior
+                    use of intoxicants, alcohol, non-prescribed narcotics,
+                    hallucinogenic drugs, marijuana, or other non-prescribed
+                    controlled substances may result in disciplinary action up
+                    to and including immediate discharge.
+                  </Typography>
+                </Grid>
+                <Grid className="point-blk-inn" mt={5}>
+                  <Typography variant="h5">Search</Typography>
+                  <Typography variant="body">
+                    Where there is a reason to believe in the opinion of The
+                    Company that an employee is impaired by intoxicants, drugs
+                    or narcotics, or is in possession of any intoxicants, drugs,
+                    narcotics or equipment, products and materials which are
+                    used, intended for use, or designed for use with
+                    non-prescribed controlled substances, The Company may search
+                    any property and/or any employee’s personal property which
+                    has been brought onto employer’s property (including but not
+                    limited to vehicles, handbags, briefcases, etc.) and the
+                    employee may be requested to submit to a search by The
+                    Company representatives of his or her person and/or
+                    property.
+                  </Typography>
+                  <Typography variant="body">
+                    The property covered by this policy includes property of any
+                    nature owned, controlled, or used by The Company, including
+                    but not limited to parking lots, offices, desks, file
+                    cabinets, lockers and vehicles.
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">N. Security Inspections</Typography>
+                <Typography variant="body">
+                  The Company wishes to maintain a work environment that is free
+                  of illegal drugs, alcohol, firearms, explosives, or other
+                  improper materials. To this end, The Company prohibits the
+                  possession, transfer, sale, or use of such materials on its
+                  premises. The Company requires the cooperation of all
+                  employees in administering this policy.
                 </Typography>
-                <Typography variant="body">The Company reserves the right to conduct random, no-notice testing of current employees at any time it feels such actions are appropriate.</Typography>
-                <Typography variant="body">An employee will be required to undergo a blood test, urinalysis, "breath-analyzer" test or other diagnostic test under the following circumstances:</Typography> 
-                <ul>
-                  <li>As part of the hiring process in accordance with the pre-employment drug testing policy;</li>
-                  <li>After the occurrence of any work-related incident while on Company or corporate property or during working hours which requires medical attention other than first aid.</li>
-                 </ul>
-                 <Typography variant="body">When there is reason to believe, in the opinion of Company or corporate management, that an employee is under the influence of intoxicants, alcohol, drugs or narcotics while on Company property or during working hours or that an employee has reported to work with a measurable quantity of intoxicants, drugs or narcotics in blood or urine;</Typography>
-                 <ul>
-                  <li>As part of a random sampling of employees;</li>
-                  <li>As part of any periodic medical examination provided or required.</li>
-                 </ul>
-                 </Grid>
-                 <Grid className="point-blk-inn"  mt={5}>
-                <Typography variant="h5">
-                Discipline
+                <Typography variant="body">
+                  Desks, lockers, computers, software and other storage devices
+                  may be provided for the convenience of employees but remain
+                  the sole property of The Company. Accordingly, they, as well
+                  as any articles found within them, can be inspected by
+                  Management at any time, either with or without prior notice.
                 </Typography>
-                <Typography variant="body">Any employee who is observed coming to or returning to the job in an obviously impaired condition will be removed from the workplace immediately.  Any employee who receives a non-negative test result will be placed on suspension until an alcohol/drug evaluation is completed and said employee is cleared.</Typography>
-                <Typography variant="body">Any employee who violates any part of The Company’s drug free workplace policy may be subject to discipline up to and including discharge.</Typography>
-                <Typography variant="body">Any employee convicted on a charge of illegal possession, use, distribution, purchase or sale of any controlled substance or alcohol, while off Company or corporate property and off duty, may be subject to discipline up to and including discharge; where The Company concludes that such conduct adversely affects services. In addition, The Company may impose discipline up to and including discharge for such off-duty conduct in the absence of a conviction where there is reasonable evidence of the commission of those acts and The Company concludes that such conduct adversely affects services.</Typography> 
-                 <Typography variant="body">Any employee who is charged with a violation of any criminal drug statute must notify his or her supervisor within 5 days of such charge. Criminal drug statutes include federal, state, and local laws involving the use of drugs (including controlled substances). Failure to report a charge will result in disciplinary action including termination from employment. A charge of violating any criminal drug statute may result in disciplinary action including termination.</Typography>
-                 <Typography variant="body">An employee's refusal to submit immediately upon request to a search of his or her person and/or property or to a blood test, urinalysis, "breath-analyzer" test or other diagnostic test, or a positive result on such test(s) indicating prior use of intoxicants, alcohol, non-prescribed narcotics, hallucinogenic drugs, marijuana, or other non-prescribed controlled substances may result in disciplinary action up to and including immediate discharge.</Typography>
-                 </Grid>
-                 <Grid className="point-blk-inn"  mt={5}>
-                <Typography variant="h5">
-                Search
+                <Typography variant="body">
+                  The Company likewise wishes to discourage theft or
+                  unauthorized possession of the property of employees,
+                  employer, visitors, and residents. To facilitate enforcement
+                  of this policy, The Company or its representative may inspect
+                  not only desks and lockers but also persons entering and/or
+                  leaving the premises and any packages or other belongings. Any
+                  employee who wishes to avoid inspection of any articles or
+                  materials should not bring such items onto The Company's
+                  premises.
                 </Typography>
-                <Typography variant="body">Where there is a reason to believe in the opinion of The Company that an employee is impaired by intoxicants, drugs or narcotics, or is in possession of any intoxicants, drugs, narcotics or equipment, products and materials which are used, intended for use, or designed for use with non-prescribed controlled substances, The Company may search any property and/or any employee’s personal property which has been brought onto employer’s property (including but not limited to vehicles, handbags, briefcases, etc.) and the employee may be requested to submit to a search by The Company representatives of his or her person and/or property.</Typography>
-                <Typography variant="body">The property covered by this policy includes property of any nature owned, controlled, or used by The Company, including but not limited to parking lots, offices, desks, file cabinets, lockers and vehicles.</Typography>
-                 </Grid>
+                <Typography variant="body">
+                  Any employee who refuses to submit to a search, who fails to
+                  permit and facilitate a search, or who is found in possession
+                  of prohibited articles, will be subject to disciplinary
+                  action, up to and including discharge as well as possible
+                  criminal prosecution.
+                </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                N.	Security Inspections 
+                  O. Professional Conduct Policy
                 </Typography>
                 <Typography variant="body">
-                The Company wishes to maintain a work environment that is free of illegal drugs, alcohol, firearms, explosives, or other improper materials. To this end, The Company prohibits the possession, transfer, sale, or use of such materials on its premises. The Company requires the cooperation of all employees in administering this policy. 
+                  Employees are expected to act in a professional manner at the
+                  workplace. This extends to behavior around customers and
+                  includes all times you are engaged in work-related activities,
+                  whether on company property or at another location.
                 </Typography>
-                <Typography variant="body">
-                Desks, lockers, computers, software and other storage devices may be provided for the convenience of employees but remain the sole property of The Company. Accordingly, they, as well as any articles found within them, can be inspected by Management at any time, either with or without prior notice.  
-                </Typography>
-                <Typography variant="body">
-                The Company likewise wishes to discourage theft or unauthorized possession of the property of employees, employer, visitors, and residents. To facilitate enforcement of this policy, The Company or its representative may inspect not only desks and lockers but also persons entering and/or leaving the premises and any packages or other belongings. Any employee who wishes to avoid inspection of any articles or materials should not bring such items onto The Company's premises.
-                </Typography>
-                <Typography variant="body">
-                Any employee who refuses to submit to a search, who fails to permit and facilitate a search, or who is found in possession of prohibited articles, will be subject to disciplinary action, up to and including discharge as well as possible criminal prosecution.
-                </Typography>
-              </Grid>
-              <Grid className="points-blk">
-                <Typography className="h6">
-                O.	Professional Conduct Policy 
-                </Typography>
-                <Typography variant="body">
-                Employees are expected to act in a professional manner at the workplace. This extends to behavior around customers and includes all times you are engaged in work-related activities, whether on company property or at another location.
-                </Typography>
-                <Typography variant="body">
-                Employees must:  
-                </Typography>
+                <Typography variant="body">Employees must:</Typography>
                 <ul>
-                 <li>Refrain from horseplay and offensive or discriminatory behavior/jokes </li>
-                 <li>Follow the policies within the employee manual </li>
-                 <li>Correspond effectively with those around you </li>
-                 <li>Respect the privacy and needs of other employees and non-employees </li>
-                 <li>Examples of inappropriate conduct include, but are not limited to, the following:</li>
-                 <li>Causing physical harm to another employee </li>
-                 <li>Loud language or shouting </li>
-                 <li>Making threats or bullying others </li>
+                  <li>
+                    Refrain from horseplay and offensive or discriminatory
+                    behavior/jokes{" "}
+                  </li>
+                  <li>Follow the policies within the employee manual </li>
+                  <li>Correspond effectively with those around you </li>
+                  <li>
+                    Respect the privacy and needs of other employees and
+                    non-employees{" "}
+                  </li>
+                  <li>
+                    Examples of inappropriate conduct include, but are not
+                    limited to, the following:
+                  </li>
+                  <li>Causing physical harm to another employee </li>
+                  <li>Loud language or shouting </li>
+                  <li>Making threats or bullying others </li>
                 </ul>
                 <Typography variant="body">
-                Violations of this policy may result in disciplinary action, up to and including termination.
+                  Violations of this policy may result in disciplinary action,
+                  up to and including termination.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">
-                P.	Disciplinary Action 
+                <Typography className="h6">P. Disciplinary Action</Typography>
+                <Typography variant="body">
+                  It is the policy of The Company to take appropriate
+                  disciplinary action when employees are found to have violated
+                  company policies, procedures, work rules, or otherwise conduct
+                  themselves in an unprofessional or inappropriate manner.
                 </Typography>
                 <Typography variant="body">
-                It is the policy of The Company to take appropriate disciplinary action when employees are found to have violated company policies, procedures, work rules, or otherwise conduct themselves in an unprofessional or inappropriate manner. 
+                  Appropriate disciplinary action may involve progressive
+                  disciplinary measures or may result in immediate discharge.
+                  Nothing in this policy changes the at-will nature of the
+                  employment relationship. The Company’s policies, procedures,
+                  and work rules outlined in this employee manual are not
+                  all-inclusive and may be changed periodically at The Company’s
+                  sole discretion. Employees may be required to periodically
+                  sign copies of company policies, procedures, and or work
+                  rules, including environmental, safety, and fire prevention
+                  rules.
                 </Typography>
                 <Typography variant="body">
-                Appropriate disciplinary action may involve progressive disciplinary measures or may result in immediate discharge. Nothing in this policy changes the at-will nature of the employment relationship. The Company’s policies, procedures, and work rules outlined in this employee manual are not all-inclusive and may be changed periodically at The Company’s sole discretion.  Employees may be required to periodically sign copies of company policies, procedures, and or work rules, including environmental, safety, and fire prevention rules.  
-                </Typography>
-                <Typography variant="body">
-                There are certain policies and regulations which must be adhered to by all employees in order to maintain and operate a safe and functional operation. Most of the regulations are typical of those enforced in any organization. The circumstances surrounding a particular violation of policy rules are often as important as the action itself in determining the severity of the discipline called for.  As a result, it is not possible to list all the causes of, or reasons for disciplinary action. The following are violations that could cause an employee to be subject to disciplinary action, up to and including discharge. 
+                  There are certain policies and regulations which must be
+                  adhered to by all employees in order to maintain and operate a
+                  safe and functional operation. Most of the regulations are
+                  typical of those enforced in any organization. The
+                  circumstances surrounding a particular violation of policy
+                  rules are often as important as the action itself in
+                  determining the severity of the discipline called for. As a
+                  result, it is not possible to list all the causes of, or
+                  reasons for disciplinary action. The following are violations
+                  that could cause an employee to be subject to disciplinary
+                  action, up to and including discharge.
                 </Typography>
                 <ul>
-                 <li>Failure or unwillingness to perform work as required or directed.</li>
-                 <li>Dishonest, disrespectful, or threatening behavior toward a supervisor.</li>
-                 <li>Insubordination or flagrant disobedience.</li>
-                 <li>Falsification of any records, job resumes or job applications.</li>
-                 <li>Dishonesty in any form including theft.</li>
-                 <li>Excessive or unauthorized absenteeism and/or tardiness.</li>
-                 <li>Unauthorized use of Company or corporate supplies, equipment, or property.</li>
-                 <li>Unauthorized disclosure of any confidential information.</li>
-                 <li>Sleeping, loafing, fighting, playing, or unauthorized absence from duties.</li>
-                 <li>Conducting personal business on The Company’s time.</li>
-                 <li>Violation of the Drug Free Workplace Policy.</li>
-                 <li>Smoking in unauthorized areas or smoking during unauthorized times. </li>
-                 <li>Marring, defacing, or abusing Company or corporate property or equipment or engaging in conduct which could be expected to cause damage to the same.</li>
-                 <li>Use of threatening, profane, abusive, or indecent language or gestures toward fellow workers, supervisors, management officials, residents, or visitors.</li>
-                 <li>Disrupting work or distracting other employees from performing their work.</li>
-                 <li>Possession or display of any type of weapon while on duty.</li>
-                 <li>Failure to keep your own timecard accurately.</li>
-                 <li>Creating or contributing to unsanitary conditions.</li>
-                 <li>Posting or removal of notices, signs or writing in any form on any bulletin board on Company or corporate property without permission of management.</li>
-                 <li>Gambling, lottery, or any other game of chance on Company or corporate premises at any time.</li>
-                 <li>Violation of The Company’s "No Solicitation" rules.</li>
-                 <li>Accepting gifts from clients or regulatory bodies or government offices.</li>
-                 <li>Failure to report an incident.</li>
-                 <li>Job abandonment - (a) walking off the shift without permission of your supervisor; or (b) an unauthorized absence.</li>
-                 <li>Conviction of a felony (when charged, suspended; if convicted, discharged).</li>
-                 <li>Making false or malicious statements about an employee or The Company.</li>
-                 <li>Conversion of The Company’s property to one's own use, as opposed to theft. </li>
-                 <li>Failing to meet job expectations required by The Company from time to time. </li>
-                 <li>Negligence or carelessness resulting in danger, damage, or loss to Company or corporate property, fellow employees, or visitors.</li>
-                 <li>Making or receiving personal telephone calls other than in emergencies.</li>
-                 <li>Unauthorized visitors while on duty including friends and relatives.</li>
-                 <li>Failure to readily cooperate with fellow employees or supervisors</li>
-                 <li>Failure to maintain acceptable standards of respect for visitors, co-workers, and supervisors.</li>
-                 <li>Violation of Sexual Harassment Policy.</li>
-                 <li>Violation of any policy or procedure contained in this employee manual.</li>
+                  <li>
+                    Failure or unwillingness to perform work as required or
+                    directed.
+                  </li>
+                  <li>
+                    Dishonest, disrespectful, or threatening behavior toward a
+                    supervisor.
+                  </li>
+                  <li>Insubordination or flagrant disobedience.</li>
+                  <li>
+                    Falsification of any records, job resumes or job
+                    applications.
+                  </li>
+                  <li>Dishonesty in any form including theft.</li>
+                  <li>
+                    Excessive or unauthorized absenteeism and/or tardiness.
+                  </li>
+                  <li>
+                    Unauthorized use of Company or corporate supplies,
+                    equipment, or property.
+                  </li>
+                  <li>
+                    Unauthorized disclosure of any confidential information.
+                  </li>
+                  <li>
+                    Sleeping, loafing, fighting, playing, or unauthorized
+                    absence from duties.
+                  </li>
+                  <li>Conducting personal business on The Company’s time.</li>
+                  <li>Violation of the Drug Free Workplace Policy.</li>
+                  <li>
+                    Smoking in unauthorized areas or smoking during unauthorized
+                    times.{" "}
+                  </li>
+                  <li>
+                    Marring, defacing, or abusing Company or corporate property
+                    or equipment or engaging in conduct which could be expected
+                    to cause damage to the same.
+                  </li>
+                  <li>
+                    Use of threatening, profane, abusive, or indecent language
+                    or gestures toward fellow workers, supervisors, management
+                    officials, residents, or visitors.
+                  </li>
+                  <li>
+                    Disrupting work or distracting other employees from
+                    performing their work.
+                  </li>
+                  <li>
+                    Possession or display of any type of weapon while on duty.
+                  </li>
+                  <li>Failure to keep your own timecard accurately.</li>
+                  <li>Creating or contributing to unsanitary conditions.</li>
+                  <li>
+                    Posting or removal of notices, signs or writing in any form
+                    on any bulletin board on Company or corporate property
+                    without permission of management.
+                  </li>
+                  <li>
+                    Gambling, lottery, or any other game of chance on Company or
+                    corporate premises at any time.
+                  </li>
+                  <li>Violation of The Company’s "No Solicitation" rules.</li>
+                  <li>
+                    Accepting gifts from clients or regulatory bodies or
+                    government offices.
+                  </li>
+                  <li>Failure to report an incident.</li>
+                  <li>
+                    Job abandonment - (a) walking off the shift without
+                    permission of your supervisor; or (b) an unauthorized
+                    absence.
+                  </li>
+                  <li>
+                    Conviction of a felony (when charged, suspended; if
+                    convicted, discharged).
+                  </li>
+                  <li>
+                    Making false or malicious statements about an employee or
+                    The Company.
+                  </li>
+                  <li>
+                    Conversion of The Company’s property to one's own use, as
+                    opposed to theft.{" "}
+                  </li>
+                  <li>
+                    Failing to meet job expectations required by The Company
+                    from time to time.{" "}
+                  </li>
+                  <li>
+                    Negligence or carelessness resulting in danger, damage, or
+                    loss to Company or corporate property, fellow employees, or
+                    visitors.
+                  </li>
+                  <li>
+                    Making or receiving personal telephone calls other than in
+                    emergencies.
+                  </li>
+                  <li>
+                    Unauthorized visitors while on duty including friends and
+                    relatives.
+                  </li>
+                  <li>
+                    Failure to readily cooperate with fellow employees or
+                    supervisors
+                  </li>
+                  <li>
+                    Failure to maintain acceptable standards of respect for
+                    visitors, co-workers, and supervisors.
+                  </li>
+                  <li>Violation of Sexual Harassment Policy.</li>
+                  <li>
+                    Violation of any policy or procedure contained in this
+                    employee manual.
+                  </li>
                 </ul>
                 <Typography variant="body">
-                The above listed grounds for disciplinary action, including termination is not an exclusive list and The Company reserves the right to terminate or otherwise discipline an employee for any other reason or for no reason should such action be deemed appropriate. 
+                  The above listed grounds for disciplinary action, including
+                  termination is not an exclusive list and The Company reserves
+                  the right to terminate or otherwise discipline an employee for
+                  any other reason or for no reason should such action be deemed
+                  appropriate.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                Q.	Use of Company Property Policy 
+                  Q. Use of Company Property Policy
                 </Typography>
                 <Typography variant="body">
-                The assets of The Company are intended to be used in a way that benefits our organization. Employees must preserve these assets and use them wisely.  
+                  The assets of The Company are intended to be used in a way
+                  that benefits our organization. Employees must preserve these
+                  assets and use them wisely.
                 </Typography>
                 <Typography variant="body">
-                To protect the physical and intellectual property of The Company from loss, damage, theft, vandalism, unauthorized use, copying, disclosure, or disposal, The Company must ensure proper business use only of company property and facilities.  
+                  To protect the physical and intellectual property of The
+                  Company from loss, damage, theft, vandalism, unauthorized use,
+                  copying, disclosure, or disposal, The Company must ensure
+                  proper business use only of company property and facilities.
                 </Typography>
                 <Typography variant="body">
-                This applies to The Company’s property located at any Company.
+                  This applies to The Company’s property located at any Company.
                 </Typography>
                 <Typography variant="body">
-                The use of company facilities, equipment, supplies, or other property for personal purposes is strictly prohibited. Facilities or equipment may not be used for extracurricular activities during or after working hours. This includes athletics events, educational opportunities, or any other type of non-working activities.
+                  The use of company facilities, equipment, supplies, or other
+                  property for personal purposes is strictly prohibited.
+                  Facilities or equipment may not be used for extracurricular
+                  activities during or after working hours. This includes
+                  athletics events, educational opportunities, or any other type
+                  of non-working activities.
                 </Typography>
                 <Typography variant="body">
-                Violations of this policy may result in discipline, up to and including termination.
+                  Violations of this policy may result in discipline, up to and
+                  including termination.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                R.	Theft, Misuse and Destruction of Property Policy 
+                  R. Theft, Misuse and Destruction of Property Policy
                 </Typography>
                 <Typography variant="body">
-                The Company does not to tolerate internal theft, destruction, or inappropriate use of any company assets, property, and services. The Company does not to tolerate theft and/or destruction of employees’ personal property.  
+                  The Company does not to tolerate internal theft, destruction,
+                  or inappropriate use of any company assets, property, and
+                  services. The Company does not to tolerate theft and/or
+                  destruction of employees’ personal property.
                 </Typography>
                 <Typography variant="body">
-                The Company is not responsible for the personal property of its employees. Employees are responsible for safeguarding any personal property brought to work and kept on company premises.
+                  The Company is not responsible for the personal property of
+                  its employees. Employees are responsible for safeguarding any
+                  personal property brought to work and kept on company
+                  premises.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">
-                S.	Return of Property 
+                <Typography className="h6">S. Return of Property</Typography>
+                <Typography variant="body">
+                  Employees are responsible for all of The Company’s property,
+                  materials, or written information issued to them or in their
+                  possession or control. All such property including original
+                  and duplicate copies of all documents, data, computer software
+                  and other written materials, must be returned by employees on
+                  or before their last day of work.
                 </Typography>
                 <Typography variant="body">
-                Employees are responsible for all of The Company’s property, materials, or written information issued to them or in their possession or control.  All such property including original and duplicate copies of all documents, data, computer software and other written materials, must be returned by employees on or before their last day of work.  
+                  Employees are expected to take proper care of any
+                  company-provided equipment, tools, uniforms, or other
+                  property. Any such property must be returned in good repair.
                 </Typography>
                 <Typography variant="body">
-                Employees are expected to take proper care of any company-provided equipment, tools, uniforms, or other property. Any such property must be returned in good repair.
-                </Typography>
-                <Typography variant="body">
-                If you leave The Company, either voluntarily or by termination, you are expected to return any company property in your possession. Failure to return company property may result in a deduction from the final paycheck (where allowed under state law) or legal action.
+                  If you leave The Company, either voluntarily or by
+                  termination, you are expected to return any company property
+                  in your possession. Failure to return company property may
+                  result in a deduction from the final paycheck (where allowed
+                  under state law) or legal action.
                 </Typography>
               </Grid>
             </Grid>
 
             <Grid className="points-sec">
-              <Typography variant="h5">VII.	Electronic Systems Usage and Monitoring
+              <Typography variant="h5">
+                VII. Electronic Systems Usage and Monitoring
               </Typography>
               <Typography variant="body">
-              All electronic systems, including telephones, voicemail, computers, e-mail, and the internet (collectively the “systems”) are the property of The Company and may be used for business purposes only unless otherwise specifically provided or permitted by this manual or employer. As the systems’ owner, The Company likewise owns any messages stored on the systems including, messages sent or received via any private email account(s) accessed on the systems.  No employee has a personal privacy right in any matter created in, received by, sent over, or stored in the systems. Even though an employee may have a personal password and ability to delete messages as the employee chooses, the systems are owned and may be monitored by employer as necessary for business purposes.  Any saved or unerased messages may be accessed and reviewed by The Company, local, state and/or federal government agencies or investigators upon legitimate request, or by private parties in litigation.  
+                All electronic systems, including telephones, voicemail,
+                computers, e-mail, and the internet (collectively the “systems”)
+                are the property of The Company and may be used for business
+                purposes only unless otherwise specifically provided or
+                permitted by this manual or employer. As the systems’ owner, The
+                Company likewise owns any messages stored on the systems
+                including, messages sent or received via any private email
+                account(s) accessed on the systems. No employee has a personal
+                privacy right in any matter created in, received by, sent over,
+                or stored in the systems. Even though an employee may have a
+                personal password and ability to delete messages as the employee
+                chooses, the systems are owned and may be monitored by employer
+                as necessary for business purposes. Any saved or unerased
+                messages may be accessed and reviewed by The Company, local,
+                state and/or federal government agencies or investigators upon
+                legitimate request, or by private parties in litigation.
               </Typography>
               <Grid className="points-blk">
-                <Typography className="h6">EMPLOYEES SHOULD NOT HAVE ANY EXPECTATION OF PRIVACY IN ANY INFORMATION STORED, SENT FROM OR RECEIVED ON ANY COMPANY OWNED ELECTRONIC SYSTEM.</Typography>
+                <Typography className="h6">
+                  EMPLOYEES SHOULD NOT HAVE ANY EXPECTATION OF PRIVACY IN ANY
+                  INFORMATION STORED, SENT FROM OR RECEIVED ON ANY COMPANY OWNED
+                  ELECTRONIC SYSTEM.
+                </Typography>
                 <Typography variant="body">
-                All systems are subject to monitoring by The Company for a number of business reasons, including but not limited to the following: 
+                  All systems are subject to monitoring by The Company for a
+                  number of business reasons, including but not limited to the
+                  following:
                 </Typography>
                 <ul>
-                 <li>Retrieve business information;</li>
-                 <li>Route messages; </li>
-                 <li>Troubleshoot hardware or software problems; </li>
-                 <li>Prevent system misuse; </li>
-                 <li>Assure compliance with software distribution policies; </li>
-                 <li>Comply with legal and regulatory requests for information; </li>
-                 <li>Protect trade secrets; and </li>
-                 <li>Ensure quality control. </li>
-                 <li>All employees are additionally expected to use all systems in a way that does not violate the employment policies stated in this manual, including but not limited to unlawful harassment, workplace violence, and breach of confidentiality.</li>
+                  <li>Retrieve business information;</li>
+                  <li>Route messages; </li>
+                  <li>Troubleshoot hardware or software problems; </li>
+                  <li>Prevent system misuse; </li>
+                  <li>
+                    Assure compliance with software distribution policies;{" "}
+                  </li>
+                  <li>
+                    Comply with legal and regulatory requests for information;{" "}
+                  </li>
+                  <li>Protect trade secrets; and </li>
+                  <li>Ensure quality control. </li>
+                  <li>
+                    All employees are additionally expected to use all systems
+                    in a way that does not violate the employment policies
+                    stated in this manual, including but not limited to unlawful
+                    harassment, workplace violence, and breach of
+                    confidentiality.
+                  </li>
                 </ul>
-                </Grid>
+              </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">A.	Acceptable Use of Electronic Communications</Typography>
-                <Typography variant="body">
-                This policy contains guidelines for Electronic Communications created, sent, received, used, transmitted, or stored using company communication systems or equipment and employee provided systems or equipment used either in the workplace, during working time or to accomplish work tasks during working time.  “Electronic Communications” include, among other things, messages, images, data or any other information used in e-mail, instant messages, voice mail, fax machines, computers, personal digital assistants (including Blackberry, iPhone, iPad, tablet, smart phone or similar devices), text messages, pagers, telephones, cellular and mobile phones including those with cameras, Intranet, Internet, back -up storage, information on a memory or flash key or card, jump or zip drive or any other type of internal or external removable storage drives. In the remainder of this policy, all of these communication devices are collectively referred to as “Systems.”
+                <Typography className="h6">
+                  A. Acceptable Use of Electronic Communications
                 </Typography>
                 <Typography variant="body">
-                Employees may not use our Systems in a manner that violates our policies including but not limited to Equal Employment Opportunity, No Harassment, Confidentiality of Customer Matters, Care of Customer Records, Non-Solicitation, and Distribution.  Employees may not use our Systems in any way that may be seen as insulting, disruptive, obscene, offensive, or harmful to morale.  Examples of prohibited uses include, but are not limited to, sexually-explicit drawings, messages, images, cartoons, or jokes; propositions or love letters; ethnic or racial slurs, threats of violence or bullying, or derogatory comments; or any other message or image that may be in violation of company policies or federal, state, or local law.
+                  This policy contains guidelines for Electronic Communications
+                  created, sent, received, used, transmitted, or stored using
+                  company communication systems or equipment and employee
+                  provided systems or equipment used either in the workplace,
+                  during working time or to accomplish work tasks during working
+                  time. “Electronic Communications” include, among other things,
+                  messages, images, data or any other information used in
+                  e-mail, instant messages, voice mail, fax machines, computers,
+                  personal digital assistants (including Blackberry, iPhone,
+                  iPad, tablet, smart phone or similar devices), text messages,
+                  pagers, telephones, cellular and mobile phones including those
+                  with cameras, Intranet, Internet, back -up storage,
+                  information on a memory or flash key or card, jump or zip
+                  drive or any other type of internal or external removable
+                  storage drives. In the remainder of this policy, all of these
+                  communication devices are collectively referred to as
+                  “Systems.”
                 </Typography>
                 <Typography variant="body">
-                In addition, employees may not use our Systems:
+                  Employees may not use our Systems in a manner that violates
+                  our policies including but not limited to Equal Employment
+                  Opportunity, No Harassment, Confidentiality of Customer
+                  Matters, Care of Customer Records, Non-Solicitation, and
+                  Distribution. Employees may not use our Systems in any way
+                  that may be seen as insulting, disruptive, obscene, offensive,
+                  or harmful to morale. Examples of prohibited uses include, but
+                  are not limited to, sexually-explicit drawings, messages,
+                  images, cartoons, or jokes; propositions or love letters;
+                  ethnic or racial slurs, threats of violence or bullying, or
+                  derogatory comments; or any other message or image that may be
+                  in violation of company policies or federal, state, or local
+                  law.
+                </Typography>
+                <Typography variant="body">
+                  In addition, employees may not use our Systems:
                 </Typography>
                 <ul>
-                 <li>To download, save, send or access any discriminatory or obscene material;</li>
-                 <li>To download anything from the internet (including shareware or free software) without the advance written permission of your Manager;</li>
-                 <li>To download, save, send, or access any site or content that the company might deem “adult entertainment;”</li>
-                 <li>To access any “blog” or otherwise post a personal opinion on the Internet during working time (see Social Media policy);</li>
-                 <li>To solicit employees or others during working time;</li>
-                 <li>To attempt or to gain unauthorized or unlawful access to computers, equipment, networks, or systems of the company or any other person or entity;</li>
-                 <li>In connection with any infringement of intellectual property rights, including but not limited to copyrights; and</li>
-                 <li>In connection with the violation or attempted violation of any law.</li>
+                  <li>
+                    To download, save, send or access any discriminatory or
+                    obscene material;
+                  </li>
+                  <li>
+                    To download anything from the internet (including shareware
+                    or free software) without the advance written permission of
+                    your Manager;
+                  </li>
+                  <li>
+                    To download, save, send, or access any site or content that
+                    the company might deem “adult entertainment;”
+                  </li>
+                  <li>
+                    To access any “blog” or otherwise post a personal opinion on
+                    the Internet during working time (see Social Media policy);
+                  </li>
+                  <li>To solicit employees or others during working time;</li>
+                  <li>
+                    To attempt or to gain unauthorized or unlawful access to
+                    computers, equipment, networks, or systems of the company or
+                    any other person or entity;
+                  </li>
+                  <li>
+                    In connection with any infringement of intellectual property
+                    rights, including but not limited to copyrights; and
+                  </li>
+                  <li>
+                    In connection with the violation or attempted violation of
+                    any law.
+                  </li>
                 </ul>
                 <Typography variant="body">
-                An employee may not misrepresent, disguise, or conceal his or her identity or another’s identity in any way while using Electronic Communications during working hours; make changes to Electronic Communications without clearly indicating such changes; or use another person’s account, mailbox, password, etc. without prior written approval of the account owner and without identifying the actual author.
+                  An employee may not misrepresent, disguise, or conceal his or
+                  her identity or another’s identity in any way while using
+                  Electronic Communications during working hours; make changes
+                  to Electronic Communications without clearly indicating such
+                  changes; or use another person’s account, mailbox, password,
+                  etc. without prior written approval of the account owner and
+                  without identifying the actual author.
                 </Typography>
                 <Typography variant="body">
-                Employees must always respect intellectual property rights such as copyrights and trademarks. Employees must not copy, use, or transfer trade secrets or proprietary materials of the company or others without appropriate authorization.
+                  Employees must always respect intellectual property rights
+                  such as copyrights and trademarks. Employees must not copy,
+                  use, or transfer trade secrets or proprietary materials of the
+                  company or others without appropriate authorization.
                 </Typography>
                 <Typography variant="body">
-                Nothing in this policy is meant to restrict an employee's right to discuss the terms and conditions of his/her employment during non-working hours using non-company systems.
+                  Nothing in this policy is meant to restrict an employee's
+                  right to discuss the terms and conditions of his/her
+                  employment during non-working hours using non-company systems.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">B. Telephone Use Policy</Typography>
+                <Typography variant="body">
+                  It is the policy of The Company to implement and maintain
+                  phone service systems to meet the needs of customers, clients,
+                  and employees.
+                </Typography>
+                <Typography variant="body">
+                  The Company's telephones are not to be used for personal calls
+                  except in case of emergency. Family and friends of employees
+                  should be instructed that an employee cannot receive telephone
+                  calls when on duty.
+                </Typography>
+                <Typography variant="body">
+                  Personal cell phones must be kept on "silent" and in
+                  designated area. They may not be set out on the table or prep
+                  area.
+                </Typography>
+                <Typography variant="body">
+                  The Company is in the guest service business and should keep
+                  Company phones free for conducting business. When employees
+                  are preoccupied with text messages and personal calls, the
+                  Company’s guests and business suffer.
+                </Typography>
+                <Typography variant="body">
+                  A manager or shift leader must approve phone calls during a
+                  tipped employee’s shift (there are exceptions: parents, people
+                  caring for older or ill relatives, etc.). Tipped employees may
+                  share the restaurant’s main land line telephone number with
+                  family as an emergency contact. Local personal calls on the
+                  Company phones are permitted, but should be only for a minute
+                  or two and restricted to times that are less busy. Remember
+                  that personal calls on land lines should be kept brief and not
+                  be distraction to serving our guests.
+                </Typography>
+                <Typography variant="body">
+                  Personal long-distance calls are prohibited from Company
+                  telephones at all times.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                B.	Telephone Use Policy
+                  C. Camera and Other Recording Devices Policy
                 </Typography>
                 <Typography variant="body">
-                It is the policy of The Company to implement and maintain phone service systems to meet the needs of customers, clients, and employees.
+                  The Company prohibits the use of cameras, tape recorders, or
+                  other recording devices on company property without
+                  permission. The purpose is to protect the privacy of all
+                  employees and to ensure the security of confidential business
+                  information.
                 </Typography>
                 <Typography variant="body">
-                The Company's telephones are not to be used for personal calls except in case of emergency.  Family and friends of employees should be instructed that an employee cannot receive telephone calls when on duty.  
+                  The Company reserves the right to install surveillance cameras
+                  for legitimate business purposes such as ensuring security or
+                  preventing theft.
                 </Typography>
                 <Typography variant="body">
-                Personal cell phones must be kept on "silent" and in designated area.  They may not be set out on the table or prep area.   
+                  The Company will not install cameras in areas where privacy is
+                  necessary, such as restrooms or changing areas. However,
+                  employees should not have an expectation of privacy on company
+                  property, especially in common or public areas.
                 </Typography>
                 <Typography variant="body">
-                The Company is in the guest service business and should keep Company phones free for conducting business.  When employees are preoccupied with text messages and personal calls, the Company’s guests and business suffer.
+                  Employees in violation of this policy will be subject to
+                  disciplinary action, up to and including termination.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">D. Cell Phone Policy</Typography>
+                <Typography variant="body">
+                  Company employees are not permitted to use their personal cell
+                  phones and related features for personal reasons while on work
+                  duty, except in emergency situations.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">E. Software Policy</Typography>
+                <Typography variant="body">
+                  The Company respects all computer software copyrights and to
+                  adhere to the terms of all software licenses to which The
+                  Company is a party.
                 </Typography>
                 <Typography variant="body">
-                A manager or shift leader must approve phone calls during a tipped employee’s shift (there are exceptions: parents, people caring for older or ill relatives, etc.).   Tipped employees may share the restaurant’s main land line telephone number with family as an emergency contact.  Local personal calls on the Company phones are permitted, but should be only for a minute or two and restricted to times that are less busy.  Remember that personal calls on land lines should be kept brief and not be distraction to serving our guests.
+                  Employees may not duplicate any licensed software or related
+                  documentation for use either on employer’s premises or
+                  elsewhere unless employer is expressly authorized to do so by
+                  agreement with the licenser. Unauthorized duplication of
+                  software may subject employee and/or The Company to both civil
+                  and criminal penalties under the United States Copyright Act.
                 </Typography>
                 <Typography variant="body">
-                Personal long-distance calls are prohibited from Company telephones at all times.
+                  Employees may not give software to any outsiders. Employees
+                  may use software on local area networks or on multiple
+                  machines only in accordance with applicable license
+                  agreements.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                C.	Camera and Other Recording Devices Policy
+                  F. Employee Internet Usage Policy
                 </Typography>
                 <Typography variant="body">
-                The Company prohibits the use of cameras, tape recorders, or other recording devices on company property without permission. The purpose is to protect the privacy of all employees and to ensure the security of confidential business information.
+                  The nature of the Company’s business requires that employees
+                  have access to the Internet. The Company provides electronic
+                  mail (e-mail) and internet access for work-related purposes to
+                  specified individuals based on job need within The Company as
+                  determined by area management.
                 </Typography>
                 <Typography variant="body">
-                The Company reserves the right to install surveillance cameras for legitimate business purposes such as ensuring security or preventing theft.
+                  The Company requires all employees granted such access to
+                  adhere to this and related policies to ensure proper, legal,
+                  and effective use of these electronic tools and resources.
                 </Typography>
                 <Typography variant="body">
-                The Company will not install cameras in areas where privacy is necessary, such as restrooms or changing areas. However, employees should not have an expectation of privacy on company property, especially in common or public areas.
+                  All e-mail and internet information/language/etc. must comply
+                  with company policies and procedures, including, but not
+                  limited to, those on harassment, copyright law, trade secrets,
+                  confidentiality, and The Company disclosure agreement.
                 </Typography>
                 <Typography variant="body">
-                Employees in violation of this policy will be subject to disciplinary action, up to and including termination.
+                  Internet access by employees while working is limited to the
+                  Company’s official business. The introduction of viruses, or
+                  malicious tampering with any computer system, is expressly
+                  prohibited. Any such activity will immediately result in
+                  termination of employment.
+                </Typography>
+                <Typography variant="body">
+                  Employees using The Company’s accounts are acting as
+                  representatives of The Company. As such, employees should act
+                  accordingly so as not to damage the reputation of the
+                  organization.
+                </Typography>
+                <Typography variant="body">
+                  Files which are downloaded from the Internet must be scanned
+                  with virus detection software before installation or
+                  execution. All appropriate precautions should be taken to
+                  detect for a virus and, if necessary, to prevent its spread.
+                </Typography>
+                <Typography variant="body">
+                  The truth or accuracy of information on the Internet and in
+                  e-mail should be considered suspect until confirmed by a
+                  separate reliable source.
+                </Typography>
+                <Typography variant="body">
+                  Employees shall not place company material (copyrighted
+                  software, internal correspondence, etc.) on any publicly
+                  accessible Internet computer without prior permission.
+                </Typography>
+                <Typography variant="body">
+                  Alternate Internet Service Provider connections to The
+                  Company’s Internet network are not permitted unless expressly
+                  authorized and properly protected by a firewall or other
+                  appropriate security device(s).
+                </Typography>
+                <Typography variant="body">
+                  The Internet does not guarantee the privacy and
+                  confidentiality of information. Sensitive material transferred
+                  over the Internet may be at risk of detection by a
+                  third-party. Employees must exercise caution and care when
+                  transferring such material in any form.
+                </Typography>
+                <Typography variant="body">
+                  Unless otherwise noted, all software on the Internet should be
+                  considered copyrighted work. Therefore, employees are
+                  prohibited from downloading software and/or modifying any such
+                  files without permission from the copyright holder.
+                </Typography>
+                <Typography variant="body">
+                  Any infringing activity by an employee may be the
+                  responsibility of The Company. Therefore, The Company may
+                  choose to hold the employee liable for their actions.
+                </Typography>
+                <Typography variant="body">
+                  The Company reserves the right to inspect an employee’s
+                  computer system for violations of this policy.
+                </Typography>
+                <Typography variant="body">
+                  Employees are subject to disciplinary action, including
+                  termination, for using the internet or viewing any downloaded
+                  materials in any way that would result in a violation of law
+                  or The Company’s other policies set forth in this manual,
+                  including but not limited to unlawful harassment or
+                  discrimination toward another employee, workplace violence
+                  prevention, and interfering with an employee’s work
+                  performance and job responsibilities.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                D.	Cell Phone Policy
+                  G. Social Networking Policy
                 </Typography>
                 <Typography variant="body">
-                Company employees are not permitted to use their personal cell phones and related features for personal reasons while on work duty, except in emergency situations.
-                </Typography>
-              </Grid>
-              <Grid className="points-blk">
-                <Typography className="h6">
-                E.	Software Policy
+                  The Company recognizes that you may use social networking
+                  websites or similar media including, but not limited to,
+                  blogs, chat rooms, Facebook, MySpace, Twitter, etc.
+                  (hereinafter referred to as “personal websites”).
                 </Typography>
                 <Typography variant="body">
-                The Company respects all computer software copyrights and to adhere to the terms of all software licenses to which The Company is a party.
+                  The use of The Company’s Internet to access personal websites
+                  is prohibited. Exceptions may be made when The Company
+                  sponsors a website for business reasons or otherwise approves
+                  a legitimate business use. Social networking and/or blogging
+                  may not occur on company property (computers or PDAs) and may
+                  not occur during normal work hours.
                 </Typography>
                 <Typography variant="body">
-                Employees may not duplicate any licensed software or related documentation for use either on employer’s premises or elsewhere unless employer is expressly authorized to do so by agreement with the licenser.  Unauthorized duplication of software may subject employee and/or The Company to both civil and criminal penalties under the United States Copyright Act. 
-                </Typography>
-                <Typography variant="body">
-                Employees may not give software to any outsiders.  Employees may use software on local area networks or on multiple machines only in accordance with applicable license agreements.
-                </Typography>
-              </Grid>
-              <Grid className="points-blk">
-                <Typography className="h6">
-                F.	Employee Internet Usage Policy
-                </Typography>
-                <Typography variant="body">
-                The nature of the Company’s business requires that employees have access to the Internet.  The Company provides electronic mail (e-mail) and internet access for work-related purposes to specified individuals based on job need within The Company as determined by area management.
-                </Typography>
-                <Typography variant="body">
-                The Company requires all employees granted such access to adhere to this and related policies to ensure proper, legal, and effective use of these electronic tools and resources.
-                </Typography>
-                <Typography variant="body">
-                All e-mail and internet information/language/etc. must comply with company policies and procedures, including, but not limited to, those on harassment, copyright law, trade secrets, confidentiality, and The Company disclosure agreement.
-                </Typography>
-                <Typography variant="body">
-                Internet access by employees while working is limited to the Company’s official business.  The introduction of viruses, or malicious tampering with any computer system, is expressly prohibited.  Any such activity will immediately result in termination of employment.
-                </Typography>
-                <Typography variant="body">
-                Employees using The Company’s accounts are acting as representatives of The Company.  As such, employees should act accordingly so as not to damage the reputation of the organization.
-                </Typography>
-                <Typography variant="body">
-                Files which are downloaded from the Internet must be scanned with virus detection software before installation or execution.  All appropriate precautions should be taken to detect for a virus and, if necessary, to prevent its spread.
-                </Typography>
-                <Typography variant="body">
-                The truth or accuracy of information on the Internet and in e-mail should be considered suspect until confirmed by a separate reliable source.
-                </Typography>
-                <Typography variant="body">
-                Employees shall not place company material (copyrighted software, internal correspondence, etc.) on any publicly accessible Internet computer without prior permission.
-                </Typography>
-                <Typography variant="body">
-                Alternate Internet Service Provider connections to The Company’s Internet network are not permitted unless expressly authorized and properly protected by a firewall or other appropriate security device(s).
-                </Typography>
-                <Typography variant="body">
-                The Internet does not guarantee the privacy and confidentiality of information.  Sensitive material transferred over the Internet may be at risk of detection by a third-party.  Employees must exercise caution and care when transferring such material in any form.
-                </Typography>
-                <Typography variant="body">
-                Unless otherwise noted, all software on the Internet should be considered copyrighted work. Therefore, employees are prohibited from downloading software and/or modifying any such files without permission from the copyright holder.
-                </Typography>
-                <Typography variant="body">
-                Any infringing activity by an employee may be the responsibility of The Company.  Therefore, The Company may choose to hold the employee liable for their actions.
-                </Typography>
-                <Typography variant="body">
-                The Company reserves the right to inspect an employee’s computer system for violations of this policy.
-                </Typography>
-                <Typography variant="body">
-                Employees are subject to disciplinary action, including termination, for using the internet or viewing any downloaded materials in any way that would result in a violation of law or The Company’s other policies set forth in this manual, including but not limited to unlawful harassment or discrimination toward another employee, workplace violence prevention, and interfering with an employee’s work performance and job responsibilities.
-                </Typography>
-              </Grid>
-              <Grid className="points-blk">
-                <Typography className="h6">G.	Social Networking Policy</Typography>
-                <Typography variant="body">
-                The Company recognizes that you may use social networking websites or similar media including, but not limited to, blogs, chat rooms, Facebook, MySpace, Twitter, etc. (hereinafter referred to as “personal websites”).
-                </Typography>
-                <Typography variant="body">
-                The use of The Company’s Internet to access personal websites is prohibited. Exceptions may be made when The Company sponsors a website for business reasons or otherwise approves a legitimate business use.  Social networking and/or blogging may not occur on company property (computers or PDAs) and may not occur during normal work hours.
-                </Typography>
-                <Typography variant="body">
-                Employees who use personal websites on their own time are expected to refrain from harassing and discriminating other employees on these sites. Employees should not represent themselves as a representative of The Company on personal websites. Personal websites which indicate the employee’s place of employment should include a disclaimer that the opinions provided do not represent the views of The Company. If an employee should mention a company product or service, the employee must disclose employee’s relationship to The Company, per Federal Trade Commission guidelines. 
+                  Employees who use personal websites on their own time are
+                  expected to refrain from harassing and discriminating other
+                  employees on these sites. Employees should not represent
+                  themselves as a representative of The Company on personal
+                  websites. Personal websites which indicate the employee’s
+                  place of employment should include a disclaimer that the
+                  opinions provided do not represent the views of The Company.
+                  If an employee should mention a company product or service,
+                  the employee must disclose employee’s relationship to The
+                  Company, per Federal Trade Commission guidelines.
                 </Typography>
               </Grid>
             </Grid>
 
             <Grid className="points-sec">
-              <Typography variant="h5">VIII. GUEST RELATIONS FOR RESTAURANT PERSONNEL
+              <Typography variant="h5">
+                VIII. GUEST RELATIONS FOR RESTAURANT PERSONNEL
               </Typography>
               <Grid className="points-blk">
                 <Typography className="h6">Expectations for Guests:</Typography>
                 <ul>
-                 <li>Personable welcoming, by whoever is near the door.</li>
-                 <li>Pleasant employee interaction, with smiles and eye contact.</li>
-                 <li>No delays in service, proper food preparation.</li>
-                 <li>Exceed guest’s expectations.</li>
-                 <li>Teamwork. If employees work as a team the guests will notice. This will also increase tips, which means more money for all.</li>
-                </ul> 
-                </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">Exceeding Guests Expectations:</Typography>
-                <ul>
-                 <li>Build people's trust in you through personal appearance, knowledge (of menu, beer and wine selections and daily food and drink specials) and salesmanship.</li>
-                 <li>Through quick recognition, pace and showing a genuine concern.</li>
-                 <li>Add enjoyment to their dining experience through enthusiasm and   personality.</li>
-                </ul> 
-                </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">Initial Greeting:</Typography>
-                <ul>
-                 <li>Acknowledge guest within 60 seconds of entering front door, if able.</li>
-                 <li>Make eye contact with all guests.</li>
-                 <li>Welcome them to the café </li>
-                 <li>For regulars or returning guests, thank them for coming back.</li>
-                </ul> 
-                </Grid>
-              <Grid className="points-blk">
-                <Typography className="h6">
-                Reservations:
-                </Typography>
-                <Typography variant="body">
-                If there is an inquiry for a large group reservation, please refer them to management. If management is not available, please refer them to our website.
-                </Typography>
+                  <li>Personable welcoming, by whoever is near the door.</li>
+                  <li>
+                    Pleasant employee interaction, with smiles and eye contact.
+                  </li>
+                  <li>No delays in service, proper food preparation.</li>
+                  <li>Exceed guest’s expectations.</li>
+                  <li>
+                    Teamwork. If employees work as a team the guests will
+                    notice. This will also increase tips, which means more money
+                    for all.
+                  </li>
+                </ul>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                Phone Usage:
+                  Exceeding Guests Expectations:
                 </Typography>
+                <ul>
+                  <li>
+                    Build people's trust in you through personal appearance,
+                    knowledge (of menu, beer and wine selections and daily food
+                    and drink specials) and salesmanship.
+                  </li>
+                  <li>
+                    Through quick recognition, pace and showing a genuine
+                    concern.
+                  </li>
+                  <li>
+                    Add enjoyment to their dining experience through enthusiasm
+                    and personality.
+                  </li>
+                </ul>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Initial Greeting:</Typography>
+                <ul>
+                  <li>
+                    Acknowledge guest within 60 seconds of entering front door,
+                    if able.
+                  </li>
+                  <li>Make eye contact with all guests.</li>
+                  <li>Welcome them to the café </li>
+                  <li>
+                    For regulars or returning guests, thank them for coming
+                    back.
+                  </li>
+                </ul>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Reservations:</Typography>
                 <Typography variant="body">
-                Our phones are used for business only. Employees are not to receive or make any personal phone calls.  
+                  If there is an inquiry for a large group reservation, please
+                  refer them to management. If management is not available,
+                  please refer them to our website.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Phone Usage:</Typography>
+                <Typography variant="body">
+                  Our phones are used for business only. Employees are not to
+                  receive or make any personal phone calls.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">Restrooms:</Typography>
                 <Typography variant="body">
-                All employees are expected to help maintain restroom cleanliness and tend to toilet paper, paper towels, soap or if the floors need attention,  Please inform management as soon as possible.   
+                  All employees are expected to help maintain restroom
+                  cleanliness and tend to toilet paper, paper towels, soap or if
+                  the floors need attention, Please inform management as soon as
+                  possible.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Guest Complaints:</Typography>
+                <Typography variant="body">
+                  All guest complaints, no matter how small, must be reported to
+                  management immediately.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                Guest Complaints:
+                  Identification Required for purchasing/consuming alcohol
                 </Typography>
                 <Typography variant="body">
-                All guest complaints, no matter how small, must be reported to management immediately.
+                  Employees must card everyone who attempts to purchase any type
+                  of alcohol under the age of 45. The Company PROHIBITS any
+                  alcoholic beverage to be served to minors, even if their
+                  parent, guardian, or spouse accompanies them. Failure to
+                  request identification shall be grounds for immediate
+                  termination.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">
-                Identification Required for purchasing/consuming alcohol
-                </Typography>
+                <Typography className="h6">Parking:</Typography>
                 <Typography variant="body">
-                Employees must card everyone who attempts to purchase any type of alcohol under the age of 45. The Company PROHIBITS any alcoholic beverage to be served to minors, even if their parent, guardian, or spouse accompanies them.  Failure to request identification shall be grounds for immediate termination.
+                  Employees may park anywhere but the main parking lot.
                 </Typography>
               </Grid>
               <Grid className="points-blk">
-                <Typography className="h6">
-                Parking: 
-                </Typography>
+                <Typography className="h6">Personal Belongings:</Typography>
                 <Typography variant="body">
-                Employees may park anywhere but the main parking lot.
-                </Typography>
-              </Grid>
-              <Grid className="points-blk">
-                <Typography className="h6">
-                Personal Belongings:  
-                </Typography>
-                <Typography variant="body">
-                Employees should place a bag, backpack, or purse in the office. The Company is not responsible for stolen or damaged items, so please leave valuables elsewhere, if possible.
+                  Employees should place a bag, backpack, or purse in the
+                  office. The Company is not responsible for stolen or damaged
+                  items, so please leave valuables elsewhere, if possible.
                 </Typography>
               </Grid>
             </Grid>
 
             <Grid className="points-sec">
-              <Typography variant="h5">IX. HEALTH, SAFETY, AND SECURITY</Typography>
+              <Typography variant="h5">
+                IX. HEALTH, SAFETY, AND SECURITY
+              </Typography>
               <Grid className="points-blk">
                 <Typography className="h6">Sanitation:</Typography>
                 <Typography variant="body">
-                All employees must wash their hands when needed. This could be as many times as possible. This is for employee safety and health, as well as the customers. 
+                  All employees must wash their hands when needed. This could be
+                  as many times as possible. This is for employee safety and
+                  health, as well as the customers.
                 </Typography>
                 <Typography variant="body">
-                The following steps must be used when washing hands:
+                  The following steps must be used when washing hands:
                 </Typography>
                 <ul>
-                 <li>Turn the hot water on, wet your hands and apply a good amount of soap.</li>
-                 <li>Wash your hands very well and aggressively for at least 20 seconds. Make sure you wash your fingers, fingertips, hands, arms and areas in between.</li>
-                 <li>Completely rinse hands under clean, warm water.</li>
-                 <li>Dry hands with a paper towel and not your clothing. That will defeat the purpose of washing your hands.</li>
-                 <li>Turn water off with a paper towel and put paper towel in the trash can.</li>
-                </ul> 
-                </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">You should wash your hands:</Typography>
-                <ul>
-                 <li>Before your shift.</li>
-                 <li>Between jobs you have performed.</li>
-                 <li>After you take dishes to the kitchen.</li>
-                 <li>After using the restroom.</li>
-                 <li>Every time you touch your face, hair or body.</li>
-                 <li>After you pre-bus/bus a table.</li>
-                 <li>After you cough or sneeze.</li>
-                 <li>After you touch cleaning towels, work surfaces, eating, smoking, touching the trash, etc.</li>
-                </ul> 
-                </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">Security:</Typography>
-                <ul>
-                 <li>Make sure you know the emergency numbers or know where they are posted.</li>
-                 <li>Make sure your workplace is well lit.</li>
-                 <li>Make sure there are at least two employees to close at night.</li>
-                 <li>Keep background noise down so people are aware of any problem.</li>
-                 <li>Make sure doors are locked in restaurant before counting tips.</li>
-                 <li>Use the “buddy system” when walking to your transportation at night.</li>
-                 <li>Shift leads at night must keep the office door locked when counting money.</li>
-                </ul> 
-                </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">Cash Handling:</Typography>
-                <ul>
-                 <li>	Make sure cash register area is in a clear, unobstructed view from the street.</li>
-                 <li>	Do not count cash in front of customers. All money counting, this includes tips and banks, should be counted in the office.</li>
-                 <li>	Excessive Overages and Shortages will lead to termination – theft will be prosecuted to the full extent of the law</li>
-                 <li>	Please use the “buddy system” to transport cash to the office.</li>
-                 <li>	It is absolutely 1st priority that your office and safes are locked when not in use by Management. </li>
-                 <li>	No employee is to be allowed access without a Manager in the office for any reason.</li>
-                 <li>	Failure to follow Cash Handling policy will result in termination.</li>
-                </ul> 
-                </Grid>
+                  <li>
+                    Turn the hot water on, wet your hands and apply a good
+                    amount of soap.
+                  </li>
+                  <li>
+                    Wash your hands very well and aggressively for at least 20
+                    seconds. Make sure you wash your fingers, fingertips, hands,
+                    arms and areas in between.
+                  </li>
+                  <li>Completely rinse hands under clean, warm water.</li>
+                  <li>
+                    Dry hands with a paper towel and not your clothing. That
+                    will defeat the purpose of washing your hands.
+                  </li>
+                  <li>
+                    Turn water off with a paper towel and put paper towel in the
+                    trash can.
+                  </li>
+                </ul>
+              </Grid>
               <Grid className="points-blk">
                 <Typography className="h6">
-                Leaving the Property:
+                  You should wash your hands:
                 </Typography>
+                <ul>
+                  <li>Before your shift.</li>
+                  <li>Between jobs you have performed.</li>
+                  <li>After you take dishes to the kitchen.</li>
+                  <li>After using the restroom.</li>
+                  <li>Every time you touch your face, hair or body.</li>
+                  <li>After you pre-bus/bus a table.</li>
+                  <li>After you cough or sneeze.</li>
+                  <li>
+                    After you touch cleaning towels, work surfaces, eating,
+                    smoking, touching the trash, etc.
+                  </li>
+                </ul>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Security:</Typography>
+                <ul>
+                  <li>
+                    Make sure you know the emergency numbers or know where they
+                    are posted.
+                  </li>
+                  <li>Make sure your workplace is well lit.</li>
+                  <li>
+                    Make sure there are at least two employees to close at
+                    night.
+                  </li>
+                  <li>
+                    Keep background noise down so people are aware of any
+                    problem.
+                  </li>
+                  <li>
+                    Make sure doors are locked in restaurant before counting
+                    tips.
+                  </li>
+                  <li>
+                    Use the “buddy system” when walking to your transportation
+                    at night.
+                  </li>
+                  <li>
+                    Shift leads at night must keep the office door locked when
+                    counting money.
+                  </li>
+                </ul>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Cash Handling:</Typography>
+                <ul>
+                  <li>
+                     Make sure cash register area is in a clear, unobstructed
+                    view from the street.
+                  </li>
+                  <li>
+                     Do not count cash in front of customers. All money
+                    counting, this includes tips and banks, should be counted in
+                    the office.
+                  </li>
+                  <li>
+                     Excessive Overages and Shortages will lead to termination
+                    – theft will be prosecuted to the full extent of the law
+                  </li>
+                  <li>
+                     Please use the “buddy system” to transport cash to the
+                    office.
+                  </li>
+                  <li>
+                     It is absolutely 1st priority that your office and safes
+                    are locked when not in use by Management.{" "}
+                  </li>
+                  <li>
+                     No employee is to be allowed access without a Manager in
+                    the office for any reason.
+                  </li>
+                  <li>
+                     Failure to follow Cash Handling policy will result in
+                    termination.
+                  </li>
+                </ul>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">Leaving the Property:</Typography>
                 <Typography variant="body">
-                Make sure all windows and doors are securely locked and the security alarm is activated. There should never be one person leaving the restaurant at a time in the evening. It is best to leave in a group. If this is not possible, at least two of you should leave at a time. If you decide to leave on your own, make sure a co-worker walks you to your vehicle.
+                  Make sure all windows and doors are securely locked and the
+                  security alarm is activated. There should never be one person
+                  leaving the restaurant at a time in the evening. It is best to
+                  leave in a group. If this is not possible, at least two of you
+                  should leave at a time. If you decide to leave on your own,
+                  make sure a co-worker walks you to your vehicle.
                 </Typography>
               </Grid>
             </Grid>
 
             <Grid className="points-sec">
-              <Typography variant="h5">X. COMPANY TRADE SECRETS AND CONFIDENTIAL INFORMATION</Typography>
+              <Typography variant="h5">
+                X. COMPANY TRADE SECRETS AND CONFIDENTIAL INFORMATION
+              </Typography>
               <Grid className="points-blk">
                 <Typography variant="body">
-                All employees must maintain the confidentiality of The Company’s trade secrets. Trade secrets may include information regarding the development of systems, processes, products, know-how, and technology. Internal reports, policies, procedures, or other business-related confidential communications should not be posted online by employees without The Company’s authorization. If you are uncertain whether information is confidential, you should consult Management.  
+                  All employees must maintain the confidentiality of The
+                  Company’s trade secrets. Trade secrets may include information
+                  regarding the development of systems, processes, products,
+                  know-how, and technology. Internal reports, policies,
+                  procedures, or other business-related confidential
+                  communications should not be posted online by employees
+                  without The Company’s authorization. If you are uncertain
+                  whether information is confidential, you should consult
+                  Management.
                 </Typography>
                 <Typography variant="body">
-                Employees shall not disclose the Company’s confidential information to any other person or entity without the express written permission of Management.
+                  Employees shall not disclose the Company’s confidential
+                  information to any other person or entity without the express
+                  written permission of Management.
                 </Typography>
-                </Grid>
+              </Grid>
             </Grid>
 
             <Grid className="points-sec">
-              <Typography variant="h5">XII. ALTERNATIVE DISPUTE RESOLUTION/CLASS ACTION WAIVER</Typography>
+              <Typography variant="h5">
+                XII. ALTERNATIVE DISPUTE RESOLUTION/CLASS ACTION WAIVER
+              </Typography>
               <Grid className="points-blk">
-                <Typography className="h6">A.	Dispute Resolution</Typography>
+                <Typography className="h6">A. Dispute Resolution</Typography>
                 <Typography variant="body">
-                The Company and Employee, while not anticipating any particular problems during the employment relationship wish to outline a way to resolve any disputes that may arise out of or be related to the employment relationship.   
+                  The Company and Employee, while not anticipating any
+                  particular problems during the employment relationship wish to
+                  outline a way to resolve any disputes that may arise out of or
+                  be related to the employment relationship.
                 </Typography>
                 <Typography variant="body">
-                All claims, disputes, controversies, or disagreements of any kind whatsoever including any claim arising out of, in connection with, or related to the employment relationship, and/or employees employment with Employer, including any claim that may arise between, Employee and any of Employer’s officers, employees, managers, owners or agents in their capacity as such, shall be subject to the following alternative dispute process:
+                  All claims, disputes, controversies, or disagreements of any
+                  kind whatsoever including any claim arising out of, in
+                  connection with, or related to the employment relationship,
+                  and/or employees employment with Employer, including any claim
+                  that may arise between, Employee and any of Employer’s
+                  officers, employees, managers, owners or agents in their
+                  capacity as such, shall be subject to the following
+                  alternative dispute process:
                 </Typography>
                 <Typography variant="body">
-                 <b>Informal Mediation: </b>
-                 Upon a request from either Employee or the Company, Employee and the Company shall promptly meet to discuss the dispute and attempt to negotiate a resolution of the dispute.  
+                  <b>Informal Mediation: </b>
+                  Upon a request from either Employee or the Company, Employee
+                  and the Company shall promptly meet to discuss the dispute and
+                  attempt to negotiate a resolution of the dispute.
                 </Typography>
                 <Typography variant="body">
-                 <b>Mediation before a Mediator: </b>
-                 If Employee and the Company are not able to achieve a resolution of the dispute within 30 days of the meeting or 30 days after request for a refused meeting, Employee and the Company agree to appoint a neutral mediator and attempt to resolve the dispute through mediation with a private mediator in Harris County, Texas.  Employee and the Company agree to use reasonable efforts to select a mutually acceptable mediator and Employer shall pay the mediation fee.  
+                  <b>Mediation before a Mediator: </b>
+                  If Employee and the Company are not able to achieve a
+                  resolution of the dispute within 30 days of the meeting or 30
+                  days after request for a refused meeting, Employee and the
+                  Company agree to appoint a neutral mediator and attempt to
+                  resolve the dispute through mediation with a private mediator
+                  in Harris County, Texas. Employee and the Company agree to use
+                  reasonable efforts to select a mutually acceptable mediator
+                  and Employer shall pay the mediation fee.
                 </Typography>
                 <Typography variant="body">
-                Employee and the Company agree to conduct the mediation within 60 days of their meeting (or 30 days after request for a refused meeting) referenced above.  
+                  Employee and the Company agree to conduct the mediation within
+                  60 days of their meeting (or 30 days after request for a
+                  refused meeting) referenced above.
                 </Typography>
                 <Typography variant="body">
-                 <b>Arbitration: </b>
-                 If Employee and the Company are unable to achieve a resolution of any dispute, Employee and the Company agree to resolve any disputes relating to or arising out of this Agreement, through binding arbitration, using one (1) mutually acceptable private arbitrator in Harris County, Texas, or in the absence of agreement, (ii) in accordance with selection rules of the American Arbitration Association for one (1) arbitrator.  
+                  <b>Arbitration: </b>
+                  If Employee and the Company are unable to achieve a resolution
+                  of any dispute, Employee and the Company agree to resolve any
+                  disputes relating to or arising out of this Agreement, through
+                  binding arbitration, using one (1) mutually acceptable private
+                  arbitrator in Harris County, Texas, or in the absence of
+                  agreement, (ii) in accordance with selection rules of the
+                  American Arbitration Association for one (1) arbitrator.
                 </Typography>
                 <Typography variant="body">
-                The Arbitration shall be conducted in accordance with the Texas Rules of Civil Procedure and governed by the Federal Arbitration Act.  The Arbitration shall be brought under the American Arbitration Association Rule for Employment/Workplace Cases.  The maximum cost to Employee to arbitrate shall be governed by the AAA.  Employer agrees to pay Employees share to arbitrate upon request from Employee.  
+                  The Arbitration shall be conducted in accordance with the
+                  Texas Rules of Civil Procedure and governed by the Federal
+                  Arbitration Act. The Arbitration shall be brought under the
+                  American Arbitration Association Rule for Employment/Workplace
+                  Cases. The maximum cost to Employee to arbitrate shall be
+                  governed by the AAA. Employer agrees to pay Employees share to
+                  arbitrate upon request from Employee.
                 </Typography>
                 <Typography variant="body">
-                Employee agrees that final and binding arbitration is the exclusive final means for resolving the Claims outlined in this Agreement and waives all rights Employee may have to a civil court action on any dispute arising out of or related to the employment relationship. Accordingly, only an arbitrator, not a judge or jury, will decide the dispute, although the arbitrator has the authority to award any type of relief that could otherwise be awarded by a judge or jury, subject to all applicable terms of this ADR.  The ADR as set forth and agreed survives termination of this Employee’s employment and shall be fully enforceable.  
+                  Employee agrees that final and binding arbitration is the
+                  exclusive final means for resolving the Claims outlined in
+                  this Agreement and waives all rights Employee may have to a
+                  civil court action on any dispute arising out of or related to
+                  the employment relationship. Accordingly, only an arbitrator,
+                  not a judge or jury, will decide the dispute, although the
+                  arbitrator has the authority to award any type of relief that
+                  could otherwise be awarded by a judge or jury, subject to all
+                  applicable terms of this ADR. The ADR as set forth and agreed
+                  survives termination of this Employee’s employment and shall
+                  be fully enforceable.
                 </Typography>
                 <Typography variant="body">
-                Employee and the Company shall each pay for their own attorneys’ fees or costs of representation for purposes of the mediation and arbitration unless otherwise provided by law or other terms of this Agreement.    
+                  Employee and the Company shall each pay for their own
+                  attorneys’ fees or costs of representation for purposes of the
+                  mediation and arbitration unless otherwise provided by law or
+                  other terms of this Agreement.
                 </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">
+                  B. Waiver Of Collective Action, Class, or Consolidated Claims{" "}
+                </Typography>
+                <Typography variant="body">
+                  <b>
+                    BY ACCEPTING OR CONTINUING EMPLOYMENT WITH THE COMPANY,
+                    EMPLOYEE WAIVES THE RIGHT TO RECEIVE NOTICE OF, CONSENT TO,
+                    PARTIIPATE IN, OR PARTICIAPTE IN OR RECEIVE SETTLEMENT OF
+                    ANY CLAIM AGAINST THE COMPANY ARISING OUT OF OR RELATED TO
+                    EMPLOYMENT AS PART OF A COLLECTIVE, REPRESENTATIVE, PUTATIVE
+                    CLASS OR CLASS ACTION, WHETHER IN ARBITRATION OR IN A COURT
+                    OF COMPETENT JURISDICTION.{" "}
+                  </b>
+                </Typography>
+                <Typography variant="body">
+                  The arbitrator shall not have the authority to authorize or
+                  preside over any form of a class, collective or representative
+                  proceeding. The arbitrator may only hear claims brought
+                  individually by a single person and does not have the
+                  authority to hear claims in a class, collective or
+                  representative proceeding or to consolidate such claims.
+                </Typography>
+              </Grid>
+              <Grid className="points-blk">
+                <Typography className="h6">C. Covered Claims </Typography>
+                <Typography variant="body">
+                  Claims covered by the ADR provision and waiver include, but
+                  are not limited to the following; alleged violations of
+                  federal, state, or local constitutions, statutes, regulations,
+                  or ordinances, including, but not limited to, allegations of
+                  sexual harassment, discrimination, a breach of a contractual
+                  obligation, claims or disputes related to compensation, wages,
+                  and/or overtime, common law tort claims and alleged violations
+                  of public policy. The following are expressly excluded from
+                  the ADR provision and are not covered by this Agreement:
+                  claims or allegations related to workers’ compensation or
+                  unemployment insurance, administrative claims filed with
+                  government agencies such as the Equal Employment Opportunity
+                  Commission or the National Labor Relations Board and claims
+                  that are expressly excluded by statute or are expressly
+                  required to be arbitrated under a different procedure.
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Typography className="main-title" variant="h3">
+              EMPLOYEE ACKNOWLEDGEMENT
+            </Typography>
+
+            <Grid className="body-p">
+              <Typography variant="body">
+                I, <b>Jhon Smith (Name will be Replace)</b> , acknowledge
+                receiving and reviewing the Company’s Employee Handbook. I
+                clearly understand that this policy handbook does not create a
+                contract for employment with the Company, and that the Company
+                may change or modify the policies and procedures in this
+                handbook at any time, with or without prior notice.
+              </Typography>
+              <Typography variant="body">
+                I, <b>Jhon Smith (Name will be Replace)</b> , state that English
+                is my second language and that I have been advised to ask for a
+                translation of these policies in my native language. By affixing
+                my initials below and signing this acknowledgment form, I state
+                that I have (mark one)
+              </Typography>
+              <Typography variant="body">
+                <b>Jhon Smith (Name will be Replace)</b> declined to have the
+                EMPLOYEE HANDBOOK translated into my native language.
+              </Typography>
+              <Typography variant="body">
+                <b>Jhon Smith (Name will be Replace)</b> asked for and received
+                translation of the policies included in the EMPLOYEE HANDBOOK
+                into my native language.
+              </Typography>
+              <Typography variant="body">
+                I have read and/or received a translation of the policies
+                contained in the EMPLOYEE HANDBOOK and understand the policies
+                identified below and agree to abide by the Company’s rules and
+                regulations during my employment with the Company.
+              </Typography>
+              <Typography variant="body">
+                I understand that violating the policies and rules set out in
+                this handbook may lead to discipline, up to and including
+                termination.
+              </Typography>
+            </Grid>
+
+            <Grid className="grid-blk">
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={8}>
+                  <Typography variant="h5">
+                    Policy/Procedure Received and Understood
+                  </Typography>
                 </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">B.	Waiver Of Collective Action, Class, or Consolidated Claims </Typography>
-                <Typography variant="body">
-                 <b>BY ACCEPTING OR CONTINUING EMPLOYMENT WITH THE COMPANY, EMPLOYEE WAIVES THE RIGHT TO RECEIVE NOTICE OF, CONSENT TO, PARTIIPATE IN, OR PARTICIAPTE IN OR RECEIVE SETTLEMENT OF ANY CLAIM AGAINST THE COMPANY ARISING OUT OF OR RELATED TO EMPLOYMENT AS PART OF A COLLECTIVE, REPRESENTATIVE, PUTATIVE CLASS OR CLASS ACTION, WHETHER IN ARBITRATION OR IN A COURT OF COMPETENT JURISDICTION.  </b>   
-                </Typography>
-                <Typography variant="body">
-                The arbitrator shall not have the authority to authorize or preside over any form of a class, collective or representative proceeding.  The arbitrator may only hear claims brought individually by a single person and does not have the authority to hear claims in a class, collective or representative proceeding or to consolidate such claims.  
-                </Typography>
+                <Grid item xs={4}>
+                  <Typography variant="h5">Employee Initials</Typography>
                 </Grid>
-                <Grid className="points-blk">
-                <Typography className="h6">C.	Covered Claims </Typography>
-                <Typography variant="body">
-                Claims covered by the ADR provision and waiver include, but are not limited to the following; alleged violations of federal, state, or local constitutions, statutes, regulations, or ordinances, including, but not limited to, allegations of sexual harassment, discrimination, a breach of a contractual obligation, claims or disputes related to compensation, wages, and/or overtime, common law tort claims and alleged violations of public policy. The following are expressly excluded from the ADR provision and are not covered by this Agreement: claims or allegations related to workers’ compensation or unemployment insurance, administrative claims filed with government agencies such as the Equal Employment Opportunity Commission or the National Labor Relations Board and claims that are expressly excluded by statute or are expressly required to be arbitrated under a different procedure. 
-                </Typography>
+              </Grid>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Policy Statement on Equal Opportunity
+                  </Typography>
                 </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">Tip Credit Notice</Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">Credit Card Fee</Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Policy Against Harassment in the Workplace
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Policy Regarding Violence in the Workplace and Weapons
+                    Policy
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Consent and Release for Reasonable Workplace Searches{" "}
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">Workplace Violence </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Drug Free Workplace and Drug/Alcohol Testing{" "}
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">Remote Work Policy </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Electronic Systems Usage{" "}
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={8}>
+                  <Typography variant="body">
+                    Alternative Dispute Resolution/Class Action Waiver
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+              </Grid>
             </Grid>
 
-            
-            
-      <Typography className='main-title' variant='h3'>EMPLOYEE ACKNOWLEDGEMENT</Typography>
-
-       <Grid className='body-p'>
-         <Typography variant='body'>
-         I, <b>Jhon Smith (Name will be Replace)</b> , acknowledge receiving and reviewing the Company’s Employee Handbook.  I clearly understand that this policy handbook does not create a contract for employment with the Company, and that the Company may change or modify the policies and procedures in this handbook at any time, with or without prior notice.
-         </Typography>
-         <Typography variant='body'>
-         I, <b>Jhon Smith (Name will be Replace)</b> , state that English is my second language and that I have been advised to ask for a translation of these policies in my native language.  By affixing my initials below and signing this acknowledgment form, I state that I have (mark one)
-         </Typography>
-         <Typography variant='body'>
-         <b>Jhon Smith (Name will be Replace)</b>  declined to have the  EMPLOYEE HANDBOOK translated into my native language.
-         </Typography>
-         <Typography variant='body'>
-         <b>Jhon Smith (Name will be Replace)</b>  asked for and received translation of the policies included in the EMPLOYEE HANDBOOK into my native language.
-         </Typography>
-         <Typography variant='body'>
-         I have read and/or received a translation of the policies contained in the EMPLOYEE HANDBOOK and understand the policies identified below  and agree to abide by the Company’s rules and regulations during my employment with the Company.
-         </Typography>
-         <Typography variant='body'>
-         I understand that violating the policies and rules set out in this handbook may lead to discipline, up to and including termination.
-         </Typography>
-       </Grid>
-
-       <Grid className="grid-blk">
-       <Grid container spacing={3} columns={12} className='flx-box'>
-       <Grid item xs={8}>
-        <Typography variant="h5">Policy/Procedure Received and Understood</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography variant="h5">Employee Initials</Typography>
-       </Grid>
-       </Grid>
-       <Grid container spacing={3} columns={12} className='flx-box'>
-       <Grid item xs={8}>
-       <Typography variant="body">Policy Statement on Equal Opportunity</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Tip Credit Notice</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Credit Card Fee</Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Policy Against Harassment in the Workplace</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Policy Regarding Violence in the Workplace and Weapons Policy</Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Consent and Release for Reasonable Workplace Searches </Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Workplace Violence </Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Drug Free Workplace and Drug/Alcohol Testing </Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Remote Work Policy </Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Electronic Systems Usage </Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       <Grid item xs={8}>
-       <Typography variant="body">Alternative Dispute Resolution/Class Action Waiver</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='input-value' variant='body'>Smith</Typography>
-       </Grid>
-       </Grid>
-       </Grid>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>EMPLOYEE SIGNATURE</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>DATE</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-
-
-
-
-       <Grid className='form-points'>
-       <Grid className='form-title' mt={7}>
-       <Typography className='main-title' variant='h5'><b>NOTICE TO EMPLOYEES REGARDING EMPLOYEE CLASS WAIVER AND ARBITRATION AGREEMENT</b></Typography>
-       <Typography className='main-title' variant='h5'><b>AVISO A LAS EMPLEADAS CERCA DE ACUERDO DE ARBITRAJE Y RENUNCIA DE CLASE DEL EMPLEADO</b></Typography>
-       </Grid>
-        <Typography variant='body'>
-        If English is not your native language and/or you are unable to read and understand the Employee Class Waiver and Arbitration Agreement written
-        in English, you have a right to request a translation of the policies contained in this Policy.  You should request a translation of these
-        policies if you are unable to read and understand English because you must understand the policies contained in the Policy and agree to
-        be bound by the policies to be employed by the Company.
-        </Typography>
-        <Typography variant='body'>
-        Si inglés no es su lengua natal y/o si usted no puede leer y entender el Acuerdo de arbitraje y renuncia de clase del empleado escrita en inglés,
-        usted tiene el derecho de solicitar una traducción de las polizas contenidas en este Poliza. Usted debe de solicitar una traducción de estas
-        polizas si usted no puede leer y entender inglés, porque usted debe de entender las polizas contenidas en la Poliza y acordar en ser atado
-        a la poliza para ser empleado de la compania.
-        </Typography>
-        <Typography variant='body'>
-        Employee – check box as appropriate <b>Jhon Smith (Name will be Replace)</b> Empleado Marque la casilla según corresponda
-         </Typography>
-    <FormGroup className='pd-top-btm'>
-    <FormControl>
-      <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-      <Grid>
-
-      <Grid className='select-opt'>
-        <Typography className='label-name' variant='label'>Checked</Typography>
-        <Typography className='input-value' variant='body'>I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it.</Typography>
-        </Grid> 
- 
-
-        </Grid>
-      </RadioGroup>
-    </FormControl>
-    </FormGroup>
-       </Grid>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Employee Printed Name</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Employee Signature</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Translator Printed Name</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}> 
-        <Typography className='label-name' variant='label'>Translator Signature</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-
-       <Grid mt={8}>
-       <Typography className='main-title' variant='h3'>DISPUTE RESOLUTION AGREEMENT</Typography>
-       </Grid>
-
-       <Grid className='body-p'>
-         <Typography variant='body'>
-         Employee, <b>Jhon Smith (Name will be Replace)</b> , and Employer, Kirkwood Ops LLC, for good and valuable consideration agree as follows:
-         </Typography>
-       </Grid>
-
-       <Grid className='form-points'>
-        <Typography variant='h4'>1.	ALTERNATIVE DISPUTE RESOLUTION (“ADR”).</Typography>
-        <Typography variant='body'>
-        anticipating any particular problems during the employment relationship wish to outline a way to resolve any disputes that may arise between
-        them regarding this Agreement, including disputes arising out of or related to the relationship between the parties.  All claims, disputes,
-        controversies, or disagreements of any kind whatsoever including any claim arising out of, in connection with, or related to this Agreement,
-        and/or employees employment with Employer pursuant to this Agreement, including any claim that may arise between, Employee and any of
-        Employer’s officers, employees, managers, owners or agents in their capacity as such, shall be subject to the following alternative
-        dispute process:
-        </Typography>
-        <Grid className='form-point-inn'>
-         <Typography variant='h5'>A. Informal Mediation: </Typography>
-         <Typography variant='p'>Upon a request from any party to this Agreement, the parties shall promptly meet to discuss the dispute and attempt
-          to negotiate a resolution of the dispute.  </Typography>
-        </Grid>
-        <Grid className='form-point-inn'>
-         <Typography variant='h5'>B. Mediation before a Mediator: </Typography>
-         <Typography variant='p'>If the parties are not able to achieve a resolution of the dispute within 30 days of the meeting or 30 days after
-          request for a refused meeting, the parties agree to appoint a neutral mediator and attempt to resolve the dispute through mediation with
-           a private mediator in Harris County, Texas.  The parties agree to use reasonable efforts to select a mutually acceptable mediator and
-            Employer shall pay the mediation fee.</Typography>
-            <Typography variant='p'>The parties agree to conduct the mediation within 60 days of their meeting (or 30 days after request for a
-            refused meeting) referenced above.</Typography>
-        </Grid>
-        <Grid className='form-point-inn'>
-         <Typography variant='h5'>C. Arbitration:</Typography>
-         <Typography variant='p'>If the parties are unable to achieve a resolution of any dispute, the parties agree to resolve any disputes relating
-          to or arising out of this Agreement, through binding arbitration, using one (1) mutually acceptable private arbitrator in Harris County,
-           Texas, or in the absence of agreement, (ii) in accordance with selection rules of the American Arbitration Association for one (1) arbitrator.  </Typography>
-           <Typography variant='p'>The Arbitration shall be conducted in accordance with the Texas Rules of Civil Procedure and governed by the Federal Arbitration Act.
-            The Arbitration shall be brought under the American Arbitration Association Rule for Employment/Workplace Cases.  The maximum cost to Employee to arbitrate
-             shall be governed by the AAA.  Employer agrees to pay Employees share to arbitrate upon request from Employee.</Typography>
-             <Typography variant='p'>Employee agrees that final and binding arbitration is the exclusive final means for resolving the Claims outlined in this Agreement.
-               This Agreement is a waiver of all rights Employee may have to a civil court action on any dispute outlined by this Agreement. Accordingly, only an arbitrator,
-               not a judge or jury, will decide the dispute, although the arbitrator has the authority to award any type of relief that could otherwise be awarded by a
-               judge or jury, subject to all applicable terms of this ADR.  The ADR as set forth and agreed survives termination of this Employee’s employment and shall
-               be fully enforceable.</Typography>
-               <Typography variant='p'>Employee and Employer shall each pay for their own attorneys’ fees or costs of representation for purposes of the mediation
-               and arbitration unless otherwise provided by law or other terms of this Agreement.  </Typography>
-        </Grid>
-       </Grid>
-
-       <Grid className='form-points'>
-        <Typography variant='h4'>2.	WAIVER OF CLASS CLAIMS </Typography>
-        <Typography variant='body'>
-        EMPLOYEE WAIVES THE RIGHT TO PARTICIPATE, RECEIVE NOTICE OF, CONSENT TO OR SETTLE ANY CLAIM AGAINST EMPLOYER ARISING OUT OF OR RELATED TO EMPLOYMENT
-         AS PART OF A COLLECTIVE, REPRESENTATIVE, PUTATIVE CLASS OR CLASS ACTION, OR ANY CONSOLIDATED ACTION WHETHER IN ARBITRATION OR IN A COURT OF COMPETENT JURISDICTION.
-        </Typography>
-        <Typography variant='body'>
-        The arbitrator shall not have the authority to authorize or preside over any form of a class, collective or representative proceeding.
-        The arbitrator may only hear claims brought individually by a single person and does not have the authority to hear claims in a class,
-         collective or representative proceeding.  
-        </Typography>
-       </Grid>
-
-       <Grid className='form-points'>
-        <Typography variant='h4'>3.	COVERED CLAIMS:</Typography>
-        <Typography variant='body'>
-        Claims covered by the ADR provision and waiver include, but are not limited to the following; alleged violations of federal,
-        state, or local constitutions, statutes, regulations, or ordinances, including, but not limited to, allegations of a breach of
-        a contractual obligation, claims or disputes related to compensation, common law tort claims and alleged violations of public policy.
-        While Contractor has no employment relationship with and is not employed by Sierra the following are expressly excluded from the ADR provision
-        and are not covered by this Agreement: claims or allegations related to workers’ compensation or unemployment insurance, administrative claims
-        filed with government agencies such as the Equal Employment Opportunity Commission or the National Labor Relations Board and claims that are expressly
-        excluded by statute or are expressly required to be arbitrated under a different procedure.
-        </Typography>
-       </Grid>
-
-       <Grid className='form-points'>
-       <Grid className='form-title'>
-       <Typography className='main-title' variant='h3'>DISPUTE RESOLUTION AGREEMENT</Typography>
-       <Typography className='main-title-inn' variant='h5'><b>AVISO A LAS EMPLEADAS CERCA DE ACUERDO DE ARBITRAJE Y RENUNCIA DE CLASE DEL EMPLEADO</b></Typography>
-       </Grid>
-        <Typography variant='body'>
-        If English is not your native language and/or you are unable to read and understand the Employee Class Waiver and Arbitration Agreement written
-        in English, you have a right to request a translation of the policies contained in this Policy.  You should request a translation of these
-        policies if you are unable to read and understand English because you must understand the policies contained in the Policy and agree to
-        be bound by the policies to be employed by the Company.
-        </Typography>
-        <Typography variant='body'>
-        Si inglés no es su lengua natal y/o si usted no puede leer y entender el Acuerdo de arbitraje y renuncia de clase del empleado escrita en inglés,
-        usted tiene el derecho de solicitar una traducción de las polizas contenidas en este Poliza. Usted debe de solicitar una traducción de estas
-        polizas si usted no puede leer y entender inglés, porque usted debe de entender las polizas contenidas en la Poliza y acordar en ser atado
-        a la poliza para ser empleado de la compania.
-        </Typography>
-        <Typography variant='body'>
-        Employee – check box as appropriate <b>Jhon Smith (Name will be Replace)</b> Empleado Marque la casilla según corresponda
-         </Typography>
-    <FormGroup className='pd-top-btm'>
-    <FormControl>
-      <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-      <Grid>
-
-      <Grid className='select-opt'>
-        <Typography className='label-name' variant='label'>Checked</Typography>
-        <Typography className='input-value' variant='body'>I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it.</Typography>
-        </Grid>  
-
-        </Grid>
-      </RadioGroup>
-    </FormControl>
-    </FormGroup>
-       </Grid>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Employee Printed Name</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Employee Signature</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography> 
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Translator Printed Name</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}> 
-        <Typography className='label-name' variant='label'>Translator Signature</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        </Grid>
-        
-        
-        <Grid mt={5} container spacing={2} columns={12} className='flx-box form-hdr'>
-        <Grid item xs={6}>
-            <img className="brandname" src={mainlogo} alt="" />
-        </Grid>
-        <Grid item xs={6}>
-            <ul className="hdr-date">
-             <li>USCIS</li>
-             <li>Form I-9</li>
-             <li>OMB No.1615-0047</li>
-             <li>Expires 07/31/2026</li>
-            </ul>
-        </Grid>
-        </Grid>
-
-        <Grid className='text-box'>
-         <h1>Employment Eligibility Verification </h1>
-         <h4>Department of Homeland Security </h4>
-         <h6>U.S.Citizenship and Immigration Services </h6>
-         <p><b>START HERE:</b> Employers must ensure the form instructions are available to employees when completing this form. Employers are liable for failing
-          to comply with the requirements for completing this form. See below and the <a className="red-link" href="">Instructions</a>.</p>
-          <p>ANTI-DISCRIMINATION NOTICE: All employees can choose which acceptable documentation to present for Form I-9. Employers cannot ask employees for documentation
-          to verify information in</p>
-          <p><b>Section 1</b>, or specify which acceptable documentation employees must present for</p>
-          <p><b>Section 2</b> or Supplement B, Reverification and Rehire. Treating employees differently based on their citizenship, immigration status, or national
-           origin may be illegal.</p>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-         <h4>Section 1. Employee Information and Attestation: </h4>
-         <p>Employees must complete and sign Section 1 of Form I-9 no later than the first day of employment, but not before accepting a job offer.</p>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Last Name :</Typography>
-        <Typography className='input-value' variant='body'>Smith</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>First Name (Given Name)</Typography>
-        <Typography className='input-value' variant='body'>Jhon</Typography>
-        </Grid>
-        </Grid>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Middle Initial (if any)</Typography>
-        <Typography className='input-value' variant='body'>Middle Initial</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Other Last Names Used (if any)</Typography>
-        <Typography className='input-value' variant='body'>Other Last Names Used</Typography> 
-        </Grid>
-        </Grid>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Address (Street Number and Name)</Typography>
-        <Typography className='input-value' variant='body'>Address</Typography> 
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Apt. Number (if any)</Typography>
-        <Typography className='input-value' variant='body'>Apt. Number</Typography>
-        </Grid>
-        </Grid>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>City or Town</Typography>
-        <Typography className='input-value' variant='body'>City or Town</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>State</Typography>
-        <Typography className='input-value' variant='body'>State</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>ZIP Code</Typography>
-        <Typography className='input-value' variant='body'>ZIP Code</Typography>
-        </Grid>
-        </Grid>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Date of Birth</Typography>
-        <Typography className='input-value' variant='body'>mm/dd/yyyy</Typography>
-        </Grid>
-        <Grid item xs={6}> 
-        <Typography className='label-name' variant='label'>U.S. Social Security Number</Typography>
-        <Typography className='input-value' variant='body'>653224</Typography>
-        </Grid>
-        </Grid>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Employee's Email Address</Typography>
-        <Typography className='input-value' variant='body'>test@gmail.com</Typography>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography className='label-name' variant='label'>Employee's Telephone Number</Typography>
-        <Typography className='input-value' variant='body'>65598656565</Typography>
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-         <p>I am aware that federal law provides for imprisonment and/or fines for false statements, or the use of false documents, in
-          connection with the completion of this form. I attest, under penalty of perjury, that this information, including my selection
-           of the box attesting to my citizenship or immigration status, is true and correct.</p>
-
-    
-    <FormGroup className='pd-top-btm'>
-    <FormControl>
-    <label>Check one of the following boxes to attest to your citizenship or immigration status (See page 2 and 3 of the instructions.):</label>
-      <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="r1" name="radio-buttons-group">
-      <Grid container spacing={3} columns={12} className='flx-box checkbox'>
-
-      <Grid item xs={12}>
-        <Typography className='label-name' variant='label'>Checkbox label</Typography>
-        <Typography className='input-value' variant='body'>1. A citizen of the United States</Typography>
-      </Grid> 
-
-
-      <Grid item xs={6}>
-         <Typography className='label-name' variant='label'>Checkbox label</Typography>
-        <Typography className='input-value' variant='body'>3. A lawful permanent resident (Enter USCIS or A-Number.)</Typography>
-      </Grid>
-      <Grid item xs={6}>
-        <Typography className='label-name' variant='body'>Checkbox label</Typography>
-        <Typography className='input-value' variant='body'>Blank Filed</Typography>
-      </Grid>
-
-        </Grid>
-      </RadioGroup>
-    </FormControl>
-    </FormGroup>
-
-          <FormGroup className='pd-top-btm'>
-           <label>If you check Item Number 4., enter one of these:</label>
-           <Grid container spacing={3} columns={12} className='flx-box checkbox'>
-           <Grid item xs={3}>
-           <Typography className='label-name' variant='label'>USCIS A-Number</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
+            <Grid container spacing={3} columns={12} className="flx-box">
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  EMPLOYEE SIGNATURE
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  DATE
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item xs={1}>
-            <Typography variant='h5'>OR</Typography>
+
+            <Grid className="form-points">
+              <Grid className="form-title" mt={7}>
+                <Typography className="main-title" variant="h5">
+                  <b>
+                    NOTICE TO EMPLOYEES REGARDING EMPLOYEE CLASS WAIVER AND
+                    ARBITRATION AGREEMENT
+                  </b>
+                </Typography>
+                <Typography className="main-title" variant="h5">
+                  <b>
+                    AVISO A LAS EMPLEADAS CERCA DE ACUERDO DE ARBITRAJE Y
+                    RENUNCIA DE CLASE DEL EMPLEADO
+                  </b>
+                </Typography>
+              </Grid>
+              <Typography variant="body">
+                If English is not your native language and/or you are unable to
+                read and understand the Employee Class Waiver and Arbitration
+                Agreement written in English, you have a right to request a
+                translation of the policies contained in this Policy. You should
+                request a translation of these policies if you are unable to
+                read and understand English because you must understand the
+                policies contained in the Policy and agree to be bound by the
+                policies to be employed by the Company.
+              </Typography>
+              <Typography variant="body">
+                Si inglés no es su lengua natal y/o si usted no puede leer y
+                entender el Acuerdo de arbitraje y renuncia de clase del
+                empleado escrita en inglés, usted tiene el derecho de solicitar
+                una traducción de las polizas contenidas en este Poliza. Usted
+                debe de solicitar una traducción de estas polizas si usted no
+                puede leer y entender inglés, porque usted debe de entender las
+                polizas contenidas en la Poliza y acordar en ser atado a la
+                poliza para ser empleado de la compania.
+              </Typography>
+              <Typography variant="body">
+                Employee – check box as appropriate{" "}
+                <b>Jhon Smith (Name will be Replace)</b> Empleado Marque la
+                casilla según corresponda
+              </Typography>
+              <FormGroup className="pd-top-btm">
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="r1"
+                    name="radio-buttons-group"
+                  >
+                    <Grid>
+                      <Grid className="select-opt">
+                        <Typography className="label-name" variant="label">
+                          Checked
+                        </Typography>
+                        <Typography className="input-value" variant="body">
+                          I am able to read and understand English. I have read
+                          and understand the Employee Class Waiver and
+                          Arbitration Agreement and have signed it.
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </RadioGroup>
+                </FormControl>
+              </FormGroup>
             </Grid>
-            <Grid item xs={3}>
-            <Typography className='label-name' variant='label'>Form I-94 Admission Number</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
+
+            <Grid container spacing={3} columns={12} className="flx-box">
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Employee Printed Name
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Employee Signature
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Translator Printed Name
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Translator Signature
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item xs={1}>
-            <Typography variant='h5'>OR</Typography>
+
+            <Grid mt={8}>
+              <Typography className="main-title" variant="h3">
+                DISPUTE RESOLUTION AGREEMENT
+              </Typography>
             </Grid>
-            <Grid item xs={4}>
-            <Typography className='label-name' variant='label'>Foreign Passport Number and Country of Issuance</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-            </Grid>  
-            <Grid item xs={6}>
-            <Typography className='label-name' variant='label'>Signature of Employee</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
+
+            <Grid className="body-p">
+              <Typography variant="body">
+                Employee, <b>Jhon Smith (Name will be Replace)</b> , and
+                Employer, Kirkwood Ops LLC, for good and valuable consideration
+                agree as follows:
+              </Typography>
             </Grid>
-            <Grid item xs={6}>
-            <Typography className='label-name' variant='label'>Today's Date</Typography>
-           <Typography className='input-value' variant='body'>mm/dd/yyyy</Typography>
-            </Grid>  
+
+            <Grid className="form-points">
+              <Typography variant="h4">
+                1. ALTERNATIVE DISPUTE RESOLUTION (“ADR”).
+              </Typography>
+              <Typography variant="body">
+                anticipating any particular problems during the employment
+                relationship wish to outline a way to resolve any disputes that
+                may arise between them regarding this Agreement, including
+                disputes arising out of or related to the relationship between
+                the parties. All claims, disputes, controversies, or
+                disagreements of any kind whatsoever including any claim arising
+                out of, in connection with, or related to this Agreement, and/or
+                employees employment with Employer pursuant to this Agreement,
+                including any claim that may arise between, Employee and any of
+                Employer’s officers, employees, managers, owners or agents in
+                their capacity as such, shall be subject to the following
+                alternative dispute process:
+              </Typography>
+              <Grid className="form-point-inn">
+                <Typography variant="h5">A. Informal Mediation: </Typography>
+                <Typography variant="p">
+                  Upon a request from any party to this Agreement, the parties
+                  shall promptly meet to discuss the dispute and attempt to
+                  negotiate a resolution of the dispute.{" "}
+                </Typography>
+              </Grid>
+              <Grid className="form-point-inn">
+                <Typography variant="h5">
+                  B. Mediation before a Mediator:{" "}
+                </Typography>
+                <Typography variant="p">
+                  If the parties are not able to achieve a resolution of the
+                  dispute within 30 days of the meeting or 30 days after request
+                  for a refused meeting, the parties agree to appoint a neutral
+                  mediator and attempt to resolve the dispute through mediation
+                  with a private mediator in Harris County, Texas. The parties
+                  agree to use reasonable efforts to select a mutually
+                  acceptable mediator and Employer shall pay the mediation fee.
+                </Typography>
+                <Typography variant="p">
+                  The parties agree to conduct the mediation within 60 days of
+                  their meeting (or 30 days after request for a refused meeting)
+                  referenced above.
+                </Typography>
+              </Grid>
+              <Grid className="form-point-inn">
+                <Typography variant="h5">C. Arbitration:</Typography>
+                <Typography variant="p">
+                  If the parties are unable to achieve a resolution of any
+                  dispute, the parties agree to resolve any disputes relating to
+                  or arising out of this Agreement, through binding arbitration,
+                  using one (1) mutually acceptable private arbitrator in Harris
+                  County, Texas, or in the absence of agreement, (ii) in
+                  accordance with selection rules of the American Arbitration
+                  Association for one (1) arbitrator.{" "}
+                </Typography>
+                <Typography variant="p">
+                  The Arbitration shall be conducted in accordance with the
+                  Texas Rules of Civil Procedure and governed by the Federal
+                  Arbitration Act. The Arbitration shall be brought under the
+                  American Arbitration Association Rule for Employment/Workplace
+                  Cases. The maximum cost to Employee to arbitrate shall be
+                  governed by the AAA. Employer agrees to pay Employees share to
+                  arbitrate upon request from Employee.
+                </Typography>
+                <Typography variant="p">
+                  Employee agrees that final and binding arbitration is the
+                  exclusive final means for resolving the Claims outlined in
+                  this Agreement. This Agreement is a waiver of all rights
+                  Employee may have to a civil court action on any dispute
+                  outlined by this Agreement. Accordingly, only an arbitrator,
+                  not a judge or jury, will decide the dispute, although the
+                  arbitrator has the authority to award any type of relief that
+                  could otherwise be awarded by a judge or jury, subject to all
+                  applicable terms of this ADR. The ADR as set forth and agreed
+                  survives termination of this Employee’s employment and shall
+                  be fully enforceable.
+                </Typography>
+                <Typography variant="p">
+                  Employee and Employer shall each pay for their own attorneys’
+                  fees or costs of representation for purposes of the mediation
+                  and arbitration unless otherwise provided by law or other
+                  terms of this Agreement.{" "}
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Grid className="form-points">
+              <Typography variant="h4">2. WAIVER OF CLASS CLAIMS </Typography>
+              <Typography variant="body">
+                EMPLOYEE WAIVES THE RIGHT TO PARTICIPATE, RECEIVE NOTICE OF,
+                CONSENT TO OR SETTLE ANY CLAIM AGAINST EMPLOYER ARISING OUT OF
+                OR RELATED TO EMPLOYMENT AS PART OF A COLLECTIVE,
+                REPRESENTATIVE, PUTATIVE CLASS OR CLASS ACTION, OR ANY
+                CONSOLIDATED ACTION WHETHER IN ARBITRATION OR IN A COURT OF
+                COMPETENT JURISDICTION.
+              </Typography>
+              <Typography variant="body">
+                The arbitrator shall not have the authority to authorize or
+                preside over any form of a class, collective or representative
+                proceeding. The arbitrator may only hear claims brought
+                individually by a single person and does not have the authority
+                to hear claims in a class, collective or representative
+                proceeding.
+              </Typography>
+            </Grid>
+
+            <Grid className="form-points">
+              <Typography variant="h4">3. COVERED CLAIMS:</Typography>
+              <Typography variant="body">
+                Claims covered by the ADR provision and waiver include, but are
+                not limited to the following; alleged violations of federal,
+                state, or local constitutions, statutes, regulations, or
+                ordinances, including, but not limited to, allegations of a
+                breach of a contractual obligation, claims or disputes related
+                to compensation, common law tort claims and alleged violations
+                of public policy. While Contractor has no employment
+                relationship with and is not employed by Sierra the following
+                are expressly excluded from the ADR provision and are not
+                covered by this Agreement: claims or allegations related to
+                workers’ compensation or unemployment insurance, administrative
+                claims filed with government agencies such as the Equal
+                Employment Opportunity Commission or the National Labor
+                Relations Board and claims that are expressly excluded by
+                statute or are expressly required to be arbitrated under a
+                different procedure.
+              </Typography>
+            </Grid>
+
+            <Grid className="form-points">
+              <Grid className="form-title">
+                <Typography className="main-title" variant="h3">
+                  DISPUTE RESOLUTION AGREEMENT
+                </Typography>
+                <Typography className="main-title-inn" variant="h5">
+                  <b>
+                    AVISO A LAS EMPLEADAS CERCA DE ACUERDO DE ARBITRAJE Y
+                    RENUNCIA DE CLASE DEL EMPLEADO
+                  </b>
+                </Typography>
+              </Grid>
+              <Typography variant="body">
+                If English is not your native language and/or you are unable to
+                read and understand the Employee Class Waiver and Arbitration
+                Agreement written in English, you have a right to request a
+                translation of the policies contained in this Policy. You should
+                request a translation of these policies if you are unable to
+                read and understand English because you must understand the
+                policies contained in the Policy and agree to be bound by the
+                policies to be employed by the Company.
+              </Typography>
+              <Typography variant="body">
+                Si inglés no es su lengua natal y/o si usted no puede leer y
+                entender el Acuerdo de arbitraje y renuncia de clase del
+                empleado escrita en inglés, usted tiene el derecho de solicitar
+                una traducción de las polizas contenidas en este Poliza. Usted
+                debe de solicitar una traducción de estas polizas si usted no
+                puede leer y entender inglés, porque usted debe de entender las
+                polizas contenidas en la Poliza y acordar en ser atado a la
+                poliza para ser empleado de la compania.
+              </Typography>
+              <Typography variant="body">
+                Employee – check box as appropriate{" "}
+                <b>Jhon Smith (Name will be Replace)</b> Empleado Marque la
+                casilla según corresponda
+              </Typography>
+              <FormGroup className="pd-top-btm">
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="r1"
+                    name="radio-buttons-group"
+                  >
+                    <Grid>
+                      <Grid className="select-opt">
+                        <Typography className="label-name" variant="label">
+                          Checked
+                        </Typography>
+                        <Typography className="input-value" variant="body">
+                          I am able to read and understand English. I have read
+                          and understand the Employee Class Waiver and
+                          Arbitration Agreement and have signed it.
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </RadioGroup>
+                </FormControl>
+              </FormGroup>
+            </Grid>
+
+            <Grid container spacing={3} columns={12} className="flx-box">
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Employee Printed Name
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Employee Signature
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Translator Printed Name
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography className="label-name" variant="label">
+                  Translator Signature
+                </Typography>
+                <Typography className="input-value" variant="body">
+                  Smith
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Grid
+              mt={5}
+              container
+              spacing={2}
+              columns={12}
+              className="flx-box form-hdr"
+            >
+              <Grid item xs={6}>
+                <img className="brandname" src={mainlogo} alt="" />
+              </Grid>
+              <Grid item xs={6}>
+                <ul className="hdr-date">
+                  <li>USCIS</li>
+                  <li>Form I-9</li>
+                  <li>OMB No.1615-0047</li>
+                  <li>Expires 07/31/2026</li>
+                </ul>
+              </Grid>
+            </Grid>
+
+            <Grid className="text-box">
+              <h1>Employment Eligibility Verification </h1>
+              <h4>Department of Homeland Security </h4>
+              <h6>U.S.Citizenship and Immigration Services </h6>
+              <p>
+                <b>START HERE:</b> Employers must ensure the form instructions
+                are available to employees when completing this form. Employers
+                are liable for failing to comply with the requirements for
+                completing this form. See below and the{" "}
+                <a className="red-link" href="">
+                  Instructions
+                </a>
+                .
+              </p>
+              <p>
+                ANTI-DISCRIMINATION NOTICE: All employees can choose which
+                acceptable documentation to present for Form I-9. Employers
+                cannot ask employees for documentation to verify information in
+              </p>
+              <p>
+                <b>Section 1</b>, or specify which acceptable documentation
+                employees must present for
+              </p>
+              <p>
+                <b>Section 2</b> or Supplement B, Reverification and Rehire.
+                Treating employees differently based on their citizenship,
+                immigration status, or national origin may be illegal.
+              </p>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Section 1. Employee Information and Attestation: </h4>
+              <p>
+                Employees must complete and sign Section 1 of Form I-9 no later
+                than the first day of employment, but not before accepting a job
+                offer.
+              </p>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Last Name :
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Smith
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Jhon
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Middle Initial
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Other Last Names Used (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Other Last Names Used
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Address (Street Number and Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Address
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Apt. Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Apt. Number
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    City or Town
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    City or Town
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    State
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    State
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    ZIP Code
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    ZIP Code
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Date of Birth
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    mm/dd/yyyy
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    U.S. Social Security Number
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    653224
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Employee's Email Address
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    test@gmail.com
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Employee's Telephone Number
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    65598656565
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <p>
+                I am aware that federal law provides for imprisonment and/or
+                fines for false statements, or the use of false documents, in
+                connection with the completion of this form. I attest, under
+                penalty of perjury, that this information, including my
+                selection of the box attesting to my citizenship or immigration
+                status, is true and correct.
+              </p>
+
+              <FormGroup className="pd-top-btm">
+                <FormControl>
+                  <label>
+                    Check one of the following boxes to attest to your
+                    citizenship or immigration status (See page 2 and 3 of the
+                    instructions.):
+                  </label>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="r1"
+                    name="radio-buttons-group"
+                  >
+                    <Grid
+                      container
+                      spacing={3}
+                      columns={12}
+                      className="flx-box checkbox"
+                    >
+                      <Grid item xs={12}>
+                        <Typography className="label-name" variant="label">
+                          Checkbox label
+                        </Typography>
+                        <Typography className="input-value" variant="body">
+                          1. A citizen of the United States
+                        </Typography>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <Typography className="label-name" variant="label">
+                          Checkbox label
+                        </Typography>
+                        <Typography className="input-value" variant="body">
+                          3. A lawful permanent resident (Enter USCIS or
+                          A-Number.)
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={6}>
+                        <Typography className="label-name" variant="body">
+                          Checkbox label
+                        </Typography>
+                        <Typography className="input-value" variant="body">
+                          Blank Filed
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </RadioGroup>
+                </FormControl>
+              </FormGroup>
+
+              <FormGroup className="pd-top-btm">
+                <label>If you check Item Number 4., enter one of these:</label>
+                <Grid
+                  container
+                  spacing={3}
+                  columns={12}
+                  className="flx-box checkbox"
+                >
+                  <Grid item xs={3}>
+                    <Typography className="label-name" variant="label">
+                      USCIS A-Number
+                    </Typography>
+                    <Typography className="input-value" variant="body">
+                      Insert Text
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={1}>
+                    <Typography variant="h5">OR</Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography className="label-name" variant="label">
+                      Form I-94 Admission Number
+                    </Typography>
+                    <Typography className="input-value" variant="body">
+                      Insert Text
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={1}>
+                    <Typography variant="h5">OR</Typography>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Typography className="label-name" variant="label">
+                      Foreign Passport Number and Country of Issuance
+                    </Typography>
+                    <Typography className="input-value" variant="body">
+                      Insert Text
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Typography className="label-name" variant="label">
+                      Signature of Employee
+                    </Typography>
+                    <Typography className="input-value" variant="body">
+                      Insert Text
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Typography className="label-name" variant="label">
+                      Today's Date
+                    </Typography>
+                    <Typography className="input-value" variant="body">
+                      mm/dd/yyyy
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Typography variant="body" mt={5}>
+                  If a preparer and/or translator assisted you in completing
+                  Section 1, that person MUST complete the Preparer and/or
+                  Translator Certification on Page 3
+                </Typography>
+              </FormGroup>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Section 2. Employer Review and Verification:</h4>
+              <p>
+                Employers or their authorized representative must complete and
+                sign Section 2 within three business days after the employee's
+                first day of employment, and must physically examine, or examine
+                consistent with an alternative procedure authorized by the
+                Secretary of DHS, documentation from List A OR a combination of
+                documentation from List B and List C. Enter any additional
+                documentation in the Additional Information box; see
+                Instructions.
+              </p>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={12}>
+                  <Typography variant="h5" className="tag">
+                    List A
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Document Title 1
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Issuing Authority
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Document Title 2 (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Issuing Authority
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Document Title 3 (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Issuing Authority
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+
+                <Grid item xs={12} mt={5}>
+                  <Typography variant="h5" className="tag">
+                    List B
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Document Title 1
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Issuing Authority
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+
+                <Grid item xs={12} mt={5}>
+                  <Typography variant="h5" className="tag">
+                    List C
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Document Title 1
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Issuing Authority
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Additional Information
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h4>Certification:</h4>
+              <p>
+                I attest, under penalty of perjury, that (1) I have examined the
+                documentation presented by the above-named employee, (2) the
+                above-listed documentation appears to be genuine and to relate
+                to the employee named, and (3) to the best of my knowledge, the
+                employee is authorized to work in the United States.
+              </p>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    First Day of Employment
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    mm/dd/yyyy
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Last Name, First Name and Title of Employer
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="label-name" variant="label">
+                    Today's Date
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    mm/dd/yyyy
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Employer's Business or Organization Name
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="label-name" variant="label">
+                    Employer's Business or Organization Address, City or Town,
+                    State, ZIP Code
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <p>
+                    For reverification or rehire, complete Supplement B,
+                    Reverification and Rehire on Page 4.
+                  </p>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid className="table-box">
+              <Grid container className="flx-box table-box-title">
+                <Grid item xs={12}>
+                  <Typography variant="h4">
+                    LISTS OF ACCEPTABLE DOCUMENTS
+                  </Typography>
+                  <Typography variant="body">
+                    All documents containing an expiration date must be
+                    unexpired.
+                  </Typography>
+                  <Typography variant="body">
+                    Documents extended by the issuing authority are considered
+                    unexpired.
+                  </Typography>
+                  <Typography variant="body">
+                    Employees may present one selection from List A or a
+                    combination of one selection from List B and one selection
+                    from List C.
+                  </Typography>
+                  <Typography variant="body">
+                    <b>
+                      Examples of many of these documents appear in the Handbook
+                      for Employers (M-274).
+                    </b>
+                  </Typography>
+                </Grid>
+              </Grid>
+              <table>
+                <tr>
+                  <th>
+                    <Typography variant="body">LIST A</Typography>
+                    Documents that Establish Both Identity and Employment
+                    Authorization
+                  </th>
+                  <th>OR</th>
+                  <th>
+                    <Typography variant="body">LIST B</Typography> Documents
+                    that Establish Identity
+                  </th>
+                  <th>AND</th>
+                  <th>
+                    <Typography variant="body">LIST C</Typography>
+                    Documents that Establish Employment Authorization
+                  </th>
+                </tr>
+
+                <tr>
+                  <td>1. U.S. Passport or U.S. Passport Card</td>
+                  <td className="bordernone"></td>
+                  <td>
+                    1. Driver's license or ID card issued by a State or outlying
+                    possession of the United States provided it contains a
+                    photograph or information such as name, date of birth,
+                    gender, height, eye color, and address
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>
+                    A Social Security Account Number card, unless the card
+                    includes one of the following restrictions:
+                    <ul>
+                      <li>(1) NOT VALID FOR EMPLOYMENT</li>
+                      <li>(2) VALID FOR WORK ONLY WITH INS AUTHORIZATION</li>
+                      <li>(3) VALID FOR WORK ONLY WITH DHS AUTHORIZATION</li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    2. Permanent Resident Card or Alien Registration Receipt
+                    Card (Form I-551)
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>
+                    2. ID card issued by federal, state or local government
+                    agencies or entities, provided it contains a photograph or
+                    information such as name, date of birth, gender, height, eye
+                    color, and address
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>
+                    2. Certification of report of birth issued by the Department
+                    of State (Forms DS-1350, FS-545, FS-240)
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    3. Foreign passport that contains a temporary I-551 stamp or
+                    temporary I-551 printed notation on a machinereadable
+                    immigrant visa
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>3. School ID card with a photograph</td>
+                  <td className="bordernone"></td>
+                  <td>
+                    3. Original or certified copy of birth certificate issued by
+                    a State, county, municipal authority, or territory of the
+                    United States bearing an official seal
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    4. Employment Authorization Document that contains a
+                    photograph (Form I-766)
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>4. Voter's registration card</td>
+                  <td className="bordernone"></td>
+                  <td>4. Native American tribal document</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    5. For an individual temporarily authorized to work for a
+                    specific employer because of his or her status or parole:
+                    <ul>
+                      <li>a. Foreign passport; and</li>
+                      <li>
+                        b. Form I-94 or Form I-94A that has the following:
+                      </li>
+                      <ol>
+                        <li>(1) The same name as the passport; and</li>
+                        <li>
+                          (2) An endorsement of the individual's status or
+                          parole as long as that period of endorsement has not
+                          yet expired and the proposed employment is not in
+                          conflict with any restrictions or limitations
+                          identified on the form.
+                        </li>
+                      </ol>
+                    </ul>
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>5. U.S. Military card or draft record</td>
+                  <td className="bordernone"></td>
+                  <td>5. U.S. Citizen ID Card (Form I-197)</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    6. Passport from the Federated States of Micronesia (FSM) or
+                    the Republic of the Marshall Islands (RMI) with Form I-94 or
+                    Form I-94A indicating nonimmigrant admission under the
+                    Compact of Free Association Between the United States and
+                    the FSM or RMI
+                  </td>
+                  <td className="bordernone"></td>
+                  <td>6. Military dependent's ID card</td>
+                  <td className="bordernone"></td>
+                  <td>
+                    6. Identification Card for Use of Resident Citizen in the
+                    United States (Form I-179)
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>7. U.S. Coast Guard Merchant Mariner Card</td>
+                  <td className="bordernone"></td>
+                  <td>
+                    7. Employment authorization document issued by the
+                    Department of Homeland Security
+                    <br></br>
+                    For examples, see Section 7 and Section 13 of the M-274 on
+                    uscis.gov/i-9-central.
+                    <br></br>
+                    The Form I-766, Employment Authorization Document, is a List
+                    A, Item Number 4. document, not a List C document.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>8. Native American tribal document</td>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>
+                    9. Driver's license issued by a Canadian government
+                    authority
+                  </td>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>
+                    <b>
+                      For persons under age 18 who are unable to present a
+                      document listed above:
+                    </b>
+                  </td>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>10. School record or report card</td>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>11. Clinic, doctor, or hospital record</td>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                </tr>
+
+                <tr>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                  <td>12. Day-care or nursery school record</td>
+                  <td className="bordernone"></td>
+                  <td className="bordernone"></td>
+                </tr>
+              </table>
+
+              <Grid className="grid-title">
+                <Typography variant="h4">Acceptable Receipts</Typography>
+                <Typography variant="body">
+                  May be presented in lieu of a document listed above for a
+                  temporary period. For receipt validity dates, see the M-274.{" "}
+                </Typography>
+                <table>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>
+                          ● Receipt for a replacement of a lost, stolen, or
+                          damaged List A document.
+                        </li>
+                        <li>
+                          ● Form I-94 issued to a lawful permanent resident that
+                          contains an I-551 stamp and a photograph of the
+                          individual.
+                        </li>
+                        <li>
+                          ● Form I-94 with “RE” notation or refugee stamp issued
+                          to a refugee.
+                        </li>
+                      </ul>
+                    </td>
+                    <td className="bordernone">
+                      <b>OR</b>
+                    </td>
+                    <td>
+                      {" "}
+                      Receipt for a replacement of a lost, stolen, or damaged
+                      List B document.
+                    </td>
+                    <td className="bordernone"></td>
+                    <td className="bordernone">
+                      Receipt for a replacement of a lost, stolen, or damaged
+                      List C document.
+                    </td>
+                  </tr>
+                </table>
+                <Typography variant="body">
+                  <b>
+                    *Refer to the Employment Authorization Extensions page on
+                    I-9 Central for more information.
+                  </b>
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Grid container spacing={2} columns={16} className="flx-box">
+              <Grid item xs={8}>
+                <img className="brandname" src={mainlogo} alt="" />
+              </Grid>
+              <Grid item xs={8}>
+                <ul className="hdr-date">
+                  <li>USCIS</li>
+                  <li>Form I-9</li>
+                  <li>Supplement A</li>
+                  <li>OMB No.1615-0047</li>
+                  <li>Expires 07/31/2026</li>
+                </ul>
+              </Grid>
+            </Grid>
+
+            <Grid className="text-box">
+              <Typography variant="h1">
+                Supplement A<br></br>
+                Preparer and/or Translator Certification for Section 1
+              </Typography>
+              <h4>Department of Homeland Security </h4>
+              <h6>U.S.Citizenship and Immigration Services </h6>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name) from Section 1.
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name) from Section 1.
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Middle initial (if any) from Section 1.
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <p>
+                    <b>Instructions:</b> This supplement must be completed by
+                    any preparer and/or translator who assists an employee in
+                    completing Section 1 of Form I-9. The preparer and/or
+                    translator must enter the employee's name in the spaces
+                    provided above. Each preparer or translator must complete,
+                    sign, and date a separate certification area. Employers must
+                    retain completed supplement sheets with the employee's
+                    completed Form I-9.{" "}
+                  </p>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h3>
+                I attest, under penalty of perjury, that I have assisted in the
+                completion of Section 1 of this form and that to the best of my
+                knowledge the information is true and correct.{" "}
+              </h3>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={8}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Preparer or Translator
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={5}>
+                  <Typography className="label-name" variant="label">
+                    Address (Street Number and Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <Typography className="label-name" variant="label">
+                    City or Town
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    State
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    ZIP Code
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h3>
+                I attest, under penalty of perjury, that I have assisted in the
+                completion of Section 1 of this form and that to the best of my
+                knowledge the information is true and correct.
+              </h3>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={8}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Preparer or Translator
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={5}>
+                  <Typography className="label-name" variant="label">
+                    Address (Street Number and Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <Typography className="label-name" variant="label">
+                    City or Town
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    State
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    ZIP Code
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h3>
+                I attest, under penalty of perjury, that I have assisted in the
+                completion of Section 1 of this form and that to the best of my
+                knowledge the information is true and correct.
+              </h3>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={8}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Preparer or Translator
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={5}>
+                  <Typography className="label-name" variant="label">
+                    Address (Street Number and Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <Typography className="label-name" variant="label">
+                    City or Town
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    State
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    ZIP Code
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <h3>
+                I attest, under penalty of perjury, that I have assisted in the
+                completion of Section 1 of this form and that to the best of my
+                knowledge the information is true and correct.
+              </h3>
+
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={8}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Preparer or Translator
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={5}>
+                  <Typography className="label-name" variant="label">
+                    Address (Street Number and Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <Typography className="label-name" variant="label">
+                    City or Town
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    State
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    ZIP Code
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid container spacing={2} columns={16} className="flx-box">
+              <Grid item xs={8}>
+                <img className="brandname" src={mainlogo} alt="" />
+              </Grid>
+              <Grid item xs={8}>
+                <ul className="hdr-date">
+                  <li>USCIS</li>
+                  <li>Form I-9</li>
+                  <li>Supplement B</li>
+                  <li>OMB No.1615-0047</li>
+                  <li>Expires 07/31/2026</li>
+                </ul>
+              </Grid>
+            </Grid>
+
+            <Grid className="text-box">
+              <Typography variant="h1">
+                Supplement B<br></br>
+                Reverification and Rehire (formerly Section 3)
+              </Typography>
+              <h4>Department of Homeland Security </h4>
+              <h6>U.S.Citizenship and Immigration Services </h6>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name) from Section 1.
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    First Name (Given Name) from Section 1.
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Middle initial (if any) from Section 1.
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <p>
+                    <b>Instructions:</b> This supplement replaces Section 3 on
+                    the previous version of Form I-9. Only use this page if your
+                    employee requires reverification, is rehired within three
+                    years of the date the original Form I-9 was completed, or
+                    provides proof of a legal name change. Enter the employee's
+                    name in the fields above. Use a new section for each
+                    reverification or rehire. Review the Form I-9 instructions
+                    before completing this page. Keep this page as part of the
+                    employee's Form I-9 record. Additional guidance can be found
+                    in the
+                    <a className="red-link" href="">
+                      {" "}
+                      Handbook for Employers: Guidance for Completing Form I-9
+                      (M-274)
+                    </a>
+                  </p>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    Date of Rehire (if applicable)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="body">
+                    <b>Reverification:</b> If the employee requires
+                    reverification, your employee can choose to present any
+                    acceptable List A or List C documentation to show continued
+                    employment authorization. Enter the document information in
+                    the spaces below.
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Title
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any) (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="body">
+                    I attest, under penalty of perjury, that to the best of my
+                    knowledge, this employee is authorized to work in the United
+                    States, and if the employee presented documentation, the
+                    documentation I examined appears to be genuine and to relate
+                    to the individual who presented it.
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Name of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Today's Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    Date of Rehire (if applicable)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="body">
+                    <b>Reverification:</b> If the employee requires
+                    reverification, your employee can choose to present any
+                    acceptable List A or List C documentation to show continued
+                    employment authorization. Enter the document information in
+                    the spaces below.
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Title
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any) (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="body">
+                    I attest, under penalty of perjury, that to the best of my
+                    knowledge, this employee is authorized to work in the United
+                    States, and if the employee presented documentation, the
+                    documentation I examined appears to be genuine and to relate
+                    to the individual who presented it.
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Name of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Today's Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+
+            <Grid className="text-box txt-fld-space">
+              <Grid container spacing={3} columns={12} className="flx-box">
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    Date of Rehire (if applicable)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Last Name (Family Name)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography className="label-name" variant="label">
+                    Middle Initial
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="body">
+                    <b>Reverification:</b> If the employee requires
+                    reverification, your employee can choose to present any
+                    acceptable List A or List C documentation to show continued
+                    employment authorization. Enter the document information in
+                    the spaces below.
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Title
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Document Number (if any)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Expiration Date (if any) (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="body">
+                    I attest, under penalty of perjury, that to the best of my
+                    knowledge, this employee is authorized to work in the United
+                    States, and if the employee presented documentation, the
+                    documentation I examined appears to be genuine and to relate
+                    to the individual who presented it.
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Name of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Signature of Employer or Authorized Representative
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography className="label-name" variant="label">
+                    Today's Date (mm/dd/yyyy)
+                  </Typography>
+                  <Typography className="input-value" variant="body">
+                    Insert Text
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid container spacing={3} columns={12} className="btm-button">
+              <Grid item xs={6}></Grid>
+              <Grid item xs={6}>
+                <Grid className="form-btns">
+                  <Button className="save-btn">
+                    {/* <Link to={"/stepform"} > */}
+                      Generate PDF
+                    {/* </Link> */}
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
-          <Typography variant='body' mt={5}>
-          If a preparer and/or translator assisted you in completing Section 1, that person MUST complete the Preparer and/or Translator Certification on Page 3
-          </Typography>
-          </FormGroup>
-      
-        </Grid>
-
-        <hr></hr>
-
-
-        <Grid className='text-box txt-fld-space'>
-        <h4>Section 2. Employer Review and Verification:</h4>
-        <p>Employers or their authorized representative must complete and sign Section 2 within three business days after the employee's first day of employment,
-         and must physically examine, or examine consistent with an alternative procedure authorized by the Secretary of DHS, documentation from List A OR a 
-         combination of documentation from List B and List C. Enter any additional documentation in the Additional Information box; see Instructions.</p>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-
-       <Grid item xs={12}>
-        <Typography variant='h5' className='tag'>
-         List A
-        </Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Document Title 1</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Issuing Authority</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Expiration Date (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Document Title 2 (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Issuing Authority</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Expiration Date (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Document Title 3 (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Issuing Authority</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='label-name' variant='label'>Expiration Date (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-
-       <Grid item xs={12} mt={5}>
-        <Typography variant='h5' className='tag'>
-        List B
-        </Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Document Title 1</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Issuing Authority</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Expiration Date (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       
-
-       <Grid item xs={12} mt={5}>
-        <Typography variant='h5' className='tag'>
-        List C
-        </Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Document Title 1</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Issuing Authority</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}> 
-       <Typography className='label-name' variant='label'>Expiration Date (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Additional Information</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       </Grid>
-       </Grid>
-
-       <hr></hr>
-
-       <Grid className='text-box txt-fld-space'>
-        <h4>Certification:</h4>
-        <p>I attest, under penalty of perjury, that (1) I have examined the documentation presented by the above-named employee, (2) the above-listed documentation
-         appears to be genuine and to relate to the employee named, and (3) to the best of my knowledge, the employee is authorized to work in the United States.</p>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-       <Grid item xs={6}>
-       <Typography className='label-name' variant='label'>First Day of Employment</Typography>
-           <Typography className='input-value' variant='body'>mm/dd/yyyy</Typography>
-       </Grid>
-       <Grid item xs={6}>
-       <Typography className='label-name' variant='label'>Last Name, First Name and Title of Employer</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={6}> 
-       <Typography className='label-name' variant='label'>Signature of Employer or Authorized Representative</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={6}>
-       <Typography className='label-name' variant='label'>Today's Date</Typography>
-           <Typography className='input-value' variant='body'>mm/dd/yyyy</Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <Typography className='label-name' variant='label'>Employer's Business or Organization Name</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={12}> 
-       <Typography className='label-name' variant='label'>Employer's Business or Organization Address, City or Town, State, ZIP Code</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={12}>
-       <p>For reverification or rehire, complete Supplement B, Reverification and Rehire on Page 4.</p>
-       </Grid>
-       </Grid>
-       </Grid>
-
-
-    
-    <Grid className='table-box'>   
-    <Grid container className='flx-box table-box-title'>
-        <Grid item xs={12}>
-            <Typography variant='h4'>LISTS OF ACCEPTABLE DOCUMENTS</Typography>
-            <Typography variant='body'>All documents containing an expiration date must be unexpired.</Typography>
-            <Typography variant='body'>Documents extended by the issuing authority are considered unexpired.</Typography>
-            <Typography variant='body'>Employees may present one selection from List A or a
-            combination of one selection from List B and one selection from List C.</Typography>
-            <Typography variant='body'><b>Examples of many of these documents appear in the Handbook for Employers (M-274).</b></Typography>
-        </Grid>
-    </Grid>  
-    <table>
-
-      <tr>
-        <th><Typography variant='body'>LIST A</Typography>
-        Documents that Establish Both Identity 
-        and Employment Authorization</th>
-        <th>OR</th>
-        <th><Typography variant='body'>LIST B</Typography> Documents that Establish Identity</th>
-        <th>AND</th>
-        <th><Typography variant='body'>LIST C</Typography>
-        Documents that Establish Employment
-        Authorization</th>
-      </tr>
-
-      <tr>
-        <td>1. U.S. Passport or U.S. Passport Card</td>
-        <td className='bordernone'></td>
-        <td>1. Driver's license or ID card issued by a State or
-        outlying possession of the United States
-        provided it contains a photograph or
-        information such as name, date of birth,
-        gender, height, eye color, and address</td>
-        <td className='bordernone'></td>
-        <td>A Social Security Account Number card,
-        unless the card includes one of the following
-        restrictions:
-         <ul>
-         <li>(1) NOT VALID FOR EMPLOYMENT</li>
-         <li>(2) VALID FOR WORK ONLY WITH
-         INS AUTHORIZATION</li>
-          <li>(3) VALID FOR WORK ONLY WITH
-          DHS AUTHORIZATION</li>
-         </ul>
-        </td>
-      </tr>
-
-      <tr>
-        <td>2. Permanent Resident Card or Alien
-        Registration Receipt Card (Form I-551)</td>
-        <td className='bordernone'></td>
-        <td>2. ID card issued by federal, state or local
-        government agencies or entities, provided it
-        contains a photograph or information such as
-        name, date of birth, gender, height, eye color,
-        and address</td>
-        <td className='bordernone'></td>
-        <td>2. Certification of report of birth issued by the
-        Department of State (Forms DS-1350,
-          FS-545, FS-240)</td>
-      </tr>
-
-      <tr>
-        <td>3. Foreign passport that contains a
-        temporary I-551 stamp or temporary
-        I-551 printed notation on a machinereadable immigrant visa</td>
-        <td className='bordernone'></td>
-        <td>3. School ID card with a photograph</td>
-        <td className='bordernone'></td>
-        <td>3. Original or certified copy of birth certificate
-        issued by a State, county, municipal
-        authority, or territory of the United States
-        bearing an official seal</td>
-      </tr>
-
-      <tr>
-        <td>4. Employment Authorization Document
-        that contains a photograph (Form I-766)</td>
-        <td className='bordernone'></td>
-        <td>4. Voter's registration card</td>
-        <td className='bordernone'></td>
-        <td>4. Native American tribal document</td>
-      </tr>
-
-      <tr>
-        <td>5. For an individual temporarily authorized
-        to work for a specific employer because
-        of his or her status or parole:
-         <ul>
-          <li>a. Foreign passport; and</li>
-          <li>b. Form I-94 or Form I-94A that has
-          the following:</li>
-          <ol>
-           <li>(1) The same name as the
-           passport; and</li>
-           <li>(2) An endorsement of the
-           individual's status or parole as
-           long as that period of
-           endorsement has not yet
-           expired and the proposed
-           employment is not in conflict
-           with any restrictions or
-           limitations identified on the form.</li>
-          </ol>
-         </ul>
-        </td>
-        <td className='bordernone'></td>
-        <td>5. U.S. Military card or draft record</td>
-        <td className='bordernone'></td>
-        <td>5. U.S. Citizen ID Card (Form I-197)</td>
-      </tr>
-
-      <tr>
-        <td>6. Passport from the Federated States of
-        Micronesia (FSM) or the Republic of the
-        Marshall Islands (RMI) with Form I-94 or
-        Form I-94A indicating nonimmigrant
-        admission under the Compact of Free
-        Association Between the United States
-        and the FSM or RMI</td>
-        <td className='bordernone'></td>
-        <td>6. Military dependent's ID card</td>
-        <td className='bordernone'></td>
-        <td>6. Identification Card for Use of Resident
-        Citizen in the United States (Form I-179)</td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td>7. U.S. Coast Guard Merchant Mariner Card</td>
-        <td className='bordernone'></td>
-        <td>7. Employment authorization document
-        issued by the Department of Homeland
-        Security
-        <br></br>
-        For examples, see Section 7 and
-        Section 13 of the M-274 on
-        uscis.gov/i-9-central.
-        <br></br>
-        The Form I-766, Employment
-        Authorization Document, is a List A, Item
-        Number 4. document, not a List C
-        document.</td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td>8. Native American tribal document</td>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td>9. Driver's license issued by a Canadian
-        government authority</td>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td><b>For persons under age 18 who are 
-        unable to present a document 
-        listed above:</b></td>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td>10. School record or report card</td>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td>11. Clinic, doctor, or hospital record</td>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-      </tr>
-
-      <tr>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-        <td>12. Day-care or nursery school record</td>
-        <td className='bordernone'></td>
-        <td className='bordernone'></td>
-      </tr>
-
-
-    </table>
-
-    <Grid className='grid-title'>
-    <Typography variant='h4'>Acceptable Receipts</Typography>
-    <Typography variant='body'>May be presented in lieu of a document listed above for a temporary period. 
-    For receipt validity dates, see the M-274. </Typography>
-    <table>
-  <tr>
-    <td>
-     <ul>
-     <li>● Receipt for a replacement of a lost,
-     stolen, or damaged List A document.</li>
-      <li>● Form I-94 issued to a lawful
-      permanent resident that contains an
-      I-551 stamp and a photograph of the
-      individual.</li>
-      <li>● Form I-94 with “RE” notation or
-      refugee stamp issued to a refugee.</li>
-     </ul>
-    </td>
-    <td className='bordernone'><b>OR</b></td>
-    <td> Receipt for a replacement of a lost, stolen, or 
-    damaged List B document.</td>
-    <td className='bordernone'></td>
-    <td className='bordernone'>Receipt for a replacement of a lost, stolen, or 
-    damaged List C document.</td>
-  </tr>
-    </table>
-    <Typography variant='body'><b>*Refer to the Employment Authorization Extensions page on I-9 Central for more information.</b></Typography>
-   </Grid>
-    </Grid>
-    
-
-
-        
-
-        <Grid container spacing={2} columns={16} className='flx-box'>
-        <Grid item xs={8}>
-            <img className="brandname" src={mainlogo} alt="" />
-        </Grid>
-        <Grid item xs={8}>
-            <ul className="hdr-date">
-             <li>USCIS</li>
-             <li>Form I-9</li>
-             <li>Supplement A</li>
-             <li>OMB No.1615-0047</li>
-             <li>Expires 07/31/2026</li>
-            </ul>
-        </Grid>
-        </Grid>
-
-        <Grid className='text-box'>
-         <Typography variant='h1'>Supplement A<br></br>
-         Preparer and/or Translator Certification for Section 1
-         </Typography>
-         <h4>Department of Homeland Security </h4>
-         <h6>U.S.Citizenship and Immigration Services </h6>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name) from Section 1.</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>First Name (Given Name) from Section 1.</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Middle initial (if any) from Section 1.</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={12}>
-         <p><b>Instructions:</b> This supplement must be completed by any preparer and/or translator who assists an employee in completing Section 1 
-         of Form I-9. The preparer and/or translator must enter the employee's name in the spaces provided above. Each preparer or translator 
-         must complete, sign, and date a separate certification area. Employers must retain completed supplement sheets with the employee's 
-         completed Form I-9. </p>
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-
-       <Grid className='text-box txt-fld-space'>
-        <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
-        knowledge the information is true and correct. </h3>
-
-       <Grid container spacing={3} columns={12} className='flx-box'>
-       <Grid item xs={8}>
-       <Typography className='label-name' variant='label'>Signature of Preparer or Translator</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Date (mm/dd/yyyy)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography> 
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography> 
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>First Name (Given Name)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={4}>
-       <Typography className='label-name' variant='label'>Middle Initial (if any)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={5}>
-       <Typography className='label-name' variant='label'>Address (Street Number and Name)</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={3}>
-       <Typography className='label-name' variant='label'>City or Town</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography> 
-       </Grid>
-       <Grid item xs={2}>
-       <Typography className='label-name' variant='label'>State</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-       <Grid item xs={2}>
-       <Typography className='label-name' variant='label'>ZIP Code</Typography>
-           <Typography className='input-value' variant='body'>Insert Text</Typography>
-       </Grid>
-
-       </Grid>
-       </Grid>
-
-       <hr></hr>
-
-       <Grid className='text-box txt-fld-space'>
-        <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
-        knowledge the information is true and correct.</h3>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={8}>
-        <Typography className='label-name' variant='label'>Signature of Preparer or Translator</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Date (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>First Name (Given Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Middle Initial (if any)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={5}>
-        <Typography className='label-name' variant='label'>Address (Street Number and Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={3}>
-        <Typography className='label-name' variant='label'>City or Town</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>State</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>ZIP Code</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
- 
-        </Grid>
-       </Grid>
-
-       <hr></hr>
-
-
-       <Grid className='text-box txt-fld-space'>
-        <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
-        knowledge the information is true and correct.</h3>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={8}>
-        <Typography className='label-name' variant='label'>Signature of Preparer or Translator</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Date (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>First Name (Given Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Middle Initial (if any)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={5}>
-        <Typography className='label-name' variant='label'>Address (Street Number and Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={3}>
-        <Typography className='label-name' variant='label'>City or Town</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>State</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>ZIP Code</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
- 
-        </Grid>
-       </Grid>
-
-       <hr></hr>
-
-
-       <Grid className='text-box txt-fld-space'>
-        <h3>I attest, under penalty of perjury, that I have assisted in the completion of Section 1 of this form and that to the best of my 
-        knowledge the information is true and correct.</h3>
-
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={8}>
-        <Typography className='label-name' variant='label'>Signature of Preparer or Translator</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Date (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>First Name (Given Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Middle Initial (if any)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={5}>
-        <Typography className='label-name' variant='label'>Address (Street Number and Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={3}>
-        <Typography className='label-name' variant='label'>City or Town</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>State</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>ZIP Code</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
- 
-        </Grid>
-       </Grid>
-
-       <Grid container spacing={2} columns={16} className='flx-box'>
-        <Grid item xs={8}>
-            <img className="brandname" src={mainlogo} alt="" />
-        </Grid>
-        <Grid item xs={8}>
-            <ul className="hdr-date">
-             <li>USCIS</li>
-             <li>Form I-9</li>
-             <li>Supplement B</li>
-             <li>OMB No.1615-0047</li>
-             <li>Expires 07/31/2026</li>
-            </ul>
-        </Grid>
-        </Grid>
-
-        <Grid className='text-box'>
-         <Typography variant='h1'>Supplement B<br></br>
-         Reverification and Rehire (formerly Section 3) 
-         </Typography>
-         <h4>Department of Homeland Security </h4>
-         <h6>U.S.Citizenship and Immigration Services </h6>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name) from Section 1.</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>First Name (Given Name) from Section 1.</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Middle initial (if any) from Section 1.</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={12}>
-         <p><b>Instructions:</b> This supplement replaces Section 3 on the previous version of Form I-9. Only use this page if your employee requires 
-         reverification, is rehired within three years of the date the original Form I-9 was completed, or provides proof of a legal name change. Enter 
-         the employee's name in the fields above. Use a new section for each reverification or rehire. Review the Form I-9 instructions before 
-         completing this page. Keep this page as part of the employee's Form I-9 record. Additional guidance can be found in the  
-          <a className="red-link" href=""> Handbook for Employers: Guidance for Completing Form I-9 (M-274)</a></p>
-        </Grid>
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>Date of Rehire (if applicable)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={2}> 
-        <Typography className='label-name' variant='label'>Middle Initial</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={12}>
-        <Typography variant='body'>
-        <b>Reverification:</b> If the employee requires reverification, your employee can choose to present any acceptable List A or List C documentation to show 
-        continued employment authorization. Enter the document information in the spaces below.         
-        </Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Document Title</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}> 
-        <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Expiration Date (if any) (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={12}>
-        <Typography variant='body'>
-        I attest, under penalty of perjury, that to the best of my knowledge, this employee is authorized to work in the United States, and if the 
-         employee presented documentation, the documentation I examined appears to be genuine and to relate to the individual who presented it.          
-        </Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Name of Employer or Authorized Representative</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}> 
-        <Typography className='label-name' variant='label'>Signature of Employer or Authorized Representative</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Today's Date (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography> 
-        </Grid>
-
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>Date of Rehire (if applicable)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>Middle Initial</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={12}>
-        <Typography variant='body'>
-        <b>Reverification:</b> If the employee requires reverification, your employee can choose to present any acceptable List A or List C documentation to show 
-        continued employment authorization. Enter the document information in the spaces below.         
-        </Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Document Title</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Expiration Date (if any) (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={12}>
-        <Typography variant='body'>
-        I attest, under penalty of perjury, that to the best of my knowledge, this employee is authorized to work in the United States, and if the 
-         employee presented documentation, the documentation I examined appears to be genuine and to relate to the individual who presented it.          
-        </Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Name of Employer or Authorized Representative</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Signature of Employer or Authorized Representative</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Today's Date (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-
-        </Grid>
-        </Grid>
-
-        <hr></hr>
-
-        <Grid className='text-box txt-fld-space'>
-        <Grid container spacing={3} columns={12} className='flx-box'>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>Date of Rehire (if applicable)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Last Name (Family Name)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={2}>
-        <Typography className='label-name' variant='label'>Middle Initial</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={12}>
-        <Typography variant='body'>
-        <b>Reverification:</b> If the employee requires reverification, your employee can choose to present any acceptable List A or List C documentation to show 
-        continued employment authorization. Enter the document information in the spaces below.         
-        </Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Document Title</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Document Number (if any)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Expiration Date (if any) (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={12}>
-        <Typography variant='body'>
-        I attest, under penalty of perjury, that to the best of my knowledge, this employee is authorized to work in the United States, and if the 
-         employee presented documentation, the documentation I examined appears to be genuine and to relate to the individual who presented it.          
-        </Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Name of Employer or Authorized Representative</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}> 
-        <Typography className='label-name' variant='label'>Signature of Employer or Authorized Representative</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        <Grid item xs={4}>
-        <Typography className='label-name' variant='label'>Today's Date (mm/dd/yyyy)</Typography>
-            <Typography className='input-value' variant='body'>Insert Text</Typography>
-        </Grid>
-        </Grid>
-        </Grid>
-
-       <Grid container spacing={3} columns={12} className='btm-button'>
-       <Grid item xs={6}></Grid>
-       <Grid item xs={6}>
-        <Grid className='form-btns'>
-         <Button><Link to={'/'} className='save-btn'>Preview</Link></Button>
-        </Grid>
-       </Grid>
-       </Grid>
-       </Grid>
-       </Container>
+        </Container>
       </Grid>
-     </Grid>
-  )
-}
+    </Grid>
+  );
+};
 
-export default EligibilityVerificationView
+export default EligibilityVerificationView;

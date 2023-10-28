@@ -1,4 +1,9 @@
 import React from "react";
+
+//Router Dom
+import { Link } from "react-router-dom";
+
+//Mui Design Library
 import {
   Container,
   Grid,
@@ -10,11 +15,10 @@ import {
 } from "@mui/material";
 
 //Images
-import mainlogo from "../assets/images/logo.png";
-import companylogo01 from "../assets/images/logo01.png";
-import companylogo02 from "../assets/images/logo02.png";
-import companylogo03 from "../assets/images/logo03.png";
-import { Link } from "react-router-dom";
+import mainLogo from "../assets/images/logo.png";
+import companyLogo01 from "../assets/images/logo01.png";
+import companyLogo02 from "../assets/images/logo02.png";
+import companyLogo03 from "../assets/images/logo03.png";
 
 const EligibilityVerificationView = () => {
   return (
@@ -24,16 +28,16 @@ const EligibilityVerificationView = () => {
           <Grid className="form-inner">
             <Grid container spacing={2} columns={12} className="flx-box">
               <Grid item xs={6}>
-                <img className="brandname" src={mainlogo} alt="" />
+                <img className="brandname" src={mainLogo} alt="" />
               </Grid>
-              <Grid item xs={6}></Grid>
+              <Grid item xs={6} />
             </Grid>
 
             <Grid className="text-box">
               <h1>Company Name New Employee Onboarding Form</h1>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Personal Information: </h4>
@@ -98,7 +102,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Emergency Contact Information:</h4>
@@ -131,7 +135,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Employment Details:</h4>
@@ -172,7 +176,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Tax Information:</h4>
@@ -222,7 +226,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Direct Deposit Information:</h4>
@@ -255,7 +259,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Benefit Elections:</h4>
@@ -363,7 +367,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space form-points">
               <h4>Acknowledgment of Company Policies:</h4>
@@ -379,7 +383,7 @@ const EligibilityVerificationView = () => {
               </ul>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Additional Information:</h4>
@@ -439,7 +443,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <p>
@@ -455,13 +459,13 @@ const EligibilityVerificationView = () => {
             <Grid mt={8} className="company-logos">
               <Grid container spacing={3} columns={12} className="flx-box">
                 <Grid item xs={4}>
-                  <img src={companylogo01} alt="" />
+                  <img src={companyLogo01} alt="" />
                 </Grid>
                 <Grid item xs={4}>
-                  <img src={companylogo02} alt="" />
+                  <img src={companyLogo02} alt="" />
                 </Grid>
                 <Grid item xs={4}>
-                  <img src={companylogo03} alt="" />
+                  <img src={companyLogo03} alt="" />
                 </Grid>
               </Grid>
             </Grid>
@@ -499,19 +503,19 @@ const EligibilityVerificationView = () => {
                   <Grid>
                     <Typography variant="h5">I. EMPLOYMENT PROCESS</Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>6</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Nature of Employment</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>6</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Equal Opportunity Employer</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>7</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -519,32 +523,32 @@ const EligibilityVerificationView = () => {
                     C. Immigration Law Compliance and Employment Eligibility
                     Verification
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>7</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>D. Employment Reference Checks</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>7</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Employment Applications</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>8</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>F. Pre-Employment Drug Screening</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>8</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>G. Hiring of Relatives</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>8</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>H. Employee Personal Relationships</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>8</Grid>
                 </Grid>
               </Grid>
@@ -554,44 +558,44 @@ const EligibilityVerificationView = () => {
                   <Grid>
                     <Typography variant="h5">II. EMPLOYMENT STATUS</Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>9</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Employment Categories</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>9</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Exempt and Nonexempt Status</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>9</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Work Status Categories</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>9</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>D. Tipped Employees</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>10</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Employee Performance Evaluation</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>10</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>F. Employee Access to Personnel Records</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>11</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>G. Personnel Data Changes</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>11</Grid>
                 </Grid>
               </Grid>
@@ -603,54 +607,54 @@ const EligibilityVerificationView = () => {
                       III. EMPLOYEE BENEFIT PROGRAMS AND LEAVE
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>11</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Employee Benefits</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>11</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Employee Meals</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>11</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Vacation</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>12</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>D. Benefits Continuation (COBRA)</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>12</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Family and Medical Leaves of Absence</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>12</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>F. Jury Duty</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>16</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>G. Time Off To Vote</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>17</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>H. Military Leave</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>17</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>I. Lactation Breaks</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>17</Grid>
                 </Grid>
               </Grid>
@@ -662,34 +666,34 @@ const EligibilityVerificationView = () => {
                       IV. TIMEKEEPING/PAYROLL
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>18</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Payroll</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>18</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Timekeeping</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>18</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Time Clock Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>18</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>D. Administrative Pay Corrections</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>19</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Business Travel Expenses</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>19</Grid>
                 </Grid>
               </Grid>
@@ -701,39 +705,39 @@ const EligibilityVerificationView = () => {
                       V. WORK HOURS AND CONDITIONS
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>20</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Work Hours</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>20</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Attendance and Punctuality</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>20</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Overtime</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>21</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>D. Meal Periods and Breaks</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>21</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Visitors in the Workplace</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>21</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>F. Solicitation</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>22</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -741,7 +745,7 @@ const EligibilityVerificationView = () => {
                     G. Alcohol Consumption by Employees & Dram Shop
                     Responsibilities
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>22</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -749,17 +753,17 @@ const EligibilityVerificationView = () => {
                     H. Employees Engaged In Retail Sale Of Cigarettes,
                     E-Cigarettes, And Tobacoo Products
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>22</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>I. Tipped Employees Uniforms</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>23</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>J. Dress and Grooming</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>23</Grid>
                 </Grid>
               </Grid>
@@ -771,24 +775,24 @@ const EligibilityVerificationView = () => {
                       VI. EMPLOYEE CONDUCT AND DISCIPLINARY ACTION
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>24</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Business Ethics and Conduct</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>24</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Gifts, Favors, or Similar Items</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>24</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Conflicts of Interest</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>25</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -796,22 +800,22 @@ const EligibilityVerificationView = () => {
                     D. Policy on Harassment or any other form of Unlawful
                     Discrimination
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>26</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Definition of Harassment</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>26</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>F. Sexual Harassment</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>26</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>G. Anti-Discrimination Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>27</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -819,12 +823,12 @@ const EligibilityVerificationView = () => {
                     H. How to Report Harassment or any other form of Unlawful
                     Discrimination
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>27</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>I. Investigation Process</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>27</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -832,54 +836,54 @@ const EligibilityVerificationView = () => {
                     J. Accommodations under the Americans with Disabilities Act
                     or Pregnant Works Fairness Act
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>29</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>K. Workplace Violence Prevention</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>29</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>L. Weapons Prohibition Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>30</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>M. Drug and Alcohol-Free Workplace Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>30</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>N. Security Inspections</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>33</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>O. Professional Conduct Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>33</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>P. Disciplinary Action</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>34</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>Q. Use of Company Property Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>35</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>
                     R. Theft, Misuse and Destruction of Property Policy
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>35</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>S. Return of Property</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>36</Grid>
                 </Grid>
               </Grid>
@@ -891,44 +895,44 @@ const EligibilityVerificationView = () => {
                       VII. ELECTRONIC SYSTEMS USAGE AND MONITORING
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>36</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Acceptable Use of Electronic Communications</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>37</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>B. Telephone Use Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>38</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Camera and Other Recording Devices Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>38</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>D. Cell Phone Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>39</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>E. Software Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>39</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>F. Employee Internet Usage Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>39</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>G. Social Networking Policy</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>40</Grid>
                 </Grid>
               </Grid>
@@ -940,24 +944,24 @@ const EligibilityVerificationView = () => {
                       IX. HEALTH, SAFETY, AND SECURITY
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>41</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>SANITATION:</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>41</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>CASH HANDLING:</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>42</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>LEAVING THE PROPERTY:</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>42</Grid>
                 </Grid>
               </Grid>
@@ -969,7 +973,7 @@ const EligibilityVerificationView = () => {
                       X. COMPANY TRADE SECRETS AND CONFIDENTIAL INFORMATION
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>43</b>
                   </Grid>
@@ -983,14 +987,14 @@ const EligibilityVerificationView = () => {
                       XII. ALTERNATIVE DISPUTE RESOLUTION/CLASS ACTION WAIVER
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>43</b>
                   </Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>A. Dispute Resolution</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>43</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
@@ -998,12 +1002,12 @@ const EligibilityVerificationView = () => {
                     B. Waiver Of Collective Action, Class, or Consolidated
                     Claims
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>44</Grid>
                 </Grid>
                 <Grid className="linewrapper linewrapper-inn">
                   <Grid>C. Covered Claims</Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>44</Grid>
                 </Grid>
               </Grid>
@@ -1015,7 +1019,7 @@ const EligibilityVerificationView = () => {
                       EMPLOYEE ACKNOWLEDGEMENT
                     </Typography>
                   </Grid>
-                  <Grid className="middle"></Grid>
+                  <Grid className="middle" />
                   <Grid>
                     <b>45</b>
                   </Grid>
@@ -1023,7 +1027,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="welcom-blk">
               <Typography variant="h4">WELCOME</Typography>
@@ -5154,7 +5158,7 @@ const EligibilityVerificationView = () => {
               className="flx-box form-hdr"
             >
               <Grid item xs={6}>
-                <img className="brandname" src={mainlogo} alt="" />
+                <img className="brandname" src={mainLogo} alt="" />
               </Grid>
               <Grid item xs={6}>
                 <ul className="hdr-date">
@@ -5196,7 +5200,7 @@ const EligibilityVerificationView = () => {
               </p>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Section 1. Employee Information and Attestation: </h4>
@@ -5324,7 +5328,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <p>
@@ -5448,7 +5452,7 @@ const EligibilityVerificationView = () => {
               </FormGroup>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Section 2. Employer Review and Verification:</h4>
@@ -5652,7 +5656,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h4>Certification:</h4>
@@ -5771,14 +5775,14 @@ const EligibilityVerificationView = () => {
 
                 <tr>
                   <td>1. U.S. Passport or U.S. Passport Card</td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     1. Driver's license or ID card issued by a State or outlying
                     possession of the United States provided it contains a
                     photograph or information such as name, date of birth,
                     gender, height, eye color, and address
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     A Social Security Account Number card, unless the card
                     includes one of the following restrictions:
@@ -5795,14 +5799,14 @@ const EligibilityVerificationView = () => {
                     2. Permanent Resident Card or Alien Registration Receipt
                     Card (Form I-551)
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     2. ID card issued by federal, state or local government
                     agencies or entities, provided it contains a photograph or
                     information such as name, date of birth, gender, height, eye
                     color, and address
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     2. Certification of report of birth issued by the Department
                     of State (Forms DS-1350, FS-545, FS-240)
@@ -5815,9 +5819,9 @@ const EligibilityVerificationView = () => {
                     temporary I-551 printed notation on a machinereadable
                     immigrant visa
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>3. School ID card with a photograph</td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     3. Original or certified copy of birth certificate issued by
                     a State, county, municipal authority, or territory of the
@@ -5830,9 +5834,9 @@ const EligibilityVerificationView = () => {
                     4. Employment Authorization Document that contains a
                     photograph (Form I-766)
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>4. Voter's registration card</td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>4. Native American tribal document</td>
                 </tr>
 
@@ -5857,9 +5861,9 @@ const EligibilityVerificationView = () => {
                       </ol>
                     </ul>
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>5. U.S. Military card or draft record</td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>5. U.S. Citizen ID Card (Form I-197)</td>
                 </tr>
 
@@ -5871,9 +5875,9 @@ const EligibilityVerificationView = () => {
                     Compact of Free Association Between the United States and
                     the FSM or RMI
                   </td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>6. Military dependent's ID card</td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     6. Identification Card for Use of Resident Citizen in the
                     United States (Form I-179)
@@ -5881,76 +5885,76 @@ const EligibilityVerificationView = () => {
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>7. U.S. Coast Guard Merchant Mariner Card</td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
                   <td>
                     7. Employment authorization document issued by the
                     Department of Homeland Security
-                    <br></br>
+                    <br />
                     For examples, see Section 7 and Section 13 of the M-274 on
                     uscis.gov/i-9-central.
-                    <br></br>
+                    <br />
                     The Form I-766, Employment Authorization Document, is a List
                     A, Item Number 4. document, not a List C document.
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>8. Native American tribal document</td>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>
                     9. Driver's license issued by a Canadian government
                     authority
                   </td>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>
                     <b>
                       For persons under age 18 who are unable to present a
                       document listed above:
                     </b>
                   </td>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>10. School record or report card</td>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>11. Clinic, doctor, or hospital record</td>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                 </tr>
 
                 <tr>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                   <td>12. Day-care or nursery school record</td>
-                  <td className="bordernone"></td>
-                  <td className="bordernone"></td>
+                  <td className="bordernone" />
+                  <td className="bordernone" />
                 </tr>
               </table>
 
@@ -5983,11 +5987,10 @@ const EligibilityVerificationView = () => {
                       <b>OR</b>
                     </td>
                     <td>
-                      {" "}
-                      Receipt for a replacement of a lost, stolen, or damaged
-                      List B document.
+                      {" "}Receipt for a replacement of a lost, stolen, or
+                      damaged List B document.
                     </td>
-                    <td className="bordernone"></td>
+                    <td className="bordernone" />
                     <td className="bordernone">
                       Receipt for a replacement of a lost, stolen, or damaged
                       List C document.
@@ -6005,7 +6008,7 @@ const EligibilityVerificationView = () => {
 
             <Grid container spacing={2} columns={16} className="flx-box">
               <Grid item xs={8}>
-                <img className="brandname" src={mainlogo} alt="" />
+                <img className="brandname" src={mainLogo} alt="" />
               </Grid>
               <Grid item xs={8}>
                 <ul className="hdr-date">
@@ -6020,14 +6023,14 @@ const EligibilityVerificationView = () => {
 
             <Grid className="text-box">
               <Typography variant="h1">
-                Supplement A<br></br>
+                Supplement A<br />
                 Preparer and/or Translator Certification for Section 1
               </Typography>
               <h4>Department of Homeland Security </h4>
               <h6>U.S.Citizenship and Immigration Services </h6>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <Grid container spacing={3} columns={12} className="flx-box">
@@ -6070,7 +6073,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h3>
@@ -6155,7 +6158,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h3>
@@ -6240,7 +6243,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h3>
@@ -6325,7 +6328,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <h3>
@@ -6412,7 +6415,7 @@ const EligibilityVerificationView = () => {
 
             <Grid container spacing={2} columns={16} className="flx-box">
               <Grid item xs={8}>
-                <img className="brandname" src={mainlogo} alt="" />
+                <img className="brandname" src={mainLogo} alt="" />
               </Grid>
               <Grid item xs={8}>
                 <ul className="hdr-date">
@@ -6427,14 +6430,14 @@ const EligibilityVerificationView = () => {
 
             <Grid className="text-box">
               <Typography variant="h1">
-                Supplement B<br></br>
+                Supplement B<br />
                 Reverification and Rehire (formerly Section 3)
               </Typography>
               <h4>Department of Homeland Security </h4>
               <h6>U.S.Citizenship and Immigration Services </h6>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <Grid container spacing={3} columns={12} className="flx-box">
@@ -6475,16 +6478,15 @@ const EligibilityVerificationView = () => {
                     employee's Form I-9 record. Additional guidance can be found
                     in the
                     <a className="red-link" href="">
-                      {" "}
-                      Handbook for Employers: Guidance for Completing Form I-9
-                      (M-274)
+                      {" "}Handbook for Employers: Guidance for Completing Form
+                      I-9 (M-274)
                     </a>
                   </p>
                 </Grid>
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <Grid container spacing={3} columns={12} className="flx-box">
@@ -6589,7 +6591,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <Grid container spacing={3} columns={12} className="flx-box">
@@ -6694,7 +6696,7 @@ const EligibilityVerificationView = () => {
               </Grid>
             </Grid>
 
-            <hr></hr>
+            <hr />
 
             <Grid className="text-box txt-fld-space">
               <Grid container spacing={3} columns={12} className="flx-box">
@@ -6800,14 +6802,10 @@ const EligibilityVerificationView = () => {
             </Grid>
 
             <Grid container spacing={3} columns={12} className="btm-button">
-              <Grid item xs={6}></Grid>
+              <Grid item xs={6} />
               <Grid item xs={6}>
                 <Grid className="form-btns">
-                  <Button className="save-btn">
-                    {/* <Link to={"/stepform"} > */}
-                      Generate PDF
-                    {/* </Link> */}
-                  </Button>
+                  <Button className="save-btn">Generate PDF</Button>
                 </Grid>
               </Grid>
             </Grid>

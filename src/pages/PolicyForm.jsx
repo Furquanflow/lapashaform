@@ -1,48 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+//Mui Design Library
 import {
   Container,
   Grid,
   TextField,
   Typography,
   FormGroup,
-  Checkbox,
   FormControlLabel,
   Button,
   Radio,
   RadioGroup,
   FormControl,
-  FormLabel,
 } from "@mui/material";
 
 // images
-import companylogo01 from "../assets/images/logo01.png";
-import companylogo02 from "../assets/images/logo02.png";
-import companylogo03 from "../assets/images/logo03.png";
-import { Link } from "react-router-dom";
+import companyLogo01 from "../assets/images/logo01.png";
+import companyLogo02 from "../assets/images/logo02.png";
+import companyLogo03 from "../assets/images/logo03.png";
 
+//Router Dom
+import { Link, useNavigate } from "react-router-dom";
 
-
-const PolicyForm = (data, formChange) => {
-  const policySubmit = (e) => {
+const PolicyForm = ({ data, onStep1, addData1 }) => {
+  const navigate = useNavigate();
+  const policySubmit = e => {
     e.preventDefault();
-    console.log(data);
+    // console.log(JSON.stringify(state));
+    localStorage.getItem("DATA", addData1);
+    onStep1();
+    navigate("/stepform");
   };
+
+  useEffect(
+    () => {
+      localStorage.setItem("DATA", addData1);
+    },
+    [addData1]
+  );
   return (
     <Grid>
       <Grid className="form-section">
         <Container>
           <Grid className="form-inner">
-            <form onSubmit={policySubmit}>
+            <form onSubmit={e => policySubmit(e)}>
               <Grid className="company-logos">
                 <Grid container spacing={3} columns={12} className="flx-box">
                   <Grid item xs={4}>
-                    <img src={companylogo01} alt="" />
+                    <img src={companyLogo01} alt="" />
                   </Grid>
                   <Grid item xs={4}>
-                    <img src={companylogo02} alt="" />
+                    <img src={companyLogo02} alt="" />
                   </Grid>
                   <Grid item xs={4}>
-                    <img src={companylogo03} alt="" />
+                    <img src={companyLogo03} alt="" />
                   </Grid>
                 </Grid>
               </Grid>
@@ -83,19 +94,19 @@ const PolicyForm = (data, formChange) => {
                         I. EMPLOYMENT PROCESS
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>6</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Nature of Employment</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>6</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Equal Opportunity Employer</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>7</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -103,32 +114,32 @@ const PolicyForm = (data, formChange) => {
                       C. Immigration Law Compliance and Employment Eligibility
                       Verification
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>7</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>D. Employment Reference Checks</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>7</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Employment Applications</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>8</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>F. Pre-Employment Drug Screening</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>8</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>G. Hiring of Relatives</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>8</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>H. Employee Personal Relationships</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>8</Grid>
                   </Grid>
                 </Grid>
@@ -140,44 +151,44 @@ const PolicyForm = (data, formChange) => {
                         II. EMPLOYMENT STATUS
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>9</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Employment Categories</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>9</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Exempt and Nonexempt Status</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>9</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Work Status Categories</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>9</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>D. Tipped Employees</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>10</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Employee Performance Evaluation</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>10</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>F. Employee Access to Personnel Records</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>11</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>G. Personnel Data Changes</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>11</Grid>
                   </Grid>
                 </Grid>
@@ -189,54 +200,54 @@ const PolicyForm = (data, formChange) => {
                         III. EMPLOYEE BENEFIT PROGRAMS AND LEAVE
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>11</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Employee Benefits</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>11</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Employee Meals</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>11</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Vacation</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>12</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>D. Benefits Continuation (COBRA)</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>12</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Family and Medical Leaves of Absence</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>12</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>F. Jury Duty</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>16</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>G. Time Off To Vote</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>17</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>H. Military Leave</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>17</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>I. Lactation Breaks</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>17</Grid>
                   </Grid>
                 </Grid>
@@ -248,34 +259,34 @@ const PolicyForm = (data, formChange) => {
                         IV. TIMEKEEPING/PAYROLL
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>18</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Payroll</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>18</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Timekeeping</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>18</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Time Clock Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>18</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>D. Administrative Pay Corrections</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>19</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Business Travel Expenses</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>19</Grid>
                   </Grid>
                 </Grid>
@@ -287,39 +298,39 @@ const PolicyForm = (data, formChange) => {
                         V. WORK HOURS AND CONDITIONS
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>20</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Work Hours</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>20</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Attendance and Punctuality</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>20</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Overtime</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>21</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>D. Meal Periods and Breaks</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>21</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Visitors in the Workplace</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>21</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>F. Solicitation</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>22</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -327,7 +338,7 @@ const PolicyForm = (data, formChange) => {
                       G. Alcohol Consumption by Employees & Dram Shop
                       Responsibilities
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>22</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -335,17 +346,17 @@ const PolicyForm = (data, formChange) => {
                       H. Employees Engaged In Retail Sale Of Cigarettes,
                       E-Cigarettes, And Tobacoo Products
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>22</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>I. Tipped Employees Uniforms</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>23</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>J. Dress and Grooming</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>23</Grid>
                   </Grid>
                 </Grid>
@@ -357,24 +368,24 @@ const PolicyForm = (data, formChange) => {
                         VI. EMPLOYEE CONDUCT AND DISCIPLINARY ACTION
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>24</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Business Ethics and Conduct</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>24</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Gifts, Favors, or Similar Items</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>24</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Conflicts of Interest</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>25</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -382,22 +393,22 @@ const PolicyForm = (data, formChange) => {
                       D. Policy on Harassment or any other form of Unlawful
                       Discrimination
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>26</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Definition of Harassment</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>26</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>F. Sexual Harassment</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>26</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>G. Anti-Discrimination Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>27</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -405,12 +416,12 @@ const PolicyForm = (data, formChange) => {
                       H. How to Report Harassment or any other form of Unlawful
                       Discrimination
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>27</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>I. Investigation Process</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>27</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -418,54 +429,54 @@ const PolicyForm = (data, formChange) => {
                       J. Accommodations under the Americans with Disabilities
                       Act or Pregnant Works Fairness Act
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>29</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>K. Workplace Violence Prevention</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>29</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>L. Weapons Prohibition Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>30</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>M. Drug and Alcohol-Free Workplace Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>30</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>N. Security Inspections</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>33</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>O. Professional Conduct Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>33</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>P. Disciplinary Action</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>34</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>Q. Use of Company Property Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>35</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>
                       R. Theft, Misuse and Destruction of Property Policy
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>35</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>S. Return of Property</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>36</Grid>
                   </Grid>
                 </Grid>
@@ -477,44 +488,44 @@ const PolicyForm = (data, formChange) => {
                         VII. ELECTRONIC SYSTEMS USAGE AND MONITORING
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>36</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Acceptable Use of Electronic Communications</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>37</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>B. Telephone Use Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>38</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Camera and Other Recording Devices Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>38</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>D. Cell Phone Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>39</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>E. Software Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>39</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>F. Employee Internet Usage Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>39</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>G. Social Networking Policy</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>40</Grid>
                   </Grid>
                 </Grid>
@@ -526,24 +537,24 @@ const PolicyForm = (data, formChange) => {
                         IX. HEALTH, SAFETY, AND SECURITY
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>41</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>SANITATION:</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>41</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>CASH HANDLING:</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>42</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>LEAVING THE PROPERTY:</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>42</Grid>
                   </Grid>
                 </Grid>
@@ -555,7 +566,7 @@ const PolicyForm = (data, formChange) => {
                         X. COMPANY TRADE SECRETS AND CONFIDENTIAL INFORMATION
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>43</b>
                     </Grid>
@@ -569,14 +580,14 @@ const PolicyForm = (data, formChange) => {
                         XII. ALTERNATIVE DISPUTE RESOLUTION/CLASS ACTION WAIVER
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>43</b>
                     </Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>A. Dispute Resolution</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>43</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
@@ -584,12 +595,12 @@ const PolicyForm = (data, formChange) => {
                       B. Waiver Of Collective Action, Class, or Consolidated
                       Claims
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>44</Grid>
                   </Grid>
                   <Grid className="linewrapper linewrapper-inn">
                     <Grid>C. Covered Claims</Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>44</Grid>
                   </Grid>
                 </Grid>
@@ -601,7 +612,7 @@ const PolicyForm = (data, formChange) => {
                         EMPLOYEE ACKNOWLEDGEMENT
                       </Typography>
                     </Grid>
-                    <Grid className="middle"></Grid>
+                    <Grid className="middle" />
                     <Grid>
                       <b>45</b>
                     </Grid>
@@ -609,7 +620,7 @@ const PolicyForm = (data, formChange) => {
                 </Grid>
               </Grid>
 
-              <hr></hr>
+              <hr />
 
               <Grid className="welcom-blk">
                 <Typography variant="h4">WELCOME</Typography>
@@ -764,16 +775,15 @@ const PolicyForm = (data, formChange) => {
                     The Company is committed to employing only United States
                     citizens and aliens who are authorized to work in the United
                     States and does not unlawfully discriminate on the basis of
-                    citizenship or national origin. The Company is required to
-                    comply with federal laws and regulations concerning
-                    verification of employment eligibility and associated record
-                    keeping of all employees hired to work in the United States.
-                    The law applies to both United States citizens and
-                    non-citizens.
+                    citizenship or national origin. The Company is to comply
+                    with federal laws and regulations concerning verification of
+                    employment eligibility and associated record keeping of all
+                    employees hired to work in the United States. The law
+                    applies to both United States citizens and non-citizens.
                   </Typography>
                   <Typography variant="body">
                     The Citizenship and Immigration Services Employment
-                    Eligibility Verification (Form I-9) is required for all new
+                    Eligibility Verification (Form I-9) is for all new
                     employees. Form I-9 are completed according to the
                     instructions provided on the form and related legal
                     requirements. Any employee who has been terminated and
@@ -801,14 +811,13 @@ const PolicyForm = (data, formChange) => {
                   <Typography variant="body">
                     The Company will respond in writing only to those reference
                     check inquiries that are submitted in writing. Unless
-                    otherwise required to be disclosed by legal process (e.g.,
-                    subpoena), responses to such inquires will confirm only
-                    dates of employment, wage rates, and position(s) held. No
-                    employment data will be released without a written
-                    authorization and release signed by the individual who is
-                    the subject of the inquiry. All job reference inquiries by
-                    prospective employers should be directed to The Company’s
-                    President.
+                    otherwise to be disclosed by legal process (e.g., subpoena),
+                    responses to such inquires will confirm only dates of
+                    employment, wage rates, and position(s) held. No employment
+                    data will be released without a written authorization and
+                    release signed by the individual who is the subject of the
+                    inquiry. All job reference inquiries by prospective
+                    employers should be directed to The Company’s President.
                   </Typography>
                 </Grid>
                 <Grid className="points-blk">
@@ -839,10 +848,10 @@ const PolicyForm = (data, formChange) => {
                   </Typography>
                   <Typography variant="body">
                     Individuals who report to work under the influence of drugs
-                    and/or alcohol may be required to submit to a drug test. If
-                    this occurs, an agent of the Company will transport the
-                    employee to an approved testing facility. Testing will be
-                    conducted in accordance with the law.
+                    and/or alcohol may be to submit to a drug test. If this
+                    occurs, an agent of the Company will transport the employee
+                    to an approved testing facility. Testing will be conducted
+                    in accordance with the law.
                   </Typography>
                 </Grid>
                 <Grid className="points-blk">
@@ -927,8 +936,8 @@ const PolicyForm = (data, formChange) => {
                     </Grid>
                   </Grid>
                   <Typography variant="body">
-                    Each employee will be required to execute a Consensual
-                    Relationship Agreement in which each employee:
+                    Each employee will be to execute a Consensual Relationship
+                    Agreement in which each employee:
                   </Typography>
                   <ul className="num-list">
                     <li>acknowledges this Policy;</li>
@@ -1033,9 +1042,9 @@ const PolicyForm = (data, formChange) => {
                     the maximum allowed by federal law.
                   </Typography>
                   <Typography variant="body">
-                    Under the Act, we are required to notify you of our
-                    intention to utilize the tip credit. This provision serves
-                    as notification of Employer’s use of the tip credit and your
+                    Under the Act, we are to notify you of our intention to
+                    utilize the tip credit. This provision serves as
+                    notification of Employer’s use of the tip credit and your
                     signature to this manual confirms your receipt of and
                     understanding of the Employer’s use of the tip credit.. You
                     also should know that the additional amount claimed by
@@ -1256,9 +1265,9 @@ const PolicyForm = (data, formChange) => {
                     The purpose of this policy is to provide employees with a
                     general description of their FMLA rights. In the event of
                     any conflict between this policy and the applicable law,
-                    employees will be afforded all rights required by law. If
-                    you have any questions, concerns or disputes with this
-                    policy, please contact Management.
+                    employees will be afforded all rights by law. If you have
+                    any questions, concerns or disputes with this policy, please
+                    contact Management.
                   </Typography>
 
                   <Grid className="points-blk-inn">
@@ -1429,10 +1438,10 @@ const PolicyForm = (data, formChange) => {
                     </Typography>
                     <Typography variant="body">
                       Within five business days after the employee has submitted
-                      the required certification or other documentation, the HR
-                      manager will complete and provide the employee with a
-                      written response to the employee's request for FMLA leave
-                      using the FMLA Designation Notice.
+                      the certification or other documentation, the HR manager
+                      will complete and provide the employee with a written
+                      response to the employee's request for FMLA leave using
+                      the FMLA Designation Notice.
                     </Typography>
                   </Grid>
                   <Grid className="points-blk-inn">
@@ -1525,7 +1534,7 @@ const PolicyForm = (data, formChange) => {
                       FMLA. For example, when an employee takes six weeks of The
                       Company pregnancy disability leave, the six weeks will be
                       designated as FMLA leave and counted toward the employee's
-                      12-week entitlement. The employee will then be required to
+                      12-week entitlement. The employee will then be to
                       substitute accrued (or earned) paid leave as appropriate
                       before being eligible for unpaid leave for what remains of
                       the 12-week entitlement. An employee who is taking leave
@@ -1642,12 +1651,12 @@ const PolicyForm = (data, formChange) => {
                   <Typography className="h6">F. Jury Duty</Typography>
                   <Typography variant="body">
                     The Company encourages employees to fulfill their civic
-                    responsibilities by serving jury duty when required, and
-                    will not interfere, discharge, or discourage an employee who
-                    is summoned to serve on a jury. If desired,
-                    exempt/management employees may use any available paid time
-                    off (PTO) to cover time off for jury duty. Otherwise, jury
-                    duty will be unpaid regardless of the length of such duty.
+                    responsibilities by serving jury duty when , and will not
+                    interfere, discharge, or discourage an employee who is
+                    summoned to serve on a jury. If desired, exempt/management
+                    employees may use any available paid time off (PTO) to cover
+                    time off for jury duty. Otherwise, jury duty will be unpaid
+                    regardless of the length of such duty.
                   </Typography>
                   <Typography variant="body">
                     Employees must show the jury duty summons to their
@@ -1682,10 +1691,10 @@ const PolicyForm = (data, formChange) => {
                   <Typography variant="body">
                     Employees should request time off to vote from their
                     supervisor at least 2 working days prior to the Election
-                    Day. Advance notice is required so that the necessary time
-                    off can be scheduled at the beginning or end of the work
-                    shift, whichever provides the least disruption to the normal
-                    work schedule.
+                    Day. Advance notice is so that the necessary time off can be
+                    scheduled at the beginning or end of the work shift,
+                    whichever provides the least disruption to the normal work
+                    schedule.
                   </Typography>
                 </Grid>
                 <Grid className="points-blk">
@@ -1695,9 +1704,9 @@ const PolicyForm = (data, formChange) => {
                     are absent from work because of service in the U.S.
                     uniformed services in accordance with the Uniformed Services
                     Employment and Reemployment Rights Act (USERRA). Advance
-                    notice of military service is required, unless military
-                    necessity prevents such notice, or it is otherwise
-                    impossible or unreasonable.
+                    notice of military service is , unless military necessity
+                    prevents such notice, or it is otherwise impossible or
+                    unreasonable.
                   </Typography>
                   <Typography variant="body">
                     Military leave will be unpaid. However, employees may use
@@ -1708,18 +1717,18 @@ const PolicyForm = (data, formChange) => {
                     upon the employee’s return to active employment.
                   </Typography>
                   <Typography variant="body">
-                    Employees on military leave for up to 30 days are required
-                    to return to work for the first regularly scheduled shift
-                    after the end of service, allowing reasonable travel time.
-                    Employees on longer military leave must apply for
-                    reinstatement in accordance with USERRA and all applicable
-                    state laws. Employees returning from military leave will be
-                    placed in the position they would have attained had they
-                    remained continuously employed or a comparable one depending
-                    on the length of military service in accordance with USERRA.
-                    They will be treated as though they were continuously
-                    employed for purposes of determining benefits based on
-                    length of service.
+                    Employees on military leave for up to 30 days are to return
+                    to work for the first regularly scheduled shift after the
+                    end of service, allowing reasonable travel time. Employees
+                    on longer military leave must apply for reinstatement in
+                    accordance with USERRA and all applicable state laws.
+                    Employees returning from military leave will be placed in
+                    the position they would have attained had they remained
+                    continuously employed or a comparable one depending on the
+                    length of military service in accordance with USERRA. They
+                    will be treated as though they were continuously employed
+                    for purposes of determining benefits based on length of
+                    service.
                   </Typography>
                 </Grid>
                 <Grid className="points-blk">
@@ -1771,14 +1780,13 @@ const PolicyForm = (data, formChange) => {
                   </Typography>
                   <Typography variant="body">
                     Federal withholding taxes and social security taxes will be
-                    withheld from all compensation paid to the employee, as
-                    required by law. In addition to payroll withholdings
-                    required by law, if authorized a voluntary written
-                    authorization from the employee, The Company will deduct
-                    amounts necessary to pay for coverage of employees and
-                    dependents under The Company’s group health insurance plan
-                    or policy, and other approved deductions to the extent
-                    allowed by applicable law.
+                    withheld from all compensation paid to the employee, as by
+                    law. In addition to payroll withholdings by law, if
+                    authorized a voluntary written authorization from the
+                    employee, The Company will deduct amounts necessary to pay
+                    for coverage of employees and dependents under The Company’s
+                    group health insurance plan or policy, and other approved
+                    deductions to the extent allowed by applicable law.
                   </Typography>
                   <Typography variant="body">
                     Court-issued wage assignment or garnishments are deducted
@@ -1811,19 +1819,18 @@ const PolicyForm = (data, formChange) => {
                 <Grid className="points-blk">
                   <Typography className="h6">C. Time Clock Policy</Typography>
                   <Typography variant="body">
-                    Employees will be required to track time in the manner
-                    prescribed by the Company.
+                    Employees will be to track time in the manner prescribed by
+                    the Company.
                   </Typography>
                   <Typography variant="body">
-                    Employees are responsible for and will be required to verify
-                    the accuracy of all time and hours worked in each work
-                    period and the amount of earnings before receiving their
-                    paychecks. The supervisor will review and then initial the
-                    time record before submitting it for payroll processing. If
-                    corrections or modifications to the employee’s time record
-                    are needed, both the employee and the supervisor must
-                    document and verify those changes by initialing the time
-                    record.
+                    Employees are responsible for and will be to verify the
+                    accuracy of all time and hours worked in each work period
+                    and the amount of earnings before receiving their paychecks.
+                    The supervisor will review and then initial the time record
+                    before submitting it for payroll processing. If corrections
+                    or modifications to the employee’s time record are needed,
+                    both the employee and the supervisor must document and
+                    verify those changes by initialing the time record.
                   </Typography>
                   <Typography variant="body">
                     It is a violation of The Company’s policy for an employee
@@ -2073,13 +2080,12 @@ const PolicyForm = (data, formChange) => {
                     of break periods may result in discipline or termination.
                   </Typography>
                   <Typography variant="body">
-                    All employees are required to clock out at the beginning of
-                    the meal break and clock back in once the allowed meal break
-                    ends and upon starting back to work. If an employee is
-                    unable to take a meal break, the employee should inform
-                    Management. Working meal breaks during which time the
-                    employee performs work while also breaking shall be
-                    compensated as working time.
+                    All employees are to clock out at the beginning of the meal
+                    break and clock back in once the allowed meal break ends and
+                    upon starting back to work. If an employee is unable to take
+                    a meal break, the employee should inform Management. Working
+                    meal breaks during which time the employee performs work
+                    while also breaking shall be compensated as working time.
                   </Typography>
                 </Grid>
                 <Grid className="points-blk">
@@ -2237,12 +2243,12 @@ const PolicyForm = (data, formChange) => {
                     employment and continued employment.
                   </Typography>
                   <Typography variant="body">
-                    All bartenders and servers are required to be alert and
-                    observe the patrons’ consumption of alcohol while on duty.
-                    Any bartender or server who believes any patron has become
-                    intoxicated shall immediately notify the restaurant manager.
-                    The patron SHALL NOT be permitted to leave the restaurant
-                    behind the wheel. The patron shall be provided alternate
+                    All bartenders and servers are to be alert and observe the
+                    patrons’ consumption of alcohol while on duty. Any bartender
+                    or server who believes any patron has become intoxicated
+                    shall immediately notify the restaurant manager. The patron
+                    SHALL NOT be permitted to leave the restaurant behind the
+                    wheel. The patron shall be provided alternate
                     transportation. If the Patron becomes disruptive or violent,
                     or refuses alternative transportation, the restaurant
                     management shall immediately call 911 to report the
@@ -2257,8 +2263,8 @@ const PolicyForm = (data, formChange) => {
                     E-Cigarettes, And Tobacoo Products
                   </Typography>
                   <Typography variant="body">
-                    Employees engaged in the sale of any tobacco product are
-                    required to abide by state law:
+                    Employees engaged in the sale of any tobacco product are to
+                    abide by state law:
                   </Typography>
                   <ul className="num-list">
                     <li>
@@ -2327,12 +2333,11 @@ const PolicyForm = (data, formChange) => {
                   <Typography variant="body">
                     Occasionally, certain events may be hosted at a location for
                     which there is a commemorative t-shirt or other attire
-                    available. If the attire is required to be worn for the
-                    event, the attire will be issued to each employee working
-                    the event at no cost to the employee. If the attire is
-                    optional for the event, or for other employees wishing to
-                    purchase the attire, the employee may do so at employee’s
-                    own cost.
+                    available. If the attire is to be worn for the event, the
+                    attire will be issued to each employee working the event at
+                    no cost to the employee. If the attire is optional for the
+                    event, or for other employees wishing to purchase the
+                    attire, the employee may do so at employee’s own cost.
                   </Typography>
                 </Grid>
 
@@ -2952,8 +2957,8 @@ const PolicyForm = (data, formChange) => {
                   </Typography>
                   <Typography variant="body">
                     If you are aware of violations or threats of violations of
-                    this policy, you are required to report such violations or
-                    threats of violations to Human Resources immediately.
+                    this policy, you are to report such violations or threats of
+                    violations to Human Resources immediately.
                   </Typography>
                   <Typography variant="body">
                     Violations of this policy will result in disciplinary
@@ -2981,9 +2986,9 @@ const PolicyForm = (data, formChange) => {
                     also to all who come in contact with the user. The benefits
                     to be derived from reducing the number of accidents and the
                     greater safety of all the employees and residents make up
-                    for the inconvenience. Each employee is expected and
-                    required to report to work in an appropriate mental and
-                    physical condition to perform his or her assigned duties.
+                    for the inconvenience. Each employee is expected and to
+                    report to work in an appropriate mental and physical
+                    condition to perform his or her assigned duties.
                   </Typography>
                   <Typography variant="body">
                     The Company defines “intoxication” pursuant to Sec.
@@ -3086,9 +3091,8 @@ const PolicyForm = (data, formChange) => {
                         over-the-counter narcotic or drug must advise his or her
                         supervisor of its use and any potential side effects.
                         The employee may either be allowed to remain on his or
-                        her job, be required to take a leave of absence or be
-                        subjected to other appropriate action as determined by
-                        management.
+                        her job, be to take a leave of absence or be subjected
+                        to other appropriate action as determined by management.
                       </li>
                     </ul>
                   </Grid>
@@ -3100,9 +3104,9 @@ const PolicyForm = (data, formChange) => {
                       feels such actions are appropriate.
                     </Typography>
                     <Typography variant="body">
-                      An employee will be required to undergo a blood test,
-                      urinalysis, "breath-analyzer" test or other diagnostic
-                      test under the following circumstances:
+                      An employee will be to undergo a blood test, urinalysis,
+                      "breath-analyzer" test or other diagnostic test under the
+                      following circumstances:
                     </Typography>
                     <ul>
                       <li>
@@ -3128,7 +3132,7 @@ const PolicyForm = (data, formChange) => {
                       <li>As part of a random sampling of employees;</li>
                       <li>
                         As part of any periodic medical examination provided or
-                        required.
+                        .
                       </li>
                     </ul>
                   </Grid>
@@ -3298,10 +3302,10 @@ const PolicyForm = (data, formChange) => {
                     employment relationship. The Company’s policies, procedures,
                     and work rules outlined in this employee manual are not
                     all-inclusive and may be changed periodically at The
-                    Company’s sole discretion. Employees may be required to
-                    periodically sign copies of company policies, procedures,
-                    and or work rules, including environmental, safety, and fire
-                    prevention rules.
+                    Company’s sole discretion. Employees may be to periodically
+                    sign copies of company policies, procedures, and or work
+                    rules, including environmental, safety, and fire prevention
+                    rules.
                   </Typography>
                   <Typography variant="body">
                     There are certain policies and regulations which must be
@@ -3318,8 +3322,7 @@ const PolicyForm = (data, formChange) => {
                   </Typography>
                   <ul>
                     <li>
-                      Failure or unwillingness to perform work as required or
-                      directed.
+                      Failure or unwillingness to perform work as or directed.
                     </li>
                     <li>
                       Dishonest, disrespectful, or threatening behavior toward a
@@ -3403,8 +3406,8 @@ const PolicyForm = (data, formChange) => {
                       opposed to theft.{" "}
                     </li>
                     <li>
-                      Failing to meet job expectations required by The Company
-                      from time to time.{" "}
+                      Failing to meet job expectations by The Company from time
+                      to time.{" "}
                     </li>
                     <li>
                       Negligence or carelessness resulting in danger, damage, or
@@ -3986,7 +3989,7 @@ const PolicyForm = (data, formChange) => {
                 </Grid>
                 <Grid className="points-blk">
                   <Typography className="h6">
-                    Identification Required for purchasing/consuming alcohol
+                    Identification for purchasing/consuming alcohol
                   </Typography>
                   <Typography variant="body">
                     Employees must card everyone who attempts to purchase any
@@ -4296,8 +4299,8 @@ const PolicyForm = (data, formChange) => {
                     administrative claims filed with government agencies such as
                     the Equal Employment Opportunity Commission or the National
                     Labor Relations Board and claims that are expressly excluded
-                    by statute or are expressly required to be arbitrated under
-                    a different procedure.
+                    by statute or are expressly to be arbitrated under a
+                    different procedure.
                   </Typography>
                 </Grid>
               </Grid>
@@ -4363,14 +4366,14 @@ const PolicyForm = (data, formChange) => {
                   </Grid>
                   <Grid item xs={4}>
                     <TextField
+                      required
                       value={data.polciStatement}
                       name="polciStatement"
                       // onChange={formChange}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
-                      required
-                      />
+                    />
                   </Grid>
                   <Grid item xs={8}>
                     <Typography variant="body">Tip Credit Notice</Typography>
@@ -4599,7 +4602,8 @@ const PolicyForm = (data, formChange) => {
                   <FormControl>
                     <RadioGroup
                       aria-labelledby="demo-radio-buttons-group-label"
-                      defaultValue="data.r1"
+                      requireddefault
+                      Value="data.r1"
                       name="radio-buttons-group"
                     >
                       <Grid>
@@ -4701,7 +4705,7 @@ const PolicyForm = (data, formChange) => {
                     required
                     value={data.transSignPolicy}
                     name="transSignPolicy"
-                    onChange={formChange}
+                    // onChange={formChange}
                     className="txt-width"
                     id="standard-basic"
                     label="Translator Signature"
@@ -4717,7 +4721,7 @@ const PolicyForm = (data, formChange) => {
                 className="btm-button"
                 mt={5}
               >
-                <Grid item xs={6}></Grid>
+                <Grid item xs={6} />
                 <Grid item xs={6}>
                   <Grid className="form-btns">
                     <Button>

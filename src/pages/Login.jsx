@@ -1,5 +1,9 @@
 import React from "react";
+
+//Router Dom
 import { Link } from "react-router-dom";
+
+//Mui Design library
 import {
   Box,
   Button,
@@ -12,10 +16,10 @@ import {
 } from "@mui/material";
 
 // Images
-import companylogo01 from "../assets/images/logo01.png";
-import bgcard01 from "../assets/images/bg-card-01.png";
-import bgcard02 from "../assets/images/bg-card-02.png";
-import bgcard03 from "../assets/images/bg-card-03.png";
+import companyLogo01 from "../assets/images/logo01.png";
+import bgCard01 from "../assets/images/bg-card-01.png";
+import bgCard02 from "../assets/images/bg-card-02.png";
+import bgCard03 from "../assets/images/bg-card-03.png";
 
 const Login = () => {
   return (
@@ -23,7 +27,7 @@ const Login = () => {
       <Grid className="login-pg">
         <Container>
           <Grid className="login-box">
-            <img src={companylogo01}></img>
+            <img src={companyLogo01} />
             <Grid className="login-blk">
               <Typography variant="h2">Let’s Start</Typography>
               <Box>
@@ -64,9 +68,9 @@ const Login = () => {
           </Grid>
         </Container>
         <Grid className="img-card-blk">
-          <img className="bgcard1" src={bgcard01} />
-          <img className="bgcard2" src={bgcard02} />
-          <img className="bgcard3" src={bgcard03} />
+          <img className="bgcard1" src={bgCard01} />
+          <img className="bgcard2" src={bgCard02} />
+          <img className="bgcard3" src={bgCard03} />
         </Grid>
       </Grid>
     </Grid>

@@ -1,9 +1,13 @@
 import React from 'react'
-import { Container, Grid, TextField, Typography, FormGroup, Checkbox, FormControlLabel, Button } from '@mui/material'
+
+//Mui Design Library
+import { Container, Grid, TextField, Typography, Checkbox, FormControlLabel } from '@mui/material'
+
+//Router Dom
 import { Link } from 'react-router-dom';
 
 //Images
-import mainlogo from "../assets/images/logo.png";
+import mainLogo from "../assets/images/logo.png";
 
 const SupplementB = () => {
   return (
@@ -14,7 +18,7 @@ const SupplementB = () => {
         
         <Grid container spacing={2} columns={16} className='flx-box'>
         <Grid item xs={8}>
-            <img className="brandname" src={mainlogo} alt="" />
+            <img className="brandname" src={mainLogo} alt="" />
         </Grid>
         <Grid item xs={8}>
             <ul className="hdr-date">

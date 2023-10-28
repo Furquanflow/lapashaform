@@ -215,8 +215,25 @@ img.bgcard1 {
   align-items: center;
   position: relative;
 }
+.step-flx-red {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .step-flx span {
   background-color: #1b1919;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 8px;
+}
+.step-flx-red span {
+  background-color: red;
   color: #fff;
   width: 55px;
   height: 55px;
@@ -242,6 +259,19 @@ img.bgcard1 {
   transform: rotate(-45deg);
 }
 .step-flx:last-child::before {
+  display: none;
+}
+.step-flx-red::before {
+  content: "";
+  position: absolute;
+  right: -65px;
+  border-bottom: 2px solid #cbcbcb;
+  border-right: 2px solid #cbcbcb;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-45deg);
+}
+.step-flx-red:last-child::before {
   display: none;
 }
 .step-form-sec {
@@ -273,18 +303,24 @@ img.bgcard1 {
 .step-opt-title h6 {
   font-weight: 600;
 }
-.step-opt a {
+.step-opt button {
   background-color: #1b1919;
   color: #fff;
   text-decoration: none;
   padding: 15px 60px;
   border-radius: 30px;
 }
+.step-opt button:hover {
+  background-color: #1b1919;
+}
 .step-opt-active {
   pointer-events: auto;
   opacity: 1;
 }
-.step-opt-active a {
+.step-opt-active button {
+  background-color: #b49a53;
+}
+.step-opt-active button:hover {
   background-color: #b49a53;
 }
 .btm-nxt-sec {
@@ -326,7 +362,7 @@ img.bgcard1 {
 .file-upload-txt h4 {
   font-size: 26px !important;
 }
-.steps a {
+.steps button {
   text-decoration: none;
   display: block;
   margin: 6px 0;
@@ -336,8 +372,8 @@ img.bgcard1 {
   color: #fff;
   border-radius: 30px;
 }
-a.next-btn {
-  background-color: #b49a53;
+.next-btn-1 {
+  background-color: #b49a53 !important;
 }
 a.finish-btn {
   background-color: #41403e;
@@ -658,7 +694,7 @@ td.bordernone {
     font-size: 18px;
     line-height: 22px;
   }
-  .step-opt a {
+  .step-opt .edit-btn {
     display: inline-block;
     margin-top: 20px;
   }

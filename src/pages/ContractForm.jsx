@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+//Mui Design Library
 import {
   Container,
   Grid,
   TextField,
   Typography,
   FormGroup,
-  Checkbox,
   FormControlLabel,
   Button,
   Radio,
   RadioGroup,
   FormControl,
-  FormLabel,
 } from "@mui/material";
 
-import { Link } from "react-router-dom";
+//React Router Dom
+import { Link, useNavigate } from "react-router-dom";
 
-const ContractForm = (data, formChange) => {
-  const submitContactForm = () => {
-    console.log(data);
+const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
+  const navigate = useNavigate();
+  
+  const submitContactForm = e => {
+    e.preventDefault();
+    // console.log(JSON.stringify(state));
+    localStorage.getItem("DATA", addData2);
+    onStep2();
+    navigate("/stepform");
+
+    console.log("working");
   };
+
+  useEffect(
+    () => {
+      localStorage.setItem("DATA", addData2);
+    },
+    [addData2]
+  );
+
   return (
     <Grid>
       <Grid className="form-section">
@@ -216,9 +233,10 @@ const ContractForm = (data, formChange) => {
                       <Grid>
                         <Grid className="select-opt">
                           <FormControlLabel
+                          required
                             value={data.ableReadEng}
                             name="ableReadEng"
-                            required
+                            // required
                             // onChange={formChange}
                             control={<Radio />}
                             label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it."
@@ -227,6 +245,7 @@ const ContractForm = (data, formChange) => {
 
                         <Grid className="select-opt">
                           <FormControlLabel
+                          required
                             value={data.unableReadEng}
                             // onChange={formChange}
                             control={<Radio />}
@@ -244,6 +263,7 @@ const ContractForm = (data, formChange) => {
 
                         <Grid className="select-opt">
                           <FormControlLabel
+                          required
                             value={data.declined}
                             // onChange={formChange}
                             control={<Radio />}
@@ -273,9 +293,10 @@ const ContractForm = (data, formChange) => {
                 <Grid item xs={6}>
                   <TextField
                     className="txt-width"
+                    required
                     value={data.empName}
                     name="empName"
-                    required
+                    // required
                     onChange={formChange}
                     id="standard-basic"
                     label="Employee Printed Name"
@@ -285,9 +306,10 @@ const ContractForm = (data, formChange) => {
                 <Grid item xs={6}>
                   <TextField
                     className="txt-width"
+                    required
                     value={data.empSign}
                     name="empSign"
-                    required
+                    // required
                     onChange={formChange}
                     id="standard-basic"
                     label="Employee Signature"
@@ -296,10 +318,11 @@ const ContractForm = (data, formChange) => {
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
+                  required
                     className="txt-width"
                     value={data.transPrinName}
                     name="transPrinName"
-                    required
+                    // required
                     onChange={formChange}
                     id="standard-basic"
                     label="Translator Printed Name"
@@ -308,10 +331,11 @@ const ContractForm = (data, formChange) => {
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
+                  required
                     className="txt-width"
                     value={data.transSignName}
                     name="transSignName"
-                    required
+                    // required
                     onChange={formChange}
                     id="standard-basic"
                     label="Translator Signature"
@@ -327,7 +351,7 @@ const ContractForm = (data, formChange) => {
                 className="btm-button"
                 mt={5}
               >
-                <Grid item xs={6}></Grid>
+                <Grid item xs={6} />
                 <Grid item xs={6}>
                   <Grid className="form-btns">
                     <Button>
@@ -335,10 +359,8 @@ const ContractForm = (data, formChange) => {
                         Cancel
                       </Link>
                     </Button>
-                    <Button className="save-btn">
-                      {/* <Link to={"/stepform"} className="save-btn"> */}
+                    <Button type="submit" className="save-btn">
                       Save
-                      {/* </Link> */}
                     </Button>
                   </Grid>
                 </Grid>

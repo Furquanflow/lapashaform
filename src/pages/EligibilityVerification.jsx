@@ -21,7 +21,7 @@ import {
 //Images
 import mainLogo from "../assets/images/logo.png";
 
-const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
+const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
   const navigate = useNavigate();
 
   const onEligbility = e => {
@@ -110,7 +110,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.lastName}
-                      onChange={formChange}
+                      name="lastName"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Last Name (Family Name)"
                       variant="standard"
@@ -121,7 +122,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.firstName}
-                      onChange={formChange}
+                      name="firstName"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="First Name (Given Name)"
                       variant="standard"
@@ -134,7 +136,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.middle}
-                      onChange={formChange}
+                      name="middle"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Middle Initial (if any)"
                       variant="standard"
@@ -145,7 +148,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.otheLn}
-                      onChange={formChange}
+                      name="otheLn"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Other Last Names Used (if any)"
                       variant="standard"
@@ -158,7 +162,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.address}
-                      onChange={formChange}
+                      name="address"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Address (Street Number and Name)"
                       variant="standard"
@@ -169,7 +174,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.aptNo}
-                      onChange={formChange}
+                      name="aptNo"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Apt. Number (if any)"
                       variant="standard"
@@ -182,7 +188,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.city}
-                      onChange={formChange}
+                      name="city"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="City or Town"
                       variant="standard"
@@ -193,7 +200,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.state}
-                      onChange={formChange}
+                      name="state"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="State"
                       variant="standard"
@@ -204,7 +212,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.zipCode}
-                      onChange={formChange}
+                      name="zipCode"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="ZIP Code"
                       variant="standard"
@@ -217,7 +226,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.dob}
-                      onChange={formChange}
+                      name="dob"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Date of Birth (mm/dd/yyyy)"
                       variant="standard"
@@ -228,7 +238,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.socialSno}
-                      onChange={formChange}
+                      name="socialSno"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="U.S. Social Security Number"
                       variant="standard"
@@ -241,7 +252,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.empEmail}
-                      onChange={formChange}
+                      name="empEmail"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Employee's Email Address"
                       variant="standard"
@@ -252,7 +264,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.empTno}
-                      onChange={formChange}
+                      name="empTno"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Employee's Telephone Number"
                       variant="standard"
@@ -294,9 +307,10 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       >
                         <Grid item xs={12}>
                           <FormControlLabel
-                          required  
-                          value={data.citizeOfUsa}
-                            onChange={formChange}
+                            required
+                            value={data.citizeOfUsa}
+                            name="citizeOfUsa"
+                            onChange={formChange3}
                             control={<Radio />}
                             label="1. A citizen of the United States"
                           />
@@ -304,9 +318,10 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
 
                         <Grid item xs={12}>
                           <FormControlLabel
-                          required  
-                          value={data.noncitizeOfUsa}
-                            onChange={formChange}
+                            required
+                            value={data.noncitizeOfUsa}
+                            name="noncitizeOfUsa"
+                            onChange={formChange3}
                             control={<Radio />}
                             label="2. A noncitizen national of the United States (See Instructions.)"
                           />
@@ -314,9 +329,10 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
 
                         <Grid item xs={6}>
                           <FormControlLabel
-                          required  
-                          value={data.lawFullPr}
-                            onChange={formChange}
+                            required
+                            value={data.lawFullPr}
+                            name="lawFullPr"
+                            onChange={formChange3}
                             control={<Radio />}
                             label="3. A lawful permanent resident (Enter USCIS or A-Number.)"
                           />
@@ -326,7 +342,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                             className="txt-width"
                             required
                             value={data.lawFullPrTextFeild}
-                            onChange={formChange}
+                            name="lawFullPrTextFeild"
+                            onChange={formChange3}
                             id="standard-basic"
                             label="3. A lawful permanent resident (Enter USCIS or A-Number.)"
                             variant="standard"
@@ -335,9 +352,10 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
 
                         <Grid item xs={8}>
                           <FormControlLabel
-                          required  
-                          value={data.noncitizenAuth}
-                            onChange={formChange}
+                            required
+                            value={data.noncitizenAuth}
+                            name="noncitizenAuth"
+                            onChange={formChange3}
                             control={<Radio />}
                             label="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)"
                           />
@@ -347,7 +365,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                             className="txt-width"
                             required
                             value={data.noncitizenAuthTextField}
-                            onChange={formChange}
+                            name="noncitizenAuthTextField"
+                            onChange={formChange3}
                             id="standard-basic"
                             label="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)"
                             variant="standard"
@@ -373,7 +392,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                         className="txt-width"
                         required
                         value={data.uscis}
-                        onChange={formChange}
+                        name="uscis"
+                        onChange={formChange3}
                         id="standard-basic"
                         label="USCIS A-Number"
                         variant="standard"
@@ -387,7 +407,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                         className="txt-width"
                         required
                         value={data.formi94}
-                        onChange={formChange}
+                        name="formi94"
+                        onChange={formChange3}
                         id="standard-basic"
                         label="Form I-94 Admission Number"
                         variant="standard"
@@ -401,7 +422,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                         className="txt-width"
                         required
                         value={data.foreignPass}
-                        onChange={formChange}
+                        name="foreignPass"
+                        onChange={formChange3}
                         id="standard-basic"
                         label="Foreign Passport Number and Country of Issuance"
                         variant="standard"
@@ -412,7 +434,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                         className="txt-width"
                         required
                         value={data.signOfEmp}
-                        onChange={formChange}
+                        name="signOfEmp"
+                        onChange={formChange3}
                         id="standard-basic"
                         label="Signature of Employee"
                         variant="standard"
@@ -423,7 +446,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                         className="txt-width"
                         required
                         value={data.todayDate}
-                        onChange={formChange}
+                        name="todayDate"
+                        onChange={formChange3}
                         id="standard-basic"
                         label="Today's Date (mm/dd/yyyy)"
                         variant="standard"
@@ -464,7 +488,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docTitle1}
-                      onChange={formChange}
+                      name="docTitle1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Title 1"
                       variant="standard"
@@ -475,7 +500,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.issueAuth}
-                      onChange={formChange}
+                      name="issueAuth"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Issuing Authority"
                       variant="standard"
@@ -486,7 +512,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docNo}
-                      onChange={formChange}
+                      name="docNo"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
@@ -497,7 +524,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.expdate}
-                      onChange={formChange}
+                      name="expdate"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
@@ -508,7 +536,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docTitle2}
-                      onChange={formChange}
+                      name="docTitle2"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Title 2 (if any)"
                       variant="standard"
@@ -519,7 +548,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.issueAuth2}
-                      onChange={formChange}
+                      name="issueAuth2"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Issuing Authority"
                       variant="standard"
@@ -530,7 +560,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docNo2}
-                      onChange={formChange}
+                      name="docNo2"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
@@ -541,7 +572,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.expDate2}
-                      onChange={formChange}
+                      name="expDate2"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
@@ -552,7 +584,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docTitle3}
-                      onChange={formChange}
+                      name="docTitle3"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Title 3 (if any)"
                       variant="standard"
@@ -563,7 +596,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.issueAuth3}
-                      onChange={formChange}
+                      name="issueAuth3"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Issuing Authority"
                       variant="standard"
@@ -574,7 +608,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docNo3}
-                      onChange={formChange}
+                      name="docNo3"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
@@ -585,7 +620,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.expdate3}
-                      onChange={formChange}
+                      name="expdate3"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
@@ -602,7 +638,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docTitle4}
-                      onChange={formChange}
+                      name="docTitle4"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Title 4"
                       variant="standard"
@@ -613,7 +650,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.issueAuth4}
-                      onChange={formChange}
+                      name="issueAuth4"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Issuing Authority"
                       variant="standard"
@@ -624,7 +662,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docNo3}
-                      onChange={formChange}
+                      name="docNo3"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
@@ -635,7 +674,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.expdate4}
-                      onChange={formChange}
+                      name="expdate4"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
@@ -652,7 +692,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docTitleC}
-                      onChange={formChange}
+                      name="docTitleC"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Title 1"
                       variant="standard"
@@ -663,7 +704,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.issueAuthC}
-                      onChange={formChange}
+                      name="issueAuthC"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Issuing Authority"
                       variant="standard"
@@ -674,7 +716,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docNoC}
-                      onChange={formChange}
+                      name="docNoC"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
@@ -685,7 +728,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.expdateC}
-                      onChange={formChange}
+                      name="expdateC"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
@@ -696,7 +740,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.addInfoC}
-                      onChange={formChange}
+                      name="addInfoC"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Additional Information"
                       variant="standard"
@@ -730,7 +775,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.firstDayofEmp}
-                      onChange={formChange}
+                      name="firstDayofEmp"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="First Day of Employment (mm/dd/yyyy):"
                       variant="standard"
@@ -741,7 +787,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.lastFirstNameOfEmp}
-                      onChange={formChange}
+                      name="lastFirstNameOfEmp"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Last Name, First Name and Title of Employer"
                       variant="standard"
@@ -752,7 +799,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.signOfEmpRep}
-                      onChange={formChange}
+                      name="signOfEmpRep"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Signature of Employer or Authorized Representative"
                       variant="standard"
@@ -763,7 +811,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.todaySDate}
-                      onChange={formChange}
+                      name="todaySDate"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Today's Date (mm/dd/yyyy)"
                       variant="standard"
@@ -774,7 +823,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.empBuss}
-                      onChange={formChange}
+                      name="empBuss"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Employer's Business or Organization Name"
                       variant="standard"
@@ -785,7 +835,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.empBusOrg}
-                      onChange={formChange}
+                      name="empBusOrg"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Employer's Business or Organization Address, City or Town, State, ZIP Code"
                       variant="standard"
@@ -1119,7 +1170,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.lNamesec1}
-                      onChange={formChange}
+                      name="lNamesec1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Last Name (Family Name) from Section 1."
                       variant="standard"
@@ -1130,7 +1182,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.fNamesec1}
-                      onChange={formChange}
+                      name="fNamesec1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="First Name (Given Name) from Section 1."
                       variant="standard"
@@ -1141,7 +1194,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.middleNamesec1}
-                      onChange={formChange}
+                      name="middleNamesec1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Middle initial (if any) from Section 1."
                       variant="standard"
@@ -1177,7 +1231,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.signOfPre}
-                      onChange={formChange}
+                      name="signOfPre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Signature of Preparer or Translator"
                       variant="standard"
@@ -1188,7 +1243,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.DatePre}
-                      onChange={formChange}
+                      name="DatePre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Date (mm/dd/yyyy)"
                       variant="standard"
@@ -1199,7 +1255,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.lastNamePre}
-                      onChange={formChange}
+                      name="lastNamePre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Last Name (Family Name)  "
                       variant="standard"
@@ -1210,7 +1267,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.firstNamePre}
-                      onChange={formChange}
+                      name="firstNamePre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="First Name (Given Name) "
                       variant="standard"
@@ -1221,7 +1279,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.middleNamePre}
-                      onChange={formChange}
+                      name="middleNamePre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Middle Initial (if any)"
                       variant="standard"
@@ -1232,7 +1291,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.addressPre}
-                      onChange={formChange}
+                      name="addressPre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Address (Street Number and Name) "
                       variant="standard"
@@ -1243,7 +1303,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.cityPre}
-                      onChange={formChange}
+                      name="cityPre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="City or Town "
                       variant="standard"
@@ -1254,7 +1315,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.statePre}
-                      onChange={formChange}
+                      name="statePre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="State"
                       variant="standard"
@@ -1265,7 +1327,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.zipCodePre}
-                      onChange={formChange}
+                      name="zipCodePre"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="ZIP Code "
                       variant="standard"
@@ -1283,39 +1346,39 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={8}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
        </Grid>
        <Grid item xs={5}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={3}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="City or Town " variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="State" variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="ZIP Code " variant="standard" />
        </Grid>
 
        </Grid>
@@ -1331,39 +1394,39 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={8}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
        </Grid>
        <Grid item xs={5}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={3}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="City or Town " variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="State" variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="ZIP Code " variant="standard" />
        </Grid>
 
        </Grid>
@@ -1379,39 +1442,39 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
        <Grid container spacing={3} columns={12} className='flx-box'>
        <Grid item xs={8}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="Signature of Preparer or Translator" variant="standard" />
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Date (mm/dd/yyyy)" variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="Middle Initial (if any)" variant="standard" />
        </Grid>
        <Grid item xs={5}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="Address (Street Number and Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={3}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="City or Town " variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="City or Town " variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="State" variant="standard" /> 
+       value={data.} onChange={formChange3} id="standard-basic" label="State" variant="standard" /> 
        </Grid>
        <Grid item xs={2}>
        required<TextField className='txt-width' 
-       value={data.} onChange={formChange} id="standard-basic" label="ZIP Code " variant="standard" />
+       value={data.} onChange={formChange3} id="standard-basic" label="ZIP Code " variant="standard" />
        </Grid>
 
        </Grid>
@@ -1450,7 +1513,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.lastNameSBsec1}
-                      onChange={formChange}
+                      name="lastNameSBsec1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Last Name (Family Name) from Section 1."
                       variant="standard"
@@ -1461,7 +1525,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.firstNameSBsec1}
-                      onChange={formChange}
+                      name="firstNameSBsec1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="First Name (Given Name) from Section 1."
                       variant="standard"
@@ -1472,7 +1537,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.middleNameSBsec1}
-                      onChange={formChange}
+                      name="middleNameSBsec1"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Middle initial (if any) from Section 1."
                       variant="standard"
@@ -1508,7 +1574,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.dateOfRehireSB}
-                      onChange={formChange}
+                      name="dateOfRehireSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Date of Rehire (if applicable)"
                       variant="standard"
@@ -1519,7 +1586,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.lastNameSb}
-                      onChange={formChange}
+                      name="lastNameSb"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Last Name (Family Name)"
                       variant="standard"
@@ -1530,7 +1598,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.firstNameSB}
-                      onChange={formChange}
+                      name="firstNameSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="First Name (Family Name)"
                       variant="standard"
@@ -1541,7 +1610,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.middleNameSB}
-                      onChange={formChange}
+                      name="middleNameSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Middle Initial"
                       variant="standard"
@@ -1561,7 +1631,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docTitleSB}
-                      onChange={formChange}
+                      name="docTitleSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Title"
                       variant="standard"
@@ -1572,7 +1643,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.docNoSB}
-                      onChange={formChange}
+                      name="docNoSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
@@ -1583,7 +1655,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.ExpDateSB}
-                      onChange={formChange}
+                      name="ExpDateSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any) (mm/dd/yyyy)"
                       variant="standard"
@@ -1603,7 +1676,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.nameOfEmpSB}
-                      onChange={formChange}
+                      name="nameOfEmpSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Name of Employer or Authorized Representative"
                       variant="standard"
@@ -1614,7 +1688,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.signOfEmpSB}
-                      onChange={formChange}
+                      name="signOfEmpSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Signature of Employer or Authorized Representative"
                       variant="standard"
@@ -1625,7 +1700,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       className="txt-width"
                       required
                       value={data.todayDateSB}
-                      onChange={formChange}
+                      name="todayDateSB"
+                      onChange={formChange3}
                       id="standard-basic"
                       label="Today's Date (mm/dd/yyyy)"
                       variant="standard"
@@ -1642,7 +1718,8 @@ const EligibilityVerification = ({ data, formChange, addData3, onStep3 }) => {
                       control={<Checkbox />}
                       required
                       value={data.clickhereSB}
-                      onChange={formChange}
+                      name="clickhereSB"
+                      onChange={formChange3}
                       label="Check here if you used an alternative procedure authorized by DHS to examine documents."
                     />
                   </Grid>
@@ -1658,19 +1735,19 @@ below section are commented out */}
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={2}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)" variant="standard" />
         </Grid>
         <Grid item xs={2}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Middle Initial" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Middle Initial" variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -1680,15 +1757,15 @@ below section are commented out */}
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Document Title" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -1698,15 +1775,15 @@ below section are commented out */}
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width'
-        value={data.} onChange={formChange}  id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
+        value={data.} onChange={formChange3}  id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
         </Grid>
 
         <Grid item xs={12} mt={4}>
@@ -1716,7 +1793,7 @@ below section are commented out */}
         </Grid>
         <Grid item xs={12}>
             required<FormControlLabel control={<Checkbox />} 
-            value={data.} onChange={formChange} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
+            value={data.} onChange={formChange3} label="Check here if you used an alternative procedure authorized by DHS to examine documents." />
         </Grid>
         </Grid>
         </Grid> */}
@@ -1727,19 +1804,19 @@ below section are commented out */}
         <Grid container spacing={3} columns={12} className='flx-box'>
         <Grid item xs={2}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Date of Rehire (if applicable)" variant="standard" />
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange}  id="standard-basic" label="Last Name (Family Name)" variant="standard" />
+        value={data.} onChange={formChange3}  id="standard-basic" label="Last Name (Family Name)" variant="standard" />
         </Grid>
         <Grid item xs={2}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Middle Initial" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Middle Initial" variant="standard" /> 
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -1749,15 +1826,15 @@ below section are commented out */}
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Document Title" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Expiration Date (if any) (mm/dd/yyyy)" variant="standard" />
         </Grid>
         <Grid item xs={12}>
         <Typography variant='body'>
@@ -1767,15 +1844,15 @@ below section are commented out */}
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Name of Employer or Authorized Representative" variant="standard" />
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
+        value={data.} onChange={formChange3} id="standard-basic" label="Signature of Employer or Authorized Representative" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
         required<TextField className='txt-width' 
-        value={data.} onChange={formChange} id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
+        value={data.} onChange={formChange3} id="standard-basic" label="Today's Date (mm/dd/yyyy)" variant="standard" />
         </Grid>
 
         <Grid item xs={12} mt={4}>

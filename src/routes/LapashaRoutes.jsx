@@ -29,7 +29,7 @@ const LapashaRoutes = ({ formData, onForm }) => {
         element={
           <EligibilityVerification
             data={formData}
-            formChange={onForm}
+            formChange3={onForm}
             onStep3={() => onStepForm(4)}
             addData3={addStep}
           />
@@ -55,7 +55,7 @@ const LapashaRoutes = ({ formData, onForm }) => {
         element={
           <ContractForm
             data={formData}
-            formChange={onForm}
+            formChange2={onForm}
             onStep2={() => onStepForm(3)}
             addData2={addStep}
           />
@@ -66,7 +66,7 @@ const LapashaRoutes = ({ formData, onForm }) => {
         element={
           <PolicyForm
             data={formData}
-            formChange={onForm}
+            formChange1={onForm}
             onStep1={() => onStepForm(2)}
             addData1={addStep}
           />

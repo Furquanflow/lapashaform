@@ -17,9 +17,9 @@ import {
 //React Router Dom
 import { Link, useNavigate } from "react-router-dom";
 
-const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
+const ContractForm = ({ data, formChange2, onStep2, addData2 }) => {
   const navigate = useNavigate();
-  
+
   const submitContactForm = e => {
     e.preventDefault();
     // console.log(JSON.stringify(state));
@@ -233,11 +233,11 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
                       <Grid>
                         <Grid className="select-opt">
                           <FormControlLabel
-                          required
+                            required
                             value={data.ableReadEng}
                             name="ableReadEng"
                             // required
-                            // onChange={formChange}
+                            onChange={formChange2}
                             control={<Radio />}
                             label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it."
                           />
@@ -245,9 +245,9 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
 
                         <Grid className="select-opt">
                           <FormControlLabel
-                          required
+                            required
                             value={data.unableReadEng}
-                            // onChange={formChange}
+                            onChange={formChange2}
                             control={<Radio />}
                             label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy."
                           />
@@ -263,9 +263,9 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
 
                         <Grid className="select-opt">
                           <FormControlLabel
-                          required
+                            required
                             value={data.declined}
-                            // onChange={formChange}
+                            onChange={formChange2}
                             control={<Radio />}
                             label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration."
                           />
@@ -297,7 +297,7 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
                     value={data.empName}
                     name="empName"
                     // required
-                    onChange={formChange}
+                    onChange={formChange2}
                     id="standard-basic"
                     label="Employee Printed Name"
                     variant="standard"
@@ -310,7 +310,7 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
                     value={data.empSign}
                     name="empSign"
                     // required
-                    onChange={formChange}
+                    onChange={formChange2}
                     id="standard-basic"
                     label="Employee Signature"
                     variant="standard"
@@ -318,12 +318,12 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
-                  required
+                    required
                     className="txt-width"
                     value={data.transPrinName}
                     name="transPrinName"
                     // required
-                    onChange={formChange}
+                    onChange={formChange2}
                     id="standard-basic"
                     label="Translator Printed Name"
                     variant="standard"
@@ -331,12 +331,12 @@ const ContractForm = ({ data, formChange, onStep2, addData2 }) => {
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
-                  required
+                    required
                     className="txt-width"
                     value={data.transSignName}
                     name="transSignName"
                     // required
-                    onChange={formChange}
+                    onChange={formChange2}
                     id="standard-basic"
                     label="Translator Signature"
                     variant="standard"

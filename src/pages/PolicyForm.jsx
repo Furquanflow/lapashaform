@@ -22,7 +22,7 @@ import companyLogo03 from "../assets/images/logo03.png";
 //Router Dom
 import { Link, useNavigate } from "react-router-dom";
 
-const PolicyForm = ({ data, onStep1, addData1 }) => {
+const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
   const navigate = useNavigate();
   const policySubmit = e => {
     e.preventDefault();
@@ -30,6 +30,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
     localStorage.getItem("DATA", addData1);
     onStep1();
     navigate("/stepform");
+    console.log(addData1);
   };
 
   useEffect(
@@ -4369,7 +4370,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.polciStatement}
                       name="polciStatement"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4383,7 +4384,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.tipsCredit}
                       name="tipsCredit"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4397,7 +4398,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.cardFee}
                       name="cardFee"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4413,7 +4414,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.policyAgainst}
                       name="policyAgainst"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4430,7 +4431,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.policyReg}
                       name="policyReg"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4446,7 +4447,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.consent}
                       name="consent"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4460,7 +4461,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.workPlace}
                       name="workPlace"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4476,7 +4477,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.drugFee}
                       name="drugFee"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4490,7 +4491,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.remoteWork}
                       name="remoteWork"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4506,7 +4507,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.elecSys}
                       name="elecSys"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4522,7 +4523,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       required
                       value={data.alterDis}
                       name="alterDis"
-                      // onChange={formChange}
+                      onChange={formChange1}
                       className="txt-width"
                       id="standard-basic"
                       variant="standard"
@@ -4537,7 +4538,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     required
                     value={data.empSigPolicy}
                     name="empSigPolicy"
-                    // onChange={formChange}
+                    onChange={formChange1}
                     className="txt-width"
                     id="standard-basic"
                     label="EMPLOYEE SIGNATURE"
@@ -4549,7 +4550,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     required
                     value={data.datePolicy}
                     name="datePolicy"
-                    // onChange={formChange}
+                    onChange={formChange1}
                     className="txt-width"
                     id="standard-basic"
                     label="DATE"
@@ -4603,7 +4604,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     <RadioGroup
                       aria-labelledby="demo-radio-buttons-group-label"
                       requireddefault
-                      Value="data.r1"
+                      value="data.r1"
                       name="radio-buttons-group"
                     >
                       <Grid>
@@ -4611,7 +4612,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                           <FormControlLabel
                             required
                             value={data.ableReadPolicy1}
-                            // onChange={formChange}
+                            onChange={formChange1}
                             control={<Radio />}
                             label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it."
                           />
@@ -4621,7 +4622,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                           <FormControlLabel
                             required
                             value={data.ableReadPolicy2}
-                            // onChange={formChange}
+                            onChange={formChange1}
                             control={<Radio />}
                             label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy."
                           />
@@ -4639,7 +4640,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                           <FormControlLabel
                             required
                             value={data.declinePolicy}
-                            // onChange={formChange}
+                            onChange={formChange1}
                             control={<Radio />}
                             label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration."
                           />
@@ -4669,7 +4670,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     required
                     value={data.empNamePolicy}
                     name="empNamePolicy"
-                    // onChange={formChange}
+                    onChange={formChange1}
                     className="txt-width"
                     id="standard-basic"
                     label="Employee Printed Name"
@@ -4681,7 +4682,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     required
                     value={data.empSignPolicy}
                     name="empSignPolicy"
-                    // onChange={formChange}
+                    onChange={formChange1}
                     className="txt-width"
                     id="standard-basic"
                     label="Employee Signature"
@@ -4693,7 +4694,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     required
                     value={data.tranNamePolicy}
                     name="tranNamePolicy"
-                    // onChange={formChange}
+                    onChange={formChange1}
                     className="txt-width"
                     id="standard-basic"
                     label="Translator Printed Name"
@@ -4705,7 +4706,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                     required
                     value={data.transSignPolicy}
                     name="transSignPolicy"
-                    // onChange={formChange}
+                    onChange={formChange1}
                     className="txt-width"
                     id="standard-basic"
                     label="Translator Signature"
@@ -4730,9 +4731,7 @@ const PolicyForm = ({ data, onStep1, addData1 }) => {
                       </Link>
                     </Button>
                     <Button type="submit" className="save-btn">
-                      {/* <Link to={"/stepform"} > */}
                       Save
-                      {/* </Link> */}
                     </Button>
                   </Grid>
                 </Grid>

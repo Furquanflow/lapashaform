@@ -13,28 +13,28 @@ import {
   Button,
   Radio,
   RadioGroup,
-  FormControl,
+  FormControl
 } from "@mui/material";
 
 //Images
 import mainLogo from "../assets/images/logo.png";
 
-const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
+import SignatureCanvas from "react-signature-canvas";
+
+const EmploymentInformationForm = ({
+  data,
+  formChange,
+  onStep,
+  addData,
+  canvaUpdatedState
+}) => {
   const navigate = useNavigate();
 
   const onInfoForm = e => {
-    e.preventDefault();
-    localStorage.getItem("DATA", addData);
     onStep();
     navigate("/stepform");
+    console.log(addData);
   };
-
-  useEffect(
-    () => {
-      localStorage.setItem("DATA", addData);
-    },
-    [addData]
-  );
 
   return (
     <Grid>
@@ -248,7 +248,6 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                   <Grid item xs={6}>
                     <TextField
                       className="txt-width"
-                      required
                       value={data.empIdEmpDet}
                       name="empIdEmpDet"
                       onChange={formChange}
@@ -299,9 +298,9 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                         <label>Federal Tax Withholding (W-4) Status:</label>
                         <RadioGroup
                           aria-labelledby="demo-radio-buttons-group-label"
-                          requireddefault
-                          Value="r1"
-                          name="radio-buttons-group"
+                          value={data.taxInfo}
+                          name="taxInfo"
+                          onChange={formChange} // Assuming you have an onChange handler
                         >
                           <Grid
                             container
@@ -311,34 +310,28 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                           >
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.signleTaxInfo}
-                                name="signleTaxInfo"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Single"
+                                control={<Radio required />}
                                 label="Single"
+                                name="taxInfo"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.marriedTaxInfo}
-                                name="marriedTaxInfo"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Married"
+                                control={<Radio required />}
                                 label="Married"
+                                name="taxInfo"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.headOfHouseTaxInfo}
-                                name="headOfHouseTaxInfo"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="HeadOfHouse"
+                                control={<Radio required />}
                                 label="Head of Household"
+                                name="taxInfo"
                               />
                             </Grid>
                           </Grid>
@@ -407,9 +400,9 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                         <label>Health Insurance:</label>
                         <RadioGroup
                           aria-labelledby="demo-radio-buttons-group-label"
-                          requireddefault
-                          Value="r1"
-                          name="radio-buttons-group"
+                          value={data.healthInsurance}
+                          name="healthInsurance"
+                          onChange={formChange} // Assuming you have an onChange handler
                         >
                           <Grid
                             container
@@ -419,22 +412,16 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                           >
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.enrollHI}
-                                name="enrollHI"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Enroll"
+                                control={<Radio required />}
                                 label="Enroll"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.declineHI}
-                                name="declineHI"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Decline"
+                                control={<Radio required />}
                                 label="Decline"
                               />
                             </Grid>
@@ -449,9 +436,9 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                         <label>Dental Insurance:</label>
                         <RadioGroup
                           aria-labelledby="demo-radio-buttons-group-label"
-                          requireddefault
-                          Value="r1"
-                          name="radio-buttons-group"
+                          value={data.dentalInsurance}
+                          name="dentalInsurance"
+                          onChange={formChange} // Assuming you have an onChange handler
                         >
                           <Grid
                             container
@@ -461,22 +448,16 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                           >
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.enrollDI}
-                                name="enrollDI"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Enroll"
+                                control={<Radio required />}
                                 label="Enroll"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.declineDI}
-                                name="declineDI"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Decline"
+                                control={<Radio required />}
                                 label="Decline"
                               />
                             </Grid>
@@ -491,9 +472,9 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                         <label>Vision Insurance:</label>
                         <RadioGroup
                           aria-labelledby="demo-radio-buttons-group-label"
-                          requireddefault
-                          Value="r1"
-                          name="radio-buttons-group"
+                          value={data.visionInsurance}
+                          name="visionInsurance"
+                          onChange={formChange}
                         >
                           <Grid
                             container
@@ -503,22 +484,16 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                           >
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.enrollVI}
-                                name="enrollVI"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Enroll"
+                                control={<Radio required />}
                                 label="Enroll"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.declineVI}
-                                name="declineVI"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Decline"
+                                control={<Radio required />}
                                 label="Decline"
                               />
                             </Grid>
@@ -533,9 +508,9 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                         <label>Retirement Plan:</label>
                         <RadioGroup
                           aria-labelledby="demo-radio-buttons-group-label"
-                          requireddefault
-                          Value="r1"
-                          name="radio-buttons-group"
+                          value={data.retirementPlan}
+                          name="retirementPlan"
+                          onChange={formChange}
                         >
                           <Grid
                             container
@@ -545,22 +520,16 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                           >
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.enrollRP}
-                                name="enrollRP"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Enroll"
+                                control={<Radio required />}
                                 label="Enroll"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.declineRP}
-                                name="declineRP"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Decline"
+                                control={<Radio required />}
                                 label="Decline"
                               />
                             </Grid>
@@ -602,9 +571,9 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                         </label>
                         <RadioGroup
                           aria-labelledby="demo-radio-buttons-group-label"
-                          requireddefault
-                          Value="r1"
-                          name="radio-buttons-group"
+                          value={data.medConyes}
+                          name="medConyes"
+                          onChange={formChange}
                         >
                           <Grid
                             container
@@ -614,22 +583,16 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                           >
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.medConyes}
-                                name="medConyes"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="Yes"
+                                control={<Radio required />}
                                 label="Yes"
                               />
                             </Grid>
 
                             <Grid item xs={4}>
                               <FormControlLabel
-                              required  
-                              value={data.medConNo}
-                                name="medConNo"
-                                onChange={formChange}
-                                control={<Radio />}
+                                value="No"
+                                control={<Radio required />}
                                 label="No If yes, please provide details:"
                               />
                             </Grid>
@@ -639,17 +602,21 @@ const EmploymentInformationForm = ({ data, formChange, onStep, addData }) => {
                     </FormGroup>
                   </Grid>
                   <Grid item xs={6}>
-                    <TextField
-                      className="txt-width"
-                      required
-                      value={data.conFormsign}
-                      name="conFormsign"
-                      onChange={formChange}
-                      id="standard-basic"
-                      label="Signature:"
-                      variant="standard"
-                      type="text"
-                    />
+                    <label>
+                      Signature
+                      <SignatureCanvas
+                        ref={ref => canvaUpdatedState(ref, "conFormsign")}
+                        name="conFormsign"
+                        onChange={formChange}
+                        penColor="black"
+                        label="signature"
+                        canvasProps={{
+                          width: 500,
+                          height: 200,
+                          className: "sigCanvas txt-width"
+                        }}
+                      />
+                    </label>
                   </Grid>
                   <Grid item xs={6}>
                     <TextField

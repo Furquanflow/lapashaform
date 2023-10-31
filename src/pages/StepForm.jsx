@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import pdfImg from "../assets/images/pdf.png";
 import uploadImg from "../assets/images/upload.png";
 
-const StepForm = ({ addCount }) => {
+const StepForm = ({ addCount, formDataFunc }) => {
   const navigate = useNavigate();
   const onEditClick = e => {
     e.preventDefault();
@@ -39,7 +39,9 @@ const StepForm = ({ addCount }) => {
   const onEditClickActive = () => {
     navigate("/employmentinformationform");
   };
-  const onPreview = () => {
+  const onPreview = e => {
+    e.preventDefault();
+    formDataFunc();
     if (addCount >= 4) {
       navigate("/eligibilityverificationview");
     } else {
@@ -136,7 +138,7 @@ const StepForm = ({ addCount }) => {
               </Grid>
             </Grid>
             <Grid className="steps">
-              <Button onClick={onPreview} className="next-btn-1">
+              <Button onClick={e => onPreview(e)} className="next-btn-1">
                 Preview
               </Button>
             </Grid>

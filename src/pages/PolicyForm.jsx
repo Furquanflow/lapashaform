@@ -11,7 +11,7 @@ import {
   Button,
   Radio,
   RadioGroup,
-  FormControl,
+  FormControl
 } from "@mui/material";
 
 // images
@@ -22,23 +22,24 @@ import companyLogo03 from "../assets/images/logo03.png";
 //Router Dom
 import { Link, useNavigate } from "react-router-dom";
 
-const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
+import SignatureCanvas from "react-signature-canvas";
+
+const PolicyForm = ({
+  data,
+  onStep1,
+  addData1,
+  formChange1,
+  updatePolicySignature,
+  updateTransPolicySignature,
+  updateEmployeePolicySignature
+}) => {
   const navigate = useNavigate();
   const policySubmit = e => {
     e.preventDefault();
-    // console.log(JSON.stringify(state));
-    localStorage.getItem("DATA", addData1);
-    onStep1();
     navigate("/stepform");
-    console.log(addData1);
+    onStep1();
   };
 
-  useEffect(
-    () => {
-      localStorage.setItem("DATA", addData1);
-    },
-    [addData1]
-  );
   return (
     <Grid>
       <Grid className="form-section">
@@ -4534,16 +4535,21 @@ const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
 
               <Grid container spacing={3} columns={12} className="flx-box">
                 <Grid item xs={6}>
-                  <TextField
-                    required
-                    value={data.empSigPolicy}
-                    name="empSigPolicy"
-                    onChange={formChange1}
-                    className="txt-width"
-                    id="standard-basic"
-                    label="EMPLOYEE SIGNATURE"
-                    variant="standard"
-                  />
+                  <label>
+                    Signature
+                    <SignatureCanvas
+                      ref={ref => updatePolicySignature(ref)}
+                      name="empSigPolicy"
+                      onChange={formChange1}
+                      penColor="black"
+                      label="signature"
+                      canvasProps={{
+                        width: 500,
+                        height: 200,
+                        className: "sigCanvas txt-width"
+                      }}
+                    />
+                  </label>
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
@@ -4555,6 +4561,7 @@ const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
                     id="standard-basic"
                     label="DATE"
                     variant="standard"
+                    type="date"
                   />
                 </Grid>
               </Grid>
@@ -4603,60 +4610,35 @@ const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
                   <FormControl>
                     <RadioGroup
                       aria-labelledby="demo-radio-buttons-group-label"
-                      requireddefault
-                      value="data.r1"
-                      name="radio-buttons-group"
+                      value={data.ableReadPolicy}
+                      name="ableReadPolicy"
+                      onChange={formChange1}
                     >
                       <Grid>
                         <Grid className="select-opt">
                           <FormControlLabel
-                            required
-                            value={data.ableReadPolicy1}
-                            onChange={formChange1}
-                            control={<Radio />}
+                            value={
+                              "I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it."
+                            }
+                            control={<Radio required />}
                             label="I am able to read and understand English. I have read and understand the Employee Class Waiver and Arbitration Agreement and have signed it."
                           />
                         </Grid>
 
                         <Grid className="select-opt">
                           <FormControlLabel
-                            required
-                            value={data.ableReadPolicy2}
-                            onChange={formChange1}
-                            control={<Radio />}
-                            label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language.  My signature to this acknowledgement and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy."
+                            value="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language. My signature to this acknowledgment and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy."
+                            control={<Radio required />}
+                            label="I am unable to read and understand English and requested the Employee Class Waiver and Arbitration Agreement to be read to me in my native language. My signature to this acknowledgment and the Employee Class Waiver and Arbitration Agreement indicates that I understand and agree to the Policy."
                           />
-                          <Typography className="label-opt" variant="body">
-                            No puedo leer ni entender inglés y solicito que me
-                            leyeran el Acuerdo de arbitraje y renuncia de clase
-                            del empleado en mi idioma nativo. Mi firma de este
-                            reconocimiento y el Acuerdo de arbitraje y renuncia
-                            de clase del empleado indica que comprendo y acepto
-                            la Poliza.
-                          </Typography>
                         </Grid>
 
                         <Grid className="select-opt">
                           <FormControlLabel
-                            required
-                            value={data.declinePolicy}
-                            onChange={formChange1}
-                            control={<Radio />}
-                            label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgement and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration.  I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement.  Any dispute I have with my employer must be brought by me alone in an arbitration."
+                            value="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgment and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration. I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement. Any dispute I have with my employer must be brought by me alone in an arbitration."
+                            control={<Radio required />}
+                            label="I declined to have the Employee Class Waiver and Arbitration Agreement read to me in my native language. I understand that by signing this acknowledgment and the Class Waiver and Arbitration Agreement I am waiving my right to a jury trial and agree to take any disagreement I may have with my employer to Arbitration. I also understand that I will not be able to bring suit in a group with others regarding my employment or to participate in a group settlement. Any dispute I have with my employer must be brought by me alone in an arbitration."
                           />
-                          <Typography className="label-opt" variant="body">
-                            Me negué a que me leyeran el Acuerdo de arbitraje y
-                            renuncia de clase del empleado en mi idioma nativo.
-                            Entiendo que al firmar este reconocimiento y el
-                            Acuerdo de renuncia de clase y arbitraje, renuncio a
-                            mi derecho a un juicio con jurado y acepto llevar
-                            cualquier desacuerdo que pueda tener con mi
-                            empleador a arbitraje. También entiendo que no podré
-                            entablar una demanda en grupo con otros con respecto
-                            a mi empleo o participar en un acuerdo grupal.
-                            Cualquier disputa que tenga con mi empleador debe
-                            ser presentada por mí solo en un arbitraje.
-                          </Typography>
                         </Grid>
                       </Grid>
                     </RadioGroup>
@@ -4678,15 +4660,16 @@ const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <TextField
-                    required
-                    value={data.empSignPolicy}
+                  <SignatureCanvas
+                    ref={ref => updateEmployeePolicySignature(ref)}
                     name="empSignPolicy"
                     onChange={formChange1}
-                    className="txt-width"
-                    id="standard-basic"
-                    label="Employee Signature"
-                    variant="standard"
+                    penColor="black"
+                    canvasProps={{
+                      width: 500,
+                      height: 200,
+                      className: "sigCanvas txt-width"
+                    }}
                   />
                 </Grid>
                 <Grid item xs={6}>
@@ -4702,15 +4685,16 @@ const PolicyForm = ({ data, onStep1, addData1, formChange1 }) => {
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <TextField
-                    required
-                    value={data.transSignPolicy}
+                  <SignatureCanvas
+                    ref={ref => updateTransPolicySignature(ref)}
                     name="transSignPolicy"
                     onChange={formChange1}
-                    className="txt-width"
-                    id="standard-basic"
-                    label="Translator Signature"
-                    variant="standard"
+                    penColor="black"
+                    canvasProps={{
+                      width: 500,
+                      height: 200,
+                      className: "sigCanvas txt-width"
+                    }}
                   />
                 </Grid>
               </Grid>

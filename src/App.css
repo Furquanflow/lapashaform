@@ -749,3 +749,7 @@ td.bordernone {
     line-height: 26px;
   }
 }
+
+.sigCanvas{
+  border: 1px solid #000
+}

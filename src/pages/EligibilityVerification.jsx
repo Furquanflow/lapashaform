@@ -15,34 +15,39 @@ import {
   Button,
   Radio,
   RadioGroup,
-  FormControl,
+  FormControl
 } from "@mui/material";
 
 //Images
 import mainLogo from "../assets/images/logo.png";
 
-const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
+import SignatureCanvas from "react-signature-canvas";
+
+const EligibilityVerification = ({
+  data,
+  formChange3,
+  addData3,
+  onStep3,
+  canvaVerificationState,
+  canvaVerificationEmpState,
+  canvaVerificationPreState,
+  canvaVerificationEmpSBState,
+  formDataFunc
+}) => {
   const navigate = useNavigate();
 
   const onEligbility = e => {
     e.preventDefault();
-    localStorage.getItem("DATA", addData3);
     onStep3();
+    // formDataFunc();
     navigate("/stepform");
   };
-
-  useEffect(
-    () => {
-      localStorage.setItem("DATA", addData3);
-    },
-    [addData3]
-  );
 
   return (
     <Grid>
       <Grid className="form-section">
         <Container>
-          <form onSubmit={onEligbility}>
+          <form onSubmit={e => onEligbility(e)}>
             <Grid className="form-inner">
               <Grid
                 container
@@ -179,6 +184,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Apt. Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                 </Grid>
@@ -217,6 +223,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="ZIP Code"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                 </Grid>
@@ -231,6 +238,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Date of Birth (mm/dd/yyyy)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={6}>
@@ -243,6 +251,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="U.S. Social Security Number"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                 </Grid>
@@ -257,6 +266,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Employee's Email Address"
                       variant="standard"
+                      type="email"
                     />
                   </Grid>
                   <Grid item xs={6}>
@@ -269,6 +279,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Employee's Telephone Number"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                 </Grid>
@@ -295,52 +306,40 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     </label>
                     <RadioGroup
                       aria-labelledby="demo-radio-buttons-group-label"
-                      requireddefault
-                      Value="data.r1"
-                      name="radio-buttons-group"
+                      defaultValue={data.citizeOfUsa}
+                      name="citizeOfUsa"
+                      onChange={formChange3}
                     >
-                      <Grid
-                        container
-                        spacing={3}
-                        columns={12}
-                        className="flx-box checkbox"
-                      >
+                      <Grid container spacing={3} className="flx-box checkbox">
                         <Grid item xs={12}>
                           <FormControlLabel
-                            required
-                            value={data.citizeOfUsa}
+                            value={"1. A citizen of the United States"}
                             name="citizeOfUsa"
-                            onChange={formChange3}
-                            control={<Radio />}
+                            control={<Radio required />}
                             label="1. A citizen of the United States"
                           />
                         </Grid>
 
                         <Grid item xs={12}>
                           <FormControlLabel
-                            required
-                            value={data.noncitizeOfUsa}
-                            name="noncitizeOfUsa"
-                            onChange={formChange3}
-                            control={<Radio />}
+                            value="2. A noncitizen national of the United States (See Instructions.)"
+                            name="citizeOfUsa"
+                            control={<Radio required />}
                             label="2. A noncitizen national of the United States (See Instructions.)"
                           />
                         </Grid>
 
                         <Grid item xs={6}>
                           <FormControlLabel
-                            required
-                            value={data.lawFullPr}
-                            name="lawFullPr"
-                            onChange={formChange3}
-                            control={<Radio />}
+                            value="3. A lawful permanent resident (Enter USCIS or A-Number.)"
+                            name="citizeOfUsa"
+                            control={<Radio required />}
                             label="3. A lawful permanent resident (Enter USCIS or A-Number.)"
                           />
                         </Grid>
                         <Grid item xs={6}>
                           <TextField
                             className="txt-width"
-                            required
                             value={data.lawFullPrTextFeild}
                             name="lawFullPrTextFeild"
                             onChange={formChange3}
@@ -352,10 +351,8 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
 
                         <Grid item xs={8}>
                           <FormControlLabel
-                            required
-                            value={data.noncitizenAuth}
-                            name="noncitizenAuth"
-                            onChange={formChange3}
+                            value="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)"
+                            name="citizeOfUsa"
                             control={<Radio />}
                             label="4. A noncitizen (other than Item Numbers 2. and 3. above) authorized to work until (exp. date, if any)"
                           />
@@ -363,7 +360,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                         <Grid item xs={4}>
                           <TextField
                             className="txt-width"
-                            required
                             value={data.noncitizenAuthTextField}
                             name="noncitizenAuthTextField"
                             onChange={formChange3}
@@ -390,7 +386,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     <Grid item xs={3}>
                       <TextField
                         className="txt-width"
-                        required
                         value={data.uscis}
                         name="uscis"
                         onChange={formChange3}
@@ -405,7 +400,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     <Grid item xs={3}>
                       <TextField
                         className="txt-width"
-                        required
                         value={data.formi94}
                         name="formi94"
                         onChange={formChange3}
@@ -420,7 +414,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     <Grid item xs={4}>
                       <TextField
                         className="txt-width"
-                        required
                         value={data.foreignPass}
                         name="foreignPass"
                         onChange={formChange3}
@@ -430,16 +423,21 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       />
                     </Grid>
                     <Grid item xs={6}>
-                      <TextField
-                        className="txt-width"
-                        required
-                        value={data.signOfEmp}
-                        name="signOfEmp"
-                        onChange={formChange3}
-                        id="standard-basic"
-                        label="Signature of Employee"
-                        variant="standard"
-                      />
+                      <label>
+                        Signature
+                        <SignatureCanvas
+                          ref={ref => canvaVerificationState(ref, "signOfEmp")}
+                          name="signOfEmp"
+                          onChange={formChange3}
+                          penColor="black"
+                          label="signature"
+                          canvasProps={{
+                            width: 500,
+                            height: 200,
+                            className: "sigCanvas txt-width"
+                          }}
+                        />
+                      </label>
                     </Grid>
                     <Grid item xs={6}>
                       <TextField
@@ -451,6 +449,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                         id="standard-basic"
                         label="Today's Date (mm/dd/yyyy)"
                         variant="standard"
+                        type="date"
                       />
                     </Grid>
                   </Grid>
@@ -517,6 +516,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -529,6 +529,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -565,6 +566,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -577,6 +579,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -613,6 +616,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -625,6 +629,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
 
@@ -661,12 +666,13 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     <TextField
                       className="txt-width"
                       required
-                      value={data.docNo3}
-                      name="docNo3"
+                      value={data.docNo4}
+                      name="docNo4"
                       onChange={formChange3}
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -679,6 +685,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
 
@@ -721,6 +728,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -733,6 +741,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Expiration Date (if any)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -780,6 +789,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="First Day of Employment (mm/dd/yyyy):"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={6}>
@@ -795,16 +805,22 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     />
                   </Grid>
                   <Grid item xs={6}>
-                    <TextField
-                      className="txt-width"
-                      required
-                      value={data.signOfEmpRep}
-                      name="signOfEmpRep"
-                      onChange={formChange3}
-                      id="standard-basic"
-                      label="Signature of Employer or Authorized Representative"
-                      variant="standard"
-                    />
+                    <label>
+                      Signature
+                      <SignatureCanvas
+                        ref={ref =>
+                          canvaVerificationEmpState(ref, "signOfEmpRep")}
+                        name="signOfEmpRep"
+                        onChange={formChange3}
+                        penColor="black"
+                        label="signature"
+                        canvasProps={{
+                          width: 500,
+                          height: 200,
+                          className: "sigCanvas txt-width"
+                        }}
+                      />
+                    </label>
                   </Grid>
                   <Grid item xs={6}>
                     <TextField
@@ -816,6 +832,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Today's Date (mm/dd/yyyy)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -1227,16 +1244,21 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
 
                 <Grid container spacing={3} columns={12} className="flx-box">
                   <Grid item xs={8}>
-                    <TextField
-                      className="txt-width"
-                      required
-                      value={data.signOfPre}
-                      name="signOfPre"
-                      onChange={formChange3}
-                      id="standard-basic"
-                      label="Signature of Preparer or Translator"
-                      variant="standard"
-                    />
+                    <label>
+                      Signature
+                      <SignatureCanvas
+                        ref={ref => canvaVerificationPreState(ref, "signOfPre")}
+                        name="signOfPre"
+                        onChange={formChange3}
+                        penColor="black"
+                        label="signature"
+                        canvasProps={{
+                          width: 500,
+                          height: 200,
+                          className: "sigCanvas txt-width"
+                        }}
+                      />
+                    </label>
                   </Grid>
                   <Grid item xs={4}>
                     <TextField
@@ -1248,6 +1270,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Date (mm/dd/yyyy)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -1277,7 +1300,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
                       value={data.middleNamePre}
                       name="middleNamePre"
                       onChange={formChange3}
@@ -1332,6 +1354,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="ZIP Code "
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                 </Grid>
@@ -1535,7 +1558,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
                       value={data.middleNameSBsec1}
                       name="middleNameSBsec1"
                       onChange={formChange3}
@@ -1579,6 +1601,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Date of Rehire (if applicable)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -1608,7 +1631,6 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                   <Grid item xs={2}>
                     <TextField
                       className="txt-width"
-                      required
                       value={data.middleNameSB}
                       name="middleNameSB"
                       onChange={formChange3}
@@ -1648,6 +1670,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Document Number (if any)"
                       variant="standard"
+                      type="number"
                     />
                   </Grid>
                   <Grid item xs={4}>
@@ -1660,6 +1683,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Expiration Date (if any) (mm/dd/yyyy)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -1684,16 +1708,22 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                     />
                   </Grid>
                   <Grid item xs={4}>
-                    <TextField
-                      className="txt-width"
-                      required
-                      value={data.signOfEmpSB}
-                      name="signOfEmpSB"
-                      onChange={formChange3}
-                      id="standard-basic"
-                      label="Signature of Employer or Authorized Representative"
-                      variant="standard"
-                    />
+                    <label>
+                      Signature
+                      <SignatureCanvas
+                        ref={ref =>
+                          canvaVerificationEmpSBState(ref, "signOfEmpSB")}
+                        name="signOfEmpSB"
+                        onChange={formChange3}
+                        penColor="black"
+                        label="signature"
+                        canvasProps={{
+                          width: 500,
+                          height: 200,
+                          className: "sigCanvas txt-width"
+                        }}
+                      />
+                    </label>
                   </Grid>
                   <Grid item xs={4}>
                     <TextField
@@ -1705,6 +1735,7 @@ const EligibilityVerification = ({ data, formChange3, addData3, onStep3 }) => {
                       id="standard-basic"
                       label="Today's Date (mm/dd/yyyy)"
                       variant="standard"
+                      type="date"
                     />
                   </Grid>
 

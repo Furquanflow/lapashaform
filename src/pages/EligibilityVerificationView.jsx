@@ -11,7 +11,7 @@ import {
   FormGroup,
   Button,
   RadioGroup,
-  FormControl
+  FormControl,
 } from "@mui/material";
 
 //Images
@@ -20,9 +20,9 @@ import companyLogo01 from "../assets/images/logo01.png";
 import companyLogo02 from "../assets/images/logo02.png";
 import companyLogo03 from "../assets/images/logo03.png";
 
-const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
+const EligibilityVerificationView = ({ dataString,  }) => {
   return (
-    <Grid>
+    <Grid >
       {dataString &&
         dataString.map(value => {
           if (value !== undefined) {
@@ -5295,7 +5295,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.polciStatement}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5305,7 +5305,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.tipsCredit}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5315,7 +5315,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.cardFee}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5325,7 +5325,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.policyAgainst}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5336,7 +5336,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.policyReg}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5347,7 +5347,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.consent}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5357,7 +5357,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.workPlace}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5367,7 +5367,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.drugFee}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5377,7 +5377,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.remoteWork}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5387,7 +5387,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.elecSys}
                             </Typography>
                           </Grid>
                           <Grid item xs={8}>
@@ -5397,7 +5397,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.alterDis}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -5414,7 +5414,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             EMPLOYEE SIGNATURE
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            <img src={value.empSigPolicy} alt="empSigPolicy" />
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5422,7 +5422,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             DATE
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            {value.datePolicy}
                           </Typography>
                         </Grid>
                       </Grid>
@@ -5489,10 +5489,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                     className="input-value"
                                     variant="body"
                                   >
-                                    I am able to read and understand English. I
-                                    have read and understand the Employee Class
-                                    Waiver and Arbitration Agreement and have
-                                    signed it.
+                                    {value.ableReadPolicy}
                                   </Typography>
                                 </Grid>
                               </Grid>
@@ -5512,7 +5509,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Employee Printed Name
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            {value.empNamePolicy}
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5520,7 +5517,10 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Employee Signature
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            <img
+                              src={value.empSignPolicy}
+                              alt="empSignPolicy"
+                            />
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5528,7 +5528,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Translator Printed Name
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            {value.tranNamePolicy}
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5536,7 +5536,10 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Translator Signature
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            <img
+                              src={value.transSignPolicy}
+                              alt="transSignPolicy"
+                            />
                           </Typography>
                         </Grid>
                       </Grid>
@@ -5761,10 +5764,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                     className="input-value"
                                     variant="body"
                                   >
-                                    I am able to read and understand English. I
-                                    have read and understand the Employee Class
-                                    Waiver and Arbitration Agreement and have
-                                    signed it.
+                                    {value.ableReadEng}
                                   </Typography>
                                 </Grid>
                               </Grid>
@@ -5784,7 +5784,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Employee Printed Name
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            {value.empName}
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5792,7 +5792,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Employee Signature
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            <img src={value.empSign} />
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5800,7 +5800,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Translator Printed Name
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            {value.transPrinName}
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -5808,7 +5808,10 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             Translator Signature
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            Smith
+                            <img
+                              src={value.transSignName}
+                              alt="transSignName"
+                            />
                           </Typography>
                         </Grid>
                       </Grid>
@@ -5889,7 +5892,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name :
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Smith
+                              {value.lastName}
                             </Typography>
                           </Grid>
                           <Grid item xs={6}>
@@ -5897,7 +5900,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Jhon
+                              {value.firstName}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -5909,19 +5912,19 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                         >
                           <Grid item xs={6}>
                             <Typography className="label-name" variant="label">
-                              Middle Initial (if any)
-                            </Typography>
-                            <Typography className="input-value" variant="body">
                               Middle Initial
                             </Typography>
+                            <Typography className="input-value" variant="body">
+                              {value.middle}
+                            </Typography>
                           </Grid>
                           <Grid item xs={6}>
                             <Typography className="label-name" variant="label">
-                              Other Last Names Used (if any)
-                            </Typography>
-                            <Typography className="input-value" variant="body">
                               Other Last Names Used
                             </Typography>
+                            <Typography className="input-value" variant="body">
+                              {value.otheLn}
+                            </Typography>
                           </Grid>
                         </Grid>
                         <Grid
@@ -5932,18 +5935,18 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                         >
                           <Grid item xs={6}>
                             <Typography className="label-name" variant="label">
-                              Address (Street Number and Name)
-                            </Typography>
-                            <Typography className="input-value" variant="body">
                               Address
                             </Typography>
+                            <Typography className="input-value" variant="body">
+                              {value.address}
+                            </Typography>
                           </Grid>
                           <Grid item xs={6}>
                             <Typography className="label-name" variant="label">
-                              Apt. Number (if any)
+                              Apt. Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Apt. Number
+                              {value.aptNo}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -5958,7 +5961,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               City or Town
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              City or Town
+                              {value.city}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -5966,7 +5969,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               State
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              State
+                              {value.state}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -5974,7 +5977,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               ZIP Code
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              ZIP Code
+                              {value.zipCode}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -5989,7 +5992,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Date of Birth
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              mm/dd/yyyy
+                              {value.dob}
                             </Typography>
                           </Grid>
                           <Grid item xs={6}>
@@ -5997,7 +6000,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               U.S. Social Security Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              653224
+                              {value.socialSno}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -6012,7 +6015,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Employee's Email Address
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              test@gmail.com
+                              {value.empEmail}
                             </Typography>
                           </Grid>
                           <Grid item xs={6}>
@@ -6020,7 +6023,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Employee's Telephone Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              65598656565
+                              {value.empTno}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -6068,11 +6071,11 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                     className="input-value"
                                     variant="body"
                                   >
-                                    1. A citizen of the United States
+                                    {value.citizeOfUsa}
                                   </Typography>
                                 </Grid>
 
-                                <Grid item xs={6}>
+                                {/* <Grid item xs={6}>
                                   <Typography
                                     className="label-name"
                                     variant="label"
@@ -6100,7 +6103,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                   >
                                     Blank Filed
                                   </Typography>
-                                </Grid>
+                                    </Grid> */}
                               </Grid>
                             </RadioGroup>
                           </FormControl>
@@ -6127,7 +6130,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                 className="input-value"
                                 variant="body"
                               >
-                                Insert Text
+                                {value.uscis}
                               </Typography>
                             </Grid>
                             <Grid item xs={1}>
@@ -6144,7 +6147,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                 className="input-value"
                                 variant="body"
                               >
-                                Insert Text
+                                {value.formi94}
                               </Typography>
                             </Grid>
                             <Grid item xs={1}>
@@ -6161,7 +6164,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                 className="input-value"
                                 variant="body"
                               >
-                                Insert Text
+                                {value.foreignPass}
                               </Typography>
                             </Grid>
                             <Grid item xs={6}>
@@ -6175,7 +6178,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                 className="input-value"
                                 variant="body"
                               >
-                                Insert Text
+                                <img src={value.signOfEmp} alt="signOfEmp" />
                               </Typography>
                             </Grid>
                             <Grid item xs={6}>
@@ -6189,7 +6192,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                                 className="input-value"
                                 variant="body"
                               >
-                                mm/dd/yyyy
+                                {value.todayDate}
                               </Typography>
                             </Grid>
                           </Grid>
@@ -6233,7 +6236,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Document Title 1
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.noncitizenAuthTextField}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6241,23 +6244,23 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Issuing Authority
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.issueAuth}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Document Number (if any)
+                              Document Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docNo}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Expiration Date (if any)
+                              Expiration Date
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.expdate}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -6265,7 +6268,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Document Title 2 (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docTitle2}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6273,31 +6276,31 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Issuing Authority
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.issueAuth2}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Document Number (if any)
+                              Document Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docNo2}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Expiration Date (if any)
+                              Expiration Date
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.expDate2}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
                             <Typography className="label-name" variant="label">
-                              Document Title 3 (if any)
+                              Document Title 3
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docTitle3}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6305,15 +6308,15 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Issuing Authority
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.issueAuth3}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Document Number (if any)
+                              Document Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docNo3}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6321,7 +6324,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Expiration Date (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.expdate3}
                             </Typography>
                           </Grid>
 
@@ -6335,7 +6338,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Document Title 1
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docTitle4}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6343,23 +6346,23 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Issuing Authority
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.issueAuth4}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Document Number (if any)
+                              Document Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docNo4}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Expiration Date (if any)
+                              Expiration Date
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.expdate4}
                             </Typography>
                           </Grid>
 
@@ -6373,7 +6376,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Document Title 1
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docTitleC}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6381,15 +6384,15 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Issuing Authority
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.issueAuthC}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Document Number (if any)
+                              Document Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docNoC}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6397,7 +6400,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Expiration Date (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.expdateC}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -6405,7 +6408,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Additional Information
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.addInfoC}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -6436,7 +6439,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Day of Employment
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              mm/dd/yyyy
+                              {value.firstDayofEmp}
                             </Typography>
                           </Grid>
                           <Grid item xs={6}>
@@ -6444,7 +6447,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name, First Name and Title of Employer
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastFirstNameOfEmp}
                             </Typography>
                           </Grid>
                           <Grid item xs={6}>
@@ -6452,7 +6455,10 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Signature of Employer or Authorized Representative
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              <img
+                                src={value.signOfEmpRep}
+                                alt="signOfEmpRep"
+                              />
                             </Typography>
                           </Grid>
                           <Grid item xs={6}>
@@ -6460,7 +6466,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Today's Date
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              mm/dd/yyyy
+                              {value.todaySDate}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -6468,7 +6474,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Employer's Business or Organization Name
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.empBuss}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -6477,7 +6483,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               or Town, State, ZIP Code
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.empBusOrg}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -6831,7 +6837,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name) from Section 1.
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lNamesec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6839,15 +6845,15 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name) from Section 1.
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.fNamesec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Middle initial (if any) from Section 1.
+                              Middle initial from Section 1.
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNamesec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -6873,7 +6879,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           I attest, under penalty of perjury, that I have
                           assisted in the completion of Section 1 of this form
                           and that to the best of my knowledge the information
-                          is true and correct.{" "}
+                          is true and correct.
                         </h3>
 
                         <Grid
@@ -6887,7 +6893,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Signature of Preparer or Translator
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              <img src={value.signOfPre} alt="signOfPre" />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6895,7 +6901,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Date (mm/dd/yyyy)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.DatePre}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6903,7 +6909,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastNamePre}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6911,7 +6917,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.firstNamePre}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6919,7 +6925,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Middle Initial (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNamePre}
                             </Typography>
                           </Grid>
                           <Grid item xs={5}>
@@ -6927,7 +6933,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Address (Street Number and Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.addressPre}
                             </Typography>
                           </Grid>
                           <Grid item xs={3}>
@@ -6935,7 +6941,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               City or Town
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.cityPre}
                             </Typography>
                           </Grid>
                           <Grid item xs={2}>
@@ -6943,7 +6949,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               State
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.statePre}
                             </Typography>
                           </Grid>
                           <Grid item xs={2}>
@@ -6951,15 +6957,13 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               ZIP Code
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.zipCodePre}
                             </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
-
                       <hr />
-
-                      <Grid className="text-box txt-fld-space">
+                      {/*   <Grid className="text-box txt-fld-space">
                         <h3>
                           I attest, under penalty of perjury, that I have
                           assisted in the completion of Section 1 of this form
@@ -6978,7 +6982,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Signature of Preparer or Translator
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              <img src={value.lastNameSBsec1} />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6994,7 +6998,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7002,7 +7006,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.firstNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7010,7 +7014,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Middle Initial (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={5}>
@@ -7046,11 +7050,8 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             </Typography>
                           </Grid>
                         </Grid>
-                      </Grid>
-
-                      <hr />
-
-                      <Grid className="text-box txt-fld-space">
+                              </Grid> */}
+                      {/*   <Grid className="text-box txt-fld-space">
                         <h3>
                           I attest, under penalty of perjury, that I have
                           assisted in the completion of Section 1 of this form
@@ -7069,7 +7070,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Signature of Preparer or Translator
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              <img src={value.lastNameSBsec1} />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7085,7 +7086,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7093,7 +7094,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.firstNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7101,7 +7102,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Middle Initial (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={5}>
@@ -7137,11 +7138,8 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             </Typography>
                           </Grid>
                         </Grid>
-                      </Grid>
-
-                      <hr />
-
-                      <Grid className="text-box txt-fld-space">
+                              </Grid> */}
+                      {/*   <Grid className="text-box txt-fld-space">
                         <h3>
                           I attest, under penalty of perjury, that I have
                           assisted in the completion of Section 1 of this form
@@ -7160,7 +7158,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Signature of Preparer or Translator
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              <img src={value.lastNameSBsec1} />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7176,7 +7174,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7184,7 +7182,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.firstNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7192,7 +7190,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Middle Initial (if any)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={5}>
@@ -7228,7 +7226,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                             </Typography>
                           </Grid>
                         </Grid>
-                      </Grid>
+                              </Grid> */}
 
                       <Grid
                         container
@@ -7273,7 +7271,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name) from Section 1.
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7281,7 +7279,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               First Name (Given Name) from Section 1.
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.firstNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7289,7 +7287,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Middle initial (if any) from Section 1.
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNameSBsec1}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -7307,8 +7305,8 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Form I-9 record. Additional guidance can be found
                               in the
                               <a className="red-link" href="">
-                                {" "}Handbook for Employers: Guidance for
-                                Completing Form I-9 (M-274)
+                                Handbook for Employers: Guidance for Completing
+                                Form I-9 (M-274)
                               </a>
                             </p>
                           </Grid>
@@ -7329,7 +7327,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Date of Rehire (if applicable)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.dateOfRehireSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7337,7 +7335,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.lastNameSb}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7345,7 +7343,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Last Name (Family Name)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.firstNameSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={2}>
@@ -7353,7 +7351,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Middle Initial
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.middleNameSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -7371,23 +7369,23 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Document Title
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docTitleSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Document Number (if any)
+                              Document Number
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.docNoSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
                             <Typography className="label-name" variant="label">
-                              Expiration Date (if any) (mm/dd/yyyy)
+                              Expiration Date
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.expDateSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={12}>
@@ -7405,7 +7403,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Name of Employer or Authorized Representative
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.nameOfEmpSB}
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7413,7 +7411,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Signature of Employer or Authorized Representative
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              <img src={value.signOfEmpSB} alt="signOfEmpSB" />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7421,12 +7419,12 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                               Today's Date (mm/dd/yyyy)
                             </Typography>
                             <Typography className="input-value" variant="body">
-                              Insert Text
+                              {value.todayDateSB}
                             </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
-
+                      {/*
                       <hr />
 
                       <Grid className="text-box txt-fld-space">
@@ -7650,6 +7648,7 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                           </Grid>
                         </Grid>
                       </Grid>
+                            */}
 
                       <Grid
                         container
@@ -7658,11 +7657,13 @@ const EligibilityVerificationView = ({ dataString, fomDataGetFunc }) => {
                         className="btm-button"
                       >
                         <Grid item xs={6} />
-                        <Grid item xs={6}>
+                        {/*    <Grid item xs={6}>
                           <Grid className="form-btns">
-                            <Button className="save-btn">Generate PDF</Button>
+                            <Button className="save-btn" onClick={generatePdf}>
+                              Generate PDF
+                            </Button>
                           </Grid>
-                        </Grid>
+                          </Grid> */}
                       </Grid>
                     </Grid>
                   </Container>

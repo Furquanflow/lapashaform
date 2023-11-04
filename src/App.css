@@ -141,14 +141,14 @@ input[type="date"]:focus::-webkit-datetime-edit {
   margin: 10px 0;
 }
 .theme-btn {
-  background-color: #b49a53;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 50px;
-  border-radius: 30px;
-  margin-top: 18px;
-  border: 2px solid #b49a53;
+  background-color: #b49a53 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  padding: 10px 50px !important;
+  border-radius: 30px !important;
+  margin-top: 18px !important;
+  border: 2px solid #b49a53 !important;
 }
 .theme-btn:hover {
   background-color: transparent;
@@ -752,4 +752,8 @@ td.bordernone {
 
 .sigCanvas{
   border: 1px solid #000
+}
+
+.page-break {
+  page-break-before: always !important; /* Always start a new page before this element */
 }

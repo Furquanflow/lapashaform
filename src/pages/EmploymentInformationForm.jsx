@@ -13,7 +13,7 @@ import {
   Button,
   Radio,
   RadioGroup,
-  FormControl
+  FormControl,
 } from "@mui/material";
 
 //Images
@@ -26,13 +26,14 @@ const EmploymentInformationForm = ({
   formChange,
   onStep,
   addData,
-  canvaUpdatedState
+  canvaUpdatedState,
 }) => {
   const navigate = useNavigate();
 
   const onInfoForm = e => {
     onStep();
-    navigate("/stepform");
+    navigate("/stepform", { replace: true });
+    // window.history.pushState("/stepform");
     console.log(addData);
   };
 
@@ -613,7 +614,7 @@ const EmploymentInformationForm = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width"
+                          className: "sigCanvas txt-width",
                         }}
                       />
                     </label>

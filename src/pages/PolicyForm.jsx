@@ -36,7 +36,7 @@ const PolicyForm = ({
   const navigate = useNavigate();
   const policySubmit = e => {
     e.preventDefault();
-    navigate("/stepform");
+    navigate("/stepform", { replace: true });
     onStep1();
   };
 

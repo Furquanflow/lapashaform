@@ -3,7 +3,7 @@ import EligibilityVerification from "../pages/EligibilityVerification";
 import AcceptableDocuments from "../pages/AcceptableDocuments";
 import SupplementA from "../pages/SupplementA";
 import SupplementB from "../pages/SupplementB";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import StepForm from "../pages/StepForm";
@@ -14,6 +14,9 @@ import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
 
 import axios from "axios";
+
+import ComponentToPDF from "../pdf/Pdf";
+import Test from "../test/Test";
 
 //Server Url
 let baseUrl = "http://localhost:8000";
@@ -32,7 +35,8 @@ const LapashaRoutes = () => {
   const [policyTranslatorCanvas, setPolicyTranslatorCanvas] = useState(null);
   const [formData, setFormData] = useState(data);
   const [formDataArr, setFormDataArr] = useState([]);
-  const dataString = JSON.stringify(formData);
+  const dataString = formData;
+  const navigate = useNavigate();
 
   const onForm = e => {
     let { name, value } = e.target;
@@ -44,9 +48,6 @@ const LapashaRoutes = () => {
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
     setAddStep(eve);
-
-    console.log(dataString);
-
     if (canvas) {
       const signatureData = canvas.toDataURL();
       formDataChanges.conFormsign = signatureData;
@@ -89,8 +90,18 @@ const LapashaRoutes = () => {
     }
     setFormData(prevFormData => ({
       ...prevFormData,
-      ...formDataChanges
+      ...formDataChanges,
     }));
+  };
+
+  const onLoginClick = () => {
+    navigate("/stepform");
+    localStorage.setItem("DATA", addStep.toString());
+    localStorage.setItem("FORMDATA", dataString);
+    window.onload = () => {
+      localStorage.setItem("DATA", addStep.toString());
+      localStorage.setItem("FORMDATA", dataString);
+    };
   };
 
   const postFormData = async () => {
@@ -119,13 +130,13 @@ const LapashaRoutes = () => {
       localStorage.getItem("FORMDATA", dataString);
       getFormData();
     },
-    [dataString, addStep,]
+    [dataString, addStep]
   );
 
   return (
     // <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
       <Route
         path="/eligibilityverification"
         element={
@@ -142,7 +153,7 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route
+      {/* <Route
         path="/eligibilityverificationview"
         element={
           <EligibilityVerificationView
@@ -150,7 +161,7 @@ const LapashaRoutes = () => {
             fomDataGetFunc={getFormData}
           />
         }
-      />
+      /> */}
       <Route
         path="/employmentinformationform"
         element={
@@ -191,10 +202,12 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route path="/acceptabledocuments" element={<AcceptableDocuments />} />
-      <Route path="/supplementa" element={<SupplementA />} />
-      <Route path="/supplementb" element={<SupplementB />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Login onLogin={onLoginClick} />} />
+      <Route path="/" element={<Navigate replace to="/login" />} />
+      <Route
+        path="/test"
+        element={<Test dataString={formDataArr} />}
+      />
       <Route
         path="/stepform"
         element={

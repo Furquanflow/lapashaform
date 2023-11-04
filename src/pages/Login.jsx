@@ -21,7 +21,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -39,7 +39,7 @@ const Login = () => {
                       // onChange={formChange}
                       label="Email Address"
                       variant="standard"
-                      type="text"
+                      type="email"
                     />
                   </FormLabel>
                   <FormLabel>
@@ -52,10 +52,11 @@ const Login = () => {
                       type="password"
                     />
                   </FormLabel>
-                  <Button>
-                    <Link className="theme-btn" to={"/stepform"}>
+                  <Button className="theme-btn" onClick={onLogin}>
+                    Login
+                    {/* <Link  to={"/stepform"}>
                       Login
-                    </Link>
+  </Link> */}
                   </Button>
                   <Button>
                     <Link className="trms-btn" to={"/"}>

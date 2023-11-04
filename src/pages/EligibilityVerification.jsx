@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 //Router Dom
 import { Link, useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ import {
   Button,
   Radio,
   RadioGroup,
-  FormControl
+  FormControl,
 } from "@mui/material";
 
 //Images
@@ -32,7 +32,7 @@ const EligibilityVerification = ({
   canvaVerificationEmpState,
   canvaVerificationPreState,
   canvaVerificationEmpSBState,
-  formDataFunc
+  formDataFunc,
 }) => {
   const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ const EligibilityVerification = ({
     e.preventDefault();
     onStep3();
     // formDataFunc();
-    navigate("/stepform");
+    navigate("/stepform", { replace: true });
   };
 
   return (
@@ -434,7 +434,7 @@ const EligibilityVerification = ({
                           canvasProps={{
                             width: 500,
                             height: 200,
-                            className: "sigCanvas txt-width"
+                            className: "sigCanvas txt-width",
                           }}
                         />
                       </label>
@@ -817,7 +817,7 @@ const EligibilityVerification = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width"
+                          className: "sigCanvas txt-width",
                         }}
                       />
                     </label>
@@ -1255,7 +1255,7 @@ const EligibilityVerification = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width"
+                          className: "sigCanvas txt-width",
                         }}
                       />
                     </label>
@@ -1720,7 +1720,7 @@ const EligibilityVerification = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width"
+                          className: "sigCanvas txt-width",
                         }}
                       />
                     </label>

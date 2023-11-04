@@ -12,7 +12,7 @@ import {
   Radio,
   RadioGroup,
   FormControl,
-  FormLabel
+  FormLabel,
 } from "@mui/material";
 
 //React Router Dom
@@ -35,7 +35,7 @@ const ContractForm = ({
     e.preventDefault();
     formDataFunc();
     onStep2();
-    navigate("/stepform");
+    navigate("/stepform", { replace: true });
   };
 
   return (
@@ -285,7 +285,7 @@ const ContractForm = ({
                       canvasProps={{
                         width: 500,
                         height: 200,
-                        className: "sigCanvas txt-width"
+                        className: "sigCanvas txt-width",
                       }}
                     />
                   </label>
@@ -316,7 +316,7 @@ const ContractForm = ({
                       canvasProps={{
                         width: 500,
                         height: 200,
-                        className: "sigCanvas txt-width"
+                        className: "sigCanvas txt-width",
                       }}
                     />
                   </label>

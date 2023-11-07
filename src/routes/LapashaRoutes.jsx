@@ -249,11 +249,7 @@ const LapashaRoutes = () => {
       <Route
         path="/stepform"
         element={
-          <StepForm
-            addCount={addStep}
-            onStep2={eve => onStepForm(eve)}
-            formDataFunc={postFormData}
-          />
+          <StepForm addCount={addStep} onStep2={eve => onStepForm(eve)} />
         }
       />
     </Routes>

@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import pdfImg from "../assets/images/pdf.png";
 import uploadImg from "../assets/images/upload.png";
 
-const StepForm = ({ addCount, formDataFunc }) => {
+const StepForm = ({ addCount }) => {
   const navigate = useNavigate();
   const onEditClick = e => {
     e.preventDefault();
@@ -41,12 +41,11 @@ const StepForm = ({ addCount, formDataFunc }) => {
   };
   const onPreview = e => {
     e.preventDefault();
-    // formDataFunc();
-    navigate("/eligibilityverificationview");
-    // if (addCount >= 4) {
-    // } else {
-    //   alert("Fill i9 Form First");
-    // }
+    if (addCount >= 4) {
+      navigate("/eligibilityverificationview");
+    } else {
+      alert("Fill i9 Form First");
+    }
   };
 
   return (

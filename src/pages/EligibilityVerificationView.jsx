@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 //Router Dom
 import { Link } from "react-router-dom";
@@ -20,46 +20,7 @@ import companyLogo01 from "../assets/images/logo01.png";
 import companyLogo02 from "../assets/images/logo02.png";
 import companyLogo03 from "../assets/images/logo03.png";
 
-//PDF Element
-import { Page, Document, StyleSheet } from "@react-pdf/renderer";
-import MyComponent from "../pdf/Pdf";
-
 const EligibilityVerificationView = ({ dataString, onFormData }) => {
-  const styles = StyleSheet.create({
-    body: {
-      paddingTop: 35,
-      paddingBottom: 65,
-      paddingHorizontal: 35,
-    },
-    title: {
-      fontSize: 24,
-      textAlign: "center",
-    },
-    text: {
-      margin: 12,
-      fontSize: 14,
-      textAlign: "justify",
-      textTransform: "capitalize",
-    },
-    image: {
-      marginVertical: 15,
-      marginHorizontal: 100,
-    },
-    header: {
-      fontSize: 12,
-      marginBottom: 20,
-      textAlign: "center",
-    },
-    pageNumber: {
-      position: "absolute",
-      fontSize: 12,
-      bottom: 30,
-      left: 0,
-      right: 0,
-      textAlign: "center",
-      color: "grey",
-    },
-  });
   return (
     dataString &&
     dataString.map((value, ind) => {
@@ -77,12 +38,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                     key={value.id}
                   >
                     <Grid item xs={6}>
-                      <img
-                        style={styles.image}
-                        className="brandname"
-                        src={mainLogo}
-                        alt=""
-                      />
+                      <img className="brandname" src={mainLogo} alt="" />
                     </Grid>
                     <Grid item xs={6} />
                   </Grid>
@@ -528,7 +484,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                           Signature
                         </Typography>
                         <Typography className="input-value" variant="body">
-                          <img style={styles.image} src={value.conFormsign} />
+                          <img src={value.conFormsign} />
                         </Typography>
                       </Grid>
                       <Grid item xs={6}>
@@ -573,13 +529,13 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                       className="flx-box"
                     >
                       <Grid item xs={4}>
-                        <img style={styles.image} src={companyLogo01} alt="" />
+                        <img src={companyLogo01} alt="" />
                       </Grid>
                       <Grid item xs={4}>
-                        <img style={styles.image} src={companyLogo02} alt="" />
+                        <img src={companyLogo02} alt="" />
                       </Grid>
                       <Grid item xs={4}>
-                        <img style={styles.image} src={companyLogo03} alt="" />
+                        <img src={companyLogo03} alt="" />
                       </Grid>
                     </Grid>
                   </Grid>
@@ -5229,11 +5185,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                         EMPLOYEE SIGNATURE
                       </Typography>
                       <Typography className="input-value" variant="body">
-                        <img
-                          style={styles.image}
-                          src={value.empSigPolicy}
-                          alt="empSigPolicy"
-                        />
+                        <img src={value.empSigPolicy} alt="empSigPolicy" />
                       </Typography>
                     </Grid>
                     <Grid item xs={6}>
@@ -5330,11 +5282,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                         Employee Signature
                       </Typography>
                       <Typography className="input-value" variant="body">
-                        <img
-                          style={styles.image}
-                          src={value.empSignPolicy}
-                          alt="empSignPolicy"
-                        />
+                        <img src={value.empSignPolicy} alt="empSignPolicy" />
                       </Typography>
                     </Grid>
                     <Grid item xs={6}>
@@ -5351,7 +5299,6 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                       </Typography>
                       <Typography className="input-value" variant="body">
                         <img
-                          style={styles.image}
                           src={value.transSignPolicy}
                           alt="transSignPolicy"
                         />
@@ -5593,7 +5540,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                         Employee Signature
                       </Typography>
                       <Typography className="input-value" variant="body">
-                        <img style={styles.image} src={value.empSign} />
+                        <img src={value.empSign} />
                       </Typography>
                     </Grid>
                     <Grid item xs={6}>
@@ -5609,11 +5556,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                         Translator Signature
                       </Typography>
                       <Typography className="input-value" variant="body">
-                        <img
-                          style={styles.image}
-                          src={value.transSignName}
-                          alt="transSignName"
-                        />
+                        <img src={value.transSignName} alt="transSignName" />
                       </Typography>
                     </Grid>
                   </Grid>
@@ -5626,12 +5569,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                     className="flx-box form-hdr"
                   >
                     <Grid item xs={6}>
-                      <img
-                        style={styles.image}
-                        className="brandname"
-                        src={mainLogo}
-                        alt=""
-                      />
+                      <img className="brandname" src={mainLogo} alt="" />
                     </Grid>
                     <Grid item xs={6}>
                       <ul className="hdr-date">
@@ -5962,11 +5900,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                             Signature of Employee
                           </Typography>
                           <Typography className="input-value" variant="body">
-                            <img
-                              style={styles.image}
-                              src={value.signOfEmp}
-                              alt="signOfEmp"
-                            />
+                            <img src={value.signOfEmp} alt="signOfEmp" />
                           </Typography>
                         </Grid>
                         <Grid item xs={6}>
@@ -6236,11 +6170,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                           Signature of Employer or Authorized Representative
                         </Typography>
                         <Typography className="input-value" variant="body">
-                          <img
-                            style={styles.image}
-                            src={value.signOfEmpRep}
-                            alt="signOfEmpRep"
-                          />
+                          <img src={value.signOfEmpRep} alt="signOfEmpRep" />
                         </Typography>
                       </Grid>
                       <Grid item xs={6}>
@@ -6574,12 +6504,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
 
                   <Grid container spacing={2} columns={16} className="flx-box">
                     <Grid item xs={8}>
-                      <img
-                        style={styles.image}
-                        className="brandname"
-                        src={mainLogo}
-                        alt=""
-                      />
+                      <img className="brandname" src={mainLogo} alt="" />
                     </Grid>
                     <Grid item xs={8}>
                       <ul className="hdr-date">
@@ -6671,11 +6596,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                           Signature of Preparer or Translator
                         </Typography>
                         <Typography className="input-value" variant="body">
-                          <img
-                            style={styles.image}
-                            src={value.signOfPre}
-                            alt="signOfPre"
-                          />
+                          <img src={value.signOfPre} alt="signOfPre" />
                         </Typography>
                       </Grid>
                       <Grid item xs={4}>
@@ -6767,7 +6688,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                             <Typography 
                              className="input-value" variant="body">
                               <img
-                              style={styles.image} src={value.lastNameSBsec1} />
+                              src={value.lastNameSBsec1} />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6874,7 +6795,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                             <Typography 
                              className="input-value" variant="body">
                               <img
-                              style={styles.image} src={value.lastNameSBsec1} />
+                              src={value.lastNameSBsec1} />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -6981,7 +6902,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                             <Typography 
                              className="input-value" variant="body">
                               <img
-                              style={styles.image} src={value.lastNameSBsec1} />
+                              src={value.lastNameSBsec1} />
                             </Typography>
                           </Grid>
                           <Grid item xs={4}>
@@ -7069,12 +6990,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
 
                   <Grid container spacing={2} columns={16} className="flx-box">
                     <Grid item xs={8}>
-                      <img
-                        style={styles.image}
-                        className="brandname"
-                        src={mainLogo}
-                        alt=""
-                      />
+                      <img className="brandname" src={mainLogo} alt="" />
                     </Grid>
                     <Grid item xs={8}>
                       <ul className="hdr-date">
@@ -7248,11 +7164,7 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                           Signature of Employer or Authorized Representative
                         </Typography>
                         <Typography className="input-value" variant="body">
-                          <img
-                            style={styles.image}
-                            src={value.signOfEmpSB}
-                            alt="signOfEmpSB"
-                          />
+                          <img src={value.signOfEmpSB} alt="signOfEmpSB" />
                         </Typography>
                       </Grid>
                       <Grid item xs={4}>
@@ -7544,7 +7456,11 @@ const EligibilityVerificationView = ({ dataString, onFormData }) => {
                     <Grid item xs={6} />
                     <Grid item xs={6}>
                       <Grid className="form-btns">
-                        <Button variant="contained" className="save-btn" onClick={onFormData}>
+                        <Button
+                          variant="contained"
+                          className="save-btn"
+                          onClick={onFormData}
+                        >
                           Generate PDF
                         </Button>
                       </Grid>

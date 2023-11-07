@@ -13,11 +13,6 @@ import Register from "../pages/Register";
 
 import axios from "axios";
 
-import ComponentToPDF from "../pdf/Pdf";
-import Test from "../test/Test";
-
-import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
-
 //Server Url
 let baseUrl = "http://localhost:8000";
 
@@ -170,7 +165,6 @@ const LapashaRoutes = () => {
   };
 
   return (
-    // <BrowserRouter>
     <Routes>
       <Route path="/home" element={<Home />} />
       <Route
@@ -245,7 +239,6 @@ const LapashaRoutes = () => {
         element={<Register registerForm={onRegister} />}
       />
       <Route path="/" element={<Navigate replace to="/login" />} />
-      {/* <Route path="/test" element={<Test dataString={formDataArr} />} /> */}
       <Route
         path="/stepform"
         element={
@@ -253,7 +246,6 @@ const LapashaRoutes = () => {
         }
       />
     </Routes>
-    // </BrowserRouter>
   );
 };
 

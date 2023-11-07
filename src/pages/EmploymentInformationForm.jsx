@@ -665,7 +665,7 @@ const EmploymentInformationForm = ({
                         Cancel
                       </Link>
                     </Button>
-                    <Button type="submit" className="save-btn">
+                    <Button variant="contained" type="submit" className="save-btn">
                       Save
                     </Button>
                   </Grid>

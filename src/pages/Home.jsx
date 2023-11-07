@@ -26,7 +26,7 @@ const Home = () => {
                 <Typography variant="h4">LaPasha lounge and Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
                 <Button>
-                  <Link className="theme-btn" to={"/login"}>
+                  <Link className="theme-btn" to={"/stepform"}>
                     Get Started
                   </Link>
                 </Button>
@@ -40,7 +40,7 @@ const Home = () => {
                 <Typography variant="h4">LaPasha</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
                 <Button>
-                  <Link className="theme-btn" to={"/login"}>
+                  <Link className="theme-btn" to={"/stepform"}>
                     Get Started
                   </Link>
                 </Button>
@@ -49,12 +49,12 @@ const Home = () => {
             <Grid item xs={4}>
               <Grid className="card-blk">
                 <Grid className="image-card">
-                  <img src={companyLogo03} />
+                  <img src={companyLogo03} alt="companyLogo03" />
                 </Grid>
                 <Typography variant="h4">Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
                 <Button>
-                  <Link className="theme-btn" to={"/login"}>
+                  <Link className="theme-btn" to={"/stepform"}>
                     Get Started
                   </Link>
                 </Button>

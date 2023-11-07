@@ -41,12 +41,12 @@ const StepForm = ({ addCount, formDataFunc }) => {
   };
   const onPreview = e => {
     e.preventDefault();
-    formDataFunc();
-    if (addCount >= 4) {
-      navigate("/eligibilityverificationview");
-    } else {
-      alert("Fill i9 Form First");
-    }
+    // formDataFunc();
+    navigate("/eligibilityverificationview");
+    // if (addCount >= 4) {
+    // } else {
+    //   alert("Fill i9 Form First");
+    // }
   };
 
   return (
@@ -80,7 +80,9 @@ const StepForm = ({ addCount, formDataFunc }) => {
                   Employment information form
                 </Typography>
               </Grid>
-              <Button onClick={onEditClickActive}>Edit</Button>
+              <Button variant="contained" onClick={onEditClickActive}>
+                Edit
+              </Button>
             </Grid>
 
             <Grid
@@ -94,7 +96,11 @@ const StepForm = ({ addCount, formDataFunc }) => {
                   Policy 20223-06-12 Employee Manual
                 </Typography>
               </Grid>
-              <Button className="edit-btn" onClick={onEditClick}>
+              <Button
+                variant="contained"
+                className="edit-btn"
+                onClick={onEditClick}
+              >
                 Edit
               </Button>
             </Grid>
@@ -110,7 +116,9 @@ const StepForm = ({ addCount, formDataFunc }) => {
                   Contract 2023-04-12 Class Action Waiver Krikwood Ops
                 </Typography>
               </Grid>
-              <Button onClick={onEditClick1}>Edit</Button>
+              <Button variant="contained" onClick={onEditClick1}>
+                Edit
+              </Button>
             </Grid>
 
             <Grid
@@ -122,7 +130,9 @@ const StepForm = ({ addCount, formDataFunc }) => {
                 <img src={pdfImg} alt="" />
                 <Typography variant="h6">i-9</Typography>
               </Grid>
-              <Button onClick={onEditClick2}>Edit</Button>
+              <Button variant="contained" onClick={onEditClick2}>
+                Edit
+              </Button>
             </Grid>
           </Grid>
 
@@ -138,7 +148,11 @@ const StepForm = ({ addCount, formDataFunc }) => {
               </Grid>
             </Grid>
             <Grid className="steps">
-              <Button onClick={e => onPreview(e)} className="next-btn-1">
+              <Button
+                variant="contained"
+                onClick={e => onPreview(e)}
+                className="next-btn-1"
+              >
                 Preview
               </Button>
             </Grid>

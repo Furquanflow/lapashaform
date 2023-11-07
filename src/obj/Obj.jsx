@@ -91,7 +91,7 @@ const data = {
   docTitle1: "",
   issueAuth: "",
   docNo: "",
-  expdate: "",
+  expDate: "",
   docTitle2: "",
   issueAuth2: "",
   docNo2: "",
@@ -140,6 +140,6 @@ const data = {
   nameOfEmpSB: "",
   signOfEmpSB: "",
   todayDateSB: "",
-  clickhereSB: "",
+  clickHereSB: "",
 };
 export { data };

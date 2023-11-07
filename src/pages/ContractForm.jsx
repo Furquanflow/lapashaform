@@ -12,10 +12,9 @@ import {
   Radio,
   RadioGroup,
   FormControl,
-  FormLabel,
 } from "@mui/material";
 
-//React Router Dom
+//React Router Domvariant="contained"
 import { Link, useNavigate } from "react-router-dom";
 
 import SignatureCanvas from "react-signature-canvas";
@@ -338,7 +337,7 @@ const ContractForm = ({
                         Cancel
                       </Link>
                     </Button>
-                    <Button type="submit" className="save-btn">
+                    <Button variant="contained" type="submit" className="save-btn">
                       Save
                     </Button>
                   </Grid>

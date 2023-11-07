@@ -523,8 +523,8 @@ const EligibilityVerification = ({
                     <TextField
                       className="txt-width"
                       required
-                      value={data.expdate}
-                      name="expdate"
+                      value={data.expDate}
+                      name="expDate"
                       onChange={formChange3}
                       id="standard-basic"
                       label="Expiration Date (if any)"
@@ -1729,8 +1729,8 @@ const EligibilityVerification = ({
                     <TextField
                       className="txt-width"
                       required
-                      value={data.todayDateSB}
-                      name="todayDateSB"
+                      value={data.expDateSB}
+                      name="expDateSB"
                       onChange={formChange3}
                       id="standard-basic"
                       label="Today's Date (mm/dd/yyyy)"
@@ -1748,8 +1748,8 @@ const EligibilityVerification = ({
                     <FormControlLabel
                       control={<Checkbox />}
                       required
-                      value={data.clickhereSB}
-                      name="clickhereSB"
+                      value={data.clickHereSB}
+                      name="clickHereSB"
                       onChange={formChange3}
                       label="Check here if you used an alternative procedure authorized by DHS to examine documents."
                     />
@@ -1906,7 +1906,7 @@ below section are commented out */}
                         Cancel
                       </Link>
                     </Button>
-                    <Button type="submit" className="save-btn">
+                    <Button variant="contained" type="submit" className="save-btn">
                       Save
                     </Button>
                   </Grid>

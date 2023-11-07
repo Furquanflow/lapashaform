@@ -21,7 +21,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = ({ onLogin }) => {
+const Login = ({ registerForm }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -32,6 +32,16 @@ const Login = ({ onLogin }) => {
               <Typography variant="h2">Let’s Start</Typography>
               <Box>
                 <FormGroup>
+                  <FormLabel>
+                    <TextField
+                      id="standard-basic"
+                      // value={emailAddLogin}
+                      // onChange={formChange}
+                      label="User Name"
+                      variant="standard"
+                      type="text"
+                    />
+                  </FormLabel>
                   <FormLabel>
                     <TextField
                       id="standard-basic"
@@ -52,19 +62,16 @@ const Login = ({ onLogin }) => {
                       type="password"
                     />
                   </FormLabel>
-                  <Button variant="contained" className="theme-btn" onClick={onLogin}>
-                    Login
+                  <Button
+                    variant="contained"
+                    className="theme-btn"
+                    onClick={registerForm}
+                  >
+                    Register
                   </Button>
-                  <Grid mt={2}>
-                    <Link to="/register">
-                      <Button sx={{ width: "100%" }}>Register</Button>
-                    </Link>
-                  </Grid>
-                  <Button>
-                    <Link className="trms-btn" to={"/"}>
-                      Terms & Conditions
-                    </Link>
-                  </Button>
+                  <Link className="trms-btn" to={""}>
+                    Terms & Conditions
+                  </Link>
                 </FormGroup>
               </Box>
             </Grid>

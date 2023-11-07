@@ -1,30 +1,48 @@
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+// import React, { useRef } from 'react';
+// import { Document, Page, pdfjs } from 'react-pdf';
+// import { saveAs } from 'file-saver';
 
-function ComponentToPDF(component, filename) {
-  const input = document.createElement("div");
-  input.appendChild(component);
+// pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-  html2canvas(input).then(canvas => {
-    const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF();
-    const imgWidth = 210;
-    const pageHeight = 295;
-    const imgHeight = canvas.height * imgWidth / canvas.width;
-    let heightLeft = imgHeight;
-    let position = 0;
+// const MyComponent = () => {
+//   const numPages = 64;
+//   const pages = [];
+//   const containerRef = useRef(null);
 
-    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-    heightLeft -= pageHeight;
+//   for (let i = 1; i <= numPages; i++) {
+//     pages.push(
+//       <Page key={i} pageNumber={i} width={300} renderAnnotationLayer={false} />
+//     );
+//   }
 
-    while (heightLeft >= 0) {
-      position = heightLeft - imgHeight;
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
-    }
-    pdf.save(filename);
-  });
-}
+//   const generatePDF = async () => {
+//     const container = containerRef.current;
 
-export default ComponentToPDF;
+//     if (!container) {
+//       return;
+//     }
+
+//     const pdfElement = (
+//       <Document>
+//         {pages}
+//       </Document>
+//     );
+
+//     // Use toBlob method on the PDF element to generate the blob
+//     pdfElement.toBlob(async (blob) => {
+//       // Use file-saver to save the blob as a PDF
+//       saveAs(blob, 'document.pdf');
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <div ref={containerRef}></div>
+//       <button onClick={generatePDF} className="button">
+//         Generate PDF
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default MyComponent;

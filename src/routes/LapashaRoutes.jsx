@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import EligibilityVerification from "../pages/EligibilityVerification";
-import AcceptableDocuments from "../pages/AcceptableDocuments";
-import SupplementA from "../pages/SupplementA";
-import SupplementB from "../pages/SupplementB";
 import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -12,11 +9,14 @@ import EmploymentInformationForm from "../pages/EmploymentInformationForm";
 import ContractForm from "../pages/ContractForm";
 import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
+import Register from "../pages/Register";
 
 import axios from "axios";
 
 import ComponentToPDF from "../pdf/Pdf";
 import Test from "../test/Test";
+
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 
 //Server Url
 let baseUrl = "http://localhost:8000";
@@ -82,11 +82,11 @@ const LapashaRoutes = () => {
     }
     if (verificationPreCanvas) {
       const signatureVerificationPreData = verificationPreCanvas.toDataURL();
-      formDataChanges.signOfEmpRep = signatureVerificationPreData;
+      formDataChanges.signOfPre = signatureVerificationPreData;
     }
     if (verificationEmpSBCanvas) {
       const signatureVerificationEmpSBData = verificationEmpSBCanvas.toDataURL();
-      formDataChanges.signOfEmpRep = signatureVerificationEmpSBData;
+      formDataChanges.signOfEmpSB = signatureVerificationEmpSBData;
     }
     setFormData(prevFormData => ({
       ...prevFormData,
@@ -95,13 +95,17 @@ const LapashaRoutes = () => {
   };
 
   const onLoginClick = () => {
-    navigate("/stepform");
+    navigate("/home");
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
     window.onload = () => {
       localStorage.setItem("DATA", addStep.toString());
       localStorage.setItem("FORMDATA", dataString);
     };
+  };
+
+  const onRegister = () => {
+    navigate("/login");
   };
 
   const postFormData = async () => {
@@ -133,6 +137,38 @@ const LapashaRoutes = () => {
     [dataString, addStep]
   );
 
+  const handleGeneratePDFAndSendEmails = async () => {
+    try {
+      // Step 1: Generate the PDF
+      const response = await axios.post("/generate-pdf", dataString, {
+        responseType: "blob",
+      });
+
+      const blob = new Blob([response.data], { type: "application/pdf" });
+
+      // Step 2: Send the PDF to email addresses
+      const emailAddresses = [
+        "devhaider445@gmail.com",
+        "devyasir112233@gmail.com",
+      ]; // Replace with actual email addresses
+      const pdfFormData = new FormData();
+      pdfFormData.append("pdf", blob, "generated.pdf");
+
+      await axios.post("/send-pdf-emails", pdfFormData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        params: { emailAddresses: emailAddresses },
+      });
+
+      // Display a confirmation to the user
+      alert("PDF generated and sent to email addresses successfully");
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred");
+    }
+  };
+
   return (
     // <BrowserRouter>
     <Routes>
@@ -153,15 +189,16 @@ const LapashaRoutes = () => {
           />
         }
       />
-      {/* <Route
+      <Route
         path="/eligibilityverificationview"
         element={
           <EligibilityVerificationView
             dataString={formDataArr}
-            fomDataGetFunc={getFormData}
+            // fomDataGetFunc={getFormData}
+            onFormData={handleGeneratePDFAndSendEmails}
           />
         }
-      /> */}
+      />
       <Route
         path="/employmentinformationform"
         element={
@@ -203,11 +240,12 @@ const LapashaRoutes = () => {
         }
       />
       <Route path="/login" element={<Login onLogin={onLoginClick} />} />
-      <Route path="/" element={<Navigate replace to="/login" />} />
       <Route
-        path="/test"
-        element={<Test dataString={formDataArr} />}
+        path="/register"
+        element={<Register registerForm={onRegister} />}
       />
+      <Route path="/" element={<Navigate replace to="/login" />} />
+      {/* <Route path="/test" element={<Test dataString={formDataArr} />} /> */}
       <Route
         path="/stepform"
         element={

@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import pdfImg from "../assets/images/pdf.png";
 import uploadImg from "../assets/images/upload.png";
 
-const StepForm = ({ addCount }) => {
+const StepForm = ({ addCount, formData }) => {
   const navigate = useNavigate();
   const onEditClick = e => {
     e.preventDefault();
@@ -149,7 +149,7 @@ const StepForm = ({ addCount }) => {
             <Grid className="steps">
               <Button
                 variant="contained"
-                onClick={e => onPreview(e)}
+                onClick={(e) => onPreview(e)}
                 className="next-btn-1"
               >
                 Preview

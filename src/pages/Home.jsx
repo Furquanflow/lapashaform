@@ -7,9 +7,8 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 import companyLogo01 from "../assets/images/logo01.png";
 import companyLogo02 from "../assets/images/logo02.png";
 import companyLogo03 from "../assets/images/logo03.png";
-import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ callData }) => {
   return (
     <Grid>
       <Grid className="home-sec">
@@ -25,11 +24,7 @@ const Home = () => {
                 </Grid>
                 <Typography variant="h4">LaPasha lounge and Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
-                <Button>
-                  <Link className="theme-btn" to={"/stepform"}>
-                    Get Started
-                  </Link>
-                </Button>
+                <Button onClick={() => callData(0)}>Get Started</Button>
               </Grid>
             </Grid>
             <Grid item xs={4}>
@@ -39,11 +34,7 @@ const Home = () => {
                 </Grid>
                 <Typography variant="h4">LaPasha</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
-                <Button>
-                  <Link className="theme-btn" to={"/stepform"}>
-                    Get Started
-                  </Link>
-                </Button>
+                <Button onClick={() => callData(1)}>Get Started</Button>
               </Grid>
             </Grid>
             <Grid item xs={4}>
@@ -53,11 +44,7 @@ const Home = () => {
                 </Grid>
                 <Typography variant="h4">Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
-                <Button>
-                  <Link className="theme-btn" to={"/stepform"}>
-                    Get Started
-                  </Link>
-                </Button>
+                <Button onClick={() => callData(2)}>Get Started</Button>
               </Grid>
             </Grid>
           </Grid>

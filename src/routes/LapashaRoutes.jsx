@@ -29,8 +29,9 @@ const LapashaRoutes = () => {
   const [policyEmployeeCanvas, setPolicyEmployeeCanvas] = useState(null);
   const [policyTranslatorCanvas, setPolicyTranslatorCanvas] = useState(null);
   const [formData, setFormData] = useState(data);
-  const [formDataArr, setFormDataArr] = useState([]);
-  const dataString = formData;
+  const [formDataArr, setFormDataArr] = useState(null);
+  const [companyCall, setCompanyCall] = useState(0);
+  let dataString = formData;
   const navigate = useNavigate();
 
   const onForm = e => {
@@ -85,7 +86,7 @@ const LapashaRoutes = () => {
     }
     setFormData(prevFormData => ({
       ...prevFormData,
-      ...formDataChanges,
+      ...formDataChanges
     }));
   };
 
@@ -93,50 +94,95 @@ const LapashaRoutes = () => {
     navigate("/home");
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
-    window.onload = () => {
-      localStorage.setItem("DATA", addStep.toString());
-      localStorage.setItem("FORMDATA", dataString);
-    };
+
+    // window.onload = () => {
+    //   localStorage.setItem("DATA", addStep.toString());
+    //   localStorage.setItem("FORMDATA", dataString);
+    // };
   };
 
   const onRegister = () => {
     navigate("/login");
   };
 
+  const onCompany = eve => {
+    setCompanyCall(eve);
+    navigate("/stepform");
+    if (companyCall === 0) {
+      setFormData({});
+      setAddStep(0);
+    } else if (companyCall === 1) {
+      setFormData({});
+      setAddStep(0);
+    } else if (companyCall === 2) {
+      setFormData({});
+      setAddStep(0);
+    }
+  };
+
   const postFormData = async () => {
+    const url = getPostUrl();
+    if (!url) {
+      alert("Select a valid option.");
+      return;
+    }
     try {
-      let resp = await axios.post(`${baseUrl}/formDataPost`, dataString);
-      console.log(resp.data);
+      const response = await axios.post(url, dataString);
+      console.log(response.data);
     } catch (error) {
-      console.log(error);
+      console.error("Error posting data:", error);
     }
   };
 
   const getFormData = () => {
-    try {
-      axios.get(`${baseUrl}/formData`).then(({ data }) => {
+    const url = getGetUrl();
+    if (!url) {
+      alert("Select a valid option.");
+      return;
+    }
+    axios
+      .get(url)
+      .then(({ data }) => {
         setFormDataArr(data);
-        console.log(data);
+      })
+      .catch(error => {
+        console.error("Error getting data:", error);
       });
-    } catch (error) {
-      console.log(error);
+  };
+
+  console.log(formDataArr);
+
+  const getPostUrl = () => {
+    switch (companyCall) {
+      case 0:
+        return `${baseUrl}/loungeandgrilldatapost`;
+      case 1:
+        return `${baseUrl}/formdatapost`;
+      case 2:
+        return `${baseUrl}/naracafedataPost`;
+      default:
+        return null;
     }
   };
 
-  useEffect(
-    () => {
-      localStorage.getItem("DATA", addStep);
-      localStorage.getItem("FORMDATA", dataString);
-      getFormData();
-    },
-    [dataString, addStep]
-  );
+  const getGetUrl = () => {
+    switch (companyCall) {
+      case 0:
+        return `${baseUrl}/loungeandgrilldata`;
+      case 1:
+        return `${baseUrl}/formdata`;
+      case 2:
+        return `${baseUrl}/naracafedata`;
+      default:
+        return null;
+    }
+  };
 
   const handleGeneratePDFAndSendEmails = async () => {
     try {
       // Step 1: Generate the PDF
       const response = await axios.post("/generate-pdf", dataString, {
-        responseType: "blob",
+        responseType: "blob"
       });
 
       const blob = new Blob([response.data], { type: "application/pdf" });
@@ -144,16 +190,16 @@ const LapashaRoutes = () => {
       // Step 2: Send the PDF to email addresses
       const emailAddresses = [
         "devhaider445@gmail.com",
-        "devyasir112233@gmail.com",
+        "devyasir112233@gmail.com"
       ]; // Replace with actual email addresses
       const pdfFormData = new FormData();
       pdfFormData.append("pdf", blob, "generated.pdf");
 
       await axios.post("/send-pdf-emails", pdfFormData, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "multipart/form-data"
         },
-        params: { emailAddresses: emailAddresses },
+        params: { emailAddresses: emailAddresses }
       });
 
       // Display a confirmation to the user
@@ -164,9 +210,18 @@ const LapashaRoutes = () => {
     }
   };
 
+  useEffect(
+    () => {
+      // getFormData();
+      localStorage.getItem("DATA", addStep);
+      localStorage.getItem("FORMDATA", dataString);
+    },
+    [dataString, addStep]
+  );
+
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home callData={onCompany} />} />
       <Route
         path="/eligibilityverification"
         element={
@@ -175,11 +230,12 @@ const LapashaRoutes = () => {
             formChange3={onForm}
             onStep3={() => onStepForm(4)}
             addData3={addStep}
+            formData={getFormData}
             canvaVerificationState={setVerificationCanvas}
             canvaVerificationEmpState={setVerificationEmpCanvas}
             canvaVerificationPreState={setVerificationPreCanvas}
             canvaVerificationEmpSBState={setVerificationEmpSBCanvas}
-            // formDataFunc={postFormData}
+            formDataFunc={postFormData}
           />
         }
       />
@@ -189,6 +245,7 @@ const LapashaRoutes = () => {
           <EligibilityVerificationView
             dataString={formDataArr}
             // fomDataGetFunc={getFormData}
+            formDataFunc={getFormData}
             onFormData={handleGeneratePDFAndSendEmails}
           />
         }
@@ -215,7 +272,6 @@ const LapashaRoutes = () => {
             addData2={addStep}
             updateEmployeeContactSignature={setContactEmployeeCanvas}
             updateTransContactSignature={setContactTransCanvas}
-            formDataFunc={postFormData}
           />
         }
       />

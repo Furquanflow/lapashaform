@@ -26,13 +26,11 @@ const ContractForm = ({
   addData2,
   updateTransContactSignature,
   updateEmployeeContactSignature,
-  formDataFunc,
 }) => {
   const navigate = useNavigate();
 
   const submitContactForm = e => {
     e.preventDefault();
-    formDataFunc();
     onStep2();
     navigate("/stepform", { replace: true });
   };

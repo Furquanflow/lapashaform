@@ -15,7 +15,7 @@ import {
   Button,
   Radio,
   RadioGroup,
-  FormControl,
+  FormControl
 } from "@mui/material";
 
 //Images
@@ -33,13 +33,15 @@ const EligibilityVerification = ({
   canvaVerificationPreState,
   canvaVerificationEmpSBState,
   formDataFunc,
+  formData
 }) => {
   const navigate = useNavigate();
 
   const onEligbility = e => {
     e.preventDefault();
+    // formData();
     onStep3();
-    // formDataFunc();
+    formDataFunc();
     navigate("/stepform", { replace: true });
   };
 
@@ -434,7 +436,7 @@ const EligibilityVerification = ({
                           canvasProps={{
                             width: 500,
                             height: 200,
-                            className: "sigCanvas txt-width",
+                            className: "sigCanvas txt-width"
                           }}
                         />
                       </label>
@@ -817,7 +819,7 @@ const EligibilityVerification = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width",
+                          className: "sigCanvas txt-width"
                         }}
                       />
                     </label>
@@ -1255,7 +1257,7 @@ const EligibilityVerification = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width",
+                          className: "sigCanvas txt-width"
                         }}
                       />
                     </label>
@@ -1720,7 +1722,7 @@ const EligibilityVerification = ({
                         canvasProps={{
                           width: 500,
                           height: 200,
-                          className: "sigCanvas txt-width",
+                          className: "sigCanvas txt-width"
                         }}
                       />
                     </label>
@@ -1729,8 +1731,8 @@ const EligibilityVerification = ({
                     <TextField
                       className="txt-width"
                       required
-                      value={data.expDateSB}
-                      name="expDateSB"
+                      value={data.todayDateSB}
+                      name="todayDateSB"
                       onChange={formChange3}
                       id="standard-basic"
                       label="Today's Date (mm/dd/yyyy)"
@@ -1906,7 +1908,11 @@ below section are commented out */}
                         Cancel
                       </Link>
                     </Button>
-                    <Button variant="contained" type="submit" className="save-btn">
+                    <Button
+                      variant="contained"
+                      type="submit"
+                      className="save-btn"
+                    >
                       Save
                     </Button>
                   </Grid>

@@ -11,7 +11,7 @@ import {
   Button,
   RadioGroup,
   FormControl,
-  Typography,
+  Typography
 } from "@mui/material";
 
 //Images
@@ -20,7 +20,14 @@ import companyLogo01 from "../assets/images/logo01.png";
 import companyLogo02 from "../assets/images/logo02.png";
 import companyLogo03 from "../assets/images/logo03.png";
 
-const EligibilityVerificationView = ({ dataString, onFormData }) => {
+const EligibilityVerificationView = ({
+  dataString,
+  onFormData,
+  formDataFunc
+}) => {
+  React.useEffect(() => {
+    formDataFunc();
+  }, []);
   return (
     dataString &&
     dataString.map((value, ind) => {

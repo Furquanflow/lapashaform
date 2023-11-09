@@ -95,10 +95,12 @@ const LapashaRoutes = () => {
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
 
+
+    //  Will Use this Function Later
     // window.onload = () => {
     //   localStorage.setItem("DATA", addStep.toString());
     //   localStorage.setItem("FORMDATA", dataString);
-    // };
+    // }; Will Use this Function Later
   };
 
   const onRegister = () => {
@@ -178,38 +180,6 @@ const LapashaRoutes = () => {
     }
   };
 
-  const handleGeneratePDFAndSendEmails = async () => {
-    try {
-      // Step 1: Generate the PDF
-      const response = await axios.post("/generate-pdf", dataString, {
-        responseType: "blob"
-      });
-
-      const blob = new Blob([response.data], { type: "application/pdf" });
-
-      // Step 2: Send the PDF to email addresses
-      const emailAddresses = [
-        "devhaider445@gmail.com",
-        "devyasir112233@gmail.com"
-      ]; // Replace with actual email addresses
-      const pdfFormData = new FormData();
-      pdfFormData.append("pdf", blob, "generated.pdf");
-
-      await axios.post("/send-pdf-emails", pdfFormData, {
-        headers: {
-          "Content-Type": "multipart/form-data"
-        },
-        params: { emailAddresses: emailAddresses }
-      });
-
-      // Display a confirmation to the user
-      alert("PDF generated and sent to email addresses successfully");
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred");
-    }
-  };
-
   useEffect(
     () => {
       // getFormData();
@@ -246,7 +216,6 @@ const LapashaRoutes = () => {
             dataString={formDataArr}
             // fomDataGetFunc={getFormData}
             formDataFunc={getFormData}
-            onFormData={handleGeneratePDFAndSendEmails}
           />
         }
       />

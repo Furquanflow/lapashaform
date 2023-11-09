@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 //Mui Design Library
 import {
@@ -23,7 +23,6 @@ const ContractForm = ({
   data,
   formChange2,
   onStep2,
-  addData2,
   updateTransContactSignature,
   updateEmployeeContactSignature,
 }) => {

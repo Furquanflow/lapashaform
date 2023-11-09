@@ -19,6 +19,7 @@ import mainLogo from "../assets/images/logo.png";
 import companyLogo01 from "../assets/images/logo01.png";
 import companyLogo02 from "../assets/images/logo02.png";
 import companyLogo03 from "../assets/images/logo03.png";
+import GeneratePDFButton from "../pdf";
 
 const EligibilityVerificationView = ({
   dataString,
@@ -7462,15 +7463,16 @@ const EligibilityVerificationView = ({
                   >
                     <Grid item xs={6} />
                     <Grid item xs={6}>
-                      <Grid className="form-btns">
+                      <GeneratePDFButton formData={dataString} />
+                      {/*  <Grid className="form-btns">
                         <Button
                           variant="contained"
                           className="save-btn"
                           onClick={onFormData}
                         >
                           Generate PDF
-                        </Button>
-                      </Grid>
+                          </Button> 
+                      </Grid> */}
                     </Grid>
                   </Grid>
                 </Grid>

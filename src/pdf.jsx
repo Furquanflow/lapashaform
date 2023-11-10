@@ -18,6 +18,7 @@ const GeneratePDFButton = ({ formData }) => {
             }
         } catch (error) {
             console.error('Error:', error);
+            console.log("Hello");
         }
     };
 

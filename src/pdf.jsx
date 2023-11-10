@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Button, Grid } from "@mui/material";
 
-const baseUrl = "lapasha-server.vercel.app";
+const baseUrl = "https://lapasha-server.vercel.app/";
 
 const GeneratePDFButton = ({ formData }) => {
     const handleGeneratePDF = async () => {

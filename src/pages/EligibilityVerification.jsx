@@ -141,7 +141,7 @@ const EligibilityVerification = ({
                   <Grid item xs={6}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.middle}
                       name="middle"
                       onChange={formChange3}
@@ -153,7 +153,7 @@ const EligibilityVerification = ({
                   <Grid item xs={6}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.otheLn}
                       name="otheLn"
                       onChange={formChange3}
@@ -179,7 +179,7 @@ const EligibilityVerification = ({
                   <Grid item xs={6}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.aptNo}
                       name="aptNo"
                       onChange={formChange3}
@@ -511,7 +511,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docNo}
                       name="docNo"
                       onChange={formChange3}
@@ -524,7 +524,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.expDate}
                       name="expDate"
                       onChange={formChange3}
@@ -537,7 +537,7 @@ const EligibilityVerification = ({
                   <Grid item xs={12}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docTitle2}
                       name="docTitle2"
                       onChange={formChange3}
@@ -561,7 +561,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docNo2}
                       name="docNo2"
                       onChange={formChange3}
@@ -574,7 +574,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.expDate2}
                       name="expDate2"
                       onChange={formChange3}
@@ -587,7 +587,7 @@ const EligibilityVerification = ({
                   <Grid item xs={12}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docTitle3}
                       name="docTitle3"
                       onChange={formChange3}
@@ -611,7 +611,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docNo3}
                       name="docNo3"
                       onChange={formChange3}
@@ -624,7 +624,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.expdate3}
                       name="expdate3"
                       onChange={formChange3}
@@ -667,7 +667,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docNo4}
                       name="docNo4"
                       onChange={formChange3}
@@ -680,7 +680,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.expdate4}
                       name="expdate4"
                       onChange={formChange3}
@@ -723,7 +723,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docNoC}
                       name="docNoC"
                       onChange={formChange3}
@@ -736,7 +736,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.expdateC}
                       name="expdateC"
                       onChange={formChange3}
@@ -1211,7 +1211,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.middleNamesec1}
                       name="middleNamesec1"
                       onChange={formChange3}
@@ -1382,7 +1382,7 @@ const EligibilityVerification = ({
        value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       required<TextField className='txt-width' 
+       required<TextField className='txt
        value={data.} onChange={formChange3} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
@@ -1430,7 +1430,7 @@ const EligibilityVerification = ({
        value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       required<TextField className='txt-width' 
+       required<TextField className='txt
        value={data.} onChange={formChange3} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
@@ -1478,7 +1478,7 @@ const EligibilityVerification = ({
        value={data.} onChange={formChange3} id="standard-basic" label="Last Name (Family Name)  " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
-       required<TextField className='txt-width' 
+       required<TextField className='txt
        value={data.} onChange={formChange3} id="standard-basic" label="First Name (Given Name) " variant="standard" /> 
        </Grid>
        <Grid item xs={4}>
@@ -1665,7 +1665,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.docNoSB}
                       name="docNoSB"
                       onChange={formChange3}
@@ -1678,7 +1678,7 @@ const EligibilityVerification = ({
                   <Grid item xs={4}>
                     <TextField
                       className="txt-width"
-                      required
+
                       value={data.ExpDateSB}
                       name="ExpDateSB"
                       onChange={formChange3}
@@ -1789,11 +1789,11 @@ below section are commented out */}
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        required<TextField className='txt-width' 
+        required<TextField className='txt
         value={data.} onChange={formChange3} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        required<TextField className='txt-width' 
+        required<TextField className='txt
         value={data.} onChange={formChange3} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>
@@ -1858,11 +1858,11 @@ below section are commented out */}
         </Typography>
         </Grid>
         <Grid item xs={4}>
-        required<TextField className='txt-width' 
+        required<TextField className='txt
         value={data.} onChange={formChange3} id="standard-basic" label="Document Title" variant="standard" />
         </Grid>
         <Grid item xs={4}>
-        required<TextField className='txt-width' 
+        required<TextField className='txt
         value={data.} onChange={formChange3} id="standard-basic" label="Document Number (if any)" variant="standard" /> 
         </Grid>
         <Grid item xs={4}>

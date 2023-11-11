@@ -6,13 +6,14 @@ import { useNavigate } from "react-router-dom";
 const baseUrl = "https://lapasha-server.vercel.app";
 
 const GeneratePDFButton = ({ formData }) => {
+
     let navigate = useNavigate()
     const handleGeneratePDF = async () => {
         try {
             const formDataToSend = new FormData();
             formDataToSend.append('data', JSON.stringify(formData));
-            const response = await axios.post(`/generate-and-send-pdf`, formDataToSend);
-            if (response.status === 200) {
+            const response = await axios.post(`${baseUrl}/generate-and-send-pdf`, formDataToSend);
+            if (response.data && response.data.pdfPath) {
                 alert('PDF generated and sent successfully.');
                 window.open(`${baseUrl}/download-pdf`, '_blank');
                 navigate("/stepform")

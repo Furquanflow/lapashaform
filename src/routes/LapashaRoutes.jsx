@@ -10,10 +10,11 @@ import ContractForm from "../pages/ContractForm";
 import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
 import Register from "../pages/Register";
+
 import axios from "axios";
 
 //Server Url
-// let baseUrl = "https://lapasha-server.vercel.app";
+let baseUrl = "https://lapasha-server.vercel.app";
 
 const LapashaRoutes = () => {
   const [addStep, setAddStep] = useState(0);
@@ -94,7 +95,6 @@ const LapashaRoutes = () => {
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
 
-
     //  Will Use this Function Later
     // window.onload = () => {
     //   localStorage.setItem("DATA", addStep.toString());
@@ -156,11 +156,11 @@ const LapashaRoutes = () => {
   const getPostUrl = () => {
     switch (companyCall) {
       case 0:
-        return "https://lapasha-server.vercel.app/loungeandgrilldatapost";
+        return `${baseUrl}/loungeandgrilldatapost`;
       case 1:
-        return "https://lapasha-server.vercel.app/formdatapost";
+        return `${baseUrl}/formdatapost`;
       case 2:
-        return "https://lapasha-server.vercel.app/naracafedataPost";
+        return `${baseUrl}/naracafedataPost`;
       default:
         return null;
     }
@@ -169,11 +169,11 @@ const LapashaRoutes = () => {
   const getGetUrl = () => {
     switch (companyCall) {
       case 0:
-        return "https://lapasha-server.vercel.app/loungeandgrilldata";
+        return `${baseUrl}/loungeandgrilldata`;
       case 1:
-        return "https://lapasha-server.vercel.app/formdata";
+        return `${baseUrl}/formdata`;
       case 2:
-        return "https://lapasha-server.vercel.app/naracafedata";
+        return `${baseUrl}/naracafedata`;
       default:
         return null;
     }

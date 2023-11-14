@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-// const baseUrl = "https://lapasha-server.vercel.app";
+const baseUrl = "https://lapasha-server.vercel.app";
 
 const GeneratePDFButton = ({ formData }) => {
 
@@ -14,11 +14,11 @@ const GeneratePDFButton = ({ formData }) => {
             console.log("Working in try catch");
             const formDataToSend = new FormData();
             formDataToSend.append('data', JSON.stringify(formData));
-            const response = await axios.post("https://lapasha-server.vercel.app/generate-and-send-pdf", formDataToSend);
+            const response = await axios.post(`${baseUrl}/generate-and-send-pdf`, formDataToSend);
             console.log(response.data);
             if (response.data && response.data.pdfPath) {
                 alert('PDF generated and sent successfully.');
-                window.open("https://lapasha-server.vercel.app/download-pdf", '_blank');
+                window.open(`${baseUrl}/download-pdf`, '_blank');
                 console.log("Condition Working");
                 // navigate("/stepform")
             } else {
@@ -38,3 +38,4 @@ const GeneratePDFButton = ({ formData }) => {
 };
 
 export default GeneratePDFButton;
+

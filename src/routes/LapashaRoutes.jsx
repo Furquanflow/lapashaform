@@ -10,11 +10,10 @@ import ContractForm from "../pages/ContractForm";
 import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
 import Register from "../pages/Register";
-
 import axios from "axios";
 
 //Server Url
-let baseUrl = "https://lapasha-server.vercel.app";
+// let baseUrl = "https://lapasha-server.vercel.app";
 
 const LapashaRoutes = () => {
   const [addStep, setAddStep] = useState(0);
@@ -157,11 +156,11 @@ const LapashaRoutes = () => {
   const getPostUrl = () => {
     switch (companyCall) {
       case 0:
-        return `${baseUrl}/loungeandgrilldatapost`;
+        return "https://lapasha-server.vercel.app/loungeandgrilldatapost";
       case 1:
-        return `${baseUrl}/formdatapost`;
+        return "https://lapasha-server.vercel.app/formdatapost";
       case 2:
-        return `${baseUrl}/naracafedataPost`;
+        return "https://lapasha-server.vercel.app/naracafedataPost";
       default:
         return null;
     }
@@ -170,11 +169,11 @@ const LapashaRoutes = () => {
   const getGetUrl = () => {
     switch (companyCall) {
       case 0:
-        return `${baseUrl}/loungeandgrilldata`;
+        return "https://lapasha-server.vercel.app/loungeandgrilldata";
       case 1:
-        return `${baseUrl}/formdata`;
+        return "https://lapasha-server.vercel.app/formdata";
       case 2:
-        return `${baseUrl}/naracafedata`;
+        return "https://lapasha-server.vercel.app/naracafedata";
       default:
         return null;
     }

@@ -27,7 +27,7 @@ const Login = ({ onLogin }) => {
       <Grid className="login-pg">
         <Container>
           <Grid className="login-box">
-            <img src={companyLogo01} />
+            <img src={companyLogo01} alt="companyLogo01" />
             <Grid className="login-blk">
               <Typography variant="h2">Let’s Start</Typography>
               <Box>
@@ -71,9 +71,9 @@ const Login = ({ onLogin }) => {
           </Grid>
         </Container>
         <Grid className="img-card-blk">
-          <img className="bgcard1" src={bgCard01} />
-          <img className="bgcard2" src={bgCard02} />
-          <img className="bgcard3" src={bgCard03} />
+          <img className="bgcard1" src={bgCard01} alt="bgCard01" />
+          <img className="bgcard2" src={bgCard02} alt="bgCard02" />
+          <img className="bgcard3" src={bgCard03} alt="bgCard03" />
         </Grid>
       </Grid>
     </Grid>

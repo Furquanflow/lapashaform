@@ -380,7 +380,7 @@ a.finish-btn {
 }
 .form-btns {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .form-btns a {
   margin-left: 10px;

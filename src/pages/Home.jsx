@@ -20,7 +20,7 @@ const Home = ({ callData }) => {
             <Grid item xs={4}>
               <Grid className="card-blk">
                 <Grid className="image-card">
-                  <img src={companyLogo01} />
+                  <img src={companyLogo01} alt="companyLogo01" />
                 </Grid>
                 <Typography variant="h4">LaPasha lounge and Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
@@ -32,7 +32,7 @@ const Home = ({ callData }) => {
             <Grid item xs={4}>
               <Grid className="card-blk">
                 <Grid className="image-card">
-                  <img src={companyLogo02} />
+                  <img src={companyLogo02} alt="companyLogo02" />
                 </Grid>
                 <Typography variant="h4">LaPasha</Typography>
                 <Typography variant="p">kirkwood ops</Typography>

@@ -491,7 +491,7 @@ const EligibilityVerificationView = ({
                           Signature
                         </Typography>
                         <Typography className="input-value" variant="body">
-                          <img src={value.conFormsign} />
+                          <img src={value.conFormsign} alt="conFormsign" />
                         </Typography>
                       </Grid>
                       <Grid item xs={6}>
@@ -5547,7 +5547,7 @@ const EligibilityVerificationView = ({
                         Employee Signature
                       </Typography>
                       <Typography className="input-value" variant="body">
-                        <img src={value.empSign} />
+                        <img src={value.empSign} alt="empSign" />
                       </Typography>
                     </Grid>
                     <Grid item xs={6}>
@@ -5571,7 +5571,7 @@ const EligibilityVerificationView = ({
                   <Grid
                     mt={5}
                     container
-                    spacing={2}
+                    spacing={2} 
                     columns={12}
                     className="flx-box form-hdr"
                   >

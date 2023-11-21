@@ -31,6 +31,17 @@ const LapashaRoutes = () => {
   const [formData, setFormData] = useState(data);
   const [formDataArr, setFormDataArr] = useState(null);
   const [companyCall, setCompanyCall] = useState(0);
+
+  //Login
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  //Register
+  const [regName, setRegName] = useState('')
+  const [regEmail, setRegEmail] = useState('')
+  const [regPassword, setRegPassword] = useState('')
+
+
   let dataString = formData;
   const navigate = useNavigate();
 
@@ -90,19 +101,82 @@ const LapashaRoutes = () => {
     }));
   };
 
-  const onLoginClick = () => {
+  const loginChange = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const loginPasswordChange = (e) => {
+    setPassword(e.target.value)
+  }
+
+  const onLoginClick = async () => {
+    //api
+    const response = await axios(`${baseUrl}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+
+    const data = await response.json()
+
+    if (data.user) {
+      localStorage.setItem('token', data.user)
+      alert('Login successful')
+      window.location.href = '/dashboard'
+    } else {
+      alert('Please check your username and password')
+    }
+
+
+
     navigate("/home");
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
-
-    //  Will Use this Function Later
-    // window.onload = () => {
-    //   localStorage.setItem("DATA", addStep.toString());
-    //   localStorage.setItem("FORMDATA", dataString);
-    // }; Will Use this Function Later
   };
 
-  const onRegister = () => {
+  //Register onChange
+  const regEmailChange = (e) => {
+    setRegEmail(e.target.value)
+  }
+
+  const regNameChange = (e) => {
+    setRegName(e.target.value)
+  }
+
+  const regPasswordChange = (e) => {
+    setRegPassword(e.target.value)
+  }
+
+  const onRegister = async () => {
+
+    const response = await axios('http://localhost:8000/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        regName,
+        regEmail,
+        regPassword,
+      }),
+    })
+
+    console.log(regName, regEmail, regPassword  );
+
+    const data = await response.json()
+
+    if (data.status === 'ok') {
+      navigate('/login')
+    }
+
+
+
+
     navigate("/login");
   };
 
@@ -257,10 +331,10 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route path="/login" element={<Login onLogin={onLoginClick} />} />
+      <Route path="/login" element={<Login passwordFunc={loginPasswordChange} emailFunc={loginChange} email={email} password={password} onLogin={onLoginClick} />} />
       <Route
         path="/register"
-        element={<Register registerForm={onRegister} />}
+        element={<Register regEmailFunc={regEmailChange} regNameFunc={regNameChange} regPasswordFunc={regPasswordChange} regEmail={regEmail} regName={regName} regPassword={regPassword} registerForm={onRegister} />}
       />
       <Route path="/" element={<Navigate replace to="/login" />} />
       <Route

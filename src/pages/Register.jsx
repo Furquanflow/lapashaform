@@ -21,7 +21,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = ({ registerForm }) => {
+const Login = ({ registerForm, regEmailFunc, regNameFunc, regPasswordFunc, regPassword, regName, regEmail }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -35,8 +35,8 @@ const Login = ({ registerForm }) => {
                   <FormLabel>
                     <TextField
                       id="standard-basic"
-                      // value={emailAddLogin}
-                      // onChange={formChange}
+                      value={regName}
+                      onChange={regNameFunc}
                       label="User Name"
                       variant="standard"
                       type="text"
@@ -45,8 +45,8 @@ const Login = ({ registerForm }) => {
                   <FormLabel>
                     <TextField
                       id="standard-basic"
-                      // value={emailAddLogin}
-                      // onChange={formChange}
+                      value={regEmail}
+                      onChange={regEmailFunc}
                       label="Email Address"
                       variant="standard"
                       type="email"
@@ -55,8 +55,8 @@ const Login = ({ registerForm }) => {
                   <FormLabel>
                     <TextField
                       id="standard-basic"
-                      // value={passLogin}
-                      // onChange={formChange}
+                      value={regPassword}
+                      onChange={regPasswordFunc}
                       label="Password"
                       variant="standard"
                       type="password"

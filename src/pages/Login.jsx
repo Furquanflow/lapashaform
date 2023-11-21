@@ -21,7 +21,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin, emailFunc, passwordFunc, email, password }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -35,8 +35,8 @@ const Login = ({ onLogin }) => {
                   <FormLabel>
                     <TextField
                       id="standard-basic"
-                      // value={emailAddLogin}
-                      // onChange={formChange}
+                      value={email}
+                      onChange={emailFunc}
                       label="Email Address"
                       variant="standard"
                       type="email"
@@ -45,8 +45,8 @@ const Login = ({ onLogin }) => {
                   <FormLabel>
                     <TextField
                       id="standard-basic"
-                      // value={passLogin}
-                      // onChange={formChange}
+                      value={password}
+                      onChange={passwordFunc}
                       label="Password"
                       variant="standard"
                       type="password"

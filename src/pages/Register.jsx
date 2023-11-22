@@ -21,7 +21,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = ({ registerForm, regEmailFunc, regNameFunc, regPasswordFunc, regPassword, regName, regEmail }) => {
+const Login = ({ registerForm, authFunc, email, password, userName }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -30,49 +30,53 @@ const Login = ({ registerForm, regEmailFunc, regNameFunc, regPasswordFunc, regPa
             <img src={companyLogo01} alt="companyLogo01" />
             <Grid className="login-blk">
               <Typography variant="h2">Let’s Start</Typography>
-              <Box>
-                <FormGroup>
-                  <FormLabel>
-                    <TextField
-                      id="standard-basic"
-                      value={regName}
-                      onChange={regNameFunc}
-                      label="User Name"
-                      variant="standard"
-                      type="text"
-                    />
-                  </FormLabel>
-                  <FormLabel>
-                    <TextField
-                      id="standard-basic"
-                      value={regEmail}
-                      onChange={regEmailFunc}
-                      label="Email Address"
-                      variant="standard"
-                      type="email"
-                    />
-                  </FormLabel>
-                  <FormLabel>
-                    <TextField
-                      id="standard-basic"
-                      value={regPassword}
-                      onChange={regPasswordFunc}
-                      label="Password"
-                      variant="standard"
-                      type="password"
-                    />
-                  </FormLabel>
-                  <Button
-                    variant="contained"
-                    className="theme-btn"
-                    onClick={registerForm}
-                  >
-                    Register
-                  </Button>
-                  <Link className="trms-btn" to={""}>
-                    Terms & Conditions
-                  </Link>
-                </FormGroup>
+              <Box component="form" onSubmit={registerForm}>
+                <FormLabel>
+                  <TextField
+                    id="standard-basic"
+                    value={userName}
+                    name="name"
+                    onChange={authFunc}
+                    label="User Name"
+                    variant="standard"
+                    type="text"
+                    required
+                  />
+                </FormLabel>
+                <FormLabel>
+                  <TextField
+                    id="standard-basic"
+                    value={email}
+                    name="email"
+                    onChange={authFunc}
+                    label="Email Address"
+                    variant="standard"
+                    type="email"
+                    required
+                  />
+                </FormLabel>
+                <FormLabel>
+                  <TextField
+                    id="standard-basic"
+                    value={password}
+                    name="password"
+                    onChange={authFunc}
+                    label="Password"
+                    variant="standard"
+                    type="password"
+                    required
+                  />
+                </FormLabel>
+                <Button
+                  variant="contained"
+                  className="theme-btn"
+                  type="submit"
+                >
+                  Register
+                </Button>
+                <Link className="trms-btn" to={"/"}>
+                  Terms & Conditions
+                </Link>
               </Box>
             </Grid>
           </Grid>

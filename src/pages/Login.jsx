@@ -21,7 +21,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = ({ onLogin, emailFunc, passwordFunc, email, password }) => {
+const Login = ({ onLogin, authFunc, email, password }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -30,42 +30,42 @@ const Login = ({ onLogin, emailFunc, passwordFunc, email, password }) => {
             <img src={companyLogo01} alt="companyLogo01" />
             <Grid className="login-blk">
               <Typography variant="h2">Let’s Start</Typography>
-              <Box>
-                <FormGroup>
-                  <FormLabel>
-                    <TextField
-                      id="standard-basic"
-                      value={email}
-                      onChange={emailFunc}
-                      label="Email Address"
-                      variant="standard"
-                      type="email"
-                    />
-                  </FormLabel>
-                  <FormLabel>
-                    <TextField
-                      id="standard-basic"
-                      value={password}
-                      onChange={passwordFunc}
-                      label="Password"
-                      variant="standard"
-                      type="password"
-                    />
-                  </FormLabel>
-                  <Button variant="contained" className="theme-btn" onClick={onLogin}>
-                    Login
-                  </Button>
-                  <Grid mt={2}>
-                    <Link to="/register">
-                      <Button sx={{ width: "100%" }}>Register</Button>
-                    </Link>
-                  </Grid>
-                  <Button>
-                    <Link className="trms-btn" to={"/"}>
-                      Terms & Conditions
-                    </Link>
-                  </Button>
-                </FormGroup>
+              <Box component="form" onSubmit={onLogin}>
+                <FormLabel>
+                  <TextField
+                    id="standard-basic"
+                    value={email}
+                    name="email"
+                    onChange={authFunc}
+                    label="Email Address"
+                    variant="standard"
+                    type="email"
+                    required
+                  />
+                </FormLabel>
+                <TextField
+                  id="standard-basic"
+                  value={password}
+                  name="password"
+                  onChange={authFunc}
+                  label="Password"
+                  variant="standard"
+                  type="password"
+                  required
+                />
+                <Button variant="contained" className="theme-btn" type="submit">
+                  Login
+                </Button>
+                <Grid mt={2}>
+                  <Link to="/register">
+                    <Button sx={{ width: "100%" }}>Register</Button>
+                  </Link>
+                </Grid>
+                <Button>
+                  <Link className="trms-btn" to={"/"}>
+                    Terms & Conditions
+                  </Link>
+                </Button>
               </Box>
             </Grid>
           </Grid>

@@ -14,7 +14,7 @@ import Register from "../pages/Register";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "https://lapasha-server.vercel.app";
+let baseUrl = "http://localhost:8000";
 
 const LapashaRoutes = () => {
   const [addStep, setAddStep] = useState(0);
@@ -32,15 +32,11 @@ const LapashaRoutes = () => {
   const [formDataArr, setFormDataArr] = useState(null);
   const [companyCall, setCompanyCall] = useState(0);
 
-  //Login
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
-  //Register
-  const [regName, setRegName] = useState('')
-  const [regEmail, setRegEmail] = useState('')
-  const [regPassword, setRegPassword] = useState('')
-
+  const [auth, setAuth] = useState({
+    email: "",
+    password: "",
+    name: ""
+  })
 
   let dataString = formData;
   const navigate = useNavigate();
@@ -49,6 +45,11 @@ const LapashaRoutes = () => {
     let { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  let authFunc = (e) => {
+    let { name, value } = e.target;
+    setAuth({ ...auth, [name]: value })
+  }
 
   const onStepForm = eve => {
     let formDataChanges = {};
@@ -101,83 +102,59 @@ const LapashaRoutes = () => {
     }));
   };
 
-  const loginChange = (e) => {
-    setEmail(e.target.value)
-  }
+  let authEmail = auth.email
+  let authPassword = auth.password
+  let authName = auth.name
 
-  const loginPasswordChange = (e) => {
-    setPassword(e.target.value)
-  }
-
-  const onLoginClick = async () => {
+  const onLoginClick = async (e) => {
+    // e.preventDefault()
     //api
-    const response = await axios(`${baseUrl}/login`, {
+    const response = await fetch(`${baseUrl}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email,
-        password,
+        authEmail,
+        authPassword,
       }),
     })
-
+    console.log(response);
     const data = await response.json()
-
+    console.log(data);
     if (data.user) {
       localStorage.setItem('token', data.user)
       alert('Login successful')
-      window.location.href = '/dashboard'
+      navigate("/home");
     } else {
       alert('Please check your username and password')
     }
-
-
-
-    navigate("/home");
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
   };
 
-  //Register onChange
-  const regEmailChange = (e) => {
-    setRegEmail(e.target.value)
-  }
-
-  const regNameChange = (e) => {
-    setRegName(e.target.value)
-  }
-
-  const regPasswordChange = (e) => {
-    setRegPassword(e.target.value)
-  }
-
-  const onRegister = async () => {
-
-    const response = await axios('http://localhost:8000/register', {
+  const onRegister = async (e) => {
+    e.preventDefault()
+    const response = await fetch(`${baseUrl}/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        regName,
-        regEmail,
-        regPassword,
+        authName,
+        authEmail,
+        authPassword,
       }),
     })
 
-    console.log(regName, regEmail, regPassword  );
+    console.log(response);
 
-    const data = await response.json()
+    // const data = await response
 
-    if (data.status === 'ok') {
+    if (response.statusText === 'OK') {
       navigate('/login')
+      console.log("Working");
     }
-
-
-
-
-    navigate("/login");
   };
 
   const onCompany = eve => {
@@ -224,8 +201,6 @@ const LapashaRoutes = () => {
         console.error("Error getting data:", error);
       });
   };
-
-  console.log(formDataArr);
 
   const getPostUrl = () => {
     switch (companyCall) {
@@ -331,12 +306,12 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route path="/login" element={<Login passwordFunc={loginPasswordChange} emailFunc={loginChange} email={email} password={password} onLogin={onLoginClick} />} />
+      <Route path="/login" element={<Login onLogin={onLoginClick} authFunc={authFunc} email={authEmail} password={authPassword} />} />
       <Route
         path="/register"
-        element={<Register regEmailFunc={regEmailChange} regNameFunc={regNameChange} regPasswordFunc={regPasswordChange} regEmail={regEmail} regName={regName} regPassword={regPassword} registerForm={onRegister} />}
+        element={<Register registerForm={onRegister} authFunc={authFunc} email={authEmail} password={authPassword} userName={authName} />}
       />
-      <Route path="/" element={<Navigate replace to="/login" />} />
+      <Route path="/" element={<Navigate replace to="/login" authFunc={authFunc} />} />
       <Route
         path="/stepform"
         element={

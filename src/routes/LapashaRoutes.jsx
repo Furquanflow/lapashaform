@@ -31,6 +31,13 @@ const LapashaRoutes = () => {
   const [formData, setFormData] = useState(data);
   const [formDataArr, setFormDataArr] = useState(null);
   const [companyCall, setCompanyCall] = useState(0);
+
+  const [auth, setAuth] = useState({
+    email: "",
+    password: "",
+    name: ""
+  })
+
   let dataString = formData;
   const navigate = useNavigate();
 
@@ -38,6 +45,11 @@ const LapashaRoutes = () => {
     let { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  let authFunc = (e) => {
+    let { name, value } = e.target;
+    setAuth({ ...auth, [name]: value })
+  }
 
   const onStepForm = eve => {
     let formDataChanges = {};
@@ -90,20 +102,59 @@ const LapashaRoutes = () => {
     }));
   };
 
-  const onLoginClick = () => {
-    navigate("/home");
+  let authEmail = auth.email
+  let authPassword = auth.password
+  let authName = auth.name
+
+  const onLoginClick = async (e) => {
+    // e.preventDefault()
+    //api
+    const response = await fetch(`${baseUrl}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        authEmail,
+        authPassword,
+      }),
+    })
+    console.log(response);
+    const data = await response.json()
+    console.log(data);
+    if (data.user) {
+      localStorage.setItem('token', data.user)
+      alert('Login successful')
+      navigate("/home");
+    } else {
+      alert('Please check your username and password')
+    }
     localStorage.setItem("DATA", addStep.toString());
     localStorage.setItem("FORMDATA", dataString);
-
-    //  Will Use this Function Later
-    // window.onload = () => {
-    //   localStorage.setItem("DATA", addStep.toString());
-    //   localStorage.setItem("FORMDATA", dataString);
-    // }; Will Use this Function Later
   };
 
-  const onRegister = () => {
-    navigate("/login");
+  const onRegister = async (e) => {
+    e.preventDefault()
+    const response = await fetch(`${baseUrl}/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        authName,
+        authEmail,
+        authPassword,
+      }),
+    })
+
+    console.log(response);
+
+    // const data = await response
+
+    if (response.statusText === 'OK') {
+      navigate('/login')
+      console.log("Working");
+    }
   };
 
   const onCompany = eve => {
@@ -150,8 +201,6 @@ const LapashaRoutes = () => {
         console.error("Error getting data:", error);
       });
   };
-
-  console.log(formDataArr);
 
   const getPostUrl = () => {
     switch (companyCall) {
@@ -257,12 +306,12 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route path="/login" element={<Login onLogin={onLoginClick} />} />
+      <Route path="/login" element={<Login onLogin={onLoginClick} authFunc={authFunc} email={authEmail} password={authPassword} />} />
       <Route
         path="/register"
-        element={<Register registerForm={onRegister} />}
+        element={<Register registerForm={onRegister} authFunc={authFunc} email={authEmail} password={authPassword} userName={authName} />}
       />
-      <Route path="/" element={<Navigate replace to="/login" />} />
+      <Route path="/" element={<Navigate replace to="/login" authFunc={authFunc} />} />
       <Route
         path="/stepform"
         element={

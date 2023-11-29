@@ -14,7 +14,7 @@ import Register from "../pages/Register";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "https://lapasha-server.vercel.app";
+let baseUrl = "http://52.204.170.61:8000";
 
 const LapashaRoutes = () => {
   const [addStep, setAddStep] = useState(0);
@@ -107,55 +107,67 @@ const LapashaRoutes = () => {
   let authName = auth.name
 
   const onLoginClick = async (e) => {
-    // e.preventDefault()
-    //api
-    const response = await fetch(`${baseUrl}/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    e.preventDefault();
+    navigate("/home");
+    try {
+      const response = await axios.post(`${baseUrl}/login`, {
         authEmail,
         authPassword,
-      }),
-    })
-    console.log(response);
-    const data = await response.json()
-    console.log(data);
-    if (data.user) {
-      localStorage.setItem('token', data.user)
-      alert('Login successful')
-      navigate("/home");
-    } else {
-      alert('Please check your username and password')
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      console.log(response);
+      const data = response.data;
+      console.log(data);
+      if (data.user) {
+        localStorage.setItem('token', data.user);
+        alert('Login successful');
+
+      } else {
+        alert('Please check your username and password');
+      }
+
+      localStorage.setItem("DATA", addStep.toString());
+      localStorage.setItem("FORMDATA", dataString);
+    } catch (error) {
+      if (error.response) {
+        console.error('Server Error:', error.response.data);
+      } else if (error.request) {
+        console.error('Network Error:', error.request);
+      } else {
+        console.error('Error:', error.message);
+      }
     }
-    localStorage.setItem("DATA", addStep.toString());
-    localStorage.setItem("FORMDATA", dataString);
   };
 
   const onRegister = async (e) => {
-    e.preventDefault()
-    const response = await fetch(`${baseUrl}/register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(`${baseUrl}/register`, {
         authName,
         authEmail,
         authPassword,
-      }),
-    })
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-    console.log(response);
+      console.log(response);
 
-    // const data = await response
-
-    if (response.statusText === 'OK') {
-      navigate('/login')
-      console.log("Working");
+      if (response.statusText === 'OK') {
+        navigate('/login');
+        console.log("Working");
+      }
+    } catch (error) {
+      // Handle errors
+      console.error('Error:', error);
     }
   };
+
 
   const onCompany = eve => {
     setCompanyCall(eve);

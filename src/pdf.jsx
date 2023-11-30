@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, Grid } from "@mui/material";
 // import { useNavigate } from "react-router-dom";
 
-const baseUrl = "https://lapasha-server.vercel.app";
+const baseUrl = "http://52.204.170.61:8000";
 
 const GeneratePDFButton = ({ formData }) => {
 
@@ -15,7 +15,8 @@ const GeneratePDFButton = ({ formData }) => {
             const formDataToSend = new FormData();
             formDataToSend.append('data', JSON.stringify(formData));
             const response = await axios.post(`${baseUrl}/generate-and-send-pdf`, formDataToSend);
-            console.log(response.data);
+            console.log(response);
+            console.log("response working");
             if (response.data && response.data.pdfPath) {
                 alert('PDF generated and sent successfully.');
                 window.open(`${baseUrl}/download-pdf`, '_blank');

@@ -14,7 +14,7 @@ import Register from "../pages/Register";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://52.204.170.61:8000";
+let baseUrl = "https://lapasha-server.vercel.app";
 
 const LapashaRoutes = () => {
   const [addStep, setAddStep] = useState(0);

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, Grid } from "@mui/material";
 // import { useNavigate } from "react-router-dom";
 
-const baseUrl = "http://52.204.170.61:8000";
+const baseUrl = "https://lapasha-server.vercel.app";
 
 const GeneratePDFButton = ({ formData }) => {
 

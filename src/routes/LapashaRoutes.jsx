@@ -36,7 +36,7 @@ const LapashaRoutes = () => {
     email: "",
     password: "",
     name: ""
-  })
+  });
 
   let dataString = formData;
   const navigate = useNavigate();
@@ -46,10 +46,10 @@ const LapashaRoutes = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  let authFunc = (e) => {
+  let authFunc = e => {
     let { name, value } = e.target;
-    setAuth({ ...auth, [name]: value })
-  }
+    setAuth({ ...auth, [name]: value });
+  };
 
   const onStepForm = eve => {
     let formDataChanges = {};
@@ -102,76 +102,85 @@ const LapashaRoutes = () => {
     }));
   };
 
-  let authEmail = auth.email
-  let authPassword = auth.password
-  let authName = auth.name
+  let authEmail = auth.email;
+  let authPassword = auth.password;
+  let authName = auth.name;
 
-  const onLoginClick = async (e) => {
+  const onLoginClick = async e => {
     e.preventDefault();
-    if (auth.email === "furqan.rahim@flowtechnologies.io" && auth.password === "test12345678") {
+    if (
+      auth.email === "furqan.rahim@flowtechnologies.io" &&
+      auth.password === "test12345678"
+    ) {
       navigate("/home");
     } else {
-      alert("Your password is wrong")
+      alert("Your password is wrong");
     }
     try {
-      const response = await axios.post(`${baseUrl}/login`, {
-        authEmail,
-        authPassword,
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await axios.post(
+        `${baseUrl}/login`,
+        {
+          authEmail,
+          authPassword
         },
-      });
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
       console.log(response);
       const data = response.data;
       console.log(data);
       if (data.user) {
-        localStorage.setItem('token', data.user);
-        alert('Login successful');
-
+        localStorage.setItem("token", data.user);
+        alert("Login successful");
       } else {
-        alert('Please check your username and password');
+        alert("Please check your username and password");
       }
 
       localStorage.setItem("DATA", addStep.toString());
       localStorage.setItem("FORMDATA", dataString);
     } catch (error) {
       if (error.response) {
-        console.error('Server Error:', error.response.data);
+        console.error("Server Error:", error.response.data);
       } else if (error.request) {
-        console.error('Network Error:', error.request);
+        console.error("Network Error:", error.request);
       } else {
-        console.error('Error:', error.message);
+        console.error("Error:", error.message);
       }
     }
   };
 
-  const onRegister = async (e) => {
+  const onRegister = async e => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${baseUrl}/register`, {
-        authName,
-        authEmail,
-        authPassword,
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await axios.post(
+        `${baseUrl}/register`,
+        {
+          authName,
+          authEmail,
+          authPassword
         },
-      });
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
 
       console.log(response);
 
-      if (response.statusText === 'OK') {
-        navigate('/login');
+      if (response.statusText === "OK") {
+        navigate("/login");
         console.log("Working");
       }
     } catch (error) {
       // Handle errors
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
-
 
   const onCompany = eve => {
     setCompanyCall(eve);
@@ -246,9 +255,9 @@ const LapashaRoutes = () => {
 
   useEffect(
     () => {
-      // getFormData();
       localStorage.getItem("DATA", addStep);
       localStorage.getItem("FORMDATA", dataString);
+      getFormData();
     },
     [dataString, addStep]
   );
@@ -322,16 +331,37 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route path="/login" element={<Login onLogin={onLoginClick} authFunc={authFunc} email={authEmail} password={authPassword} />} />
+      <Route
+        path="/login"
+        element={
+          <Login
+            onLogin={onLoginClick}
+            authFunc={authFunc}
+            email={authEmail}
+            password={authPassword}
+          />
+        }
+      />
       <Route
         path="/register"
-        element={<Register registerForm={onRegister} authFunc={authFunc} email={authEmail} password={authPassword} userName={authName} />}
+        element={
+          <Register
+            registerForm={onRegister}
+            authFunc={authFunc}
+            email={authEmail}
+            password={authPassword}
+            userName={authName}
+          />
+        }
       />
-      <Route path="/" element={<Navigate replace to="/login" authFunc={authFunc} />} />
+      <Route
+        path="/"
+        element={<Navigate replace to="/login" authFunc={authFunc} />}
+      />
       <Route
         path="/stepform"
         element={
-          <StepForm addCount={addStep} onStep2={eve => onStepForm(eve)} />
+          <StepForm addCount={addStep} onStep2={eve => onStepForm(eve)} dataString={formDataArr} />
         }
       />
     </Routes>

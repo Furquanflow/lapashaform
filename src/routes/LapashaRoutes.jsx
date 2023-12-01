@@ -108,7 +108,11 @@ const LapashaRoutes = () => {
 
   const onLoginClick = async (e) => {
     e.preventDefault();
-    navigate("/home");
+    if (auth.email === "furqan.rahim@flowtechnologies.io" && auth.password === "test12345678") {
+      navigate("/home");
+    } else {
+      alert("Your password is wrong")
+    }
     try {
       const response = await axios.post(`${baseUrl}/login`, {
         authEmail,

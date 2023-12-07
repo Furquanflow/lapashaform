@@ -12,11 +12,11 @@ import uploadImg from "../assets/images/upload.png";
 
 const StepForm = ({ addCount, dataString }) => {
   const navigate = useNavigate();
-let newFormData = dataString && dataString.map((item) => item.middleNameSB)
+  let newFormData = dataString && dataString.map(item => item.middleNameSB);
 
   const onEditClick = e => {
     e.preventDefault();
-    if (addCount >= 1 || newFormData != "" ) {
+    if (addCount >= 1 || newFormData != "") {
       navigate("/policyform");
     } else {
       alert("Fill Employment information form First");
@@ -55,19 +55,35 @@ let newFormData = dataString && dataString.map((item) => item.middleNameSB)
       <Grid className="step-form-sec">
         <Container>
           <Grid className="step-bar">
-            <Grid className={addCount >= 1 || newFormData != "" ? "step-flx-red" : "step-flx"}>
+            <Grid
+              className={
+                addCount >= 1 || newFormData != "" ? "step-flx-red" : "step-flx"
+              }
+            >
               <Typography variant="b">01</Typography>
               <Typography variant="h5">Step</Typography>
             </Grid>
-            <Grid className={addCount >= 2 || newFormData != "" ? "step-flx-red" : "step-flx"}>
+            <Grid
+              className={
+                addCount >= 2 || newFormData != "" ? "step-flx-red" : "step-flx"
+              }
+            >
               <Typography variant="b">02</Typography>
               <Typography variant="h5">Step</Typography>
             </Grid>
-            <Grid className={addCount >= 3 || newFormData != "" ? "step-flx-red" : "step-flx"}>
+            <Grid
+              className={
+                addCount >= 3 || newFormData != "" ? "step-flx-red" : "step-flx"
+              }
+            >
               <Typography variant="b">03</Typography>
               <Typography variant="h5">Step</Typography>
             </Grid>
-            <Grid className={addCount >= 4 || newFormData != "" ? "step-flx-red" : "step-flx"}>
+            <Grid
+              className={
+                addCount >= 4 || newFormData != "" ? "step-flx-red" : "step-flx"
+              }
+            >
               <Typography variant="b">04</Typography>
               <Typography variant="h5">Step</Typography>
             </Grid>
@@ -88,7 +104,9 @@ let newFormData = dataString && dataString.map((item) => item.middleNameSB)
 
             <Grid
               className={
-                addCount >= 1 || newFormData != "" ? "step-opt step-opt-active" : "step-opt"
+                addCount >= 1 || newFormData != ""
+                  ? "step-opt step-opt-active"
+                  : "step-opt"
               }
             >
               <Grid className="step-opt-title">
@@ -108,7 +126,9 @@ let newFormData = dataString && dataString.map((item) => item.middleNameSB)
 
             <Grid
               className={
-                addCount >= 2 || newFormData != "" ? "step-opt step-opt-active" : "step-opt"
+                addCount >= 2 || newFormData != ""
+                  ? "step-opt step-opt-active"
+                  : "step-opt"
               }
             >
               <Grid className="step-opt-title">
@@ -124,7 +144,9 @@ let newFormData = dataString && dataString.map((item) => item.middleNameSB)
 
             <Grid
               className={
-                addCount >= 3 || newFormData != "" ? "step-opt step-opt-active" : "step-opt"
+                addCount >= 3 || newFormData != ""
+                  ? "step-opt step-opt-active"
+                  : "step-opt"
               }
             >
               <Grid className="step-opt-title">

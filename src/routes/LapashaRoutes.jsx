@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import EligibilityVerification from "../pages/EligibilityVerification";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  Navigate,
+  useRoutes
+} from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import StepForm from "../pages/StepForm";
@@ -10,11 +16,16 @@ import ContractForm from "../pages/ContractForm";
 import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
 import Register from "../pages/Register";
+import LapashaLoungeAndGrill from "../admin panel/pages/LapashaLoungeAndGrill";
+import NaraCafe from "../admin panel/pages/NaraCafe";
+import Patio from "../admin panel/pages/Patio";
+
+import AdminHome from "../admin panel/pages/AdminHome";
 
 import axios from "axios";
 
 //Server Url
-let baseUrl = "https://lapasha-server.vercel.app";
+let baseUrl = "http://localhost:8000";
 
 const LapashaRoutes = () => {
   const [addStep, setAddStep] = useState(0);
@@ -40,6 +51,14 @@ const LapashaRoutes = () => {
 
   let dataString = formData;
   const navigate = useNavigate();
+
+  const routeElement = useRoutes([
+    { path: "/admin", element: <AdminHome /> },
+    { path: "/admin/lounge", element: <LapashaLoungeAndGrill /> },
+    { path: "/admin/patio", element: <Patio /> },
+    { path: "/admin/naracafe", element: <NaraCafe /> }
+    // ... other routes
+  ]);
 
   const onForm = e => {
     let { name, value } = e.target;
@@ -361,9 +380,14 @@ const LapashaRoutes = () => {
       <Route
         path="/stepform"
         element={
-          <StepForm addCount={addStep} onStep2={eve => onStepForm(eve)} dataString={formDataArr} />
+          <StepForm
+            addCount={addStep}
+            onStep2={eve => onStepForm(eve)}
+            dataString={formDataArr}
+          />
         }
       />
+      <Route path="/admin/*" element={<AdminHome  dataString={formDataArr} />} />
     </Routes>
   );
 };

@@ -53,12 +53,9 @@ const EligibilityVerificationView = ({
                   <Grid className="text-box">
                     <h1>Company Name New Employee Onboarding Form</h1>
                   </Grid>
-
                   <hr />
-
                   <Grid className="text-box txt-fld-space">
                     <h4>Personal Information: </h4>
-
                     <Grid
                       container
                       spacing={3}
@@ -5571,7 +5568,7 @@ const EligibilityVerificationView = ({
                   <Grid
                     mt={5}
                     container
-                    spacing={2} 
+                    spacing={2}
                     columns={12}
                     className="flx-box form-hdr"
                   >

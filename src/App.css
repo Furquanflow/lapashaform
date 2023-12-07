@@ -757,3 +757,7 @@ td.bordernone {
 .page-break {
   page-break-before: always !important; /* Always start a new page before this element */
 }
+
+.MuiListItemIcon-root.css-cveggr-MuiListItemIcon-root {
+  width: 0 !important;
+}

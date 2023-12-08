@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import EligibilityVerification from "../pages/EligibilityVerification";
+
+//Roter Dom
 import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+
+//Local Componnents
+import EligibilityVerification from "../pages/EligibilityVerification";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import StepForm from "../pages/StepForm";
@@ -11,6 +15,7 @@ import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
 import Register from "../pages/Register";
 
+// Axios
 import axios from "axios";
 
 //Server Url

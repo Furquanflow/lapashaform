@@ -45,15 +45,21 @@ const Login = ({ registerPage, onLogin, authFunc, email, password }) => {
                   value={password}
                   name="password"
                   onChange={authFunc}
-                  autoComplete="true" 
+                  autoComplete="true"
                   label="Password"
                   variant="standard"
                   type="password"
                   required
                 />
-                <Button variant="contained" className="theme-btn" type="submit">
-                  Login
-                </Button>
+                <Grid>
+                  <Button
+                    variant="contained"
+                    className="theme-btn"
+                    type="submit"
+                  >
+                    Login
+                  </Button>
+                </Grid>
                 <Grid mt={2}>
                   <Link to={registerPage}>
                     <Button sx={{ width: "100%" }}>Register</Button>

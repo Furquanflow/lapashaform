@@ -11,7 +11,7 @@ import {
   FormLabel,
   Grid,
   TextField,
-  Typography,
+  Typography
 } from "@mui/material";
 
 // Images
@@ -63,16 +63,20 @@ const Login = ({ registerForm, authFunc, email, password, userName }) => {
                     required
                   />
                 </FormLabel>
-                <Button
-                  variant="contained"
-                  className="theme-btn"
-                  type="submit"
-                >
-                  Register
-                </Button>
-                <Link className="trms-btn" to={"/"}>
-                  Terms & Conditions
-                </Link>
+                <Grid>
+                  <Button
+                    variant="contained"
+                    className="theme-btn"
+                    type="submit"
+                  >
+                    Register
+                  </Button>
+                </Grid>
+                <Grid mt={2}>
+                  <Link className="trms-btn" to={"/"}>
+                    Terms & Conditions
+                  </Link>
+                </Grid>
               </Box>
             </Grid>
           </Grid>

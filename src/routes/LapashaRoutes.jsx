@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EligibilityVerification from "../pages/EligibilityVerification";
-import {
-  Routes,
-  Route,
-  useNavigate,
-  Navigate,
-  useRoutes
-} from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import StepForm from "../pages/StepForm";
@@ -16,11 +10,6 @@ import ContractForm from "../pages/ContractForm";
 import PolicyForm from "../pages/PolicyForm";
 import { data } from "../obj/Obj";
 import Register from "../pages/Register";
-import LapashaLoungeAndGrill from "../admin panel/pages/LapashaLoungeAndGrill";
-import NaraCafe from "../admin panel/pages/NaraCafe";
-import Patio from "../admin panel/pages/Patio";
-
-import AdminHome from "../admin panel/pages/AdminHome";
 
 import axios from "axios";
 
@@ -42,7 +31,6 @@ const LapashaRoutes = () => {
   const [formData, setFormData] = useState(data);
   const [formDataArr, setFormDataArr] = useState(null);
   const [companyCall, setCompanyCall] = useState(0);
-
   const [auth, setAuth] = useState({
     email: "",
     password: "",
@@ -51,15 +39,6 @@ const LapashaRoutes = () => {
 
   let dataString = formData;
   const navigate = useNavigate();
-
-  const routeElement = useRoutes([
-    { path: "/admin", element: <AdminHome /> },
-    { path: "/admin/lounge", element: <LapashaLoungeAndGrill /> },
-    { path: "/admin/patio", element: <Patio /> },
-    { path: "/admin/naracafe", element: <NaraCafe /> }
-    // ... other routes
-  ]);
-
   const onForm = e => {
     let { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -127,14 +106,6 @@ const LapashaRoutes = () => {
 
   const onLoginClick = async e => {
     e.preventDefault();
-    if (
-      auth.email === "furqan.rahim@flowtechnologies.io" &&
-      auth.password === "test12345678"
-    ) {
-      navigate("/home");
-    } else {
-      alert("Your password is wrong");
-    }
     try {
       const response = await axios.post(
         `${baseUrl}/login`,
@@ -148,12 +119,11 @@ const LapashaRoutes = () => {
           }
         }
       );
-      console.log(response);
       const data = response.data;
-      console.log(data);
       if (data.user) {
-        localStorage.setItem("token", data.user);
+        localStorage.setItem("token", data);
         alert("Login successful");
+        navigate("/home");
       } else {
         alert("Please check your username and password");
       }
@@ -173,7 +143,6 @@ const LapashaRoutes = () => {
 
   const onRegister = async e => {
     e.preventDefault();
-
     try {
       const response = await axios.post(
         `${baseUrl}/register`,
@@ -189,14 +158,10 @@ const LapashaRoutes = () => {
         }
       );
 
-      console.log(response);
-
       if (response.statusText === "OK") {
         navigate("/login");
-        console.log("Working");
       }
     } catch (error) {
-      // Handle errors
       console.error("Error:", error);
     }
   };
@@ -223,8 +188,7 @@ const LapashaRoutes = () => {
       return;
     }
     try {
-      const response = await axios.post(url, dataString);
-      console.log(response.data);
+      await axios.post(url, dataString);
     } catch (error) {
       console.error("Error posting data:", error);
     }
@@ -356,6 +320,7 @@ const LapashaRoutes = () => {
           <Login
             onLogin={onLoginClick}
             authFunc={authFunc}
+            registerPage={"/register"}
             email={authEmail}
             password={authPassword}
           />
@@ -387,7 +352,6 @@ const LapashaRoutes = () => {
           />
         }
       />
-      <Route path="/admin/*" element={<AdminHome  dataString={formDataArr} />} />
     </Routes>
   );
 };

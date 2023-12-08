@@ -8,11 +8,10 @@ import {
   Box,
   Button,
   Container,
-  FormGroup,
   FormLabel,
   Grid,
   TextField,
-  Typography,
+  Typography
 } from "@mui/material";
 
 // Images
@@ -21,7 +20,7 @@ import bgCard01 from "../assets/images/bg-card-01.png";
 import bgCard02 from "../assets/images/bg-card-02.png";
 import bgCard03 from "../assets/images/bg-card-03.png";
 
-const Login = ({ onLogin, authFunc, email, password }) => {
+const Login = ({ registerPage, onLogin, authFunc, email, password }) => {
   return (
     <Grid>
       <Grid className="login-pg">
@@ -33,7 +32,6 @@ const Login = ({ onLogin, authFunc, email, password }) => {
               <Box component="form" onSubmit={onLogin}>
                 <FormLabel>
                   <TextField
-                    id="standard-basic"
                     value={email}
                     name="email"
                     onChange={authFunc}
@@ -44,10 +42,10 @@ const Login = ({ onLogin, authFunc, email, password }) => {
                   />
                 </FormLabel>
                 <TextField
-                  id="standard-basic"
                   value={password}
                   name="password"
                   onChange={authFunc}
+                  autoComplete="true" 
                   label="Password"
                   variant="standard"
                   type="password"
@@ -57,7 +55,7 @@ const Login = ({ onLogin, authFunc, email, password }) => {
                   Login
                 </Button>
                 <Grid mt={2}>
-                  <Link to="/register">
+                  <Link to={registerPage}>
                     <Button sx={{ width: "100%" }}>Register</Button>
                   </Link>
                 </Grid>

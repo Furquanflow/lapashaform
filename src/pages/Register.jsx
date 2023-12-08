@@ -8,7 +8,6 @@ import {
   Box,
   Button,
   Container,
-  FormGroup,
   FormLabel,
   Grid,
   TextField,
@@ -33,7 +32,6 @@ const Login = ({ registerForm, authFunc, email, password, userName }) => {
               <Box component="form" onSubmit={registerForm}>
                 <FormLabel>
                   <TextField
-                    id="standard-basic"
                     value={userName}
                     name="name"
                     onChange={authFunc}
@@ -45,7 +43,6 @@ const Login = ({ registerForm, authFunc, email, password, userName }) => {
                 </FormLabel>
                 <FormLabel>
                   <TextField
-                    id="standard-basic"
                     value={email}
                     name="email"
                     onChange={authFunc}
@@ -57,7 +54,6 @@ const Login = ({ registerForm, authFunc, email, password, userName }) => {
                 </FormLabel>
                 <FormLabel>
                   <TextField
-                    id="standard-basic"
                     value={password}
                     name="password"
                     onChange={authFunc}

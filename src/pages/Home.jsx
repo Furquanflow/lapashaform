@@ -25,7 +25,13 @@ const Home = ({ callData }) => {
                 <Typography variant="h4">LaPasha lounge and Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
                 <Grid mt={4}>
-                  <Button className="save-btn" variant="contained" onClick={() => callData(0)}>Get Started</Button>
+                  <Button
+                    className="save-btn"
+                    variant="contained"
+                    onClick={() => callData(0)}
+                  >
+                    Get Started
+                  </Button>
                 </Grid>
               </Grid>
             </Grid>
@@ -37,7 +43,13 @@ const Home = ({ callData }) => {
                 <Typography variant="h4">LaPasha</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
                 <Grid mt={4}>
-                  <Button className="save-btn" variant="contained" onClick={() => callData(1)}>Get Started</Button>
+                  <Button
+                    className="save-btn"
+                    variant="contained"
+                    onClick={() => callData(1)}
+                  >
+                    Get Started
+                  </Button>
                 </Grid>
               </Grid>
             </Grid>
@@ -49,7 +61,13 @@ const Home = ({ callData }) => {
                 <Typography variant="h4">Grill</Typography>
                 <Typography variant="p">kirkwood ops</Typography>
                 <Grid mt={2}>
-                  <Button className="save-btn" variant="contained" onClick={() => callData(2)}>Get Started</Button>
+                  <Button
+                    className="save-btn"
+                    variant="contained"
+                    onClick={() => callData(2)}
+                  >
+                    Get Started
+                  </Button>
                 </Grid>
               </Grid>
             </Grid>

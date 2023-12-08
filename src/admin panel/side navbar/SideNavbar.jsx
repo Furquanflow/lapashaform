@@ -1,7 +1,7 @@
 import React from "react";
 
 //Mui Component
-import { styled, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 //Mui Design Library
@@ -22,20 +22,25 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 //Router Dom
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, Navigate, useParams } from "react-router-dom";
 
 //Local Component
 import LapashaLoungeAndGrill from "../pages/LapashaLoungeAndGrill";
 import NaraCafe from "../pages/NaraCafe";
 import Patio from "../pages/Patio";
-import LapashaRoutes from "../../routes/LapashaRoutes";
 
 //images
 import companyLogo01 from "../../assets/images/logo01.png";
 import companyLogo02 from "../../assets/images/logo02.png";
 import companyLogo03 from "../../assets/images/logo03.png";
+import lapashaLogo from "../../assets/images/lapasha-logo.png";
 
-import { DrawerHeader, AppBar, Main , drawerWidth} from "../../functions/SpareFunctions";
+import {
+  DrawerHeader,
+  AppBar,
+  Main,
+  drawerWidth
+} from "../../functions/SpareFunctions";
 
 export default function PersistentDrawerLeft({ data }) {
   const theme = useTheme();
@@ -103,7 +108,12 @@ export default function PersistentDrawerLeft({ data }) {
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Link to="/admin/lounge">
+            <Grid mt={2}>
+              <img src={lapashaLogo} width={100} />
+            </Grid>
+          </Link>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr"
               ? <ChevronLeftIcon
@@ -163,7 +173,11 @@ export default function PersistentDrawerLeft({ data }) {
             overflow: "hidden"
           }}
         >
-          <LapashaLoungeAndGrill lapashaData={data} />
+          <Routes>
+            <Route path="/lounge" element={<LapashaLoungeAndGrill />} />
+            <Route path="/patio" element={<Patio />} />
+            <Route path="/naracafe" element={<NaraCafe />} />
+          </Routes>
         </Grid>
       </Main>
     </Box>

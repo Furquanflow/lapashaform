@@ -9,8 +9,9 @@ import axios from "axios";
 //Server Url
 let baseUrl = "http://localhost:8000";
 
-const Patio = ({ lapashaData }) => {
+const Patio = ({ patioEditFunc }) => {
   const [adminPatioData, setAdminPatioData] = React.useState([]);
+
   const getFormData = () => {
     axios
       .get(`${baseUrl}/formdata`)
@@ -25,7 +26,14 @@ const Patio = ({ lapashaData }) => {
   React.useEffect(() => {
     getFormData();
   }, []);
-  return <LapashaFormData lapashaData={adminPatioData} title={"Patio"} />;
+
+  return (
+    <LapashaFormData
+      empolymentFunc={e => patioEditFunc(e, 3)}
+      lapashaData={adminPatioData}
+      title={"Patio"}
+    />
+  );
 };
 
 export default Patio;

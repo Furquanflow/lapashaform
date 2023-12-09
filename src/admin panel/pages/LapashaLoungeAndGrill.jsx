@@ -9,8 +9,9 @@ import axios from "axios";
 //Server Url
 let baseUrl = "http://localhost:8000";
 
-const LapashaLoungeAndGrill = () => {
+const LapashaLoungeAndGrill = ({ loungeGrillEditFunc }) => {
   const [adminData, setAdminData] = React.useState([]);
+
   const getFormData = () => {
     axios
       .get(`${baseUrl}/loungeandgrilldata`)
@@ -29,6 +30,7 @@ const LapashaLoungeAndGrill = () => {
     <LapashaFormData
       lapashaData={adminData}
       title={"Lapasha lounge And Grill"}
+      empolymentFunc={e => loungeGrillEditFunc(e, 1)}
     />
   );
 };

@@ -21,7 +21,7 @@ import axios from "axios";
 //Server Url
 let baseUrl = "http://localhost:8000";
 
-const LapashaRoutes = () => {
+const LapashaRoutes = ({pdfCount}) => {
   const [addStep, setAddStep] = useState(0);
   const [canvas, setCanvas] = useState(null);
   const [contactEmployeeCanvas, setContactEmployeeCanvas] = useState(null);
@@ -229,7 +229,7 @@ const LapashaRoutes = () => {
   };
 
   const getGetUrl = () => {
-    switch (companyCall) {
+    switch (companyCall || pdfCount) {
       case 0:
         return `${baseUrl}/loungeandgrilldata`;
       case 1:
@@ -274,6 +274,7 @@ const LapashaRoutes = () => {
         path="/eligibilityverificationview"
         element={
           <EligibilityVerificationView
+          pdfCount={pdfCount}
             dataString={formDataArr}
             // fomDataGetFunc={getFormData}
             formDataFunc={getFormData}

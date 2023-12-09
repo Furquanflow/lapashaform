@@ -21,7 +21,7 @@ import {
   StyledTableCell
 } from "../../../functions/SpareFunctions";
 
-const LapashaFormData = ({ lapashaData, title }) => {
+const LapashaFormData = ({ lapashaData, title, empolymentFunc }) => {
   return (
     <Box sx={{ background: "#fff", padding: "40px", borderRadius: "20px" }}>
       <Grid mb={4}>
@@ -69,6 +69,7 @@ const LapashaFormData = ({ lapashaData, title }) => {
                             background: "#b49a53"
                           }
                         }}
+                        onClick={empolymentFunc}
                       >
                         Edit
                       </Button>

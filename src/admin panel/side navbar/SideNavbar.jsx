@@ -42,7 +42,7 @@ import {
   drawerWidth
 } from "../../functions/SpareFunctions";
 
-export default function PersistentDrawerLeft({ data }) {
+export default function PersistentDrawerLeft({ loungeGrillEditFunc, naraCafeFunc, patioFunc }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
 
@@ -174,9 +174,9 @@ export default function PersistentDrawerLeft({ data }) {
           }}
         >
           <Routes>
-            <Route path="/lounge" element={<LapashaLoungeAndGrill />} />
-            <Route path="/patio" element={<Patio />} />
-            <Route path="/naracafe" element={<NaraCafe />} />
+            <Route path="/lounge" element={<LapashaLoungeAndGrill loungeGrillEditFunc={loungeGrillEditFunc} />} />
+            <Route path="/patio" element={<Patio patioEditFunc={patioFunc} />} />
+            <Route path="/naracafe" element={<NaraCafe naraCafeEditFunc={naraCafeFunc} />} />
           </Routes>
         </Grid>
       </Main>

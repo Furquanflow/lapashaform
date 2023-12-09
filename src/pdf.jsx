@@ -1,18 +1,27 @@
 import React from "react";
-import axios from "axios";
-import { Button, Grid } from "@mui/material";
+
+//Router Dom
 import { useNavigate } from "react-router-dom";
 
+//Mui
+import { Button, Grid } from "@mui/material";
+
+//Axios
+import axios from "axios";
+
+//Server Url
 const baseUrl = "http://localhost:8000";
 
-const GeneratePDFButton = ({ formData }) => {
+const GeneratePDFButton = ({ formData, pdfCount }) => {
   let navigate = useNavigate();
   const handleGeneratePDF = async () => {
     try {
       const formDataToSend = new FormData();
       formDataToSend.append("data", JSON.stringify(formData));
       const response = await axios.post(
-        `${baseUrl}/generate-and-send-pdf`,
+        `${baseUrl}/${pdfCount >= 1
+          ? "generate-and-send-pdf-employer"
+          : "generate-and-send-pdf"}`,
         formDataToSend
       );
       if (response.data && response.data.pdfPath) {

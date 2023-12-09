@@ -20,6 +20,7 @@ let baseUrl = "http://localhost:8000";
 
 
 const App = () => {
+  const [pdfCount, setPdfCount] = useState(0)
   const [auth, setAuth] = useState({
     email: "",
     password: "",
@@ -31,6 +32,24 @@ const App = () => {
   let authAdminFunc = e => {
     let { name, value } = e.target;
     setAuth({ ...auth, [name]: value });
+  };
+
+  const loungeGrillEditFunc = async (e, countPdf) => {
+    e.preventDefault()
+    navigate("/eligibilityverificationview");
+    setPdfCount(countPdf)
+  };
+
+  const naraCafeEditFunc = (e, countPdf) => {
+    e.preventDefault()
+    navigate("/eligibilityverificationview");
+    setPdfCount(countPdf)
+  };
+
+  const patioEditFunc = (e, countPdf) => {
+    e.preventDefault()
+    navigate("/eligibilityverificationview");
+    setPdfCount(countPdf)
   };
 
 
@@ -99,17 +118,17 @@ const App = () => {
 
   return (
     <>
-    <LapashaRoutes />
+    <LapashaRoutes pdfCount={pdfCount}  />
     {/*Nested Routes*/}
     <Routes>
-    <Route path="/admin/*" element={<SideNavbar />} />
+    <Route path="/admin/*" element={<SideNavbar loungeGrillEditFunc={loungeGrillEditFunc} naraCafeFunc={naraCafeEditFunc} patioFunc={patioEditFunc} />} />
     <Route path="/admin/login" element={<Login  onLogin={onAdminLoginClick} authFunc={authAdminFunc} registerPage={"/admin/register"}  email={authAdminEmail}
     password={authAdminPassword} />} />
     <Route path="/admin/register" element={<Register  registerForm={onAdminRegister}
     authFunc={authAdminFunc}
     email={authAdminEmail}
     password={authAdminPassword}
-    userName={authAdminName}  />} />
+    userName={authAdminName}   />} />
     </Routes>
     </>
   )

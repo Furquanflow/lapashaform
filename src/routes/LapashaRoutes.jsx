@@ -19,9 +19,9 @@ import Register from "../pages/Register";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://localhost:8000";
+let baseUrl = "https://lapasha-server.vercel.app";
 
-const LapashaRoutes = ({pdfCount}) => {
+const LapashaRoutes = ({ pdfCount }) => {
   const [addStep, setAddStep] = useState(0);
   const [canvas, setCanvas] = useState(null);
   const [contactEmployeeCanvas, setContactEmployeeCanvas] = useState(null);
@@ -216,7 +216,7 @@ const LapashaRoutes = ({pdfCount}) => {
   };
 
   const getPostUrl = () => {
-    switch (companyCall) {
+    switch (companyCall || pdfCount) {
       case 0:
         return `${baseUrl}/loungeandgrilldatapost`;
       case 1:
@@ -274,7 +274,7 @@ const LapashaRoutes = ({pdfCount}) => {
         path="/eligibilityverificationview"
         element={
           <EligibilityVerificationView
-          pdfCount={pdfCount}
+            pdfCount={pdfCount}
             dataString={formDataArr}
             // fomDataGetFunc={getFormData}
             formDataFunc={getFormData}

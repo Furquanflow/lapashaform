@@ -7,7 +7,7 @@ import LapashaFormData from "../components/lapasha form data/LapashaFormData";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://localhost:8000";
+let baseUrl = "https://lapasha-server.vercel.app";
 
 const Patio = ({ patioEditFunc }) => {
   const [adminPatioData, setAdminPatioData] = React.useState([]);
@@ -29,7 +29,7 @@ const Patio = ({ patioEditFunc }) => {
 
   return (
     <LapashaFormData
-      empolymentFunc={e => patioEditFunc(e, 3)}
+      empolymentFunc={e => patioEditFunc(e, 1)}
       lapashaData={adminPatioData}
       title={"Patio"}
     />

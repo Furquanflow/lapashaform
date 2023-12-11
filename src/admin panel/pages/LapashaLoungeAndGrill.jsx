@@ -7,7 +7,7 @@ import LapashaFormData from "../components/lapasha form data/LapashaFormData";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://localhost:8000";
+let baseUrl = "https://lapasha-server.vercel.app";
 
 const LapashaLoungeAndGrill = ({ loungeGrillEditFunc }) => {
   const [adminData, setAdminData] = React.useState([]);
@@ -30,7 +30,7 @@ const LapashaLoungeAndGrill = ({ loungeGrillEditFunc }) => {
     <LapashaFormData
       lapashaData={adminData}
       title={"Lapasha lounge And Grill"}
-      empolymentFunc={e => loungeGrillEditFunc(e, 1)}
+      empolymentFunc={e => loungeGrillEditFunc(e, 0)}
     />
   );
 };

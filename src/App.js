@@ -16,7 +16,7 @@ import "./App.css";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://localhost:8000";
+let baseUrl = "https://lapasha-server.vercel.app";
 
 
 const App = () => {
@@ -36,19 +36,19 @@ const App = () => {
 
   const loungeGrillEditFunc = async (e, countPdf) => {
     e.preventDefault()
-    navigate("/eligibilityverificationview");
+    navigate("/eligibilityverification");
     setPdfCount(countPdf)
   };
 
   const naraCafeEditFunc = (e, countPdf) => {
     e.preventDefault()
-    navigate("/eligibilityverificationview");
+    navigate("/eligibilityverification");
     setPdfCount(countPdf)
   };
 
   const patioEditFunc = (e, countPdf) => {
     e.preventDefault()
-    navigate("/eligibilityverificationview");
+    navigate("/eligibilityverification");
     setPdfCount(countPdf)
   };
 

@@ -7,14 +7,14 @@ import LapashaFormData from "../components/lapasha form data/LapashaFormData";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://localhost:8000";
+let baseUrl = "https://lapasha-server.vercel.app";
 
 const NaraCafe = ({naraCafeEditFunc}) => {
   const [naraAdminData, setNaraAdminData] = React.useState([]);
 
   const getFormData = () => {
     axios
-      .get(`${baseUrl}/naracafedataPost`)
+      .get(`${baseUrl}/naracafedata`)
       .then(({ data }) => {
         setNaraAdminData(data);
       })

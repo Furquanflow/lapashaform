@@ -10,10 +10,10 @@ import { Button, Grid } from "@mui/material";
 import axios from "axios";
 
 //Server Url
-const baseUrl = "https://lapasha-server.vercel.app";
+const baseUrl = "http://localhost:8000";
 
 const GeneratePDFButton = ({ formData, pdfCount }) => {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const handleGeneratePDF = async () => {
     try {
       const formDataToSend = new FormData();
@@ -28,7 +28,7 @@ const GeneratePDFButton = ({ formData, pdfCount }) => {
         alert("PDF generated and sent successfully.");
         window.open(`${baseUrl}/download-pdf`, "_blank");
         console.log("Condition Working");
-        navigate("/stepform");
+        // navigate("/stepform");
       } else {
         alert("Failed to generate and send PDF.");
       }

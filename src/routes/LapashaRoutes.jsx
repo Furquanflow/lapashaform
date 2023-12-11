@@ -19,7 +19,7 @@ import Register from "../pages/Register";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "https://lapasha-server.vercel.app";
+let baseUrl = "http://localhost:8000";
 
 const LapashaRoutes = ({ pdfCount }) => {
   const [addStep, setAddStep] = useState(0);

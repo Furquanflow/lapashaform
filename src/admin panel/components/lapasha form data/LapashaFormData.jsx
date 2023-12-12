@@ -22,6 +22,16 @@ import {
 } from "../../../functions/SpareFunctions";
 
 const LapashaFormData = ({ lapashaData, title, empolymentFunc }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredData = lapashaData.filter((item) =>
+    item.fNamePerInfo.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <Box sx={{ background: "#fff", padding: "40px", borderRadius: "20px" }}>
       <Grid mb={4}>
@@ -29,7 +39,8 @@ const LapashaFormData = ({ lapashaData, title, empolymentFunc }) => {
           {title}
         </Typography>
       </Grid>
-      <TextField fullWidth label="Search ..." id="fullWidth" />
+      <TextField fullWidth label="Search ..." id="fullWidth" value={searchTerm} onChange={handleSearch}
+      type="text" />
       <Grid mt={5}>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -43,8 +54,8 @@ const LapashaFormData = ({ lapashaData, title, empolymentFunc }) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {lapashaData &&
-                lapashaData.map((row, ind) => {
+              {filteredData &&
+                filteredData.map((row, ind) => {
                   return (
                     <StyledTableRow key={+row.id}>
                       <StyledTableCell component="th" scope="row">

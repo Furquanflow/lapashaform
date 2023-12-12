@@ -16,7 +16,7 @@ import "./App.css";
 import axios from "axios";
 
 //Server Url
-let baseUrl = "http://13.59.177.230:8000";
+let baseUrl = "http://localhost:8000";
 
 
 const App = () => {
